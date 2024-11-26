@@ -5,7 +5,7 @@
 Registers checkout-related functionality for the BigCommerce platform, including customer login and checkout requirements.
 
 This class extends the Provider class and interacts with various BigCommerce services, such as customer login and checkout
-requirements, through a Pimple container.
+requirements, through a Pimple container. test.
 
 * Full name: `\BigCommerce\Container\Checkout`
 * Parent class: [`Provider`](./Provider.md)
