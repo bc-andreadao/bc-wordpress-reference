@@ -5,7 +5,7 @@
 Registers checkout-related functionality for the BigCommerce platform, including customer login and checkout requirements.
 
 This class extends the Provider class and interacts with various BigCommerce services, such as customer login and checkout
-requirements, through a Pimple container. test.
+requirements, through a Pimple container.
 
 * Full name: `\BigCommerce\Container\Checkout`
 * Parent class: [`Provider`](./Provider.md)
@@ -51,13 +51,13 @@ public register(\Pimple\Container $container): void
 
 ### requirements
 
-Registers services related to the checkout requirements.
+
 
 ```php
-private requirements(\Pimple\Container $container): void
+private requirements(\Pimple\Container $container): mixed
 ```
 
-This method sets up services for the requirements notice, admin actions, and filters.
+
 
 
 
@@ -68,7 +68,7 @@ This method sets up services for the requirements notice, admin actions, and fil
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `$container` | **\Pimple\Container** | The Pimple container to register services in. |
+| `$container` | **\Pimple\Container** |  |
 
 
 
@@ -78,13 +78,13 @@ This method sets up services for the requirements notice, admin actions, and fil
 
 ### customer_login
 
-Registers services related to the customer login functionality during checkout.
+
 
 ```php
-private customer_login(\Pimple\Container $container): void
+private customer_login(\Pimple\Container $container): mixed
 ```
 
-This method sets up the customer login service and modifies the checkout URL to include the login token.
+
 
 
 
@@ -95,7 +95,7 @@ This method sets up the customer login service and modifies the checkout URL to 
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `$container` | **\Pimple\Container** | The Pimple container to register services in. |
+| `$container` | **\Pimple\Container** |  |
 
 
 
@@ -105,4 +105,4 @@ This method sets up the customer login service and modifies the checkout URL to 
 
 
 ***
-> Automatically generated on 2024-11-26
+> Automatically generated on 2024-11-27
