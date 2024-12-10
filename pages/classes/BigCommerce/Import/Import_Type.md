@@ -17,23 +17,6 @@
 |`IMPORT_TYPE_FULL`|public| |&#039;import_type_full&#039;|
 |`IMPORT_TYPE_PARTIAL`|public| |&#039;import_type_partial&#039;|
 
-## Properties
-
-
-### catalog
-
-
-
-```php
-private \BigCommerce\Api\v3\Api\CatalogApi $catalog
-```
-
-
-
-
-
-
-***
 
 ## Methods
 

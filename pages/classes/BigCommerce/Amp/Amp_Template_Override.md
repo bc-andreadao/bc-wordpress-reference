@@ -11,23 +11,6 @@ versions when AMP mode is enabled.
 
 
 
-## Properties
-
-
-### amp_directory
-
-Directory name containing AMP-specific template overrides.
-
-```php
-private string $amp_directory
-```
-
-
-
-
-
-
-***
 
 ## Methods
 

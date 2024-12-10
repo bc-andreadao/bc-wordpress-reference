@@ -55,33 +55,6 @@ Returns `true` if the submission is spam, otherwise `false`.
 
 ***
 
-### get_query_string
-
-
-
-```php
-private get_query_string(mixed $submission): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$submission` | **mixed** |  |
-
-
-
-
-
-***
-
 
 ***
 > Automatically generated on 2024-12-10

@@ -208,33 +208,6 @@ protected delete_option(string $option): bool
 
 ***
 
-### clear_cache
-
-Clear caches that may be storing the option
-
-```php
-private clear_cache(string $option): void
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$option` | **string** |  |
-
-
-
-
-
-***
-
 
 ***
 > Automatically generated on 2024-12-10

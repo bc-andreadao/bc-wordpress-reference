@@ -15,23 +15,6 @@ with the new credentials.
 
 
 
-## Properties
-
-
-### config
-
-
-
-```php
-private \BigCommerce\Api\Configuration $config
-```
-
-
-
-
-
-
-***
 
 ## Methods
 

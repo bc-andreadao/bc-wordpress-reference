@@ -170,33 +170,6 @@ public set_taxonomy_archive_template_path(string[] $templates): string[]
 
 ***
 
-### prefix_theme_paths
-
-Prefix all paths with the theme's plugin override dir
-
-```php
-private prefix_theme_paths(string[] $paths): string[]
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$paths` | **string[]** |  |
-
-
-
-
-
-***
-
 ### include_product_template
 
 
@@ -217,83 +190,6 @@ public include_product_template(string|bool $template): string|bool
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | `$template` | **string&#124;bool** |  |
-
-
-
-
-
-***
-
-### get_product_single_path
-
-
-
-```php
-private get_product_single_path(): bool|string
-```
-
-
-
-
-
-
-
-
-
-**Return Value:**
-
-Path to the product single template in the plugin
-
-
-
-
-***
-
-### get_product_archive_path
-
-
-
-```php
-private get_product_archive_path(): bool|string
-```
-
-
-
-
-
-
-
-
-
-**Return Value:**
-
-Path to the product archive template in the plugin
-
-
-
-
-***
-
-### get_template_path
-
-Get the template path
-
-```php
-private get_template_path(string $relative_path): string|bool
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$relative_path` | **string** |  |
 
 
 

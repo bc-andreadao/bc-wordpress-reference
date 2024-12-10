@@ -15,23 +15,6 @@
 |:---------|:-----------|:-----|:------|
 |`ACTION`|public| |&#039;bigcommerce_import_now&#039;|
 
-## Properties
-
-
-### settings_screen
-
-
-
-```php
-private \BigCommerce\Settings\Screens\Settings_Screen $settings_screen
-```
-
-
-
-
-
-
-***
 
 ## Methods
 
@@ -168,27 +151,6 @@ public handle_request(): void
 
 ***
 
-### current_user_can_start_import
-
-
-
-```php
-private current_user_can_start_import(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
 ### list_table_notice
 
 Print the import button into the notices section
@@ -205,31 +167,6 @@ public list_table_notice(): void
 
 
 
-
-
-
-
-***
-
-### on_products_list_table
-
-
-
-```php
-private on_products_list_table(): bool
-```
-
-
-
-
-
-
-
-
-
-**Return Value:**
-
-Whether the current screen is the products list table
 
 
 

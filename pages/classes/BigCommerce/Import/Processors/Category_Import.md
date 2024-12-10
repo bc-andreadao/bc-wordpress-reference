@@ -371,33 +371,6 @@ protected delete_option(string $option): bool
 
 ***
 
-### clear_cache
-
-Clear caches that may be storing the option
-
-```php
-private clear_cache(string $option): void
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$option` | **string** |  |
-
-
-
-
-
-***
-
 ### __construct
 
 Constructor for the Term_Import class.
@@ -639,75 +612,6 @@ protected parse_gql_term(\StdClass|null $term = null): array
 **Return Value:**
 
 The parsed term data.
-
-
-
-
-***
-
-### get_state
-
-
-
-```php
-private get_state(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
-### set_state
-
-
-
-```php
-private set_state(array $state): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$state` | **array** |  |
-
-
-
-
-
-***
-
-### clear_state
-
-
-
-```php
-private clear_state(): mixed
-```
-
-
-
-
-
-
-
-
 
 
 

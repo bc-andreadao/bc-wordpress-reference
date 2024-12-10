@@ -86,27 +86,6 @@ protected get_header(): string
 
 ***
 
-### get_description
-
-
-
-```php
-private get_description(): string
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
 ### submit_button
 
 Build the buttons
@@ -142,33 +121,6 @@ public add_buttons_to_settings_screen(): mixed
 
 
 
-
-
-
-
-
-***
-
-### get_admin_url
-
-
-
-```php
-private get_admin_url(mixed $action): string
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$action` | **mixed** |  |
 
 
 

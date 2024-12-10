@@ -15,23 +15,6 @@ This class interacts with the BigCommerce API to fetch and manage data for custo
 |:---------|:-----------|:-----|:------|
 |`CUSTOMER_ID_META`|public|string|&#039;bigcommerce_customer_id&#039;|
 
-## Properties
-
-
-### wp_user_id
-
-The WordPress user ID associated with the customer.
-
-```php
-private int $wp_user_id
-```
-
-
-
-
-
-
-***
 
 ## Methods
 
@@ -265,87 +248,6 @@ Fetches detailed information about the specified order, including products and s
 **Return Value:**
 
 An array of order details or false if the order is not found.
-
-
-
-
-***
-
-### get_order_products
-
-Retrieve order products list
-
-```php
-private get_order_products(mixed $order_id): mixed|void
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$order_id` | **mixed** |  |
-
-
-
-
-
-***
-
-### get_order_shipping_addresses
-
-Get order shipping address
-
-```php
-private get_order_shipping_addresses(mixed $order_id): mixed|void
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$order_id` | **mixed** |  |
-
-
-
-
-
-***
-
-### flatten_resource
-
-
-
-```php
-private flatten_resource(\Bigcommerce\Api\Resource $resource): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$resource` | **\Bigcommerce\Api\Resource** |  |
-
 
 
 

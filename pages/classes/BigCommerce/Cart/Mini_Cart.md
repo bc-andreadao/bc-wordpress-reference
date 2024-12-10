@@ -46,27 +46,6 @@ The modified configuration array with mini-cart settings.
 
 ***
 
-### mini_cart_enabled
-
-
-
-```php
-private mini_cart_enabled(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
 
 ***
 > Automatically generated on 2024-12-10

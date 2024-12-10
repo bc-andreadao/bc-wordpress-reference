@@ -15,23 +15,6 @@ Shows a notice if the required configuration for checkout is not complete
 |:---------|:-----------|:-----|:------|
 |`REFRESH`|public|string|&#039;bigcommerce_checkout_requirements_refresh&#039;|
 
-## Properties
-
-
-### status
-
-
-
-```php
-private \BigCommerce\Merchant\Setup_Status $status
-```
-
-
-
-
-
-
-***
 
 ## Methods
 
@@ -85,27 +68,6 @@ public check_requirements(): void
 
 ***
 
-### get_settings_dashboard_url
-
-
-
-```php
-private get_settings_dashboard_url(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
 ### refresh_status
 
 Admin post handler to refresh the checkout requirements status cache.
@@ -120,33 +82,6 @@ public refresh_status(): void
 
 
 
-
-
-
-
-
-***
-
-### refresh_url
-
-Get the URL to trigger a status cache refresh
-
-```php
-private refresh_url(string $redirect = &#039;&#039;): string
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$redirect` | **string** | Redirect destination after refreshing the status cache |
 
 
 

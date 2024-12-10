@@ -20,23 +20,6 @@ and handling settings.
 |:---------|:-----------|:-----|:------|
 |`NAME`|public| |&#039;bigcommerce_welcome&#039;|
 
-## Properties
-
-
-### template_dir
-
-
-
-```php
-private string $template_dir
-```
-
-
-
-
-
-
-***
 
 ## Methods
 
@@ -141,69 +124,6 @@ public render_settings_page(): void
 
 ***
 
-### get_connect_account_url
-
-
-
-```php
-private get_connect_account_url(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
-### get_create_account_url
-
-
-
-```php
-private get_create_account_url(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
-### get_credentials_url
-
-
-
-```php
-private get_credentials_url(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
 ### should_register
 
 Indicates if this screen should be registered, given the current state of the WordPress installation.
@@ -223,48 +143,6 @@ public should_register(): bool
 **Return Value:**
 
 True if the screen should be registered, false otherwise.
-
-
-
-
-***
-
-### get_notices
-
-
-
-```php
-private get_notices(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
-### get_video
-
-
-
-```php
-private get_video(): mixed
-```
-
-
-
-
-
-
-
-
 
 
 

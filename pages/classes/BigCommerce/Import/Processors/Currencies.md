@@ -13,56 +13,6 @@ to channels, and stores the relevant data in WordPress options and term meta.
 
 
 
-## Properties
-
-
-### currencies_api
-
-Instance of the Currencies_Api class used to interact with the v2 BigCommerce API
-for fetching currency data.
-
-```php
-private \BigCommerce\Api\Currencies_Api $currencies_api
-```
-
-
-
-
-
-
-***
-
-### currencies_v3_api
-
-Instance of the CurrencyApi class used to interact with the v3 BigCommerce API
-for managing currency assignments at the channel level.
-
-```php
-private \BigCommerce\Api\v3\Api\CurrencyApi $currencies_v3_api
-```
-
-
-
-
-
-
-***
-
-### connections
-
-Instance of the Connections class that provides functionality to interact with the active
-channels in the BigCommerce store.
-
-```php
-private \BigCommerce\Taxonomies\Channel\Connections $connections
-```
-
-
-
-
-
-
-***
 
 ## Methods
 

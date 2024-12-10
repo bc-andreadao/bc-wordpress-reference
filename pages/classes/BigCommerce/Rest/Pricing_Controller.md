@@ -11,23 +11,6 @@
 
 
 
-## Properties
-
-
-### pricing_api
-
-
-
-```php
-private $pricing_api
-```
-
-
-
-
-
-
-***
 
 ## Methods
 
@@ -156,108 +139,6 @@ public get_items(\WP_REST_Request $request): \WP_REST_Response|\WP_Error
 **Return Value:**
 
 Response object on success, or WP_Error object on failure.
-
-
-
-
-***
-
-### filter_empty_options
-
-
-
-```php
-private filter_empty_options(mixed $items): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$items` | **mixed** |  |
-
-
-
-
-
-***
-
-### get_channel_id
-
-
-
-```php
-private get_channel_id(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
-### format_prices
-
-
-
-```php
-private format_prices(\BigCommerce\Api\v3\Model\ItemPricing $item): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$item` | **\BigCommerce\Api\v3\Model\ItemPricing** |  |
-
-
-
-
-
-***
-
-### object_to_array
-
-Convert an API response object into an associative array
-
-```php
-private object_to_array(object|array $object): array
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$object` | **object&#124;array** | A BigCommerce API response object, or an array thereof |
-
 
 
 

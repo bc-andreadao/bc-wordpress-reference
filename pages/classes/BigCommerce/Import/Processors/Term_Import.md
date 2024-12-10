@@ -318,75 +318,6 @@ The parsed term data.
 
 ***
 
-### get_state
-
-
-
-```php
-private get_state(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
-### set_state
-
-
-
-```php
-private set_state(array $state): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$state` | **array** |  |
-
-
-
-
-
-***
-
-### clear_state
-
-
-
-```php
-private clear_state(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
 ### handle_graph_ql_response
 
 Parse a GraphQL response and handle pagination if necessary.
@@ -566,33 +497,6 @@ protected add_option(string $option, mixed $value, bool $autoload = false): bool
 
 ```php
 protected delete_option(string $option): bool
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$option` | **string** |  |
-
-
-
-
-
-***
-
-### clear_cache
-
-Clear caches that may be storing the option
-
-```php
-private clear_cache(string $option): void
 ```
 
 

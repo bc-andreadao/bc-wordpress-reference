@@ -77,21 +77,6 @@ protected \BigCommerce\Api\v3\Api\CatalogApi $catalog
 
 ***
 
-### channel_term
-
-
-
-```php
-private \WP_Term $channel_term
-```
-
-
-
-
-
-
-***
-
 ## Methods
 
 

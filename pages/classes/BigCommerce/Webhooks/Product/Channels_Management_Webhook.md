@@ -303,27 +303,6 @@ public scope(): mixed
 
 ***
 
-### generate_password
-
-
-
-```php
-private generate_password(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
 ### delete
 
 Deletes a webhook from the BigCommerce database.

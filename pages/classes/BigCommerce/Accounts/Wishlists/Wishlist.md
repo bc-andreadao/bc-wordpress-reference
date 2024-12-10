@@ -11,23 +11,6 @@ and handle items in the wishlist.
 
 
 
-## Properties
-
-
-### wishlist
-
-
-
-```php
-private \BigCommerce\Api\v3\Model\Wishlist $wishlist
-```
-
-
-
-
-
-
-***
 
 ## Methods
 

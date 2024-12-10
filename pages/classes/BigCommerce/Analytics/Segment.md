@@ -41,33 +41,6 @@ If no Segment key is set, the function does nothing.
 
 ***
 
-### get_settings
-
-Retrieves a list of the analytics settings.
-
-```php
-private get_settings(): object
-```
-
-This function collects the relevant analytics settings, including configurations
-for Google Analytics and Facebook Pixel, and returns them in an object format.
-These settings are then used to configure the Segment analytics integration.
-
-
-
-
-
-
-
-**Return Value:**
-
-The analytics settings object.
-
-
-
-
-***
-
 
 ***
 > Automatically generated on 2024-12-10

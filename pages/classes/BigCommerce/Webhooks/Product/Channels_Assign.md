@@ -43,62 +43,6 @@ public handle_request(mixed $product_id, mixed $channel_id): mixed
 
 ***
 
-### handle_product_creation
-
-
-
-```php
-private handle_product_creation(\BigCommerce\Api\v3\Model\Product $product, \WP_Term $channel): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$product` | **\BigCommerce\Api\v3\Model\Product** |  |
-| `$channel` | **\WP_Term** |  |
-
-
-
-
-
-***
-
-### handle_product_update
-
-
-
-```php
-private handle_product_update(\BigCommerce\Post_Types\Product\Product $product, \WP_Term $channel): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$product` | **\BigCommerce\Post_Types\Product\Product** |  |
-| `$channel` | **\WP_Term** |  |
-
-
-
-
-
-***
-
 
 ## Inherited methods
 

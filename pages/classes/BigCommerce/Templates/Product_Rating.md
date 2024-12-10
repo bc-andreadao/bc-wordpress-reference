@@ -89,62 +89,6 @@ public get_data(): array
 
 ***
 
-### get_percentage
-
-
-
-```php
-private get_percentage(mixed $sum, mixed $count): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$sum` | **mixed** |  |
-| `$count` | **mixed** |  |
-
-
-
-
-
-***
-
-### get_stars
-
-
-
-```php
-private get_stars(mixed $sum, mixed $count): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$sum` | **mixed** |  |
-| `$count` | **mixed** |  |
-
-
-
-
-
-***
-
 
 ## Inherited methods
 
@@ -303,33 +247,6 @@ public get_data(): array
 * This method is **abstract**.
 
 
-
-
-
-
-
-***
-
-### get_template
-
-
-
-```php
-private get_template(string $relative_path): \BigCommerce\Templates\Template
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$relative_path` | **string** |  |
 
 
 

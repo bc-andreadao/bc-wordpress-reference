@@ -16,23 +16,6 @@ Handles cart operations such as adding line items, managing cookies, and interac
 |`CART_COOKIE`|public|string|&#039;wp-bigcommerce_cart_id&#039;|
 |`COUNT_COOKIE`|public|string|&#039;wp-bigcommerce_cart_item_count&#039;|
 
-## Properties
-
-
-### api
-
-
-
-```php
-private \BigCommerce\Api\v3\Api\CartApi $api
-```
-
-
-
-
-
-
-***
 
 ## Methods
 
@@ -194,38 +177,6 @@ The updated cart after adding the gift certificate.
 
 ***
 
-### add_request_to_cart
-
-
-
-```php
-private add_request_to_cart(\BigCommerce\Api\v3\Model\CartRequestData $request): \BigCommerce\Api\v3\Model\Cart
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$request` | **\BigCommerce\Api\v3\Model\CartRequestData** |  |
-
-
-
-
-**Throws:**
-
-- [`ApiException`](../Api/v3/ApiException.md)
-
-
-
-***
-
 ### sanitize_cart_id
 
 Sanitize the cart ID by ensuring the cart still exists
@@ -251,35 +202,6 @@ public sanitize_cart_id(string $cart_id): string
 **Return Value:**
 
 The sanitized cart ID or an empty string if not valid
-
-
-
-
-***
-
-### set_item_count_cookie
-
-Set a temporary cookie with the count of items
-in the cart. Front end will use it for updating
-the cart menu item.
-
-```php
-private set_item_count_cookie(\BigCommerce\Api\v3\Model\Cart $cart): void
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$cart` | **\BigCommerce\Api\v3\Model\Cart** |  |
-
 
 
 
@@ -367,48 +289,6 @@ public get_embedded_checkout_url(string $cart_id): string
 **Return Value:**
 
 The URL for the embedded checkout with the given cart
-
-
-
-
-***
-
-### get_channel_id
-
-
-
-```php
-private get_channel_id(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
-### get_currency
-
-
-
-```php
-private get_currency(): mixed
-```
-
-
-
-
-
-
-
-
 
 
 

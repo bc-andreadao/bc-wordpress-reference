@@ -85,27 +85,6 @@ public get_data(): array
 
 ***
 
-### links
-
-
-
-```php
-private links(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
 
 ## Inherited methods
 
@@ -264,33 +243,6 @@ public get_data(): array
 * This method is **abstract**.
 
 
-
-
-
-
-
-***
-
-### get_template
-
-
-
-```php
-private get_template(string $relative_path): \BigCommerce\Templates\Template
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$relative_path` | **string** |  |
 
 
 

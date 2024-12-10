@@ -11,23 +11,6 @@ Builds plugin resources JSON from a CSV file containing resource data.
 
 
 
-## Properties
-
-
-### plugin_dir
-
-
-
-```php
-private string $plugin_dir
-```
-
-
-
-
-
-
-***
 
 ## Methods
 

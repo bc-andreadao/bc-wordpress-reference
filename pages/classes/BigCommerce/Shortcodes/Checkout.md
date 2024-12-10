@@ -17,23 +17,6 @@
 |:---------|:-----------|:-----|:------|
 |`NAME`|public| |&#039;bigcommerce_checkout&#039;|
 
-## Properties
-
-
-### cart_api
-
-
-
-```php
-private \BigCommerce\Api\v3\Api\CartApi $cart_api
-```
-
-
-
-
-
-
-***
 
 ## Methods
 

@@ -135,33 +135,6 @@ Validates the request, resets the listing, and redirects the user.
 
 ***
 
-### reset_listing
-
-
-
-```php
-private reset_listing(int $post_id): \WP_Error
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$post_id` | **int** |  |
-
-
-
-
-
-***
-
 
 ***
 > Automatically generated on 2024-12-10

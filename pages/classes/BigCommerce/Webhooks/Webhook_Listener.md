@@ -10,23 +10,6 @@ Class Webhook_Listener
 
 
 
-## Properties
-
-
-### hooks
-
-
-
-```php
-private \BigCommerce\Webhooks\Webhook[] $hooks
-```
-
-
-
-
-
-
-***
 
 ## Methods
 

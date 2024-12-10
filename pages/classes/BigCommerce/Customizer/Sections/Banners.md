@@ -47,33 +47,6 @@ Adds a new section for managing banners under the primary BigCommerce panel.
 
 ***
 
-### enable_banners
-
-
-
-```php
-private enable_banners(\WP_Customize_Manager $wp_customize): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$wp_customize` | **\WP_Customize_Manager** |  |
-
-
-
-
-
-***
-
 
 ***
 > Automatically generated on 2024-12-10

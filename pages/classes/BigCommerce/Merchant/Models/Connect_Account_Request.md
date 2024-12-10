@@ -12,38 +12,6 @@
 
 
 
-## Properties
-
-
-### secret_key
-
-
-
-```php
-private string $secret_key
-```
-
-
-
-
-
-
-***
-
-### store_url
-
-
-
-```php
-private string $store_url
-```
-
-
-
-
-
-
-***
 
 ## Methods
 

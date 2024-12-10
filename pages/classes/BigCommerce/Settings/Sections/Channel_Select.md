@@ -65,27 +65,6 @@ public render_channel_select_field(): mixed
 
 ***
 
-### get_channel_list
-
-
-
-```php
-private get_channel_list(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
 
 ## Inherited methods
 

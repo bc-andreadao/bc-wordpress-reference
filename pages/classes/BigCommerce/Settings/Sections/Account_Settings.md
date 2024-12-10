@@ -19,23 +19,6 @@
 |`REGISTRATION_SPAM_CHECK`|public| |&#039;bigcommerce_registration_spam_check&#039;|
 |`ALLOW_GLOBAL_LOGINS`|public| |&#039;bigcommerce_allow_global_logins&#039;|
 
-## Properties
-
-
-### pages
-
-
-
-```php
-private \BigCommerce\Pages\Required_Page[] $pages
-```
-
-
-
-
-
-
-***
 
 ## Methods
 

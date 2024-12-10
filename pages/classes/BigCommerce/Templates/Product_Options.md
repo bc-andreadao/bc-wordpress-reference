@@ -217,81 +217,6 @@ protected get_selected_variant_options(\BigCommerce\Post_Types\Product\Product $
 
 ***
 
-### get_variants
-
-
-
-```php
-private get_variants(\BigCommerce\Post_Types\Product\Product $product): array
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$product` | **\BigCommerce\Post_Types\Product\Product** |  |
-
-
-
-
-
-***
-
-### headless_variant_image_data
-
-
-
-```php
-private headless_variant_image_data(mixed $variant): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$variant` | **mixed** |  |
-
-
-
-
-
-***
-
-### image_size
-
-
-
-```php
-private image_size(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
 ### zoom_size
 
 
@@ -306,35 +231,6 @@ protected zoom_size(): mixed
 
 
 
-
-
-
-
-
-***
-
-### variant_image_data
-
-Get image data for the variant.
-
-```php
-private variant_image_data(int $variant_id, int $post_id, string $image_size): array|null
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$variant_id` | **int** |  |
-| `$post_id` | **int** |  |
-| `$image_size` | **string** |  |
 
 
 
@@ -521,33 +417,6 @@ public get_data(): array
 * This method is **abstract**.
 
 
-
-
-
-
-
-***
-
-### get_template
-
-
-
-```php
-private get_template(string $relative_path): \BigCommerce\Templates\Template
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$relative_path` | **string** |  |
 
 
 

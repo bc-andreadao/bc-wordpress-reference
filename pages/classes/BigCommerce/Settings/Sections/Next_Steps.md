@@ -16,38 +16,6 @@ Displays required and optional next steps after onboarding.
 |:---------|:-----------|:-----|:------|
 |`NAME`|public| |&#039;next_steps&#039;|
 
-## Properties
-
-
-### status
-
-
-
-```php
-private \BigCommerce\Merchant\Setup_Status $status
-```
-
-
-
-
-
-
-***
-
-### template_dir
-
-
-
-```php
-private string $template_dir
-```
-
-
-
-
-
-
-***
 
 ## Methods
 

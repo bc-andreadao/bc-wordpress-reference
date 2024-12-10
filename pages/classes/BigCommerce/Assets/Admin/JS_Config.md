@@ -11,53 +11,6 @@ to product categories, flags, brands, and AJAX actions used in the admin interfa
 
 
 
-## Properties
-
-
-### data
-
-
-
-```php
-private $data
-```
-
-
-
-
-
-
-***
-
-### gutenberg
-
-
-
-```php
-private $gutenberg
-```
-
-
-
-
-
-
-***
-
-### directory
-
-
-
-```php
-private $directory
-```
-
-
-
-
-
-
-***
 
 ## Methods
 

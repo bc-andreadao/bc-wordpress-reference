@@ -17,23 +17,6 @@
 |:---------|:-----------|:-----|:------|
 |`NAME`|public| |&#039;bigcommerce_product&#039;|
 
-## Properties
-
-
-### shortcode_rest_controller
-
-
-
-```php
-private \BigCommerce\Rest\Shortcode_Controller $shortcode_rest_controller
-```
-
-
-
-
-
-
-***
 
 ## Methods
 
@@ -107,34 +90,6 @@ public render(mixed $attr, mixed $instance): string
 |-----------|------|-------------|
 | `$attr` | **mixed** |  |
 | `$instance` | **mixed** |  |
-
-
-
-
-
-***
-
-### next_page_url
-
-
-
-```php
-private next_page_url(array $attr, mixed $max_pages): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$attr` | **array** |  |
-| `$max_pages` | **mixed** |  |
 
 
 

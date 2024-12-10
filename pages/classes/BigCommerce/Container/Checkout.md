@@ -51,60 +51,6 @@ requirements notice and customer login services, in the container.
 
 ***
 
-### requirements
-
-
-
-```php
-private requirements(\Pimple\Container $container): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$container` | **\Pimple\Container** |  |
-
-
-
-
-
-***
-
-### customer_login
-
-
-
-```php
-private customer_login(\Pimple\Container $container): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$container` | **\Pimple\Container** |  |
-
-
-
-
-
-***
-
 
 ***
 > Automatically generated on 2024-12-10

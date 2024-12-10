@@ -167,34 +167,6 @@ protected get_featured_image(\BigCommerce\Post_Types\Product\Product $product, m
 
 ***
 
-### get_terms
-
-Get list of terms names by post id
-
-```php
-private get_terms(mixed $post_id, mixed $taxonomy): array
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$post_id` | **mixed** |  |
-| `$taxonomy` | **mixed** |  |
-
-
-
-
-
-***
-
 
 ## Inherited methods
 
@@ -353,33 +325,6 @@ public get_data(): array
 * This method is **abstract**.
 
 
-
-
-
-
-
-***
-
-### get_template
-
-
-
-```php
-private get_template(string $relative_path): \BigCommerce\Templates\Template
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$relative_path` | **string** |  |
 
 
 

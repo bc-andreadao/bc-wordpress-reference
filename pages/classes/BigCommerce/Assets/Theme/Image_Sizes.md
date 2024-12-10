@@ -25,25 +25,6 @@ when any changes are made to the image sizes list.
 |`BC_LARGE`|public|string|&#039;bc-large&#039;|
 |`BC_CATEGORY_IMAGE`|public|string|&#039;bc-category-image&#039;|
 
-## Properties
-
-
-### sizes
-
-List of custom image sizes, each defined by width, height, and cropping settings.
-
-```php
-private array $sizes
-```
-
-The size array defines different image sizes, including thumbnail, small, medium,
-large, and category images. The cropping property determines whether the image should
-be cropped to fit the dimensions or not.
-
-
-
-
-***
 
 ## Methods
 

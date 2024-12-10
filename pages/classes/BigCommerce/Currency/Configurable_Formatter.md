@@ -12,53 +12,6 @@ Allows for customizable currency symbol, position, and decimal precision when fo
 
 
 
-## Properties
-
-
-### symbol
-
-The currency symbol.
-
-```php
-private string $symbol
-```
-
-
-
-
-
-
-***
-
-### position
-
-The position of the currency symbol relative to the value.
-
-```php
-private string $position
-```
-
-
-
-
-
-
-***
-
-### decimals
-
-The number of decimal places for formatting.
-
-```php
-private int $decimals
-```
-
-
-
-
-
-
-***
 
 ## Methods
 

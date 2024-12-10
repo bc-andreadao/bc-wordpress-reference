@@ -11,53 +11,6 @@ product messages, channel data, and other theme-specific data required for the f
 
 
 
-## Properties
-
-
-### data
-
-
-
-```php
-private array $data
-```
-
-
-
-
-
-
-***
-
-### directory
-
-
-
-```php
-private string $directory
-```
-
-
-
-
-
-
-***
-
-### connections
-
-
-
-```php
-private \BigCommerce\Taxonomies\Channel\Connections $connections
-```
-
-
-
-
-
-
-***
 
 ## Methods
 
@@ -111,27 +64,6 @@ it returns the cached version.
 **Return Value:**
 
 The configuration data for JavaScript.
-
-
-
-
-***
-
-### get_current_channel_data
-
-
-
-```php
-private get_current_channel_data(): mixed
-```
-
-
-
-
-
-
-
-
 
 
 

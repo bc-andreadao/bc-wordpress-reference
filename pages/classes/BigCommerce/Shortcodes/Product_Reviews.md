@@ -70,36 +70,6 @@ public render(array $attributes, int $instance): string
 
 ***
 
-### next_page_url
-
-Build the URL for the next page of reviews
-
-```php
-private next_page_url(int $post_id, int $per_page, int $current_page, int $max_pages): string
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$post_id` | **int** |  |
-| `$per_page` | **int** |  |
-| `$current_page` | **int** |  |
-| `$max_pages` | **int** |  |
-
-
-
-
-
-***
-
 
 ***
 > Automatically generated on 2024-12-10

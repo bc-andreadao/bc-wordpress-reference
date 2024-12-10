@@ -49,27 +49,6 @@ public register_routes(): void
 
 ***
 
-### products_query_route_path
-
-
-
-```php
-private products_query_route_path(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
 ### get_items_permissions_check
 
 Checks if a given request has access to read products.
@@ -132,94 +111,6 @@ The response object or error.
 
 ***
 
-### convert_to_wp_response
-
-
-
-```php
-private convert_to_wp_response(mixed $request, mixed $result): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$request` | **mixed** |  |
-| `$result` | **mixed** |  |
-
-
-
-
-
-***
-
-### retrieve_rest_response
-
-
-
-```php
-private retrieve_rest_response(mixed $posts, mixed $request, mixed $query_args, mixed $posts_query, null $channel_filter = null, bool $always_fetch = false): \WP_Error|\WP_HTTP_Response|\WP_REST_Response
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$posts` | **mixed** |  |
-| `$request` | **mixed** |  |
-| `$query_args` | **mixed** |  |
-| `$posts_query` | **mixed** |  |
-| `$channel_filter` | **null** |  |
-| `$always_fetch` | **bool** |  |
-
-
-
-
-
-***
-
-### get_items_graphql
-
-
-
-```php
-private get_items_graphql(\Pimple\Container $container, mixed $request_data): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$container` | **\Pimple\Container** |  |
-| `$request_data` | **mixed** |  |
-
-
-
-
-
-***
-
 ### get_items
 
 Retrieves a collection of products.
@@ -251,34 +142,6 @@ Response object on success, or WP_Error object on failure.
 
 ***
 
-### get_channel_filter
-
-Get a callback to run on pre_get_posts for a query
-to set an appropriate channel filter for the given channel
-
-```php
-private get_channel_filter(int|int[] $channel): \Closure
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$channel` | **int&#124;int[]** |  |
-
-
-
-
-
-***
-
 ### get_collection_params
 
 Retrieves the query parameters for the collection.
@@ -299,31 +162,6 @@ as sorting order, BigCommerce ID, recent updates, and channel-specific filters.
 **Return Value:**
 
 The query parameters for retrieving a collection of products.
-
-
-
-
-***
-
-### taxonomy_params
-
-
-
-```php
-private taxonomy_params(): array
-```
-
-
-
-
-
-
-
-
-
-**Return Value:**
-
-The taxonomies that can be used in requests and responses
 
 
 
@@ -358,35 +196,6 @@ the response.
 **Return Value:**
 
 Response object containing the product data.
-
-
-
-
-***
-
-### get_item_property
-
-
-
-```php
-private get_item_property(\BigCommerce\Post_Types\Product\Product $product, mixed $key, mixed $schema): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$product` | **\BigCommerce\Post_Types\Product\Product** |  |
-| `$key` | **mixed** |  |
-| `$schema` | **mixed** |  |
-
 
 
 
@@ -577,54 +386,6 @@ taxonomy terms. The schema can be used for validation and data modeling.
 **Return Value:**
 
 Item schema data, conforming to the JSON Schema specification.
-
-
-
-
-***
-
-### get_image_schema
-
-
-
-```php
-private get_image_schema(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
-### get_term_bc_id
-
-
-
-```php
-private get_term_bc_id(mixed $data): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$data` | **mixed** |  |
-
 
 
 

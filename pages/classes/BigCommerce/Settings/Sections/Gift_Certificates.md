@@ -17,23 +17,6 @@
 |`NAME`|public| |&#039;gift_certificates&#039;|
 |`OPTION_ENABLE`|public| |&#039;bigcommerce_enable_gift_certificates&#039;|
 
-## Properties
-
-
-### pages
-
-
-
-```php
-private \BigCommerce\Pages\Required_Page[] $pages
-```
-
-
-
-
-
-
-***
 
 ## Methods
 

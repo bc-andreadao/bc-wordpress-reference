@@ -53,60 +53,6 @@ and event listeners for tracking various interactions such as add-to-cart and pr
 
 ***
 
-### providers
-
-Register analytics providers
-
-```php
-private providers(\Pimple\Container $container): void
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$container` | **\Pimple\Container** |  |
-
-
-
-
-
-***
-
-### events
-
-Register analytics events
-
-```php
-private events(\Pimple\Container $container): void
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$container` | **\Pimple\Container** |  |
-
-
-
-
-
-***
-
 
 ***
 > Automatically generated on 2024-12-10

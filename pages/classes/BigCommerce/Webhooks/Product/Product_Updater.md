@@ -16,38 +16,6 @@ applied to all active channels for a product.
 
 
 
-## Properties
-
-
-### catalog
-
-
-
-```php
-private \BigCommerce\Api\v3\Api\CatalogApi $catalog
-```
-
-
-
-
-
-
-***
-
-### channels
-
-
-
-```php
-private \BigCommerce\Api\v3\Api\ChannelsApi $channels
-```
-
-
-
-
-
-
-***
 
 ## Methods
 
@@ -111,67 +79,6 @@ Applies temporary filters to prevent unintended listing updates or deletions dur
 <p>If the API request for product data fails.</p>
 
 - [`ApiException`](../../Api/v3/ApiException.md)
-
-
-
-***
-
-### update_for_channel
-
-Start product update for the specified channel
-
-```php
-private update_for_channel(\BigCommerce\Api\v3\Model\Product $product, \WP_Term $channel): void
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$product` | **\BigCommerce\Api\v3\Model\Product** |  |
-| `$channel` | **\WP_Term** |  |
-
-
-
-
-**Throws:**
-
-- [`ApiException`](../../Api/v3/ApiException.md)
-
-
-
-***
-
-### get_listing_id
-
-Find the listing ID associated with the product
-
-```php
-private get_listing_id(int $product_id, \WP_Term $channel): int
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$product_id` | **int** |  |
-| `$channel` | **\WP_Term** |  |
-
-
 
 
 

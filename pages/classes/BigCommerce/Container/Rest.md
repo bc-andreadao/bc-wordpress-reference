@@ -39,25 +39,6 @@ Provides RESTful controllers and endpoints for BigCommerce integration.
 |`COUPON_CODE_BASE`|public|string|&#039;rest.coupon_code_base&#039;|
 |`COUPON_CODE`|public|string|&#039;rest.coupon_code&#039;|
 
-## Properties
-
-
-### version
-
-The version of the REST API used by the container. It is referenced when setting up the
-`VERSION` service in the container, ensuring that the API version can be applied to the various API endpoints
-and controllers.
-
-```php
-private string $version
-```
-
-
-
-
-
-
-***
 
 ## Methods
 

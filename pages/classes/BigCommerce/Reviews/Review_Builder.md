@@ -10,23 +10,6 @@
 
 
 
-## Properties
-
-
-### data
-
-
-
-```php
-private $data
-```
-
-
-
-
-
-
-***
 
 ## Methods
 

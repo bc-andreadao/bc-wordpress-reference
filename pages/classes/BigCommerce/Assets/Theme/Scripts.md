@@ -11,68 +11,6 @@ conditional script loading based on page type, and localization of JavaScript da
 
 
 
-## Properties
-
-
-### directory
-
-
-
-```php
-private string $directory
-```
-
-
-
-
-
-
-***
-
-### version
-
-
-
-```php
-private string $version
-```
-
-
-
-
-
-
-***
-
-### config
-
-
-
-```php
-private \BigCommerce\Assets\Theme\JS_Config $config
-```
-
-
-
-
-
-
-***
-
-### localization
-
-
-
-```php
-private \BigCommerce\Assets\Theme\JS_Localization $localization
-```
-
-
-
-
-
-
-***
 
 ## Methods
 

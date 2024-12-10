@@ -55,54 +55,6 @@ The modified menu item object.
 
 ***
 
-### should_show_cart_count
-
-
-
-```php
-private should_show_cart_count(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
-### is_cart_menu_item
-
-
-
-```php
-private is_cart_menu_item(mixed $menu_item): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$menu_item` | **mixed** |  |
-
-
-
-
-
-***
-
 
 ***
 > Automatically generated on 2024-12-10

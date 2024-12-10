@@ -239,54 +239,6 @@ public handle_submission(): void
 
 ***
 
-### handle_errors
-
-
-
-```php
-private handle_errors(\WP_Error $errors): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$errors` | **\WP_Error** |  |
-
-
-
-
-
-***
-
-### get_video
-
-
-
-```php
-private get_video(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
 
 ## Inherited methods
 

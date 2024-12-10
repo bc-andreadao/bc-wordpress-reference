@@ -48,60 +48,6 @@ public handle_request(array $submission): void
 
 ***
 
-### should_handle_request
-
-
-
-```php
-private should_handle_request(mixed $submission): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$submission` | **mixed** |  |
-
-
-
-
-
-***
-
-### validate_submission
-
-
-
-```php
-private validate_submission(mixed $submission): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$submission` | **mixed** |  |
-
-
-
-
-
-***
-
 
 ***
 > Automatically generated on 2024-12-10

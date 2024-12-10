@@ -54,21 +54,6 @@ protected string $shortcode
 
 ***
 
-### shortcode_rest_controller
-
-
-
-```php
-private \BigCommerce\Rest\Product_Component_Shortcode_Controller $shortcode_rest_controller
-```
-
-
-
-
-
-
-***
-
 ## Methods
 
 

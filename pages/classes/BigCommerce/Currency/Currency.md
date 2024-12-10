@@ -102,27 +102,6 @@ public set_currency_code_cookie(string $currency_code): void
 
 ***
 
-### enabled_currencies
-
-
-
-```php
-private enabled_currencies(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
 ### get_channel_aware_currencies
 
 Retrieves channel-aware currencies for the current store or channel.

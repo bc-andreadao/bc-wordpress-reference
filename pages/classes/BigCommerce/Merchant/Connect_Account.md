@@ -15,23 +15,6 @@
 |:---------|:-----------|:-----|:------|
 |`CONNECT_ACTION`|public| |&#039;bigcommerce_connect_account&#039;|
 
-## Properties
-
-
-### onboarding
-
-
-
-```php
-private \BigCommerce\Merchant\Onboarding_Api $onboarding
-```
-
-
-
-
-
-
-***
 
 ## Methods
 
@@ -96,29 +79,6 @@ public connect_account_url(string $url): string
 
 ```php
 public connect_account(): void
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
-### generate_guid
-
-Create a random GUID to use as a store identifier when
-connecting to an existing store where we don't know its
-store ID.
-
-```php
-private generate_guid(): string
 ```
 
 

@@ -71,34 +71,6 @@ public menu_select(mixed $args): void
 
 ***
 
-### default_menu_selection
-
-Identify which nav menu to select by default. Try to make an
-intelligent guess based on what's available.
-
-```php
-private default_menu_selection(array $menus): int
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$menus` | **array** |  |
-
-
-
-
-
-***
-
 ### items_select
 
 Render the checkboxes for the menu item choices

@@ -20,53 +20,6 @@
 |`OPTION_CART_PAGE_ID`|public| |\BigCommerce\Pages\Cart_Page::NAME|
 |`OPTION_EMBEDDED_CHECKOUT`|public| |&#039;bigcommerce_enable_embedded_checkout&#039;|
 
-## Properties
-
-
-### cart_page
-
-
-
-```php
-private $cart_page
-```
-
-
-
-
-
-
-***
-
-### checkout_page
-
-
-
-```php
-private $checkout_page
-```
-
-
-
-
-
-
-***
-
-### checkout_complete_page
-
-
-
-```php
-private $checkout_complete_page
-```
-
-
-
-
-
-
-***
 
 ## Methods
 

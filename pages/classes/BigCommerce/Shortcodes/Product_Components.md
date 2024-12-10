@@ -70,49 +70,6 @@ public render(mixed $attributes, mixed $instance): string
 
 ***
 
-### product_not_found
-
-If a product cannot be found, display a message
-in place of the requested component
-
-```php
-private product_not_found(): string
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
-### image_size
-
-
-
-```php
-private image_size(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
 
 ***
 > Automatically generated on 2024-12-10

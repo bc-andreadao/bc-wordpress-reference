@@ -10,23 +10,6 @@ Responsible for coordinating the sequence of import tasks
 
 
 
-## Properties
-
-
-### tasks
-
-
-
-```php
-private \BigCommerce\Import\Task_Definition[][] $tasks
-```
-
-
-
-
-
-
-***
 
 ## Methods
 

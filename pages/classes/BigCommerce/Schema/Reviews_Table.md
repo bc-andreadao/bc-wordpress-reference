@@ -75,33 +75,6 @@ public register_tables(): void
 
 ***
 
-### drop_table
-
-
-
-```php
-private drop_table(mixed $table): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$table` | **mixed** |  |
-
-
-
-
-
-***
-
 ### get_table_definition
 
 
@@ -228,33 +201,6 @@ protected get_table_definition(string $table): string
 **Return Value:**
 
 The CREATE TABLE statement, suitable for passing to dbDelta
-
-
-
-
-***
-
-### update_table
-
-Update the schema for the given table
-
-```php
-private update_table(string $table): void
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$table` | **string** | The name of the table to update |
-
 
 
 

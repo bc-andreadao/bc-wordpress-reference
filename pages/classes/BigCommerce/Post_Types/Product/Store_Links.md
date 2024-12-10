@@ -10,23 +10,6 @@
 
 
 
-## Properties
-
-
-### api_factory
-
-
-
-```php
-private \BigCommerce\Api_Factory $api_factory
-```
-
-
-
-
-
-
-***
 
 ## Methods
 
@@ -161,54 +144,6 @@ public modify_edit_product_links_admin_bar(\WP_Admin_Bar $wp_admin_bar): mixed
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | `$wp_admin_bar` | **\WP_Admin_Bar** |  |
-
-
-
-
-
-***
-
-### get_bigcommerce_post_url
-
-Get the URL to edit a post in the BigCommerce admin
-
-```php
-private get_bigcommerce_post_url(\WP_Post $post): string
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$post` | **\WP_Post** |  |
-
-
-
-
-
-***
-
-### get_store_url
-
-Get the base URL for the BigCommerce store admin
-
-```php
-private get_store_url(): string
-```
-
-
-
-
-
-
-
 
 
 

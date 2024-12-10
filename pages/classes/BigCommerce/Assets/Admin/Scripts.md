@@ -10,68 +10,6 @@ Handles the enqueueing and registration of admin scripts and Gutenberg-specific 
 
 
 
-## Properties
-
-
-### directory
-
-
-
-```php
-private string $directory
-```
-
-
-
-
-
-
-***
-
-### version
-
-
-
-```php
-private string $version
-```
-
-
-
-
-
-
-***
-
-### config
-
-
-
-```php
-private \BigCommerce\Assets\Admin\JS_Config $config
-```
-
-
-
-
-
-
-***
-
-### localization
-
-
-
-```php
-private \BigCommerce\Assets\Admin\JS_Localization $localization
-```
-
-
-
-
-
-
-***
 
 ## Methods
 

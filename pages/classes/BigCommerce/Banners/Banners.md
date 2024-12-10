@@ -23,23 +23,6 @@ on the current page context, visibility, and date range.
 |`PAGE_SEARCH`|public|string|&#039;search_page&#039;|
 |`DATE_TYPE_CUSTOM`|public|string|&#039;custom&#039;|
 
-## Properties
-
-
-### banners_api
-
-
-
-```php
-private object $banners_api
-```
-
-
-
-
-
-
-***
 
 ## Methods
 
@@ -150,32 +133,6 @@ The fetched banners are stored in the WordPress transient cache for future use.
 **Return Value:**
 
 The list of banners retrieved from the API or cache.
-
-
-
-
-***
-
-### get_current_page
-
-Determines the current page type.
-
-```php
-private get_current_page(): string
-```
-
-This method checks the WordPress environment to determine the type of page being viewed
-(home, category, brand, search) and returns the corresponding page type constant.
-
-
-
-
-
-
-
-**Return Value:**
-
-The current page type constant (e.g., 'home_page', 'category_page').
 
 
 

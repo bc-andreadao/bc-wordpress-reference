@@ -10,23 +10,6 @@
 
 
 
-## Properties
-
-
-### api
-
-
-
-```php
-private \BigCommerce\Api\v3\Api\CatalogApi $api
-```
-
-
-
-
-
-
-***
 
 ## Methods
 

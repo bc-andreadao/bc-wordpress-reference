@@ -19,21 +19,6 @@ A block to add one or more products into the post content.
 ## Properties
 
 
-### shortcode_rest_controller
-
-The REST controller used for the shortcode.
-
-```php
-private \BigCommerce\Rest\Shortcode_Controller $shortcode_rest_controller
-```
-
-
-
-
-
-
-***
-
 ### shortcode
 
 The shortcode used for this block.

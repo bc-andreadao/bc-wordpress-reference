@@ -42,48 +42,6 @@ public maybe_switch_headless(mixed $old_value, mixed $new_value): void
 
 ***
 
-### start_import
-
-Start usual import process with storing products in WP database
-
-```php
-private start_import(): void
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
-### current_user_can_start_import
-
-
-
-```php
-private current_user_can_start_import(): bool
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
 
 ***
 > Automatically generated on 2024-12-10

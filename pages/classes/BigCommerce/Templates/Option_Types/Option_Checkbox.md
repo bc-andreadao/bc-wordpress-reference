@@ -60,87 +60,6 @@ public get_data(): array
 
 ***
 
-### get_default_value
-
-
-
-```php
-private get_default_value(mixed $config): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$config` | **mixed** |  |
-
-
-
-
-
-***
-
-### get_checkbox_label
-
-
-
-```php
-private get_checkbox_label(mixed $config): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$config` | **mixed** |  |
-
-
-
-
-
-***
-
-### get_checkbox_value
-
-
-
-```php
-private get_checkbox_value(mixed $options): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$options` | **mixed** |  |
-
-
-
-
-
-***
-
 
 ## Inherited methods
 
@@ -299,33 +218,6 @@ public get_data(): array
 
 
 
-
-
-
-
-
-***
-
-### get_template
-
-
-
-```php
-private get_template(string $relative_path): \BigCommerce\Templates\Template
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$relative_path` | **string** |  |
 
 
 

@@ -70,60 +70,6 @@ The rendered error or success messages.
 
 ***
 
-### get_error_message
-
-
-
-```php
-private get_error_message(mixed $key): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$key` | **mixed** |  |
-
-
-
-
-
-***
-
-### get_success_message
-
-
-
-```php
-private get_success_message(mixed $key): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$key` | **mixed** |  |
-
-
-
-
-
-***
-
 
 ***
 > Automatically generated on 2024-12-10

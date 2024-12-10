@@ -10,23 +10,6 @@
 
 
 
-## Properties
-
-
-### api_client
-
-
-
-```php
-private $api_client
-```
-
-
-
-
-
-
-***
 
 ## Methods
 

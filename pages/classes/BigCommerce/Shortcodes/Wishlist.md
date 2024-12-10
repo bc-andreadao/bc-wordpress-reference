@@ -18,23 +18,6 @@
 |`NAME`|public| |&#039;bigcommerce_wish_lists&#039;|
 |`LIST_PARAM`|public| |&#039;list&#039;|
 
-## Properties
-
-
-### wishlists
-
-
-
-```php
-private \BigCommerce\Api\v3\Api\WishlistsApi $wishlists
-```
-
-
-
-
-
-
-***
 
 ## Methods
 
@@ -87,48 +70,6 @@ public render(mixed $attr, mixed $instance): string
 |-----------|------|-------------|
 | `$attr` | **mixed** |  |
 | `$instance` | **mixed** |  |
-
-
-
-
-
-***
-
-### no_customer_template
-
-
-
-```php
-private no_customer_template(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
-### not_found_template
-
-
-
-```php
-private not_found_template(): mixed
-```
-
-
-
-
-
-
-
 
 
 

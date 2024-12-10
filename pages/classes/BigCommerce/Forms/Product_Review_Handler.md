@@ -17,23 +17,6 @@
 |:---------|:-----------|:-----|:------|
 |`ACTION`|public|string|&#039;product-review&#039;|
 
-## Properties
-
-
-### api
-
-
-
-```php
-private \BigCommerce\Api\v3\Api\CatalogApi $api
-```
-
-
-
-
-
-
-***
 
 ## Methods
 
@@ -85,60 +68,6 @@ public handle_request(array $submission): void
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | `$submission` | **array** | The form submission data. |
-
-
-
-
-
-***
-
-### should_handle_request
-
-
-
-```php
-private should_handle_request(mixed $submission): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$submission` | **mixed** |  |
-
-
-
-
-
-***
-
-### validate_submission
-
-
-
-```php
-private validate_submission(mixed $submission): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$submission` | **mixed** |  |
 
 
 

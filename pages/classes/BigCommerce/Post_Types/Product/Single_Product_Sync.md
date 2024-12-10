@@ -51,33 +51,6 @@ Modified list of actions with the "Re-sync" link added.
 
 ***
 
-### get_sync_url
-
-
-
-```php
-private get_sync_url(\WP_Post $post): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$post` | **\WP_Post** |  |
-
-
-
-
-
-***
-
 ### handle_request
 
 Handles the request to sync the product when the sync URL is triggered.
@@ -93,37 +66,6 @@ Verifies the request and synchronizes the product with BigCommerce. Redirects to
 
 
 
-
-
-
-
-***
-
-### sync_product
-
-Syncs the product with BigCommerce.
-
-```php
-private sync_product(int $post_id): \WP_Error
-```
-
-This method triggers the sync process by interacting with BigCommerce's API and webhooks. If an error occurs during the sync, it is captured and returned.
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$post_id` | **int** | The ID of the product post to be synchronized. |
-
-
-**Return Value:**
-
-A WP_Error object containing any errors that occurred during the sync process.
 
 
 

@@ -10,23 +10,6 @@
 
 
 
-## Properties
-
-
-### group_filtered_terms
-
-
-
-```php
-private \BigCommerce\Taxonomies\Product_Category\Group_Filtered_Terms $group_filtered_terms
-```
-
-
-
-
-
-
-***
 
 ## Methods
 
@@ -127,114 +110,6 @@ public maybe_hide_children(mixed $query): mixed
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | `$query` | **mixed** |  |
-
-
-
-
-
-***
-
-### is_product_archive_query
-
-
-
-```php
-private is_product_archive_query(\WP_Query $query): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$query` | **\WP_Query** |  |
-
-
-
-
-
-***
-
-### set_tax_query
-
-
-
-```php
-private set_tax_query(\WP_Query $query): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$query` | **\WP_Query** |  |
-
-
-
-
-
-***
-
-### is_singular_product_query
-
-
-
-```php
-private is_singular_product_query(\WP_Query $query): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$query` | **\WP_Query** |  |
-
-
-
-
-
-***
-
-### set_product_query
-
-
-
-```php
-private set_product_query(\WP_Query $query): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$query` | **\WP_Query** |  |
 
 
 

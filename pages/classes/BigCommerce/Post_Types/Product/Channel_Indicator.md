@@ -69,33 +69,6 @@ public add_message_to_gutenberg_config(array $data): array
 
 ***
 
-### get_channel_name
-
-
-
-```php
-private get_channel_name(mixed $post_id): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$post_id` | **mixed** |  |
-
-
-
-
-
-***
-
 
 ***
 > Automatically generated on 2024-12-10

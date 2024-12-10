@@ -87,48 +87,6 @@ public get_data(): array
 
 ***
 
-### continue_shopping_link_url
-
-
-
-```php
-private continue_shopping_link_url(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
-### continue_shopping_link_text
-
-
-
-```php
-private continue_shopping_link_text(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
 
 ## Inherited methods
 
@@ -287,33 +245,6 @@ public get_data(): array
 * This method is **abstract**.
 
 
-
-
-
-
-
-***
-
-### get_template
-
-
-
-```php
-private get_template(string $relative_path): \BigCommerce\Templates\Template
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$relative_path` | **string** |  |
 
 
 

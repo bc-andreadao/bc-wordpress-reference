@@ -103,33 +103,6 @@ public prevent_publication(array $data, array $postarr): array
 
 ***
 
-### is_unsupported_product
-
-
-
-```php
-private is_unsupported_product(mixed $post_id): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$post_id` | **mixed** |  |
-
-
-
-
-
-***
-
 
 ***
 > Automatically generated on 2024-12-10

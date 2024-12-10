@@ -12,38 +12,6 @@ Formatter class for currency values using PHP's intl extension.
 
 
 
-## Properties
-
-
-### formatter
-
-The NumberFormatter instance for formatting currency values.
-
-```php
-private \NumberFormatter $formatter
-```
-
-
-
-
-
-
-***
-
-### currency
-
-The currency code used for formatting.
-
-```php
-private string $currency
-```
-
-
-
-
-
-
-***
 
 ## Methods
 
@@ -68,27 +36,6 @@ public __construct(string $currency): mixed
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | `$currency` | **string** | The currency code (e.g., USD, EUR). |
-
-
-
-
-
-***
-
-### get_locale
-
-
-
-```php
-private get_locale(): mixed
-```
-
-
-
-
-
-
-
 
 
 

@@ -20,23 +20,6 @@
 |`OPTION_CLIENT_SECRET`|public| |&#039;bigcommerce_client_secret&#039;|
 |`OPTION_ACCESS_TOKEN`|public| |&#039;bigcommerce_access_token&#039;|
 
-## Properties
-
-
-### option_to_env_map
-
-
-
-```php
-private $option_to_env_map
-```
-
-
-
-
-
-
-***
 
 ## Methods
 
@@ -117,38 +100,6 @@ public render_field(mixed $args): void
 
 ***
 
-### disabled_message
-
-Get the message explaining why a field is disabled, or
-false if it is not disabled
-
-```php
-private disabled_message(string $option): bool|string
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$option` | **string** | The name of the option |
-
-
-**Return Value:**
-
-The explanatory message
-
-
-
-
-***
-
 ### render_text
 
 Render the field as a disabled text field without a name. Password
@@ -199,34 +150,6 @@ public filter_option_with_env(bool|mixed $value, string $option, mixed $default)
 | `$value` | **bool&#124;mixed** |  |
 | `$option` | **string** |  |
 | `$default` | **mixed** |  |
-
-
-
-
-
-***
-
-### get_option_from_env
-
-Get the options corresponding environment variable/constant
-value if it is set. Returns false if it is not.
-
-```php
-private get_option_from_env(string $option): bool|string
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$option` | **string** |  |
 
 
 

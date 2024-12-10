@@ -33,38 +33,6 @@
 |`SHOW_ADD_TO_WISHLIST`|public| |&#039;bigcommerce_storefront_show_add_to_wishlist&#039;|
 |`HIDE_PRICE_FROM_GUESTS`|public| |&#039;bigcommerce_storefront_hide_price_from_guests&#039;|
 
-## Properties
-
-
-### api
-
-
-
-```php
-private \BigCommerce\Api\v3\Api\SettingsApi $api
-```
-
-
-
-
-
-
-***
-
-### connections
-
-
-
-```php
-private \BigCommerce\Taxonomies\Channel\Connections $connections
-```
-
-
-
-
-
-
-***
 
 ## Methods
 

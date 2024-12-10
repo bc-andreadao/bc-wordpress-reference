@@ -134,33 +134,6 @@ public get_data(): array
 
 ***
 
-### get_search
-
-
-
-```php
-private get_search(\WP_Query $query): string
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$query` | **\WP_Query** |  |
-
-
-
-
-
-***
-
 ### get_wrapper_classes
 
 
@@ -175,137 +148,6 @@ protected get_wrapper_classes(): string[]
 
 
 
-
-
-
-
-
-***
-
-### is_search_enabled
-
-
-
-```php
-private is_search_enabled(): bool
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
-### get_sort
-
-
-
-```php
-private get_sort(\WP_Query $query): string
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$query` | **\WP_Query** |  |
-
-
-
-
-
-***
-
-### get_filters
-
-
-
-```php
-private get_filters(\WP_Query $query): array
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$query` | **\WP_Query** |  |
-
-
-
-
-
-***
-
-### get_choices
-
-Sorts the categories array nesting child under parent with a preceding '-' for each level
-
-```php
-private get_choices(mixed $parent_id, mixed $terms_by_parent, mixed $depth): array
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$parent_id` | **mixed** |  |
-| `$terms_by_parent` | **mixed** |  |
-| `$depth` | **mixed** |  |
-
-
-
-
-
-***
-
-### get_action
-
-
-
-```php
-private get_action(\WP_Query $query): string|void|\WP_Error
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$query` | **\WP_Query** |  |
 
 
 
@@ -471,33 +313,6 @@ public get_data(): array
 * This method is **abstract**.
 
 
-
-
-
-
-
-***
-
-### get_template
-
-
-
-```php
-private get_template(string $relative_path): \BigCommerce\Templates\Template
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$relative_path` | **string** |  |
 
 
 

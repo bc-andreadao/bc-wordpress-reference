@@ -239,33 +239,6 @@ protected delete_option(string $option): bool
 
 ***
 
-### clear_cache
-
-Clear caches that may be storing the option
-
-```php
-private clear_cache(string $option): void
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$option` | **string** |  |
-
-
-
-
-
-***
-
 ### __construct
 
 Category_Import constructor.
@@ -390,33 +363,6 @@ public run(): mixed
 
 ***
 
-### get_local_term_ids
-
-Get the IDs of all previously imported terms
-
-```php
-private get_local_term_ids(int $page): array
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$page` | **int** |  |
-
-
-
-
-
-***
-
 ### get_remote_term_ids
 
 Get the IDs of all terms found in the API that match
@@ -445,123 +391,6 @@ protected get_remote_term_ids(int[] $ids): int[]
 **Throws:**
 
 - [`ApiException`](../../Api/v3/ApiException.md)
-
-
-
-***
-
-### get_page
-
-
-
-```php
-private get_page(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
-### set_page
-
-
-
-```php
-private set_page(mixed $page): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$page` | **mixed** |  |
-
-
-
-
-
-***
-
-### get_state
-
-
-
-```php
-private get_state(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
-### set_state
-
-
-
-```php
-private set_state(array $state): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$state` | **array** |  |
-
-
-
-
-
-***
-
-### clear_state
-
-
-
-```php
-private clear_state(): mixed
-```
-
-
-
-
-
-
-
-
-
 
 
 

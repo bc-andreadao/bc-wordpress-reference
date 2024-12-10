@@ -86,33 +86,6 @@ public get_data(): array
 
 ***
 
-### get_the_content
-
-
-
-```php
-private get_the_content(mixed $post_id): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$post_id` | **mixed** |  |
-
-
-
-
-
-***
-
 
 ## Inherited methods
 
@@ -271,33 +244,6 @@ public get_data(): array
 * This method is **abstract**.
 
 
-
-
-
-
-
-***
-
-### get_template
-
-
-
-```php
-private get_template(string $relative_path): \BigCommerce\Templates\Template
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$relative_path` | **string** |  |
 
 
 

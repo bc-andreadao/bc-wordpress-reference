@@ -45,27 +45,6 @@ Args to pass to a WP Query based on the shortcode attributes
 
 ***
 
-### per_page_default
-
-
-
-```php
-private per_page_default(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
 ### map_rest_args_to_query
 
 

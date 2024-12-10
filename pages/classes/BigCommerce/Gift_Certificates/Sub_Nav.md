@@ -49,48 +49,6 @@ The content with the sub-navigation added if the page is a gift certificate page
 
 ***
 
-### get_subnav
-
-
-
-```php
-private get_subnav(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
-### get_links
-
-
-
-```php
-private get_links(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
 
 ***
 > Automatically generated on 2024-12-10

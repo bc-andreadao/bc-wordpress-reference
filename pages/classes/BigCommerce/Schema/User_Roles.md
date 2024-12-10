@@ -29,21 +29,6 @@ protected int $schema_version
 
 ***
 
-### roles
-
-
-
-```php
-private array $roles
-```
-
-
-
-
-
-
-***
-
 ## Methods
 
 

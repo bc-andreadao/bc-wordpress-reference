@@ -37,37 +37,6 @@ The code below is an example of structure. Check the readme js section for more 
 
 ***
 
-### kses_strings
-
-Recursively sanitize all the strings with wp_kses
-
-```php
-private kses_strings(string[]|string $strings): array|string
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$strings` | **string[]&#124;string** | The strings to sanitize. |
-
-
-**Return Value:**
-
-The sanitized strings.
-
-
-
-
-***
-
 
 ***
 > Automatically generated on 2024-12-10

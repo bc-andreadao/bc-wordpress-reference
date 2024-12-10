@@ -112,87 +112,6 @@ The rendered template
 
 ***
 
-### get_status
-
-
-
-```php
-private get_status(\BigCommerce\Post_Types\Product\Product $product): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$product` | **\BigCommerce\Post_Types\Product\Product** |  |
-
-
-
-
-
-***
-
-### get_label
-
-
-
-```php
-private get_label(\BigCommerce\Post_Types\Product\Product $product): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$product` | **\BigCommerce\Post_Types\Product\Product** |  |
-
-
-
-
-
-***
-
-### should_show_inventory
-
-
-
-```php
-private should_show_inventory(\BigCommerce\Post_Types\Product\Product $product): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$product` | **\BigCommerce\Post_Types\Product\Product** |  |
-
-
-
-
-
-***
-
 
 ## Inherited methods
 
@@ -351,33 +270,6 @@ public get_data(): array
 * This method is **abstract**.
 
 
-
-
-
-
-
-***
-
-### get_template
-
-
-
-```php
-private get_template(string $relative_path): \BigCommerce\Templates\Template
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$relative_path` | **string** |  |
 
 
 

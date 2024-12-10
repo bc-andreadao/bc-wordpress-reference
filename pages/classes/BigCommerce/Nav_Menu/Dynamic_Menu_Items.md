@@ -75,61 +75,6 @@ public insert_dynamic_menu_items(array $items, object $menu, array $args): array
 
 ***
 
-### get_menu_item_children
-
-Get the top-level terms from the taxonomy as menu items
-
-```php
-private get_menu_item_children(object $item): array
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$item` | **object** |  |
-
-
-
-
-
-***
-
-### get_terms_items
-
-
-
-```php
-private get_terms_items(mixed $taxonomy, int $parent): array|int[]|string|string[]|\WP_Error|\WP_Term[]
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$taxonomy` | **mixed** |  |
-| `$parent` | **int** |  |
-
-
-
-
-
-***
-
 
 ***
 > Automatically generated on 2024-12-10

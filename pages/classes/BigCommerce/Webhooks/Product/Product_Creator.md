@@ -10,38 +10,6 @@ This includes fetching product data, managing channel connections, and triggerin
 
 
 
-## Properties
-
-
-### catalog
-
-
-
-```php
-private \BigCommerce\Api\v3\Api\CatalogApi $catalog
-```
-
-
-
-
-
-
-***
-
-### channels
-
-
-
-```php
-private \BigCommerce\Api\v3\Api\ChannelsApi $channels
-```
-
-
-
-
-
-
-***
 
 ## Methods
 
@@ -99,96 +67,6 @@ Handles the entire product creation process, including:
 | `$product_id` | **int** | The ID of the product to create. |
 
 
-
-
-
-***
-
-### handle_product_creation
-
-Check if channel exists, adds listings to product and start product import
-
-```php
-private handle_product_creation(mixed $product, \WP_Term $channel): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$product` | **mixed** |  |
-| `$channel` | **\WP_Term** |  |
-
-
-
-
-
-***
-
-### do_import
-
-Run product import
-
-```php
-private do_import(mixed $product, mixed $listing, mixed $channel): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$product` | **mixed** |  |
-| `$listing` | **mixed** |  |
-| `$channel` | **mixed** |  |
-
-
-
-
-
-***
-
-### create_new_product_listings
-
-Create new Listing for the product. By default, listing doesn't exist on the product
-
-```php
-private create_new_product_listings(mixed $product, mixed $channel_id): \BigCommerce\Api\v3\Model\ListingCollectionResponse
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$product` | **mixed** |  |
-| `$channel_id` | **mixed** |  |
-
-
-
-
-**Throws:**
-
-- [`ApiException`](../../Api/v3/ApiException.md)
 
 
 

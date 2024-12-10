@@ -10,38 +10,6 @@ Handles the enqueueing and registration of admin and Gutenberg-specific CSS styl
 
 
 
-## Properties
-
-
-### directory
-
-
-
-```php
-private string $directory
-```
-
-
-
-
-
-
-***
-
-### version
-
-
-
-```php
-private string $version
-```
-
-
-
-
-
-
-***
 
 ## Methods
 

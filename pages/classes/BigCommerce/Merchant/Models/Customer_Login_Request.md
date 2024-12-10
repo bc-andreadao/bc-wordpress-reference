@@ -12,53 +12,6 @@
 
 
 
-## Properties
-
-
-### store_hash
-
-
-
-```php
-private string $store_hash
-```
-
-
-
-
-
-
-***
-
-### redirect_to
-
-
-
-```php
-private string $redirect_to
-```
-
-
-
-
-
-
-***
-
-### channel_id
-
-
-
-```php
-private int $channel_id
-```
-
-
-
-
-
-
-***
 
 ## Methods
 

@@ -11,23 +11,6 @@ Register build docs command and related functionality
 
 
 
-## Properties
-
-
-### plugin_dir
-
-
-
-```php
-private string $plugin_dir
-```
-
-
-
-
-
-
-***
 
 ## Methods
 
@@ -163,53 +146,6 @@ public run(array $args, array $assoc_args): void
 <p>If there is an issue during execution.</p>
 
 - [`ExitException`](../../../WP_CLI/ExitException.md)
-
-
-
-***
-
-### get_data
-
-Get a list of files and parse files with wp-parser
-
-```php
-private get_data(): array|void
-```
-
-
-
-
-
-
-
-
-
-
-
-**Throws:**
-
-- [`ExitException`](../../../WP_CLI/ExitException.md)
-
-
-
-***
-
-### collect_files
-
-Get a recursive list of files for plugin
-
-```php
-private collect_files(): array|\WP_Error
-```
-
-
-
-
-
-
-
-
-
 
 
 

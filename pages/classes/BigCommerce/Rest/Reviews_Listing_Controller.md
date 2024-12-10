@@ -11,38 +11,6 @@
 
 
 
-## Properties
-
-
-### fetcher
-
-
-
-```php
-private \BigCommerce\Reviews\Review_Fetcher $fetcher
-```
-
-
-
-
-
-
-***
-
-### cache_handler
-
-
-
-```php
-private \BigCommerce\Cache\Cache_Handler $cache_handler
-```
-
-
-
-
-
-
-***
 
 ## Methods
 
@@ -197,36 +165,6 @@ public get_rendered_item(\WP_REST_Request $request): \WP_REST_Response|\WP_Error
 **Return Value:**
 
 Response object on success, or WP_Error object on failure.
-
-
-
-
-***
-
-### next_page_url
-
-
-
-```php
-private next_page_url(mixed $post_id, mixed $per_page, mixed $current_page, mixed $max_pages): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$post_id` | **mixed** |  |
-| `$per_page` | **mixed** |  |
-| `$current_page` | **mixed** |  |
-| `$max_pages` | **mixed** |  |
-
 
 
 

@@ -56,48 +56,6 @@ The generated JWT login token.
 
 ***
 
-### get_server_time
-
-Return server time in unix timestamp
-
-```php
-private get_server_time(): int|mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
-### update_server_time
-
-Update server time from /time endpoint. If it is not possible set current unix timestamp.
-
-```php
-private update_server_time(): int
-```
-
-Determine time offset between BC api result and current server time
-
-
-
-
-
-
-
-
-
-
-***
-
 ### get_analytics_settings
 
 Return the list of store analytics settings.

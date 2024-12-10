@@ -40,27 +40,6 @@ The result of the parent import process.
 
 ***
 
-### create_default_post
-
-
-
-```php
-private create_default_post(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
 ### get_post_array
 
 Retrieves the array of post data to be saved in the WordPress database.

@@ -21,38 +21,6 @@ cleaning up queued tasks, and flushing cache related to products and customer gr
 |`CLEAN_PRODUCTS_TRANSIENT`|public|string|&#039;bigcommerce_products_transient_clean&#039;|
 |`CLEAN_POSTS_PER_PAGE`|public|int|25|
 
-## Properties
-
-
-### batch
-
-
-
-```php
-private int $batch
-```
-
-
-
-
-
-
-***
-
-### cache_handler
-
-
-
-```php
-private \BigCommerce\Cache\Cache_Handler $cache_handler
-```
-
-
-
-
-
-
-***
 
 ## Methods
 
@@ -107,33 +75,6 @@ and cleaning up user transients. It also schedules additional cleanup tasks if n
 |-----------|------|-------------|
 | `$abort` | **bool** | Whether to abort the cleanup process. |
 | `$pre_import` | **bool** | Whether this cleanup is before or after the import. |
-
-
-
-
-
-***
-
-### clean_tasks
-
-Clean Queue_Task::NAME posts before or after the import process.
-
-```php
-private clean_tasks(bool $pre_import = false): mixed
-```
-
-This method removes posts of type `Queue_Task` from the database, either before or after the import process.
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$pre_import` | **bool** | Whether to clean tasks before the import. |
 
 
 

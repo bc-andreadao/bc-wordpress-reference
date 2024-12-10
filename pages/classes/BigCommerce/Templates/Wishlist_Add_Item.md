@@ -134,61 +134,6 @@ public get_data(): array
 
 ***
 
-### build_links
-
-
-
-```php
-private build_links(int $product_id, \BigCommerce\Accounts\Wishlists\Wishlist[] $wishlists): array
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$product_id` | **int** |  |
-| `$wishlists` | **\BigCommerce\Accounts\Wishlists\Wishlist[]** |  |
-
-
-
-
-
-***
-
-### create_list_form
-
-
-
-```php
-private create_list_form(mixed $product_id): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$product_id` | **mixed** |  |
-
-
-
-
-
-***
-
 
 ## Inherited methods
 
@@ -347,33 +292,6 @@ public get_data(): array
 * This method is **abstract**.
 
 
-
-
-
-
-
-***
-
-### get_template
-
-
-
-```php
-private get_template(string $relative_path): \BigCommerce\Templates\Template
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$relative_path` | **string** |  |
 
 
 

@@ -85,27 +85,6 @@ Runs at priority 5, before the ajax response handler
 
 ***
 
-### schedule_next
-
-
-
-```php
-private schedule_next(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
 
 ***
 > Automatically generated on 2024-12-10

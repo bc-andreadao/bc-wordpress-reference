@@ -133,87 +133,6 @@ public get_data(): array
 
 ***
 
-### render_products
-
-
-
-```php
-private render_products(\BigCommerce\Accounts\Wishlists\Wishlist $wishlist): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$wishlist` | **\BigCommerce\Accounts\Wishlists\Wishlist** |  |
-
-
-
-
-
-***
-
-### render_breadcrumb
-
-
-
-```php
-private render_breadcrumb(\BigCommerce\Accounts\Wishlists\Wishlist $wishlist): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$wishlist` | **\BigCommerce\Accounts\Wishlists\Wishlist** |  |
-
-
-
-
-
-***
-
-### render_header
-
-
-
-```php
-private render_header(\BigCommerce\Accounts\Wishlists\Wishlist $wishlist): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$wishlist` | **\BigCommerce\Accounts\Wishlists\Wishlist** |  |
-
-
-
-
-
-***
-
 
 ## Inherited methods
 
@@ -372,33 +291,6 @@ public get_data(): array
 * This method is **abstract**.
 
 
-
-
-
-
-
-***
-
-### get_template
-
-
-
-```php
-private get_template(string $relative_path): \BigCommerce\Templates\Template
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$relative_path` | **string** |  |
 
 
 

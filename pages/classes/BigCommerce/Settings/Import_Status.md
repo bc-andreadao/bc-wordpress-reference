@@ -16,23 +16,6 @@ Displays the import status on the settings page after the import button
 |`AJAX_ACTION_IMPORT_STATUS`|public| |&#039;bigcommerce_import_status&#039;|
 |`IMPORT_TOTAL_PRODUCTS`|public| |&#039;bigcommerce_import_total_products&#039;|
 
-## Properties
-
-
-### manager
-
-
-
-```php
-private \BigCommerce\Import\Task_Manager $manager
-```
-
-
-
-
-
-
-***
 
 ## Methods
 
@@ -170,108 +153,6 @@ public ajax_current_status(): void
 
 ***
 
-### current_status
-
-
-
-```php
-private current_status(): array
-```
-
-
-
-
-
-
-
-
-
-**Return Value:**
-
-The message describing the current import and the status string
-
-
-
-
-***
-
-### get_current_task
-
-Get task by state. Return NULL if task is not found
-
-```php
-private get_current_task(mixed $state): \BigCommerce\Import\Task_Definition|null
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$state` | **mixed** |  |
-
-
-
-
-
-***
-
-### previous_status
-
-
-
-```php
-private previous_status(): array
-```
-
-
-
-
-
-
-
-
-
-**Return Value:**
-
-The message describing the previous import and the status string
-
-
-
-
-***
-
-### next_status
-
-
-
-```php
-private next_status(): array
-```
-
-
-
-
-
-
-
-
-
-**Return Value:**
-
-The message describing the next import and the status string
-
-
-
-
-***
-
 ### cache_queue_size
 
 Cache the current size of the import queue.
@@ -282,52 +163,6 @@ public cache_queue_size(): void
 
 This allows us to show progress as the queue
 diminishes.
-
-
-
-
-
-
-
-
-
-
-***
-
-### get_remaining_in_queue
-
-
-
-```php
-private get_remaining_in_queue(): int
-```
-
-
-
-
-
-
-
-
-
-**Return Value:**
-
-The number of records remaining in the import queue
-
-
-
-
-***
-
-### get_timezone_string
-
-
-
-```php
-private get_timezone_string(): mixed
-```
-
-
 
 
 

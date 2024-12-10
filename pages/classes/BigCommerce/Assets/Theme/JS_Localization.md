@@ -42,33 +42,6 @@ The localization data for JavaScript.
 
 ***
 
-### kses_strings
-
-Recursively sanitize all the strings with wp_kses
-
-```php
-private kses_strings(string[]|string $strings): array|string
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$strings` | **string[]&#124;string** |  |
-
-
-
-
-
-***
-
 
 ***
 > Automatically generated on 2024-12-10

@@ -17,23 +17,6 @@
 |:---------|:-----------|:-----|:------|
 |`NAME`|public| |&#039;bigcommerce_gift_form&#039;|
 
-## Properties
-
-
-### api
-
-
-
-```php
-private \BigCommerce\Api\Marketing_Api $api
-```
-
-
-
-
-
-
-***
 
 ## Methods
 

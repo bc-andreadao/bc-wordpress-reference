@@ -10,38 +10,6 @@ Handles customer login logic during the checkout process.
 
 
 
-## Properties
-
-
-### onboarding
-
-
-
-```php
-private \BigCommerce\Merchant\Onboarding_Api $onboarding
-```
-
-
-
-
-
-
-***
-
-### store
-
-
-
-```php
-private \BigCommerce\Api\Store_Api $store
-```
-
-
-
-
-
-
-***
 
 ## Methods
 
@@ -100,48 +68,6 @@ or uses custom API credentials, it generates a login token for the customer.
 **Return Value:**
 
 The updated checkout URL with the login token appended.
-
-
-
-
-***
-
-### get_store_hash
-
-Get the store hash from the API URL
-
-```php
-private get_store_hash(): string
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
-### get_channel_id
-
-Get current channel id
-
-```php
-private get_channel_id(): int
-```
-
-
-
-
-
-
-
-
 
 
 

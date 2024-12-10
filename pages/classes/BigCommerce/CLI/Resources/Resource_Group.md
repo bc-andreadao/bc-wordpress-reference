@@ -12,38 +12,6 @@ Implements the JsonSerializable interface to allow conversion to JSON.
 
 
 
-## Properties
-
-
-### label
-
-
-
-```php
-private string $label
-```
-
-
-
-
-
-
-***
-
-### resources
-
-
-
-```php
-private resource[] $resources
-```
-
-
-
-
-
-
-***
 
 ## Methods
 

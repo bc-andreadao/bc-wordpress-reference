@@ -11,38 +11,6 @@ country data into JavaScript configuration arrays.
 
 
 
-## Properties
-
-
-### data_file
-
-
-
-```php
-private $data_file
-```
-
-
-
-
-
-
-***
-
-### data
-
-
-
-```php
-private $data
-```
-
-
-
-
-
-
-***
 
 ## Methods
 
@@ -94,28 +62,6 @@ and returns the data as an array.
 **Return Value:**
 
 The list of countries loaded from the JSON file.
-
-
-
-
-***
-
-### load_data
-
-Load country data from the JSON file.
-
-```php
-private load_data(): void
-```
-
-If the country data hasn't already been loaded, this method loads it from the specified
-JSON file and decodes it into an array.
-
-
-
-
-
-
 
 
 

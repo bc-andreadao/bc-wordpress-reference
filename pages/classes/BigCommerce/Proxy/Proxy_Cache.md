@@ -23,51 +23,9 @@ Proxy_Cache class
 |`CACHE_TTL`|public| |10 * MINUTE_IN_SECONDS|
 |`GENERATION_KEY_LENGTH`|public| |5|
 
-## Properties
-
-
-### generations
-
-Generation keys requested on the current pageload.
-
-```php
-private array $generations
-```
-
-
-
-
-
-
-***
 
 ## Methods
 
-
-### get_paths
-
-Provides an array of the endpoint paths.
-
-```php
-private get_paths(): array
-```
-
-
-
-
-
-
-
-
-
-**Return Value:**
-
-Endpoint paths.
-
-
-
-
-***
 
 ### __construct
 

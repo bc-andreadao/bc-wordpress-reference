@@ -11,38 +11,6 @@ such as creating, updating, or ignoring a term based on its existing data in Wor
 
 
 
-## Properties
-
-
-### bc_term
-
-
-
-```php
-private \ArrayAccess $bc_term
-```
-
-
-
-
-
-
-***
-
-### taxonomy
-
-
-
-```php
-private string $taxonomy
-```
-
-
-
-
-
-
-***
 
 ## Methods
 
@@ -94,58 +62,6 @@ The strategy is selected based on whether the term exists and whether it needs t
 **Return Value:**
 
 The selected strategy for handling the term import.
-
-
-
-
-***
-
-### get_matching_term
-
-Find an existing term based on the same BigCommerce product
-
-```php
-private get_matching_term(): int
-```
-
-
-
-
-
-
-
-
-
-**Return Value:**
-
-The WordPress term ID, or 0 if not found
-
-
-
-
-***
-
-### needs_refresh
-
-
-
-```php
-private needs_refresh(mixed $term_id): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$term_id` | **mixed** |  |
-
 
 
 

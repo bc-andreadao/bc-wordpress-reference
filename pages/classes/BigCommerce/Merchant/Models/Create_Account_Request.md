@@ -12,68 +12,6 @@
 
 
 
-## Properties
-
-
-### secret_key
-
-
-
-```php
-private string $secret_key
-```
-
-
-
-
-
-
-***
-
-### store_name
-
-
-
-```php
-private string $store_name
-```
-
-
-
-
-
-
-***
-
-### store_url
-
-
-
-```php
-private string $store_url
-```
-
-
-
-
-
-
-***
-
-### contact
-
-
-
-```php
-private \BigCommerce\Merchant\Models\Account_Contact $contact
-```
-
-
-
-
-
-
-***
 
 ## Methods
 

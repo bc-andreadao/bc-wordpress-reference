@@ -64,27 +64,6 @@ public do_not_cache(): void
 
 ***
 
-### cart_shortcode
-
-
-
-```php
-private cart_shortcode(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
 
 ***
 > Automatically generated on 2024-12-10

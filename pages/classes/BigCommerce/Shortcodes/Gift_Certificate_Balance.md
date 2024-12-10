@@ -17,23 +17,6 @@
 |:---------|:-----------|:-----|:------|
 |`NAME`|public| |&#039;bigcommerce_gift_balance&#039;|
 
-## Properties
-
-
-### api
-
-
-
-```php
-private \BigCommerce\Api\Marketing_Api $api
-```
-
-
-
-
-
-
-***
 
 ## Methods
 
@@ -86,33 +69,6 @@ public render(mixed $attr, mixed $instance): string
 |-----------|------|-------------|
 | `$attr` | **mixed** |  |
 | `$instance` | **mixed** |  |
-
-
-
-
-
-***
-
-### get_balance
-
-
-
-```php
-private get_balance(mixed $code): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$code` | **mixed** |  |
 
 
 

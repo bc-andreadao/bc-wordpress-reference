@@ -43,34 +43,6 @@ public handle_request(int $customer_id, array $channel_ids = []): bool
 
 ***
 
-### handle_customer_id_update
-
-Set customer id
-
-```php
-private handle_customer_id_update(mixed $user_id, mixed $customer_id): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$user_id` | **mixed** |  |
-| `$customer_id` | **mixed** |  |
-
-
-
-
-
-***
-
 
 ## Inherited methods
 

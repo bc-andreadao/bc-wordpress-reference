@@ -40,33 +40,6 @@ public run(): mixed
 
 ***
 
-### is_allowed_status
-
-Is process has allowed status
-
-```php
-private is_allowed_status(mixed $status): bool
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$status` | **mixed** |  |
-
-
-
-
-
-***
-
 
 ***
 > Automatically generated on 2024-12-10

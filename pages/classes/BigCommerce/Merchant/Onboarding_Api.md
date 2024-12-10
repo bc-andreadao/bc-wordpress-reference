@@ -17,38 +17,6 @@
 |`ACCOUNT_ID`|public| |&#039;bigcommerce_account_id&#039;|
 |`STORE_ID`|public| |&#039;bigcommerce_store_id&#039;|
 
-## Properties
-
-
-### base_url
-
-
-
-```php
-private string $base_url
-```
-
-
-
-
-
-
-***
-
-### timeout
-
-
-
-```php
-private $timeout
-```
-
-
-
-
-
-
-***
 
 ## Methods
 
@@ -156,37 +124,6 @@ public status(mixed $store_id): mixed
 |-----------|------|-------------|
 | `$store_id` | **mixed** |  |
 
-
-
-
-
-***
-
-### build_auth_token
-
-Build the auth token to make an authenticated request to the connector API
-
-```php
-private build_auth_token(mixed $store_id): string
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$store_id` | **mixed** |  |
-
-
-**Return Value:**
-
-The auth token, a JWT
 
 
 

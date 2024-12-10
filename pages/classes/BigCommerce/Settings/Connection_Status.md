@@ -16,38 +16,6 @@
 |`STATUS_CACHE`|public| |&#039;bigcommerce_connection_status&#039;|
 |`STATUS_CACHE_TTL`|public| |60|
 
-## Properties
-
-
-### client
-
-
-
-```php
-private \BigCommerce\Api\v3\Api\CatalogApi $client
-```
-
-
-
-
-
-
-***
-
-### configuration_status
-
-
-
-```php
-private $configuration_status
-```
-
-
-
-
-
-
-***
 
 ## Methods
 
@@ -122,27 +90,6 @@ public render_status(): mixed
 
 ***
 
-### get_api_status
-
-
-
-```php
-private get_api_status(): string
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
 ### credentials_required_notice
 
 Display a notice if all required credentials are not set.
@@ -164,55 +111,6 @@ public credentials_required_notice(\BigCommerce\Settings\Screens\Abstract_Screen
 |-----------|------|-------------|
 | `$target_screen` | **\BigCommerce\Settings\Screens\Abstract_Screen** | Settings screen the link will point to |
 | `$excluded_screens` | **string[]** | Settings screen IDs that should not show the notice |
-
-
-
-
-
-***
-
-### connection_success_message
-
-
-
-```php
-private connection_success_message(): string
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
-### connection_failed_message
-
-
-
-```php
-private connection_failed_message(mixed $show_notice = false, \Exception $e = null): string
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$show_notice` | **mixed** |  |
-| `$e` | **\Exception** |  |
 
 
 

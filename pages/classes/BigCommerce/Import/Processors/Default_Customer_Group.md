@@ -15,23 +15,6 @@
 |:---------|:-----------|:-----|:------|
 |`DEFAULT_GROUP`|public| |&#039;bigcommerce_customers_default_group&#039;|
 
-## Properties
-
-
-### price_list_api
-
-
-
-```php
-private \BigCommerce\Api\v3\Api\PriceListsApi $price_list_api
-```
-
-
-
-
-
-
-***
 
 ## Methods
 

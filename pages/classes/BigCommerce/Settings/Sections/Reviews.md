@@ -68,27 +68,6 @@ public render_settings_section(mixed $section): mixed
 
 ***
 
-### reviews_url
-
-
-
-```php
-private reviews_url(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
 
 ## Inherited methods
 

@@ -40,53 +40,6 @@
 |`PRICE_RANGE_META_KEY`|public| |&#039;bigcommerce_price_range&#039;|
 |`INVENTORY_META_KEY`|public| |&#039;bigcommerce_inventory_level&#039;|
 
-## Properties
-
-
-### post_id
-
-
-
-```php
-private $post_id
-```
-
-
-
-
-
-
-***
-
-### source_cache
-
-
-
-```php
-private $source_cache
-```
-
-
-
-
-
-
-***
-
-### is_headless
-
-
-
-```php
-private $is_headless
-```
-
-
-
-
-
-
-***
 
 ## Methods
 
@@ -304,27 +257,6 @@ public get_reviews_sum(): mixed
 
 ```php
 public get_reviews_count(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
-### get_product_cache_expiration
-
-
-
-```php
-private get_product_cache_expiration(): mixed
 ```
 
 
@@ -779,60 +711,6 @@ An array of associative arrays, with the properties:
 
 ***
 
-### json_encode_maybe_from_api
-
-
-
-```php
-private json_encode_maybe_from_api(mixed $data): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$data` | **mixed** |  |
-
-
-
-
-
-***
-
-### maybe_serialize_from_api
-
-
-
-```php
-private maybe_serialize_from_api(mixed $data): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$data` | **mixed** |  |
-
-
-
-
-
-***
-
 ### get_gallery_ids
 
 
@@ -1216,33 +1094,6 @@ The IDs of related products
 
 ***
 
-### related_products_by_category
-
-Identify products that share one or more categories with this one
-
-```php
-private related_products_by_category(array $args): int[]
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$args` | **array** | Args to pass to WP_Query |
-
-
-
-
-
-***
-
 ### get_reviews
 
 Get the reviews associated with this product
@@ -1419,36 +1270,6 @@ public static by_product_sku(string $product_sku, \WP_Term|null $channel = null,
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | `$product_sku` | **string** |  |
-| `$channel` | **\WP_Term&#124;null** |  |
-| `$query_args` | **array** |  |
-
-
-
-
-
-***
-
-### by_product_meta
-
-Gets a BigCommerce Product by meta
-
-```php
-private static by_product_meta(string $meta_key, mixed $meta_value, \WP_Term|null $channel = null, array $query_args = []): \BigCommerce\Post_Types\Product\Product|array
-```
-
-
-
-* This method is **static**.
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$meta_key` | **string** |  |
-| `$meta_value` | **mixed** |  |
 | `$channel` | **\WP_Term&#124;null** |  |
 | `$query_args` | **array** |  |
 

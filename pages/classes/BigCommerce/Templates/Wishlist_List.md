@@ -131,54 +131,6 @@ public get_data(): array
 
 ***
 
-### render_list_row
-
-
-
-```php
-private render_list_row(\BigCommerce\Accounts\Wishlists\Wishlist $wishlist): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$wishlist` | **\BigCommerce\Accounts\Wishlists\Wishlist** |  |
-
-
-
-
-
-***
-
-### create_list_form
-
-
-
-```php
-private create_list_form(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
 
 ## Inherited methods
 
@@ -337,33 +289,6 @@ public get_data(): array
 * This method is **abstract**.
 
 
-
-
-
-
-
-***
-
-### get_template
-
-
-
-```php
-private get_template(string $relative_path): \BigCommerce\Templates\Template
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$relative_path` | **string** |  |
 
 
 

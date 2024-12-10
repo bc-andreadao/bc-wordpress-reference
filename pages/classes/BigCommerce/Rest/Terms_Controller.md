@@ -98,62 +98,6 @@ Response object on success, or WP_Error object on failure.
 
 ***
 
-### get_items_rest
-
-
-
-```php
-private get_items_rest(\Pimple\Container $container, mixed $request_data): \WP_Error|\WP_HTTP_Response|\WP_REST_Response
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$container` | **\Pimple\Container** |  |
-| `$request_data` | **mixed** |  |
-
-
-
-
-
-***
-
-### get_items_graphql
-
-
-
-```php
-private get_items_graphql(\Pimple\Container $container, mixed $request_data): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$container` | **\Pimple\Container** |  |
-| `$request_data` | **mixed** |  |
-
-
-
-
-
-***
-
 ### get_collection_params
 
 Register endpoint params

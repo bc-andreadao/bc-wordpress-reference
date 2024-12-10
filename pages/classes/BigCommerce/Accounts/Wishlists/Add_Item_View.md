@@ -13,23 +13,6 @@ and then allows the user to add a product to an existing wishlist.
 
 
 
-## Properties
-
-
-### wishlists
-
-
-
-```php
-private \BigCommerce\Api\v3\Api\WishlistsApi $wishlists
-```
-
-
-
-
-
-
-***
 
 ## Methods
 
@@ -91,38 +74,6 @@ button to the product single template.
 **Return Value:**
 
 The modified template data with the "Add to Wish List" button included.
-
-
-
-
-***
-
-### get_wishlists
-
-Fetches the customer's wishlists from the API.
-
-```php
-private get_wishlists(int $customer_id): \BigCommerce\Accounts\Wishlists\Wishlist[]
-```
-
-This method retrieves a list of the customer's existing wishlists and returns them as
-an array of Account_Wishlist objects.
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$customer_id` | **int** | The ID of the customer to fetch wishlists for. |
-
-
-**Return Value:**
-
-An array of Account_Wishlist objects representing the customer's wishlists.
 
 
 

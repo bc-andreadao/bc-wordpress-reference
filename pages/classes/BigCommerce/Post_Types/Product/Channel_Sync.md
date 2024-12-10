@@ -10,23 +10,6 @@ Synchronizes changes to the Product state with the BigCommerce Channel
 
 
 
-## Properties
-
-
-### channels
-
-
-
-```php
-private \BigCommerce\Api\v3\Api\ChannelsApi $channels
-```
-
-
-
-
-
-
-***
 
 ## Methods
 
@@ -80,90 +63,6 @@ public post_updated(int $post_id, \WP_Post $post): void
 |-----------|------|-------------|
 | `$post_id` | **int** |  |
 | `$post` | **\WP_Post** |  |
-
-
-
-
-
-***
-
-### get_listing_state
-
-
-
-```php
-private get_listing_state(int $post_id, \BigCommerce\Api\v3\Model\Listing $listing): string
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$post_id` | **int** |  |
-| `$listing` | **\BigCommerce\Api\v3\Model\Listing** |  |
-
-
-
-
-
-***
-
-### get_listing_title
-
-
-
-```php
-private get_listing_title(mixed $post_id, \BigCommerce\Api\v3\Model\Listing $listing): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$post_id` | **mixed** |  |
-| `$listing` | **\BigCommerce\Api\v3\Model\Listing** |  |
-
-
-
-
-
-***
-
-### get_listing_description
-
-
-
-```php
-private get_listing_description(mixed $post_id, \BigCommerce\Api\v3\Model\Listing $listing): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$post_id` | **mixed** |  |
-| `$listing` | **\BigCommerce\Api\v3\Model\Listing** |  |
 
 
 

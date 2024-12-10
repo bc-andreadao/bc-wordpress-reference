@@ -149,34 +149,6 @@ The rendered option and modifier fields for the product
 
 ***
 
-### get_max_quantity
-
-
-
-```php
-private get_max_quantity(mixed $order_max, mixed $inventory): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$order_max` | **mixed** |  |
-| `$inventory` | **mixed** |  |
-
-
-
-
-
-***
-
 
 ## Inherited methods
 
@@ -335,33 +307,6 @@ public get_data(): array
 * This method is **abstract**.
 
 
-
-
-
-
-
-***
-
-### get_template
-
-
-
-```php
-private get_template(string $relative_path): \BigCommerce\Templates\Template
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$relative_path` | **string** |  |
 
 
 

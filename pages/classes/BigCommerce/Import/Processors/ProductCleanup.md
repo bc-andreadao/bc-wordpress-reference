@@ -84,33 +84,6 @@ protected get_terms(): mixed
 
 ***
 
-### get_option_name
-
-
-
-```php
-private get_option_name(mixed $term_id): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$term_id` | **mixed** |  |
-
-
-
-
-
-***
-
 
 ***
 > Automatically generated on 2024-12-10

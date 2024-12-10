@@ -44,33 +44,6 @@ It is called during the registration phase of the container setup.
 
 ***
 
-### import
-
-
-
-```php
-private import(\Pimple\Container $container): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$container` | **\Pimple\Container** |  |
-
-
-
-
-
-***
-
 
 ***
 > Automatically generated on 2024-12-10

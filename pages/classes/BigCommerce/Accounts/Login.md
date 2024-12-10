@@ -15,23 +15,6 @@ This class connects WordPress users to BigCommerce customers, processes customer
 |:---------|:-----------|:-----|:------|
 |`CUSTOMER_ID_META`|public| |&#039;bigcommerce_customer_id&#039;|
 
-## Properties
-
-
-### api_factory
-
-
-
-```php
-private \BigCommerce\Api_Factory $api_factory
-```
-
-
-
-
-
-
-***
 
 ## Methods
 
@@ -85,68 +68,6 @@ public connect_customer_id(string $username, \WP_User $user): void
 | `$username` | **string** |  |
 | `$user` | **\WP_User** |  |
 
-
-
-
-
-***
-
-### find_customer_id_by_email
-
-Find the customer ID associated with the given email address
-
-```php
-private find_customer_id_by_email(string $email): int
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$email` | **string** |  |
-
-
-**Return Value:**
-
-The customer ID, 0 if not found
-
-
-
-
-***
-
-### create_customer_from_user
-
-Create BC customer from wp user
-
-```php
-private create_customer_from_user(\WP_User $user): int
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$user` | **\WP_User** |  |
-
-
-**Return Value:**
-
-The new customer's ID, 0 on failure
 
 
 
@@ -420,34 +341,6 @@ public check_password_for_linked_accounts(bool $match, string $password, string 
 | `$password` | **string** | The plaintext password. |
 | `$hash` | **string** | The hashed password. |
 | `$user_id` | **string&#124;int** | User ID. Can be empty. |
-
-
-
-
-
-***
-
-### delete_user
-
-Delete WP user
-
-```php
-private delete_user(mixed $user_id, mixed $customer_id): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$user_id` | **mixed** |  |
-| `$customer_id` | **mixed** |  |
 
 
 

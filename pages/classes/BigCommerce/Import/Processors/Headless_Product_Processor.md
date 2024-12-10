@@ -17,83 +17,6 @@
 |`HEADLESS_PRODUCTS`|public| |&#039;bigcommerce_gql_products_process&#039;|
 |`HEADLESS_CHANNEL`|public| |&#039;bigcommerce_gql_active_channel&#039;|
 
-## Properties
-
-
-### status
-
-
-
-```php
-private \BigCommerce\Import\Runner\Status $status
-```
-
-
-
-
-
-
-***
-
-### requester
-
-
-
-```php
-private \BigCommerce\GraphQL\GraphQL_Processor $requester
-```
-
-
-
-
-
-
-***
-
-### channel_term
-
-
-
-```php
-private \WP_Term $channel_term
-```
-
-
-
-
-
-
-***
-
-### batch
-
-
-
-```php
-private int|mixed $batch
-```
-
-
-
-
-
-
-***
-
-### api
-
-
-
-```php
-private \BigCommerce\Api\v3\Api\CatalogApi $api
-```
-
-
-
-
-
-
-***
 
 ## Methods
 
@@ -289,88 +212,6 @@ protected save_terms(mixed $edge, mixed $post_id): mixed
 
 ***
 
-### build_terms
-
-
-
-```php
-private build_terms(mixed $categories, mixed $brand_id): array
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$categories` | **mixed** |  |
-| `$brand_id` | **mixed** |  |
-
-
-
-
-
-***
-
-### map_product_categories
-
-
-
-```php
-private map_product_categories(array $bc_category_ids): array
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$bc_category_ids` | **array** |  |
-
-
-
-
-
-***
-
-### map_brand
-
-
-
-```php
-private map_brand(array $bc_brand_ids): array
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$bc_brand_ids` | **array** |  |
-
-
-
-
-
-***
-
 ### is_product_exist
 
 Check if product is already imported
@@ -391,27 +232,6 @@ protected is_product_exist(mixed $product_id): false|int
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | `$product_id` | **mixed** |  |
-
-
-
-
-
-***
-
-### get_option_name
-
-
-
-```php
-private get_option_name(): mixed
-```
-
-
-
-
-
-
-
 
 
 

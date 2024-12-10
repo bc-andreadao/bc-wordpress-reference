@@ -62,27 +62,6 @@ public reset_credentials(): void
 
 ***
 
-### get_reset_url
-
-
-
-```php
-private get_reset_url(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
 
 ***
 > Automatically generated on 2024-12-10

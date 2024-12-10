@@ -48,21 +48,6 @@ protected \Pimple\Container $container
 
 ***
 
-### providers
-
-
-
-```php
-private \BigCommerce\Container\Provider[] $providers
-```
-
-
-
-
-
-
-***
-
 ## Methods
 
 
@@ -126,69 +111,6 @@ public __get(mixed $property): mixed
 
 ```php
 public init(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
-### load_libraries
-
-
-
-```php
-private load_libraries(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
-### load_functions
-
-
-
-```php
-private load_functions(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
-### load_service_providers
-
-
-
-```php
-private load_service_providers(): mixed
 ```
 
 

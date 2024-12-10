@@ -10,38 +10,6 @@ Handle webhook status data. Provides diagnostic data and handle webhook subscrip
 
 
 
-## Properties
-
-
-### hooks
-
-
-
-```php
-private \BigCommerce\Webhooks\Webhook[] $hooks
-```
-
-
-
-
-
-
-***
-
-### api
-
-
-
-```php
-private \BigCommerce\Api\Webhooks_Api $api
-```
-
-
-
-
-
-
-***
 
 ## Methods
 

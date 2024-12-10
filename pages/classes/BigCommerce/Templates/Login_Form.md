@@ -108,48 +108,6 @@ protected get_login_form(): mixed
 
 ***
 
-### get_register_link
-
-
-
-```php
-private get_register_link(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
-### get_message
-
-
-
-```php
-private get_message(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
 
 ## Inherited methods
 
@@ -308,33 +266,6 @@ public get_data(): array
 * This method is **abstract**.
 
 
-
-
-
-
-
-***
-
-### get_template
-
-
-
-```php
-private get_template(string $relative_path): \BigCommerce\Templates\Template
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$relative_path` | **string** |  |
 
 
 

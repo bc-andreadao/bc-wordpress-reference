@@ -91,64 +91,6 @@ public get_data(): array
 
 ***
 
-### get_items
-
-
-
-```php
-private get_items(\Bigcommerce\Api\Resources\Shipment $shipment): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$shipment` | **\Bigcommerce\Api\Resources\Shipment** |  |
-
-
-
-
-
-***
-
-### get_product_post
-
-
-
-```php
-private get_product_post(int $product_id): int
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$product_id` | **int** |  |
-
-
-**Return Value:**
-
-The ID of the WP post associated with the product ID
-
-
-
-
-***
-
 
 ## Inherited methods
 
@@ -307,33 +249,6 @@ public get_data(): array
 * This method is **abstract**.
 
 
-
-
-
-
-
-***
-
-### get_template
-
-
-
-```php
-private get_template(string $relative_path): \BigCommerce\Templates\Template
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$relative_path` | **string** |  |
 
 
 

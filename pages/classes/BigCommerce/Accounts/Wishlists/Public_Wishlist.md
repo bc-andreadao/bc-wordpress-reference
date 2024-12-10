@@ -13,23 +13,6 @@ to show only products in the wishlist, setting the page title, customizing the
 
 
 
-## Properties
-
-
-### wishlist
-
-
-
-```php
-private \BigCommerce\Accounts\Wishlists\Wishlist $wishlist
-```
-
-
-
-
-
-
-***
 
 ## Methods
 

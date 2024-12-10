@@ -12,23 +12,6 @@
 
 
 
-## Properties
-
-
-### limit
-
-
-
-```php
-private int $limit
-```
-
-
-
-
-
-
-***
 
 ## Methods
 
@@ -74,33 +57,6 @@ public run(): mixed
 
 
 
-
-
-
-
-
-***
-
-### regenerate_image
-
-
-
-```php
-private regenerate_image(mixed $post_id): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$post_id` | **mixed** |  |
 
 
 

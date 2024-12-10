@@ -140,33 +140,6 @@ Response object on success, or WP_Error object on failure.
 
 ***
 
-### build_shortcode_string
-
-
-
-```php
-private build_shortcode_string(mixed $args): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$args` | **mixed** |  |
-
-
-
-
-
-***
-
 
 ## Inherited methods
 

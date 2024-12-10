@@ -24,23 +24,6 @@ Sets up a webhook in the BigCommerce API to send event-based requests to the WP 
 |`WEBHOOKS_OPTION`|public| |&#039;bigcommerce_webhooks&#039;|
 |`AUTH_KEY_OPTION`|public| |&#039;bigcommerce_webhook_key&#039;|
 
-## Properties
-
-
-### api_client
-
-
-
-```php
-private \BigCommerce\Api\Webhooks_Api $api_client
-```
-
-
-
-
-
-
-***
 
 ## Methods
 
@@ -246,27 +229,6 @@ public destination(): mixed
 
 ```php
 public scope(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
-### generate_password
-
-
-
-```php
-private generate_password(): mixed
 ```
 
 

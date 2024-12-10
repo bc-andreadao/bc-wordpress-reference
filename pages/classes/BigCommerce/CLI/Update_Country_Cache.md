@@ -14,23 +14,6 @@ Usage: wp bigcommerce countries update --output=/path/to/file.json
 
 
 
-## Properties
-
-
-### default_output_file
-
-
-
-```php
-private $default_output_file
-```
-
-
-
-
-
-
-***
 
 ## Methods
 

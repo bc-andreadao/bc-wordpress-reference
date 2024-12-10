@@ -48,38 +48,6 @@ Filtered menu item with added AMP-specific functionality.
 
 ***
 
-### is_cart_menu_item
-
-Checks whether the given menu item corresponds to the cart page.
-
-```php
-private is_cart_menu_item(object $menu_item): bool
-```
-
-Verifies that the menu item is of type `post_type` and that its object ID matches
-the cart page ID stored in the options.
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$menu_item` | **object** | The menu item object to check. |
-
-
-**Return Value:**
-
-True if the menu item is the cart menu item; false otherwise.
-
-
-
-
-***
-
 
 ***
 > Automatically generated on 2024-12-10

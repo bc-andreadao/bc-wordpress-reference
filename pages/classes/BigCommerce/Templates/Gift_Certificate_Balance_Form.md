@@ -266,33 +266,6 @@ public get_data(): array
 
 ***
 
-### get_template
-
-
-
-```php
-private get_template(string $relative_path): \BigCommerce\Templates\Template
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$relative_path` | **string** |  |
-
-
-
-
-
-***
-
 ### wrap
 
 Wrap the template output in an optional tag. This provides us a mechanism

@@ -10,38 +10,6 @@ Handles customer creation and synchronization with BigCommerce.
 
 
 
-## Properties
-
-
-### factory
-
-
-
-```php
-private \BigCommerce\Api_Factory $factory
-```
-
-
-
-
-
-
-***
-
-### connections
-
-
-
-```php
-private \BigCommerce\Taxonomies\Channel\Connections $connections
-```
-
-
-
-
-
-
-***
 
 ## Methods
 

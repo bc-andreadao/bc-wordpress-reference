@@ -10,38 +10,6 @@
 
 
 
-## Properties
-
-
-### state
-
-
-
-```php
-private int $state
-```
-
-
-
-
-
-
-***
-
-### template_dir
-
-
-
-```php
-private string $template_dir
-```
-
-
-
-
-
-
-***
 
 ## Methods
 
@@ -80,48 +48,6 @@ Render the onboarding progress bar
 
 ```php
 public render(): void
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
-### steps
-
-
-
-```php
-private steps(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
-### connecting_existing_account
-
-
-
-```php
-private connecting_existing_account(): mixed
 ```
 
 

@@ -24,38 +24,6 @@
 |`FACEBOOK_PIXEL_NAME`|public| |&#039;Facebook Pixel&#039;|
 |`GOOGLE_ANALYTICS_NAME`|public| |&#039;Google Analytics&#039;|
 
-## Properties
-
-
-### api
-
-
-
-```php
-private \BigCommerce\Api\Store_Api $api
-```
-
-
-
-
-
-
-***
-
-### api_v3
-
-
-
-```php
-private \BigCommerce\Api\v3\Api\SettingsApi $api_v3
-```
-
-
-
-
-
-
-***
 
 ## Methods
 

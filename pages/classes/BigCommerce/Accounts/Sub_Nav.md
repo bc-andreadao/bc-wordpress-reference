@@ -47,56 +47,6 @@ Filtered content with subnav included if applicable.
 
 ***
 
-### get_subnav
-
-Get and render the sub-navigation menu
-
-```php
-private get_subnav(): string
-```
-
-Renders the sub-navigation links component based on available account pages.
-
-
-
-
-
-
-
-**Return Value:**
-
-The HTML of the sub-navigation menu.
-
-
-
-
-***
-
-### get_links
-
-Get sub-navigation links
-
-```php
-private get_links(): array
-```
-
-Retrieves the links for the account-related pages and formats them for the sub-navigation menu.
-
-
-
-
-
-
-
-**Return Value:**
-
-The list of links to be displayed in the sub-navigation.
-
-
-
-
-***
-
 
 ***
 > Automatically generated on 2024-12-10

@@ -28,21 +28,6 @@ public int $cart_contents_count
 
 ***
 
-### bc_cart_api
-
-The instance of BigCommerce CartApi for interacting with the BigCommerce cart.
-
-```php
-private \BigCommerce\Api\v3\Api\CartApi $bc_cart_api
-```
-
-
-
-
-
-
-***
-
 ## Methods
 
 
@@ -92,69 +77,6 @@ public get_cart_subtotal(): string|int
 **Return Value:**
 
 The formatted subtotal of the cart or 0 if the cart amount is unavailable.
-
-
-
-
-***
-
-### get_bc_cart
-
-
-
-```php
-private get_bc_cart(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
-### get_bc_cart_id
-
-
-
-```php
-private get_bc_cart_id(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
-### get_empty_bc_cart
-
-
-
-```php
-private get_empty_bc_cart(): mixed
-```
-
-
-
-
-
-
-
-
 
 
 

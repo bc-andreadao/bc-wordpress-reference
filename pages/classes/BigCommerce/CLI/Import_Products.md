@@ -118,32 +118,6 @@ public run(array $args, array $assoc_args): void
 
 ***
 
-### hook_messages
-
-Add messages to each step of the import process
-
-```php
-private hook_messages(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-**Throws:**
-
-- [`ExitException`](../../WP_CLI/ExitException.md)
-
-
-
-***
-
 
 ## Inherited methods
 

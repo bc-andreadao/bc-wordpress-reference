@@ -11,38 +11,6 @@
 
 
 
-## Properties
-
-
-### checkout_api
-
-
-
-```php
-private \BigCommerce\Api\v3\Api\CheckoutApi $checkout_api
-```
-
-
-
-
-
-
-***
-
-### cart_api
-
-
-
-```php
-private \BigCommerce\Api\v3\Api\CartApi $cart_api
-```
-
-
-
-
-
-
-***
 
 ## Methods
 
@@ -213,96 +181,6 @@ public delete_coupon_code(\WP_REST_Request $request): \WP_REST_Response|\WP_Erro
 **Return Value:**
 
 Response object on success, or WP_Error object on failure.
-
-
-
-
-***
-
-### format_price
-
-
-
-```php
-private format_price(mixed $price): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$price` | **mixed** |  |
-
-
-
-
-
-***
-
-### get_cart
-
-
-
-```php
-private get_cart(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
-### get_cart_id
-
-
-
-```php
-private get_cart_id(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
-### get_empty_cart
-
-
-
-```php
-private get_empty_cart(): mixed
-```
-
-
-
-
-
-
-
-
 
 
 

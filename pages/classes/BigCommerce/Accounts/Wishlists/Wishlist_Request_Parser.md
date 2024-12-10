@@ -19,23 +19,6 @@ and actions to the WordPress environment.
 |`LIST_PARAM`|public|string|&#039;list&#039;|
 |`TOKEN_PARAM`|public|string|&#039;token&#039;|
 
-## Properties
-
-
-### wishlists
-
-
-
-```php
-private \BigCommerce\Api\v3\Api\WishlistsApi $wishlists
-```
-
-
-
-
-
-
-***
 
 ## Methods
 
@@ -88,75 +71,6 @@ wishlist data and applies appropriate actions and filters to render the wishlist
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | `$wp` | **\WP** | The WordPress request object. |
-
-
-
-
-
-***
-
-### is_wishlist_request
-
-
-
-```php
-private is_wishlist_request(\WP $wp): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$wp` | **\WP** |  |
-
-
-
-
-
-***
-
-### requested_list
-
-
-
-```php
-private requested_list(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
-### requested_token
-
-
-
-```php
-private requested_token(): mixed
-```
-
-
-
-
-
-
-
 
 
 

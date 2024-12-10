@@ -10,23 +10,6 @@ Represents a customer group in BigCommerce and provides methods to retrieve grou
 
 
 
-## Properties
-
-
-### group_id
-
-
-
-```php
-private int $group_id
-```
-
-
-
-
-
-
-***
 
 ## Methods
 
@@ -83,27 +66,6 @@ The returned data can be filtered using the `bigcommerce/customer/group_info` fi
 **Return Value:**
 
 The customer group information.
-
-
-
-
-***
-
-### get_default_group
-
-
-
-```php
-private get_default_group(): mixed
-```
-
-
-
-
-
-
-
-
 
 
 

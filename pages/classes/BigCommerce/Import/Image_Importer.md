@@ -24,38 +24,6 @@ Imports an image from a URL and attaches it to a post
 |`DISABLE_IMAGE_IMPORT`|public| |&#039;bigcommerce_disable_image_import&#039;|
 |`MIMES`|public| |[IMAGETYPE_GIF =&gt; &#039;image/gif&#039;, IMAGETYPE_JPEG =&gt; &#039;image/jpg&#039;, IMAGETYPE_PNG =&gt; &#039;image/png&#039;, IMAGETYPE_SWF =&gt; &#039;image/swf&#039;, IMAGETYPE_PSD =&gt; &#039;image/psd&#039;, IMAGETYPE_BMP =&gt; &#039;image/bmp&#039;, IMAGETYPE_TIFF_II =&gt; &#039;image/tiff&#039;, IMAGETYPE_TIFF_MM =&gt; &#039;image/tiff&#039;, IMAGETYPE_JPC =&gt; &#039;image/jpc&#039;, IMAGETYPE_JP2 =&gt; &#039;image/jp2&#039;, IMAGETYPE_JPX =&gt; &#039;image/jpx&#039;, IMAGETYPE_JB2 =&gt; &#039;image/jb2&#039;, IMAGETYPE_SWC =&gt; &#039;image/swc&#039;, IMAGETYPE_IFF =&gt; &#039;image/iff&#039;, IMAGETYPE_WBMP =&gt; &#039;image/wbmp&#039;, IMAGETYPE_XBM =&gt; &#039;image/xbm&#039;, IMAGETYPE_ICO =&gt; &#039;image/ico&#039;]|
 
-## Properties
-
-
-### image_url
-
-
-
-```php
-private $image_url
-```
-
-
-
-
-
-
-***
-
-### attach_to_post_id
-
-
-
-```php
-private $attach_to_post_id
-```
-
-
-
-
-
-
-***
 
 ## Methods
 
@@ -108,27 +76,6 @@ public import(false $is_category = false): false|int|\WP_Error
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | `$is_category` | **false** |  |
-
-
-
-
-
-***
-
-### require_files
-
-
-
-```php
-private require_files(): mixed
-```
-
-
-
-
-
-
-
 
 
 
@@ -198,48 +145,6 @@ public static has_local_featured_image(int $post_id): bool
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | `$post_id` | **int** |  |
-
-
-
-
-
-***
-
-### process_cdn_items
-
-
-
-```php
-private process_cdn_items(): false|int|\WP_Error
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
-### get_image_mime_type
-
-Get image mime type
-
-```php
-private get_image_mime_type(): string
-```
-
-
-
-
-
-
-
 
 
 

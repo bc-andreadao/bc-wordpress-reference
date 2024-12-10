@@ -11,23 +11,6 @@ Handles the import of plugin documentation from a previously built JSON file.
 
 
 
-## Properties
-
-
-### plugin_dir
-
-
-
-```php
-private string $plugin_dir
-```
-
-
-
-
-
-
-***
 
 ## Methods
 
@@ -143,38 +126,6 @@ public run(array $args, array $assoc_args): void
 |-----------|------|-------------|
 | `$args` | **array** | Positional arguments passed to the command. |
 | `$assoc_args` | **array** | Associative arguments passed to the command. |
-
-
-
-
-**Throws:**
-
-- [`ExitException`](../../../WP_CLI/ExitException.md)
-
-
-
-***
-
-### run_import
-
-Execute the data import using the WP Parser importer.
-
-```php
-private run_import(array $data): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$data` | **array** | Parsed JSON data to import. |
 
 
 

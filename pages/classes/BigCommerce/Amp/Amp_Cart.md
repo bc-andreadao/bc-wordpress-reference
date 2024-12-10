@@ -16,23 +16,6 @@ generating checkout URLs, and managing cart-related redirects.
 |:---------|:-----------|:-----|:------|
 |`CHECKOUT_REDIRECT_ACTION`|public|string|&#039;amp_checkout&#039;|
 
-## Properties
-
-
-### proxy_base
-
-Base path of the proxy REST endpoints.
-
-```php
-private string $proxy_base
-```
-
-
-
-
-
-
-***
 
 ## Methods
 
@@ -141,27 +124,6 @@ for the cart page ID. Falls back to the home URL if no cart page is set.
 **Return Value:**
 
 URL of the cart page.
-
-
-
-
-***
-
-### back_to_cart
-
-Redirects the user back to the cart page.
-
-```php
-private back_to_cart(): void
-```
-
-Sends an HTTP redirect to the cart page and terminates script execution.
-
-
-
-
-
-
 
 
 

@@ -15,23 +15,6 @@ Handle webhook update logic depends on the webhooks version
 |:---------|:-----------|:-----|:------|
 |`VERSION`|public| |2|
 
-## Properties
-
-
-### hooks
-
-
-
-```php
-private \BigCommerce\Webhooks\Webhook[] $hooks
-```
-
-
-
-
-
-
-***
 
 ## Methods
 
@@ -78,31 +61,6 @@ public maybe_update_webhooks(): void
 
 
 
-
-
-
-
-***
-
-### update_webhooks
-
-
-
-```php
-private update_webhooks(): void
-```
-
-
-
-
-
-
-
-
-
-**Return Value:**
-
-Set new routes whenever any of the route list element gets updated
 
 
 

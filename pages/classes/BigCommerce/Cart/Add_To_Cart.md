@@ -47,38 +47,6 @@ public handle_request(int $post_id, \BigCommerce\Api\v3\Api\CartApi $cart_api): 
 
 ***
 
-### sanitize_option
-
-Sanitizes a product option based on its configuration type.
-
-```php
-private sanitize_option(mixed $value, array $config): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$value` | **mixed** | The value of the option submitted by the user. |
-| `$config` | **array** | The configuration of the option (type, id, etc.). |
-
-
-**Return Value:**
-
-The sanitized option value.
-
-
-
-
-***
-
 ### handle_response
 
 Handles the response from the API after attempting to add a product to the cart.

@@ -10,83 +10,6 @@ This class decides whether to create, ignore, or update a product based on its e
 
 
 
-## Properties
-
-
-### product
-
-
-
-```php
-private \BigCommerce\Api\v3\Model\Product $product
-```
-
-
-
-
-
-
-***
-
-### listing
-
-
-
-```php
-private \BigCommerce\Api\v3\Model\Listing $listing
-```
-
-
-
-
-
-
-***
-
-### catalog
-
-
-
-```php
-private \BigCommerce\Api\v3\Api\CatalogApi $catalog
-```
-
-
-
-
-
-
-***
-
-### version
-
-
-
-```php
-private string $version
-```
-
-
-
-
-
-
-***
-
-### channel_term
-
-
-
-```php
-private \WP_Term $channel_term
-```
-
-
-
-
-
-
-***
 
 ## Methods
 
@@ -141,54 +64,6 @@ public get_strategy(): \BigCommerce\Import\Import_Strategy
 **Return Value:**
 
 The import strategy (either Product_Creator, Product_Ignorer, or Product_Updater)
-
-
-
-
-***
-
-### get_matching_post
-
-
-
-```php
-private get_matching_post(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
-### needs_refresh
-
-
-
-```php
-private needs_refresh(mixed $post_id): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$post_id` | **mixed** |  |
-
 
 
 

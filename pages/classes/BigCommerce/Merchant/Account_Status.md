@@ -15,23 +15,6 @@
 |:---------|:-----------|:-----|:------|
 |`STATUS_AJAX`|public| |&#039;bigcommerce_account_status&#039;|
 
-## Properties
-
-
-### onboarding
-
-
-
-```php
-private \BigCommerce\Merchant\Onboarding_Api $onboarding
-```
-
-
-
-
-
-
-***
 
 ## Methods
 
@@ -98,88 +81,6 @@ public handle_account_status_request(): void
 
 
 
-
-
-
-
-
-***
-
-### validate_ajax_nonce
-
-Validate the nonce for an ajax status request
-
-```php
-private validate_ajax_nonce(array $request): void
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$request` | **array** |  |
-
-
-
-
-
-***
-
-### save_store_hash
-
-Save the store's hash to the DB
-
-```php
-private save_store_hash(string $hash): void
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$hash` | **string** |  |
-
-
-
-
-
-***
-
-### save_auth_credentials
-
-Save the client ID and auth token to the DB
-
-```php
-private save_auth_credentials(string $client_id, string $auth_token): void
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$client_id` | **string** |  |
-| `$auth_token` | **string** |  |
 
 
 

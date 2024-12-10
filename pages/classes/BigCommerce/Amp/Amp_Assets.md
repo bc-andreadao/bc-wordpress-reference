@@ -10,53 +10,6 @@ Handles loading styles and scripts needed for AMP functionality and layouts.
 
 
 
-## Properties
-
-
-### directory
-
-Path to the plugin assets directory.
-
-```php
-private string $directory
-```
-
-
-
-
-
-
-***
-
-### asset_directory_url
-
-URL of the plugin asset directory.
-
-```php
-private string $asset_directory_url
-```
-
-
-
-
-
-
-***
-
-### customizer_template_file
-
-Path to the customizer template file.
-
-```php
-private string $customizer_template_file
-```
-
-
-
-
-
-
-***
 
 ## Methods
 

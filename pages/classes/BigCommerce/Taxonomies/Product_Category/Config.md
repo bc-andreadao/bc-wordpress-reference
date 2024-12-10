@@ -40,27 +40,6 @@ Filterable with register_taxonomy_args
 
 ***
 
-### get_slug
-
-
-
-```php
-private get_slug(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
 ### get_labels
 
 Get labels for the taxonomy.

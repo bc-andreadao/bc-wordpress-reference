@@ -12,25 +12,6 @@ template controllers with AMP-specific counterparts when required.
 
 
 
-## Properties
-
-
-### override_class_map
-
-Mapping of standard template classes to their AMP-specific counterparts.
-
-```php
-private array&lt;string,string&gt; $override_class_map
-```
-
-This array is used to override the default template controllers with
-AMP-compatible versions. Keys are the fully-qualified names of the standard
-classes, and values are the corresponding AMP class names.
-
-
-
-
-***
 
 ## Methods
 

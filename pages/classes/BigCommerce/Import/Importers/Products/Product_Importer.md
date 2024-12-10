@@ -10,68 +10,6 @@ Handles the import of a product from BigCommerce to WordPress.
 
 
 
-## Properties
-
-
-### product
-
-
-
-```php
-private \BigCommerce\Api\v3\Model\Product $product
-```
-
-
-
-
-
-
-***
-
-### listing
-
-
-
-```php
-private \BigCommerce\Api\v3\Model\Listing $listing
-```
-
-
-
-
-
-
-***
-
-### catalog_api
-
-
-
-```php
-private \BigCommerce\Api\v3\Api\CatalogApi $catalog_api
-```
-
-
-
-
-
-
-***
-
-### channel_term
-
-
-
-```php
-private \WP_Term $channel_term
-```
-
-
-
-
-
-
-***
 
 ## Methods
 

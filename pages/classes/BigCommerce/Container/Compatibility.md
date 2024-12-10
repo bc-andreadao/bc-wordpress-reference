@@ -51,33 +51,6 @@ public register(\Pimple\Container $container): mixed
 
 ***
 
-### matomo_integration
-
-
-
-```php
-private matomo_integration(mixed $container): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$container` | **mixed** |  |
-
-
-
-
-
-***
-
 
 ***
 > Automatically generated on 2024-12-10

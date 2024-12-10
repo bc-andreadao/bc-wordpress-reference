@@ -97,38 +97,6 @@ public get_data(): array
 
 ***
 
-### get_product_post
-
-
-
-```php
-private get_product_post(int $product_id, \WP_Term $channel = null): int
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$product_id` | **int** |  |
-| `$channel` | **\WP_Term** |  |
-
-
-**Return Value:**
-
-The ID of the WP post associated with the product ID
-
-
-
-
-***
-
 ### get_image_id
 
 Get the ID of the product's featured image
@@ -150,61 +118,6 @@ protected get_image_id(int $post_id, mixed $variant_id): int
 |-----------|------|-------------|
 | `$post_id` | **int** |  |
 | `$variant_id` | **mixed** |  |
-
-
-
-
-
-***
-
-### get_terms
-
-
-
-```php
-private get_terms(mixed $post_id, mixed $taxonomy): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$post_id` | **mixed** |  |
-| `$taxonomy` | **mixed** |  |
-
-
-
-
-
-***
-
-### get_options
-
-
-
-```php
-private get_options(mixed $product): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$product` | **mixed** |  |
 
 
 
@@ -397,33 +310,6 @@ public get_data(): array
 * This method is **abstract**.
 
 
-
-
-
-
-
-***
-
-### get_template
-
-
-
-```php
-private get_template(string $relative_path): \BigCommerce\Templates\Template
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$relative_path` | **string** |  |
 
 
 

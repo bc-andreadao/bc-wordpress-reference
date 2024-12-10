@@ -11,38 +11,6 @@ a BigCommerce channel
 
 
 
-## Properties
-
-
-### channels
-
-
-
-```php
-private \BigCommerce\Api\v3\Api\ChannelsApi $channels
-```
-
-
-
-
-
-
-***
-
-### store_api
-
-
-
-```php
-private \BigCommerce\Api\Store_Api $store_api
-```
-
-
-
-
-
-
-***
 
 ## Methods
 
@@ -90,37 +58,6 @@ public create_first_channel(): mixed
 
 
 
-
-
-
-
-***
-
-### create_channel
-
-Create a new Channel on the BigCommerce store
-
-```php
-private create_channel(string $name): int
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$name` | **string** |  |
-
-
-**Return Value:**
-
-The ID of the WordPress term connected to that channel ID
 
 
 

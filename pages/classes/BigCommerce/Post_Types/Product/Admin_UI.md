@@ -185,27 +185,6 @@ public list_table_manage_link(array $views = []): array
 
 ***
 
-### get_manage_products_url
-
-
-
-```php
-private get_manage_products_url(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
 ### last_import_date
 
 

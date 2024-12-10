@@ -12,68 +12,6 @@ displaying relevant notices in the WordPress admin interface.
 
 
 
-## Properties
-
-
-### screen_id
-
-ID of the admin screen on which to display the notice.
-
-```php
-private string $screen_id
-```
-
-
-
-
-
-
-***
-
-### amp_is_enabled
-
-Whether the AMP for WordPress plugin is active.
-
-```php
-private bool $amp_is_enabled
-```
-
-
-
-
-
-
-***
-
-### is_ssl
-
-Whether the site uses SSL.
-
-```php
-private bool $is_ssl
-```
-
-
-
-
-
-
-***
-
-### notices
-
-List of notice items.
-
-```php
-private array $notices
-```
-
-
-
-
-
-
-***
 
 ## Methods
 
@@ -153,28 +91,6 @@ public add_notice(string $notice): mixed
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | `$notice` | **string** | The notice message to be added. |
-
-
-
-
-
-***
-
-### ssl_notice
-
-Adds the SSL notice if applicable.
-
-```php
-private ssl_notice(): mixed
-```
-
-This notice is shown if the AMP plugin is active but the site does not use SSL,
-informing the user of the importance of using HTTPS for BigCommerce features.
-
-
-
-
-
 
 
 

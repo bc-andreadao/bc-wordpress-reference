@@ -15,23 +15,6 @@ Handles requests during checkout from the Buy Now button for products.
 |:---------|:-----------|:-----|:------|
 |`ACTION`|public|string|&#039;checkout&#039;|
 
-## Properties
-
-
-### api_factory
-
-The factory instance for creating BigCommerce API clients.
-
-```php
-private \BigCommerce\Api_Factory $api_factory
-```
-
-
-
-
-
-
-***
 
 ## Methods
 

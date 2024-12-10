@@ -74,61 +74,6 @@ then proceed to remove the corresponding WordPress post.
 
 ***
 
-### match_post_id
-
-
-
-```php
-private match_post_id(mixed $product_id, \WP_Term $channel): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$product_id` | **mixed** |  |
-| `$channel` | **\WP_Term** |  |
-
-
-
-
-
-***
-
-### remove_post
-
-
-
-```php
-private remove_post(mixed $post_id): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$post_id` | **mixed** |  |
-
-
-
-
-
-***
-
 
 ***
 > Automatically generated on 2024-12-10

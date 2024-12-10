@@ -10,23 +10,6 @@ Responsible for handling customer password reset and synchronization with BigCom
 
 
 
-## Properties
-
-
-### customer_api
-
-
-
-```php
-private \BigCommerce\Api\Customer_Api $customer_api
-```
-
-
-
-
-
-
-***
 
 ## Methods
 
@@ -108,38 +91,6 @@ public sync_password_change_with_bigcommerce(int $user_id, \WP_User $old_user_da
 | `$user_id` | **int** | The user ID. |
 | `$old_user_data` | **\WP_User** | The WP_User object containing user&#039;s data prior to update. |
 
-
-
-
-
-***
-
-### set_password
-
-Sets the customer's password in BigCommerce.
-
-```php
-private set_password(\WP_User $user, string $password): bool
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$user` | **\WP_User** | The WordPress user object. |
-| `$password` | **string** | The new password to set. |
-
-
-**Return Value:**
-
-Whether the password was successfully updated in BigCommerce.
 
 
 

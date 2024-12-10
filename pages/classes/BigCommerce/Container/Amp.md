@@ -60,33 +60,6 @@ public register(\Pimple\Container $container): mixed
 
 ***
 
-### admin_notices
-
-Sets up AMP admin notices class and callbacks.
-
-```php
-private admin_notices(\Pimple\Container $container): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$container` | **\Pimple\Container** | Plugin container instance. |
-
-
-
-
-
-***
-
 
 ***
 > Automatically generated on 2024-12-10

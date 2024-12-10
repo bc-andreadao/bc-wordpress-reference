@@ -12,38 +12,6 @@ theme settings to conditionally load the styles based on user preferences.
 
 
 
-## Properties
-
-
-### directory
-
-
-
-```php
-private string $directory
-```
-
-
-
-
-
-
-***
-
-### version
-
-
-
-```php
-private string $version
-```
-
-
-
-
-
-
-***
 
 ## Methods
 

@@ -102,48 +102,6 @@ protected parse_options(array $options): array
 
 ***
 
-### image_size
-
-
-
-```php
-private image_size(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
-### thumbnail_size
-
-
-
-```php
-private thumbnail_size(): mixed
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
 ### zoom_size
 
 
@@ -434,33 +392,6 @@ public get_data(): array
 * This method is **abstract**.
 
 
-
-
-
-
-
-***
-
-### get_template
-
-
-
-```php
-private get_template(string $relative_path): \BigCommerce\Templates\Template
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$relative_path` | **string** |  |
 
 
 

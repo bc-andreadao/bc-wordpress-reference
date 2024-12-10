@@ -10,23 +10,6 @@ Makes sure that the import lock expires if the timeout is reached
 
 
 
-## Properties
-
-
-### timeout
-
-
-
-```php
-private int $timeout
-```
-
-
-
-
-
-
-***
 
 ## Methods
 

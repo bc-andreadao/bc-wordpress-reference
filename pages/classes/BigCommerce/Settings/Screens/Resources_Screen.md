@@ -20,23 +20,6 @@ and handling settings.
 |:---------|:-----------|:-----|:------|
 |`NAME`|public|string|&#039;bigcommerce_resources&#039;|
 
-## Properties
-
-
-### template_dir
-
-
-
-```php
-private string $template_dir
-```
-
-
-
-
-
-
-***
 
 ## Methods
 
@@ -181,75 +164,6 @@ public should_register(): bool
 **Return Value:**
 
 True if the screen should be registered, false otherwise.
-
-
-
-
-***
-
-### retrieve_resources
-
-Retrieve the resources data from the API,
-or a local fallback.
-
-```php
-private retrieve_resources(): array
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
-### default_resources
-
-Get the default resources to display when the remote fetch
-cannot be used.
-
-```php
-private default_resources(): array
-```
-
-
-
-
-
-
-
-
-
-**Return Value:**
-
-The resource data
-
-
-
-
-***
-
-### login_url
-
-
-
-```php
-private login_url(): mixed
-```
-
-
-
-
-
-
-
-
 
 
 

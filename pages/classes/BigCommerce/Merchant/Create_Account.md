@@ -10,23 +10,6 @@
 
 
 
-## Properties
-
-
-### onboarding
-
-
-
-```php
-private \BigCommerce\Merchant\Onboarding_Api $onboarding
-```
-
-
-
-
-
-
-***
 
 ## Methods
 
@@ -79,34 +62,6 @@ public request_account(array $submission, \WP_Error $errors): void
 |-----------|------|-------------|
 | `$submission` | **array** | The data submitted to the new account form |
 | `$errors` | **\WP_Error** | Error object to collect any errors that occur |
-
-
-
-
-
-***
-
-### handle_error_response
-
-Add errors from the response to the error accumulator
-
-```php
-private handle_error_response(array $response, \WP_Error $errors): void
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$response` | **array** |  |
-| `$errors` | **\WP_Error** |  |
 
 
 

@@ -81,60 +81,6 @@ public register(\Pimple\Container $container): void
 
 ***
 
-### cron
-
-
-
-```php
-private cron(\Pimple\Container $container): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$container` | **\Pimple\Container** |  |
-
-
-
-
-
-***
-
-### process
-
-
-
-```php
-private process(\Pimple\Container $container): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$container` | **\Pimple\Container** |  |
-
-
-
-
-
-***
-
 
 ***
 > Automatically generated on 2024-12-10
