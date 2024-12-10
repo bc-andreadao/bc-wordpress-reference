@@ -1001,7 +1001,7 @@ This is an automatically generated documentation for **Documentation**.
 | Class | Description |
 |-------|-------------|
 | [`Action_Endpoint`](./classes/BigCommerce/Rewrites/Action_Endpoint.md) | |
-| [`Flusher`](./classes/BigCommerce/Rewrites/Flusher.md) | |
+| [`Flusher`](./classes/BigCommerce/Rewrites/Flusher.md) | Handles flushing and scheduling of WordPress rewrite rules for the BigCommerce plugin.|
 
 
 
