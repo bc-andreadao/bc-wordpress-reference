@@ -9,7 +9,7 @@ to show only products in the wishlist, setting the page title, customizing the
 
 
 * Full name: `\BigCommerce\Accounts\Wishlists\Public_Wishlist`
-* Parent class: [`\BigCommerce\Accounts\Wishlists\Wishlist_Public_View`](./Wishlist_Public_View.md)
+* Parent class: [`\BigCommerce\Accounts\Wishlists\Wishlist_Public_View`](./classes/BigCommerce/Accounts/Wishlists/Wishlist_Public_View.md)
 
 
 
@@ -330,4 +330,4 @@ The modified template data with the refinery component removed.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

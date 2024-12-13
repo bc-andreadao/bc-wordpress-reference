@@ -1989,7 +1989,7 @@ Do not push updates back upstream when running an import.
 
 No arguments.
 
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 495](BigCommerce/Container/Post_Types.php#L495-L506)
+Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 495](BigCommerce/Container/Post_Types.php#L495-L524)
 
 ### `bigcommerce/import/after`
 
@@ -2001,7 +2001,7 @@ This action re-enables the updates and deletions of product listings in BigComme
 
 No arguments.
 
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 508](BigCommerce/Container/Post_Types.php#L508-L518)
+Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 526](BigCommerce/Container/Post_Types.php#L526-L536)
 
 ### `manage_bigcommerce_product_posts_custom_column`
 
@@ -2014,7 +2014,7 @@ Argument | Type | Description
 `columns` | `array` | The existing columns in the admin product list.
 `post_id` | `int` | The post ID.
 
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 533](BigCommerce/Container/Post_Types.php#L533-L543)
+Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 551](BigCommerce/Container/Post_Types.php#L551-L561)
 
 ### `manage_bigcommerce_product_posts_custom_column`
 
@@ -2027,7 +2027,7 @@ Argument | Type | Description
 `columns` | `array` | The existing columns in the admin product list.
 `post_id` | `int` | The post ID.
 
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 545](BigCommerce/Container/Post_Types.php#L545-L555)
+Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 563](BigCommerce/Container/Post_Types.php#L563-L573)
 
 ### `bigcommerce/import/start`
 
@@ -2039,7 +2039,7 @@ Argument | Type | Description
 -------- | ---- | -----------
 `error` | `string` | Error message (if any).
 
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 596](BigCommerce/Container/Post_Types.php#L596-L607)
+Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 614](BigCommerce/Container/Post_Types.php#L614-L625)
 
 ### `bigcommerce/import/error`
 
@@ -2051,7 +2051,7 @@ Argument | Type | Description
 -------- | ---- | -----------
 `error` | `string` | Error message encountered during the import process.
 
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 609](BigCommerce/Container/Post_Types.php#L609-L620)
+Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 627](BigCommerce/Container/Post_Types.php#L627-L638)
 
 ### `bigcommerce/import/logs/rotate`
 
@@ -2063,7 +2063,7 @@ Argument | Type | Description
 -------- | ---- | -----------
 `log` | `string` | The log data.
 
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 622](BigCommerce/Container/Post_Types.php#L622-L633)
+Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 640](BigCommerce/Container/Post_Types.php#L640-L651)
 
 ### `admin_bar_menu`
 
@@ -2075,7 +2075,7 @@ Argument | Type | Description
 -------- | ---- | -----------
 `wp_admin_bar` | `\BigCommerce\Container\WP_Admin_Bar` | The admin bar instance.
 
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 701](BigCommerce/Container/Post_Types.php#L701-L712)
+Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 719](BigCommerce/Container/Post_Types.php#L719-L730)
 
 ### `admin_post_Product\Reset_Listing::ACTION`
 
@@ -2085,7 +2085,7 @@ Handles the reset listing request via an admin action.
 
 No arguments.
 
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 741](BigCommerce/Container/Post_Types.php#L741-L750)
+Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 759](BigCommerce/Container/Post_Types.php#L759-L768)
 
 ### `admin_post_Product\Single_Product_Sync::ACTION`
 
@@ -2095,7 +2095,7 @@ Handles product resync on admin post action.
 
 No arguments.
 
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 777](BigCommerce/Container/Post_Types.php#L777-L784)
+Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 795](BigCommerce/Container/Post_Types.php#L795-L802)
 
 ### `post_submitbox_misc_actions`
 
@@ -2107,7 +2107,7 @@ Argument | Type | Description
 -------- | ---- | -----------
 `post` | `\BigCommerce\Container\WP_Post` | The post object.
 
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 799](BigCommerce/Container/Post_Types.php#L799-L810)
+Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 817](BigCommerce/Container/Post_Types.php#L817-L828)
 
 ### `save_post`
 
@@ -2120,7 +2120,7 @@ Argument | Type | Description
 `post_id` | `int` | The post ID.
 `post` | `\BigCommerce\Container\WP_Post` | The post object.
 
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 840](BigCommerce/Container/Post_Types.php#L840-L850)
+Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 858](BigCommerce/Container/Post_Types.php#L858-L868)
 
 ### `before_delete_post`
 
@@ -2132,7 +2132,7 @@ Argument | Type | Description
 -------- | ---- | -----------
 `post_id` | `int` | The post ID.
 
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 852](BigCommerce/Container/Post_Types.php#L852-L861)
+Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 870](BigCommerce/Container/Post_Types.php#L870-L879)
 
 ### `widgets_init`
 
@@ -4572,11 +4572,29 @@ Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Ty
 
 ### `bigcommerce/channel/listing/should_update`
 
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 504](BigCommerce/Container/Post_Types.php#L504-L504)
+Filter to determine whether a channel listing should be updated.
+
+This filter allows developers to modify the behavior of channel listing updates.
+By default, it is set to return `false`, preventing updates to channel listings.
+
+**Arguments**
+
+No arguments.
+
+Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 505](BigCommerce/Container/Post_Types.php#L505-L513)
 
 ### `bigcommerce/channel/listing/should_delete`
 
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 505](BigCommerce/Container/Post_Types.php#L505-L505)
+Filter to determine whether a channel listing should be deleted.
+
+This filter allows developers to modify the behavior of channel listing deletions.
+By default, it is set to return `false`, preventing deletions of channel listings.
+
+**Arguments**
+
+No arguments.
+
+Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 515](BigCommerce/Container/Post_Types.php#L515-L523)
 
 ### `manage_bigcommerce_product_posts_columns`
 
@@ -4590,7 +4608,7 @@ Argument | Type | Description
 -------- | ---- | -----------
 `columns` | `array` | The current list of columns.
 
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 520](BigCommerce/Container/Post_Types.php#L520-L531)
+Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 538](BigCommerce/Container/Post_Types.php#L538-L549)
 
 ### `bigcommerce/diagnostics`
 
@@ -4602,7 +4620,7 @@ Argument | Type | Description
 -------- | ---- | -----------
 `data` | `array` | Diagnostic data to be included in the output.
 
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 635](BigCommerce/Container/Post_Types.php#L635-L646)
+Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 653](BigCommerce/Container/Post_Types.php#L653-L664)
 
 ### `post_row_actions`
 
@@ -4615,7 +4633,7 @@ Argument | Type | Description
 `actions` | `array` | The current actions for the post.
 `post` | `\BigCommerce\Container\WP_Post` | The post object being displayed.
 
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 661](BigCommerce/Container/Post_Types.php#L661-L673)
+Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 679](BigCommerce/Container/Post_Types.php#L679-L691)
 
 ### `post_submitbox_misc_actions`
 
@@ -4627,7 +4645,7 @@ Argument | Type | Description
 -------- | ---- | -----------
 `post` | `\BigCommerce\Container\WP_Post` | The post object being edited.
 
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 675](BigCommerce/Container/Post_Types.php#L675-L686)
+Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 693](BigCommerce/Container/Post_Types.php#L693-L704)
 
 ### `bigcommerce/gutenberg/js_config`
 
@@ -4639,7 +4657,7 @@ Argument | Type | Description
 -------- | ---- | -----------
 `data` | `array` | The existing Gutenberg block editor configuration data.
 
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 688](BigCommerce/Container/Post_Types.php#L688-L699)
+Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 706](BigCommerce/Container/Post_Types.php#L706-L717)
 
 ### `post_row_actions`
 
@@ -4652,7 +4670,7 @@ Argument | Type | Description
 `actions` | `array` | The current actions for the post.
 `post` | `\BigCommerce\Container\WP_Post` | The post object being displayed.
 
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 727](BigCommerce/Container/Post_Types.php#L727-L739)
+Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 745](BigCommerce/Container/Post_Types.php#L745-L757)
 
 ### `post_row_actions`
 
@@ -4665,7 +4683,7 @@ Argument | Type | Description
 `actions` | `array` | The list of actions for the post.
 `post` | `\BigCommerce\Container\WP_Post` | The post object.
 
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 765](BigCommerce/Container/Post_Types.php#L765-L775)
+Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 783](BigCommerce/Container/Post_Types.php#L783-L793)
 
 ### `bigcommerce/gutenberg/js_config`
 
@@ -4677,7 +4695,7 @@ Argument | Type | Description
 -------- | ---- | -----------
 `data` | `array` | The Gutenberg JS config data.
 
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 812](BigCommerce/Container/Post_Types.php#L812-L825)
+Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 830](BigCommerce/Container/Post_Types.php#L830-L843)
 
 ### `wp_unique_post_slug`
 
@@ -4694,7 +4712,7 @@ Argument | Type | Description
 `post_parent` | `int` | The parent post ID.
 `original_slug` | `string` | The original slug.
 
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 876](BigCommerce/Container/Post_Types.php#L876-L894)
+Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 894](BigCommerce/Container/Post_Types.php#L894-L912)
 
 ### `wp_title_parts`
 
@@ -4706,7 +4724,7 @@ Argument | Type | Description
 -------- | ---- | -----------
 `title_parts` | `array` | The parts of the title.
 
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 909](BigCommerce/Container/Post_Types.php#L909-L920)
+Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 927](BigCommerce/Container/Post_Types.php#L927-L938)
 
 ### `document_title_parts`
 
@@ -4718,7 +4736,7 @@ Argument | Type | Description
 -------- | ---- | -----------
 `title_parts` | `array` | The document title parts.
 
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 922](BigCommerce/Container/Post_Types.php#L922-L931)
+Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 940](BigCommerce/Container/Post_Types.php#L940-L949)
 
 ### `wp_head`
 
@@ -4728,7 +4746,7 @@ Filters the product page meta description.
 
 No arguments.
 
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 933](BigCommerce/Container/Post_Types.php#L933-L944)
+Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 951](BigCommerce/Container/Post_Types.php#L951-L962)
 
 ### `login_url`
 

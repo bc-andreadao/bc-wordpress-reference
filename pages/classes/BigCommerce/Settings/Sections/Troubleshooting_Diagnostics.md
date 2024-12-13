@@ -7,7 +7,7 @@ Class Troubleshooting_Diagnostics
 
 
 * Full name: `\BigCommerce\Settings\Sections\Troubleshooting_Diagnostics`
-* Parent class: [`\BigCommerce\Settings\Sections\Settings_Section`](./Settings_Section.md)
+* Parent class: [`\BigCommerce\Settings\Sections\Settings_Section`](./classes/BigCommerce/Settings/Sections/Settings_Section.md)
 
 
 ## Constants
@@ -44,6 +44,7 @@ protected string $plugin_path
 
 
 
+
 ***
 
 ### users_transient_groups
@@ -53,6 +54,7 @@ protected string $plugin_path
 ```php
 protected $users_transient_groups
 ```
+
 
 
 
@@ -431,4 +433,4 @@ public get_disabled_attr_headless(): string
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

@@ -7,7 +7,7 @@ This is an abstract base class for creating custom WP-CLI commands in the BigCom
 It registers the command with WP-CLI and provides methods for handling command-specific logic.
 
 * Full name: `\BigCommerce\CLI\Command`
-* Parent class: [`WP_CLI_Command`](../../WP_CLI_Command.md)
+* Parent class: [`WP_CLI_Command`](./classes/WP_CLI_Command.md)
 * This class is an **Abstract class**
 
 
@@ -147,4 +147,4 @@ passed to the command via WP-CLI.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

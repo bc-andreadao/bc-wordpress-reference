@@ -10,7 +10,7 @@ If no output file is provided, it defaults to a predefined file path.
 Usage: wp bigcommerce countries update --output=/path/to/file.json
 
 * Full name: `\BigCommerce\CLI\Update_Country_Cache`
-* Parent class: [`\BigCommerce\CLI\Command`](./Command.md)
+* Parent class: [`\BigCommerce\CLI\Command`](./classes/BigCommerce/CLI/Command.md)
 
 
 
@@ -148,7 +148,7 @@ Fetches data from the BigCommerce API and writes it to the specified output file
 **Throws:**
 <p>If there is an error in the process, an exit exception is thrown.</p>
 
-- [`ExitException`](../../WP_CLI/ExitException.md)
+- [`ExitException`](./classes/WP_CLI/ExitException.md)
 
 
 
@@ -314,4 +314,4 @@ passed to the command via WP-CLI.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

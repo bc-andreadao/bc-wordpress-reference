@@ -10,7 +10,7 @@ This container handles:
 - WordPress hooks for table registration and role initialization.
 
 * Full name: `\BigCommerce\Container\Schema`
-* Parent class: [`Provider`](./Provider.md)
+* Parent class: [`Provider`](./classes/BigCommerce/Container/Provider.md)
 
 
 ## Constants
@@ -63,4 +63,4 @@ Hooks registered:
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

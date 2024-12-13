@@ -10,7 +10,7 @@ methods to retrieve the role's ID and label.
 
 * Full name: `\BigCommerce\Accounts\Roles\Customer`
 * This class implements:
-[`\BigCommerce\Accounts\Roles\Role`](./Role.md)
+[`\BigCommerce\Accounts\Roles\Role`](./classes/BigCommerce/Accounts/Roles/Role.md)
 
 
 ## Constants
@@ -77,4 +77,4 @@ The label of the customer role.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

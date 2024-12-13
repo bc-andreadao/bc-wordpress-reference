@@ -7,7 +7,7 @@ Class Reviews_Table
 
 
 * Full name: `\BigCommerce\Schema\Reviews_Table`
-* Parent class: [`\BigCommerce\Schema\Table_Maker`](./Table_Maker.md)
+* Parent class: [`\BigCommerce\Schema\Table_Maker`](./classes/BigCommerce/Schema/Table_Maker.md)
 * **Warning:** this class is **deprecated**. This means that this class will likely be removed in a future version.
 
 
@@ -33,6 +33,7 @@ protected $schema_version
 
 
 
+
 ***
 
 ### tables
@@ -42,6 +43,7 @@ protected $schema_version
 ```php
 protected array $tables
 ```
+
 
 
 
@@ -241,4 +243,4 @@ table prefix for the current blog
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

@@ -7,7 +7,7 @@ Class Product_Update_Webhook
 Sets up the webhook that runs on product update.
 
 * Full name: `\BigCommerce\Webhooks\Product\Product_Update_Webhook`
-* Parent class: [`\BigCommerce\Webhooks\Webhook`](../Webhook.md)
+* Parent class: [`\BigCommerce\Webhooks\Webhook`](./classes/BigCommerce/Webhooks/Webhook.md)
 
 
 ## Constants
@@ -402,4 +402,4 @@ protected trigger_action(array $request): void
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

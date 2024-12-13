@@ -9,7 +9,7 @@ different import-related actions.
 
 
 * Full name: `\BigCommerce\Container\Import`
-* Parent class: [`Provider`](./Provider.md)
+* Parent class: [`Provider`](./classes/BigCommerce/Container/Provider.md)
 
 
 ## Constants
@@ -83,4 +83,4 @@ public register(\Pimple\Container $container): void
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

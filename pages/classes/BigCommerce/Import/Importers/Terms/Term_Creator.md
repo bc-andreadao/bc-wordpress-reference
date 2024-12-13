@@ -8,7 +8,7 @@ Handles the creation and saving of terms in WordPress during the import process.
 and includes methods for inserting terms and saving term metadata.
 
 * Full name: `\BigCommerce\Import\Importers\Terms\Term_Creator`
-* Parent class: [`\BigCommerce\Import\Importers\Terms\Term_Saver`](./Term_Saver.md)
+* Parent class: [`\BigCommerce\Import\Importers\Terms\Term_Saver`](./classes/BigCommerce/Import/Importers/Terms/Term_Saver.md)
 
 
 
@@ -469,4 +469,4 @@ The calculated hash.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

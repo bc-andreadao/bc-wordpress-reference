@@ -27,6 +27,7 @@ protected string $taxonomy
 
 
 
+
 ***
 
 ### post_types
@@ -36,6 +37,7 @@ protected string $taxonomy
 ```php
 protected array $post_types
 ```
+
 
 
 
@@ -243,4 +245,4 @@ protected get_caps(): mixed
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

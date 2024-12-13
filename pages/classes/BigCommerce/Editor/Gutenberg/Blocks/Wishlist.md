@@ -7,7 +7,7 @@ A block to display the wishlist.
 
 
 * Full name: `\BigCommerce\Editor\Gutenberg\Blocks\Wishlist`
-* Parent class: [`\BigCommerce\Editor\Gutenberg\Blocks\Shortcode_Block`](./Shortcode_Block.md)
+* Parent class: [`\BigCommerce\Editor\Gutenberg\Blocks\Shortcode_Block`](./classes/BigCommerce/Editor/Gutenberg/Blocks/Shortcode_Block.md)
 
 
 ## Constants
@@ -32,6 +32,7 @@ protected string $icon
 
 
 
+
 ***
 
 ### shortcode
@@ -41,6 +42,7 @@ The shortcode associated with the block.
 ```php
 protected string $shortcode
 ```
+
 
 
 
@@ -544,4 +546,4 @@ The HTML image for the block.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

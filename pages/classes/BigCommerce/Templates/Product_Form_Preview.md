@@ -7,7 +7,7 @@ A specialized version of the product form that disables purchase functionality.
 It hides product options and renders a disabled purchase button.
 
 * Full name: `\BigCommerce\Templates\Product_Form_Preview`
-* Parent class: [`\BigCommerce\Templates\Product_Form`](./Product_Form.md)
+* Parent class: [`\BigCommerce\Templates\Product_Form`](./classes/BigCommerce/Templates/Product_Form.md)
 
 
 
@@ -21,6 +21,7 @@ The template path for rendering the product form preview.
 ```php
 protected string $template
 ```
+
 
 
 
@@ -439,4 +440,4 @@ The rendered option and modifier fields for the product
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

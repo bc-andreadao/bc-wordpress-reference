@@ -9,7 +9,7 @@ any write operation to ensure data consistency.
 
 
 * Full name: `\BigCommerce\Api\Caching_Client`
-* Parent class: [`\BigCommerce\Api\Base_Client`](./Base_Client.md)
+* Parent class: [`\BigCommerce\Api\Base_Client`](./classes/BigCommerce/Api/Base_Client.md)
 
 
 
@@ -55,7 +55,7 @@ Response data from the API or cache.
 **Throws:**
 <p>If a non-2xx response is received.</p>
 
-- [`ApiException`](./v3/ApiException.md)
+- [`ApiException`](./classes/BigCommerce/Api/v3/ApiException.md)
 
 
 
@@ -120,4 +120,4 @@ Returns the Configuration object used by this API client.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

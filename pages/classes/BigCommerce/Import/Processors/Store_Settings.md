@@ -8,7 +8,7 @@
 
 * Full name: `\BigCommerce\Import\Processors\Store_Settings`
 * This class implements:
-[`\BigCommerce\Import\Processors\Import_Processor`](./Import_Processor.md)
+[`\BigCommerce\Import\Processors\Import_Processor`](./classes/BigCommerce/Import/Processors/Import_Processor.md)
 
 
 ## Constants
@@ -99,4 +99,4 @@ public static is_msf_on(): bool
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

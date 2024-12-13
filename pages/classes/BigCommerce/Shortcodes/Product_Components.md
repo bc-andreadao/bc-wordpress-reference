@@ -8,7 +8,7 @@
 
 * Full name: `\BigCommerce\Shortcodes\Product_Components`
 * This class implements:
-[`\BigCommerce\Shortcodes\Shortcode`](./Shortcode.md)
+[`\BigCommerce\Shortcodes\Shortcode`](./classes/BigCommerce/Shortcodes/Shortcode.md)
 
 
 ## Constants
@@ -72,4 +72,4 @@ public render(mixed $attributes, mixed $instance): string
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

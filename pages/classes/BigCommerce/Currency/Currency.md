@@ -129,4 +129,4 @@ The list of channel-aware currencies.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

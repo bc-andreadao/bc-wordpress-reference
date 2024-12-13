@@ -7,7 +7,7 @@
 
 
 * Full name: `\BigCommerce\Templates\Linked_Product_Featured_Image`
-* Parent class: [`\BigCommerce\Templates\Product_Featured_Image`](./Product_Featured_Image.md)
+* Parent class: [`\BigCommerce\Templates\Product_Featured_Image`](./classes/BigCommerce/Templates/Product_Featured_Image.md)
 
 
 
@@ -27,6 +27,7 @@ protected string $wrapper_tag
 
 
 
+
 ***
 
 ### wrapper_classes
@@ -36,6 +37,7 @@ protected string $wrapper_tag
 ```php
 protected string[] $wrapper_classes
 ```
+
 
 
 
@@ -409,4 +411,4 @@ protected get_image(mixed $attachment_id): mixed
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

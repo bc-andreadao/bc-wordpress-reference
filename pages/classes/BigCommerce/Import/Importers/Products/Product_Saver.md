@@ -9,7 +9,7 @@ taxonomy terms, images, and sending notifications after the product has been imp
 
 * Full name: `\BigCommerce\Import\Importers\Products\Product_Saver`
 * This class implements:
-[`\BigCommerce\Import\Import_Strategy`](../../Import_Strategy.md)
+[`\BigCommerce\Import\Import_Strategy`](./classes/BigCommerce/Import/Import_Strategy.md)
 * This class is an **Abstract class**
 
 
@@ -24,6 +24,7 @@ taxonomy terms, images, and sending notifications after the product has been imp
 ```php
 protected \BigCommerce\Api\v3\Model\Product $product
 ```
+
 
 
 
@@ -45,6 +46,7 @@ protected \BigCommerce\Api\v3\Model\Listing $listing
 
 
 
+
 ***
 
 ### post_id
@@ -60,6 +62,7 @@ protected int $post_id
 
 
 
+
 ***
 
 ### catalog
@@ -69,6 +72,7 @@ protected int $post_id
 ```php
 protected \BigCommerce\Api\v3\Api\CatalogApi $catalog
 ```
+
 
 
 
@@ -380,4 +384,4 @@ protected send_notifications(): void
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

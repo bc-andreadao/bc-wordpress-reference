@@ -7,7 +7,7 @@ Class Wishlist_New_Link
 Renders the "New Wish List" button as a link
 
 * Full name: `\BigCommerce\Templates\Wishlist_New_Link`
-* Parent class: [`\BigCommerce\Templates\Wishlist_New_Button`](./Wishlist_New_Button.md)
+* Parent class: [`\BigCommerce\Templates\Wishlist_New_Button`](./classes/BigCommerce/Templates/Wishlist_New_Button.md)
 
 
 
@@ -21,6 +21,7 @@ Renders the "New Wish List" button as a link
 ```php
 protected $template
 ```
+
 
 
 
@@ -388,4 +389,4 @@ protected render_form_template(array $product_ids): mixed
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

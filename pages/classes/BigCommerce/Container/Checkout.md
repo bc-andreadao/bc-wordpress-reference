@@ -9,7 +9,7 @@ process, such as displaying checkout requirements notices and handling customer
 login functionality during the checkout flow.
 
 * Full name: `\BigCommerce\Container\Checkout`
-* Parent class: [`Provider`](./Provider.md)
+* Parent class: [`Provider`](./classes/BigCommerce/Container/Provider.md)
 
 
 ## Constants
@@ -53,4 +53,4 @@ requirements notice and customer login services, in the container.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

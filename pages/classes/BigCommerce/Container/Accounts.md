@@ -8,7 +8,7 @@ Handles the registration and initialization of various account-related services
 such as login, registration, countries, wishlists, profile settings, and customer groups.
 
 * Full name: `\BigCommerce\Container\Accounts`
-* Parent class: [`Provider`](./Provider.md)
+* Parent class: [`Provider`](./classes/BigCommerce/Container/Provider.md)
 
 
 ## Constants
@@ -68,4 +68,4 @@ public register(\Pimple\Container $container): mixed
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

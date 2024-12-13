@@ -10,7 +10,7 @@ featured image handling, and custom product status for unsupported products.
 It also interfaces with the BigCommerce API to manage import processes, prevent publication of certain posts, and manage product deletion.
 
 * Full name: `\BigCommerce\Container\Post_Types`
-* Parent class: [`Provider`](./Provider.md)
+* Parent class: [`Provider`](./classes/BigCommerce/Container/Provider.md)
 
 
 ## Constants
@@ -73,4 +73,4 @@ public register(\Pimple\Container $container): void
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

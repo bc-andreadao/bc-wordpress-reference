@@ -9,7 +9,7 @@ the body class dynamically based on the context, such as product pages, archives
 
 
 * Full name: `\BigCommerce\Container\Templates`
-* Parent class: [`Provider`](./Provider.md)
+* Parent class: [`Provider`](./classes/BigCommerce/Container/Provider.md)
 
 
 ## Constants
@@ -54,4 +54,4 @@ container is initialized and hooks into various WordPress actions and filters fo
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

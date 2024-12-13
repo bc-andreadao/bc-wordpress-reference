@@ -7,7 +7,7 @@ This class registers the proxy container that adds a Wordpress proxy layer on to
 Sets up necessary services such as REST controllers, caching, and AMP cart controllers.
 
 * Full name: `\BigCommerce\Container\Proxy`
-* Parent class: [`Provider`](./Provider.md)
+* Parent class: [`Provider`](./classes/BigCommerce/Container/Provider.md)
 
 
 ## Constants
@@ -54,4 +54,4 @@ public register(\Pimple\Container $container): void
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

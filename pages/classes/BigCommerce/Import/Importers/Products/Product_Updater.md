@@ -8,7 +8,7 @@ the send_notifications method to send notifications when a product is updated.
 
 
 * Full name: `\BigCommerce\Import\Importers\Products\Product_Updater`
-* Parent class: [`\BigCommerce\Import\Importers\Products\Product_Saver`](./Product_Saver.md)
+* Parent class: [`\BigCommerce\Import\Importers\Products\Product_Saver`](./classes/BigCommerce/Import/Importers/Products/Product_Saver.md)
 
 
 
@@ -342,4 +342,4 @@ protected send_notifications(): void
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

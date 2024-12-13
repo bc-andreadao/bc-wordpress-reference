@@ -7,7 +7,7 @@ Class Product_Category_Widget
 A widget to display a list or dropdown of product categories
 
 * Full name: `\BigCommerce\Widgets\Product_Category_Widget`
-* Parent class: [`WP_Widget`](../../WP_Widget.md)
+* Parent class: [`WP_Widget`](./classes/WP_Widget.md)
 
 
 ## Constants
@@ -214,4 +214,4 @@ public form(array $instance): mixed
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

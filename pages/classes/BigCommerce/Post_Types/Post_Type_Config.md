@@ -27,6 +27,7 @@ protected string $post_type
 
 
 
+
 ***
 
 ## Methods
@@ -153,4 +154,4 @@ Filterable with post_type_labels_{$post_type_name}
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

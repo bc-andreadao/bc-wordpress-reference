@@ -7,7 +7,7 @@ Register build docs command and related functionality
 
 
 * Full name: `\BigCommerce\CLI\Documentation\Build_Docs`
-* Parent class: [`\BigCommerce\CLI\Command`](../Command.md)
+* Parent class: [`\BigCommerce\CLI\Command`](./classes/BigCommerce/CLI/Command.md)
 
 
 
@@ -145,7 +145,7 @@ public run(array $args, array $assoc_args): void
 **Throws:**
 <p>If there is an issue during execution.</p>
 
-- [`ExitException`](../../../WP_CLI/ExitException.md)
+- [`ExitException`](./classes/WP_CLI/ExitException.md)
 
 
 
@@ -286,4 +286,4 @@ passed to the command via WP-CLI.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

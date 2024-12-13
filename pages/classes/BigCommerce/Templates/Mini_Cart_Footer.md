@@ -7,7 +7,7 @@
 
 
 * Full name: `\BigCommerce\Templates\Mini_Cart_Footer`
-* Parent class: [`\BigCommerce\Templates\Cart_Footer`](./Cart_Footer.md)
+* Parent class: [`\BigCommerce\Templates\Cart_Footer`](./classes/BigCommerce/Templates/Cart_Footer.md)
 
 
 
@@ -21,6 +21,7 @@
 ```php
 protected $template
 ```
+
 
 
 
@@ -481,4 +482,4 @@ protected is_physical_item_in_cart(mixed $cart): mixed
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

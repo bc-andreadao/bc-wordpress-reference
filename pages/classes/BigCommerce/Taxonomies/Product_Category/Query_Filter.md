@@ -119,4 +119,4 @@ public maybe_hide_children(mixed $query): mixed
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

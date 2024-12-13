@@ -9,7 +9,7 @@ It communicates with the GraphQL API using pre-defined queries and returns the r
 The class utilizes a configuration object for API settings and a query object for constructing GraphQL queries.
 
 * Full name: `\BigCommerce\GraphQL\GraphQL_Processor`
-* Parent class: [`\BigCommerce\GraphQL\BaseGQL`](./BaseGQL.md)
+* Parent class: [`\BigCommerce\GraphQL\BaseGQL`](./classes/BigCommerce/GraphQL/BaseGQL.md)
 
 
 
@@ -23,6 +23,7 @@ The class utilizes a configuration object for API settings and a query object fo
 ```php
 protected mixed $query
 ```
+
 
 
 
@@ -281,7 +282,7 @@ public get_graph_ql_query_from_file(string $file = &#039;&#039;): string
 
 **Throws:**
 
-- [`Exception`](../../Exception.md)
+- [`Exception`](./classes/Exception.md)
 
 
 
@@ -307,7 +308,7 @@ public get_category_tree(): mixed
 
 **Throws:**
 
-- [`ApiException`](../Api/v3/ApiException.md)
+- [`ApiException`](./classes/BigCommerce/Api/v3/ApiException.md)
 
 
 
@@ -522,7 +523,7 @@ The parsed response data.
 **Throws:**
 <p>If the request fails or the response is invalid.</p>
 
-- [`ApiException`](../Api/v3/ApiException.md)
+- [`ApiException`](./classes/BigCommerce/Api/v3/ApiException.md)
 
 
 
@@ -559,7 +560,7 @@ The parsed response data.
 **Throws:**
 <p>If the response is invalid.</p>
 
-- [`ApiException`](../Api/v3/ApiException.md)
+- [`ApiException`](./classes/BigCommerce/Api/v3/ApiException.md)
 
 
 
@@ -729,4 +730,4 @@ The request headers.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

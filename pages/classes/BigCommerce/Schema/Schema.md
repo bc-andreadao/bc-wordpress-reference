@@ -27,6 +27,7 @@ protected int $schema_version
 
 
 
+
 ***
 
 ## Methods
@@ -79,4 +80,4 @@ protected mark_schema_update_complete(): void
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

@@ -7,7 +7,7 @@ This class is responsible for managing and registering taxonomies for BigCommerc
 
 
 * Full name: `\BigCommerce\Container\Taxonomies`
-* Parent class: [`Provider`](./Provider.md)
+* Parent class: [`Provider`](./classes/BigCommerce/Container/Provider.md)
 
 
 ## Constants
@@ -71,4 +71,4 @@ public register(\Pimple\Container $container): mixed
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

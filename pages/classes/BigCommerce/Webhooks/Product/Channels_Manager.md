@@ -26,6 +26,7 @@ protected \BigCommerce\Api\v3\Api\CatalogApi $catalog_api
 
 
 
+
 ***
 
 ### channels_api
@@ -35,6 +36,7 @@ protected \BigCommerce\Api\v3\Api\CatalogApi $catalog_api
 ```php
 protected \BigCommerce\Api\v3\Api\ChannelsApi $channels_api
 ```
+
 
 
 
@@ -130,4 +132,4 @@ protected maybe_get_existing_product(mixed $product_id): mixed
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

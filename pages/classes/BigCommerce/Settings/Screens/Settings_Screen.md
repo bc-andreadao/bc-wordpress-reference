@@ -11,7 +11,7 @@ Concrete subclasses should implement their specific logic for rendering the scre
 and handling settings.
 
 * Full name: `\BigCommerce\Settings\Screens\Settings_Screen`
-* Parent class: [`\BigCommerce\Settings\Screens\Abstract_Screen`](./Abstract_Screen.md)
+* Parent class: [`\BigCommerce\Settings\Screens\Abstract_Screen`](./classes/BigCommerce/Settings/Screens/Abstract_Screen.md)
 
 
 ## Constants
@@ -883,4 +883,4 @@ The admin body class.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

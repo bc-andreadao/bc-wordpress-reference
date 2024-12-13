@@ -41,7 +41,7 @@ Ensures that the extending class defines a NAME constant.
 **Throws:**
 <p>If NAME constant is not set in the extending class.</p>
 
-- [`LogicException`](../../../../LogicException.md)
+- [`LogicException`](./classes/LogicException.md)
 
 
 
@@ -206,4 +206,4 @@ The configuration data.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

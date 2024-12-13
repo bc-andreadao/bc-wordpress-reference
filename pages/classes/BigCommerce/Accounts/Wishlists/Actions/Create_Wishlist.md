@@ -9,7 +9,7 @@ the request data, creating a wishlist, and redirecting the user to the newly cre
 It also handles errors and triggers appropriate actions upon success or failure.
 
 * Full name: `\BigCommerce\Accounts\Wishlists\Actions\Create_Wishlist`
-* Parent class: [`\BigCommerce\Accounts\Wishlists\Actions\Wishlist_Action`](./Wishlist_Action.md)
+* Parent class: [`\BigCommerce\Accounts\Wishlists\Actions\Wishlist_Action`](./classes/BigCommerce/Accounts/Wishlists/Actions/Wishlist_Action.md)
 
 
 ## Constants
@@ -84,7 +84,7 @@ The sanitized request data, including the wishlist name, public status, and prod
 **Throws:**
 <p>If the request is missing required fields or contains invalid data.</p>
 
-- [`InvalidArgumentException`](../../../../InvalidArgumentException.md)
+- [`InvalidArgumentException`](./classes/InvalidArgumentException.md)
 
 
 
@@ -216,10 +216,10 @@ The customer's wishlist.
 **Throws:**
 <p>If the wishlist cannot be found or accessed.</p>
 
-- [`RuntimeException`](../../../../RuntimeException.md)
+- [`RuntimeException`](./classes/RuntimeException.md)
 <p>If the wishlist does not belong to the customer.</p>
 
-- [`InvalidArgumentException`](../../../../InvalidArgumentException.md)
+- [`InvalidArgumentException`](./classes/InvalidArgumentException.md)
 
 
 
@@ -258,4 +258,4 @@ The customer ID associated with the user.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

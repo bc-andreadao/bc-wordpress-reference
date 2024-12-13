@@ -8,7 +8,7 @@
 
 * Full name: `\BigCommerce\Import\Processors\Listing_Fetcher`
 * This class implements:
-[`\BigCommerce\Import\Processors\Import_Processor`](./Import_Processor.md)
+[`\BigCommerce\Import\Processors\Import_Processor`](./classes/BigCommerce/Import/Processors/Import_Processor.md)
 
 
 ## Constants
@@ -191,4 +191,4 @@ protected delete_option(string $option): bool
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

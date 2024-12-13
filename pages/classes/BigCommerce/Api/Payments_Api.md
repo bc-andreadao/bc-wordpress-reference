@@ -7,7 +7,7 @@ Provides methods for interacting with the Payments API in BigCommerce.
 Includes functionality to retrieve payment methods and count them with optional filters.
 
 * Full name: `\BigCommerce\Api\Payments_Api`
-* Parent class: [`\BigCommerce\Api\v2ApiAdapter`](./v2ApiAdapter.md)
+* Parent class: [`\BigCommerce\Api\v2ApiAdapter`](./classes/BigCommerce/Api/v2ApiAdapter.md)
 
 
 
@@ -135,7 +135,7 @@ The result of the method call.
 **Throws:**
 <p>If the method is not found.</p>
 
-- [`BadMethodCallException`](../../BadMethodCallException.md)
+- [`BadMethodCallException`](./classes/BadMethodCallException.md)
 
 
 
@@ -168,4 +168,4 @@ The store hash.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

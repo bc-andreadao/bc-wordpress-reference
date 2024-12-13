@@ -37,6 +37,7 @@ It is typically populated during screen setup to enable specific functionality o
 
 
 
+
 ***
 
 ### capability
@@ -49,6 +50,7 @@ protected string $capability
 
 This property defines the required capability to access the settings page.
 By default, it's set to `manage_options`, which allows administrators to access the page.
+
 
 
 
@@ -69,6 +71,7 @@ By default, it is set to `STATUS_NEW` from the `Settings` class.
 
 
 
+
 ***
 
 ### assets_url
@@ -81,6 +84,7 @@ protected string $assets_url
 
 This property stores the URL to the plugin's assets directory, such as images, stylesheets,
 and scripts. It is used to reference assets from the plugin's folder within the admin interface.
+
 
 
 
@@ -753,4 +757,4 @@ The admin body class.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

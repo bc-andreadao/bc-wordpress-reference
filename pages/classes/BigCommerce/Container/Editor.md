@@ -9,7 +9,7 @@ the integration of the Gutenberg editor with BigCommerce blocks and assets.
 
 
 * Full name: `\BigCommerce\Container\Editor`
-* Parent class: [`Provider`](./Provider.md)
+* Parent class: [`Provider`](./classes/BigCommerce/Container/Provider.md)
 
 
 ## Constants
@@ -57,4 +57,4 @@ editor, integrating custom buttons and templates for a more enhanced editing exp
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

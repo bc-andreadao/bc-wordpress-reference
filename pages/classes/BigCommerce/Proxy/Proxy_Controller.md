@@ -7,7 +7,7 @@ Proxy_Controller class
 
 
 * Full name: `\BigCommerce\Proxy\Proxy_Controller`
-* Parent class: [`WP_REST_Controller`](../../WP_REST_Controller.md)
+* Parent class: [`WP_REST_Controller`](./classes/WP_REST_Controller.md)
 
 
 
@@ -21,6 +21,7 @@ Proxy base namespace.
 ```php
 protected string $proxy_base
 ```
+
 
 
 
@@ -334,4 +335,4 @@ public route(\WP_REST_Request $request): string
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

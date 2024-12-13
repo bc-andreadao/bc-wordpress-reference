@@ -9,7 +9,7 @@ customers, orders, and payment methods.
 
 
 * Full name: `\BigCommerce\Api\Api_Scopes_Validator`
-* Parent class: [`\BigCommerce\Api\v2ApiAdapter`](./v2ApiAdapter.md)
+* Parent class: [`\BigCommerce\Api\v2ApiAdapter`](./classes/BigCommerce/Api/v2ApiAdapter.md)
 
 
 ## Constants
@@ -52,7 +52,7 @@ Returns true if all scopes are valid.
 **Throws:**
 <p>If any of the scopes are invalid.</p>
 
-- [`Exception`](../../Exception.md)
+- [`Exception`](./classes/Exception.md)
 
 
 
@@ -121,7 +121,7 @@ The result of the method call.
 **Throws:**
 <p>If the method is not found.</p>
 
-- [`BadMethodCallException`](../../BadMethodCallException.md)
+- [`BadMethodCallException`](./classes/BadMethodCallException.md)
 
 
 
@@ -154,4 +154,4 @@ The store hash.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

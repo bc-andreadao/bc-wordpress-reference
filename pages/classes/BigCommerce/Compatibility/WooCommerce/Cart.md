@@ -26,6 +26,7 @@ public int $cart_contents_count
 
 
 
+
 ***
 
 ## Methods
@@ -85,4 +86,4 @@ The formatted subtotal of the cart or 0 if the cart amount is unavailable.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

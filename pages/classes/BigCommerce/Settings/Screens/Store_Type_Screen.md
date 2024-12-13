@@ -7,7 +7,7 @@ Class Store_Type_Screen
 
 
 * Full name: `\BigCommerce\Settings\Screens\Store_Type_Screen`
-* Parent class: [`\BigCommerce\Settings\Screens\Onboarding_Screen`](./Onboarding_Screen.md)
+* Parent class: [`\BigCommerce\Settings\Screens\Onboarding_Screen`](./classes/BigCommerce/Settings/Screens/Onboarding_Screen.md)
 
 
 ## Constants
@@ -942,4 +942,4 @@ protected make_video_embed(mixed $url, mixed $width = 1280, mixed $height = 720)
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

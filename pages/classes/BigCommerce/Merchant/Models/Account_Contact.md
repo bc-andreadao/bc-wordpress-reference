@@ -8,7 +8,7 @@ Contact details for an account
 
 * Full name: `\BigCommerce\Merchant\Models\Account_Contact`
 * This class implements:
-[`\JsonSerializable`](../../../JsonSerializable.md)
+[`\JsonSerializable`](./classes/JsonSerializable.md)
 
 
 
@@ -22,6 +22,7 @@ Contact details for an account
 ```php
 public $email
 ```
+
 
 
 
@@ -43,6 +44,7 @@ public $first_name
 
 
 
+
 ***
 
 ### last_name
@@ -52,6 +54,7 @@ public $first_name
 ```php
 public $last_name
 ```
+
 
 
 
@@ -73,6 +76,7 @@ public $address_line_1
 
 
 
+
 ***
 
 ### address_line_2
@@ -82,6 +86,7 @@ public $address_line_1
 ```php
 public $address_line_2
 ```
+
 
 
 
@@ -103,6 +108,7 @@ public $city
 
 
 
+
 ***
 
 ### district
@@ -112,6 +118,7 @@ public $city
 ```php
 public $district
 ```
+
 
 
 
@@ -133,6 +140,7 @@ public $postal_code
 
 
 
+
 ***
 
 ### country
@@ -148,6 +156,7 @@ public $country
 
 
 
+
 ***
 
 ### phone_number
@@ -157,6 +166,7 @@ public $country
 ```php
 public $phone_number
 ```
+
 
 
 
@@ -218,4 +228,4 @@ public jsonSerialize(): mixed
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

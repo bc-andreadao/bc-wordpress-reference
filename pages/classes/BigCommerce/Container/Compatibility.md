@@ -7,7 +7,7 @@ Provides integration with various third-party services and themes, including Woo
 It handles the registration of necessary services, theme compatibility, and custom functionality for BigCommerce.
 
 * Full name: `\BigCommerce\Container\Compatibility`
-* Parent class: [`Provider`](./Provider.md)
+* Parent class: [`Provider`](./classes/BigCommerce/Container/Provider.md)
 
 
 ## Constants
@@ -53,4 +53,4 @@ public register(\Pimple\Container $container): mixed
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

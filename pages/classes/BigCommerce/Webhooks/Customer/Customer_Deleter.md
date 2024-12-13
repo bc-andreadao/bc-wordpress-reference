@@ -7,7 +7,7 @@
 
 
 * Full name: `\BigCommerce\Webhooks\Customer\Customer_Deleter`
-* Parent class: [`\BigCommerce\Webhooks\Customer\Customer_Saver`](./Customer_Saver.md)
+* Parent class: [`\BigCommerce\Webhooks\Customer\Customer_Saver`](./classes/BigCommerce/Webhooks/Customer/Customer_Saver.md)
 
 
 
@@ -267,4 +267,4 @@ protected save_customer_channel_data(\WP_User $user, \BigCommerce\Api\v3\Model\C
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

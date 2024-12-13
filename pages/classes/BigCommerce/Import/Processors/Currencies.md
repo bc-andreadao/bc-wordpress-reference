@@ -9,7 +9,7 @@ to channels, and stores the relevant data in WordPress options and term meta.
 
 * Full name: `\BigCommerce\Import\Processors\Currencies`
 * This class implements:
-[`\BigCommerce\Import\Processors\Import_Processor`](./Import_Processor.md)
+[`\BigCommerce\Import\Processors\Import_Processor`](./classes/BigCommerce/Import/Processors/Import_Processor.md)
 
 
 
@@ -90,4 +90,4 @@ This process is only performed for MSF (Multi-Storefront) stores.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

@@ -8,7 +8,7 @@ Includes functionality for validating customer passwords and retrieving customer
 information by email address.
 
 * Full name: `\BigCommerce\Api\Customer_Api`
-* Parent class: [`\BigCommerce\Api\v2ApiAdapter`](./v2ApiAdapter.md)
+* Parent class: [`\BigCommerce\Api\v2ApiAdapter`](./classes/BigCommerce/Api/v2ApiAdapter.md)
 
 
 
@@ -49,7 +49,7 @@ True if the password is valid, false otherwise.
 **Throws:**
 <p>If the customer ID is not found.</p>
 
-- [`InvalidArgumentException`](../../InvalidArgumentException.md)
+- [`InvalidArgumentException`](./classes/InvalidArgumentException.md)
 
 
 
@@ -150,7 +150,7 @@ The result of the method call.
 **Throws:**
 <p>If the method is not found.</p>
 
-- [`BadMethodCallException`](../../BadMethodCallException.md)
+- [`BadMethodCallException`](./classes/BadMethodCallException.md)
 
 
 
@@ -183,4 +183,4 @@ The store hash.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

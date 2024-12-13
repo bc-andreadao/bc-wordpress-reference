@@ -7,7 +7,7 @@ Class Next_Steps
 Displays required and optional next steps after onboarding.
 
 * Full name: `\BigCommerce\Settings\Sections\Next_Steps`
-* Parent class: [`\BigCommerce\Settings\Sections\Settings_Section`](./Settings_Section.md)
+* Parent class: [`\BigCommerce\Settings\Sections\Settings_Section`](./classes/BigCommerce/Settings/Sections/Settings_Section.md)
 
 
 ## Constants
@@ -171,4 +171,4 @@ public get_disabled_attr_headless(): string
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

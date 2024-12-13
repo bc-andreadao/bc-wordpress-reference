@@ -7,7 +7,7 @@
 
 
 * Full name: `\BigCommerce\Templates\Gift_Certificate_Balance_Form`
-* Parent class: [`\BigCommerce\Templates\Form_Controller`](./Form_Controller.md)
+* Parent class: [`\BigCommerce\Templates\Form_Controller`](./classes/BigCommerce/Templates/Form_Controller.md)
 
 
 
@@ -21,6 +21,7 @@
 ```php
 protected $template
 ```
+
 
 
 
@@ -439,4 +440,4 @@ protected restore_submission(string $field, array $data, array $submission): arr
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

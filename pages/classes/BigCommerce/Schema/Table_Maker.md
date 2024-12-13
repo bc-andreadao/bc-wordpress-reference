@@ -7,7 +7,7 @@ Class Table_Maker
 Utility class for creating/updating custom tables
 
 * Full name: `\BigCommerce\Schema\Table_Maker`
-* Parent class: [`\BigCommerce\Schema\Schema`](./Schema.md)
+* Parent class: [`\BigCommerce\Schema\Schema`](./classes/BigCommerce/Schema/Schema.md)
 * This class is an **Abstract class**
 
 
@@ -22,6 +22,7 @@ Utility class for creating/updating custom tables
 ```php
 protected array $tables
 ```
+
 
 
 
@@ -168,4 +169,4 @@ protected mark_schema_update_complete(): void
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

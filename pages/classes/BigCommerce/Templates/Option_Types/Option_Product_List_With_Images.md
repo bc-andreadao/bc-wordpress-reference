@@ -7,7 +7,7 @@
 
 
 * Full name: `\BigCommerce\Templates\Option_Types\Option_Product_List_With_Images`
-* Parent class: [`\BigCommerce\Templates\Option_Types\Option_Product_List`](./Option_Product_List.md)
+* Parent class: [`\BigCommerce\Templates\Option_Types\Option_Product_List`](./classes/BigCommerce/Templates/Option_Types/Option_Product_List.md)
 
 
 
@@ -21,6 +21,7 @@
 ```php
 protected $template
 ```
+
 
 
 
@@ -510,4 +511,4 @@ The WordPress post ID for the product
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

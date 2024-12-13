@@ -8,7 +8,7 @@ It provides links to the order history, addresses, and wish lists (if enabled), 
 passed to the template for rendering.
 
 * Full name: `\BigCommerce\Compatibility\Themes\Flatsome\Templates\Account_Links`
-* Parent class: [`\BigCommerce\Templates\Controller`](../../../../Templates/Controller.md)
+* Parent class: [`\BigCommerce\Templates\Controller`](./classes/BigCommerce/Templates/Controller.md)
 
 
 ## Constants
@@ -27,6 +27,7 @@ The template file used to render the account links.
 ```php
 protected string $template
 ```
+
 
 
 
@@ -409,4 +410,4 @@ protected build_attribute_string(array $attributes): string
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

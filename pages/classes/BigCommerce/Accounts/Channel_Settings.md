@@ -32,6 +32,7 @@ protected int $channel_id
 
 
 
+
 ***
 
 ### connections
@@ -47,6 +48,7 @@ protected \BigCommerce\Taxonomies\Channel\Connections $connections
 
 
 
+
 ***
 
 ### customers
@@ -56,6 +58,7 @@ protected \BigCommerce\Taxonomies\Channel\Connections $connections
 ```php
 protected \BigCommerce\Api\v3\Api\CustomersApi $customers
 ```
+
 
 
 
@@ -209,4 +212,4 @@ Clears the scheduled events for the "bigcommerce/sync_global_logins" hook.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

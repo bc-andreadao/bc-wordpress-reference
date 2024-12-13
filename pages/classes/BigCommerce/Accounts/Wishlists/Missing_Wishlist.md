@@ -7,7 +7,7 @@ Class Missing_Wishlist
 Handle missing wishlist page and results message
 
 * Full name: `\BigCommerce\Accounts\Wishlists\Missing_Wishlist`
-* Parent class: [`\BigCommerce\Accounts\Wishlists\Wishlist_Public_View`](./Wishlist_Public_View.md)
+* Parent class: [`\BigCommerce\Accounts\Wishlists\Wishlist_Public_View`](./classes/BigCommerce/Accounts/Wishlists/Wishlist_Public_View.md)
 
 
 
@@ -282,4 +282,4 @@ The modified template data with the refinery component removed.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

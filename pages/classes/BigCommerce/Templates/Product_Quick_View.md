@@ -7,7 +7,7 @@
 
 
 * Full name: `\BigCommerce\Templates\Product_Quick_View`
-* Parent class: [`\BigCommerce\Templates\Product_Shortcode_Single`](./Product_Shortcode_Single.md)
+* Parent class: [`\BigCommerce\Templates\Product_Shortcode_Single`](./classes/BigCommerce/Templates/Product_Shortcode_Single.md)
 
 
 ## Constants
@@ -33,6 +33,7 @@ protected $template
 
 
 
+
 ***
 
 ### wrapper_tag
@@ -42,6 +43,7 @@ protected $template
 ```php
 protected string $wrapper_tag
 ```
+
 
 
 
@@ -63,6 +65,7 @@ protected string[] $wrapper_classes
 
 
 
+
 ***
 
 ### wrapper_attributes
@@ -72,6 +75,7 @@ protected string[] $wrapper_classes
 ```php
 protected string[] $wrapper_attributes
 ```
+
 
 
 
@@ -790,4 +794,4 @@ protected get_specs(\BigCommerce\Post_Types\Product\Product $product): mixed
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

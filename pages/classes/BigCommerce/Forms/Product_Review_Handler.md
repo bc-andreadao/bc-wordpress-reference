@@ -8,7 +8,7 @@
 
 * Full name: `\BigCommerce\Forms\Product_Review_Handler`
 * This class implements:
-[`\BigCommerce\Forms\Form_Handler`](./Form_Handler.md)
+[`\BigCommerce\Forms\Form_Handler`](./classes/BigCommerce/Forms/Form_Handler.md)
 
 
 ## Constants
@@ -142,4 +142,4 @@ Whether to display the reviews form.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

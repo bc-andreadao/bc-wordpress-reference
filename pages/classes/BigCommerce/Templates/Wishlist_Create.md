@@ -7,7 +7,7 @@
 
 
 * Full name: `\BigCommerce\Templates\Wishlist_Create`
-* Parent class: [`\BigCommerce\Templates\Controller`](./Controller.md)
+* Parent class: [`\BigCommerce\Templates\Controller`](./classes/BigCommerce/Templates/Controller.md)
 
 
 ## Constants
@@ -34,6 +34,7 @@ protected string $wrapper_tag
 
 
 
+
 ***
 
 ### wrapper_classes
@@ -43,6 +44,7 @@ protected string $wrapper_tag
 ```php
 protected string[] $wrapper_classes
 ```
+
 
 
 
@@ -64,6 +66,7 @@ protected string[] $wrapper_attributes
 
 
 
+
 ***
 
 ### template
@@ -73,6 +76,7 @@ protected string[] $wrapper_attributes
 ```php
 protected $template
 ```
+
 
 
 
@@ -440,4 +444,4 @@ protected build_attribute_string(array $attributes): string
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

@@ -8,7 +8,7 @@ in the nav menu admin
 
 
 * Full name: `\BigCommerce\Nav_Menu\Nav_Items_Meta_Box`
-* Parent class: [`\BigCommerce\Meta_Boxes\Meta_Box`](../Meta_Boxes/Meta_Box.md)
+* Parent class: [`\BigCommerce\Meta_Boxes\Meta_Box`](./classes/BigCommerce/Meta_Boxes/Meta_Box.md)
 
 
 ## Constants
@@ -405,4 +405,4 @@ Additional args to pass to the render callback
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

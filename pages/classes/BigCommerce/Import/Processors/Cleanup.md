@@ -9,7 +9,7 @@ cleaning up queued tasks, and flushing cache related to products and customer gr
 
 * Full name: `\BigCommerce\Import\Processors\Cleanup`
 * This class implements:
-[`\BigCommerce\Import\Processors\Import_Processor`](./Import_Processor.md)
+[`\BigCommerce\Import\Processors\Import_Processor`](./classes/BigCommerce/Import/Processors/Import_Processor.md)
 
 
 ## Constants
@@ -160,4 +160,4 @@ This method either refreshes the product source cache or performs a pre-cache op
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

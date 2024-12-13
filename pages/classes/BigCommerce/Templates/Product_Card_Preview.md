@@ -7,7 +7,7 @@
 
 
 * Full name: `\BigCommerce\Templates\Product_Card_Preview`
-* Parent class: [`\BigCommerce\Templates\Product_Card`](./Product_Card.md)
+* Parent class: [`\BigCommerce\Templates\Product_Card`](./classes/BigCommerce/Templates/Product_Card.md)
 
 
 
@@ -492,4 +492,4 @@ protected get_form(\BigCommerce\Post_Types\Product\Product $product): mixed
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

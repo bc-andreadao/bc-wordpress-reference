@@ -8,7 +8,7 @@ that a required configuration is missing when making API requests.
 This allows for more granular exception handling within the BigCommerce API SDK.
 
 * Full name: `\BigCommerce\Api\ConfigurationRequiredException`
-* Parent class: [`ApiException`](./v3/ApiException.md)
+* Parent class: [`ApiException`](./classes/BigCommerce/Api/v3/ApiException.md)
 
 
 
@@ -16,4 +16,4 @@ This allows for more granular exception handling within the BigCommerce API SDK.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

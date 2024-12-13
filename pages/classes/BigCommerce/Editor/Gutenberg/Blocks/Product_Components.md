@@ -7,7 +7,7 @@ A block to display a given product's components.
 
 
 * Full name: `\BigCommerce\Editor\Gutenberg\Blocks\Product_Components`
-* Parent class: [`\BigCommerce\Editor\Gutenberg\Blocks\Shortcode_Block`](./Shortcode_Block.md)
+* Parent class: [`\BigCommerce\Editor\Gutenberg\Blocks\Shortcode_Block`](./classes/BigCommerce/Editor/Gutenberg/Blocks/Shortcode_Block.md)
 
 
 ## Constants
@@ -37,6 +37,7 @@ protected string $icon
 
 
 
+
 ***
 
 ### shortcode
@@ -46,6 +47,7 @@ The shortcode used for this block.
 ```php
 protected string $shortcode
 ```
+
 
 
 
@@ -652,4 +654,4 @@ The HTML image for the block.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

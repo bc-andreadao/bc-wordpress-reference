@@ -7,7 +7,7 @@
 
 
 * Full name: `\BigCommerce\Templates\Option_Types\Option_Date`
-* Parent class: [`\BigCommerce\Templates\Option_Types\Option_Type`](./Option_Type.md)
+* Parent class: [`\BigCommerce\Templates\Option_Types\Option_Type`](./classes/BigCommerce/Templates/Option_Types/Option_Type.md)
 
 
 ## Constants
@@ -34,6 +34,7 @@ protected $template
 
 
 
+
 ***
 
 ### wrapper_t
@@ -49,6 +50,7 @@ protected $wrapper_t
 
 
 
+
 ***
 
 ### wrapper_classes
@@ -58,6 +60,7 @@ protected $wrapper_t
 ```php
 protected $wrapper_classes
 ```
+
 
 
 
@@ -489,4 +492,4 @@ protected sort_options(mixed $a, mixed $b): mixed
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

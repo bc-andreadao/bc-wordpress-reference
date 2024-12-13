@@ -7,7 +7,7 @@
 
 
 * Full name: `\BigCommerce\Templates\Mini_Cart_Items`
-* Parent class: [`\BigCommerce\Templates\Cart_Items`](./Cart_Items.md)
+* Parent class: [`\BigCommerce\Templates\Cart_Items`](./classes/BigCommerce/Templates/Cart_Items.md)
 
 
 
@@ -21,6 +21,7 @@
 ```php
 protected $template
 ```
+
 
 
 
@@ -367,4 +368,4 @@ protected get_fallback_image(): mixed
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

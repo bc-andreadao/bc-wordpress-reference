@@ -7,7 +7,7 @@
 
 
 * Full name: `\BigCommerce\Schema\User_Roles`
-* Parent class: [`\BigCommerce\Schema\Schema`](./Schema.md)
+* Parent class: [`\BigCommerce\Schema\Schema`](./classes/BigCommerce/Schema/Schema.md)
 
 
 
@@ -21,6 +21,7 @@
 ```php
 protected int $schema_version
 ```
+
 
 
 
@@ -131,4 +132,4 @@ protected mark_schema_update_complete(): void
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

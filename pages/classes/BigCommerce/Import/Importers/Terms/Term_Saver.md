@@ -11,7 +11,7 @@ in WordPress.
 
 * Full name: `\BigCommerce\Import\Importers\Terms\Term_Saver`
 * This class implements:
-[`\BigCommerce\Import\Import_Strategy`](../../Import_Strategy.md)
+[`\BigCommerce\Import\Import_Strategy`](./classes/BigCommerce/Import/Import_Strategy.md)
 * This class is an **Abstract class**
 
 
@@ -38,6 +38,7 @@ protected \ArrayAccess $bc_term
 
 
 
+
 ***
 
 ### taxonomy
@@ -53,6 +54,7 @@ protected string $taxonomy
 
 
 
+
 ***
 
 ### term_id
@@ -62,6 +64,7 @@ protected string $taxonomy
 ```php
 protected int $term_id
 ```
+
 
 
 
@@ -462,4 +465,4 @@ The calculated hash.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

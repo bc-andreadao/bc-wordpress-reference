@@ -26,6 +26,7 @@ protected $routes
 
 
 
+
 ***
 
 ### screen_settings
@@ -35,6 +36,7 @@ protected $routes
 ```php
 protected $screen_settings
 ```
+
 
 
 
@@ -97,4 +99,4 @@ public sync(): mixed
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

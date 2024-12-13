@@ -28,6 +28,7 @@ protected string $taxonomy
 
 
 
+
 ***
 
 ## Methods
@@ -55,7 +56,7 @@ Throws an exception if the taxonomy is not set.
 **Throws:**
 <p>If the taxonomy is not set.</p>
 
-- [`RuntimeException`](../../../RuntimeException.md)
+- [`RuntimeException`](./classes/RuntimeException.md)
 
 
 
@@ -127,4 +128,4 @@ The ID of the found term, or 0 if not found.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

@@ -134,7 +134,7 @@ The updated cart after adding the line item.
 **Throws:**
 <p>If an error occurs while interacting with the BigCommerce API.</p>
 
-- [`ApiException`](../Api/v3/ApiException.md)
+- [`ApiException`](./classes/BigCommerce/Api/v3/ApiException.md)
 
 
 
@@ -171,7 +171,7 @@ The updated cart after adding the gift certificate.
 **Throws:**
 <p>If an error occurs while interacting with the BigCommerce API.</p>
 
-- [`ApiException`](../Api/v3/ApiException.md)
+- [`ApiException`](./classes/BigCommerce/Api/v3/ApiException.md)
 
 
 
@@ -318,4 +318,4 @@ public delete_cart(): void
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

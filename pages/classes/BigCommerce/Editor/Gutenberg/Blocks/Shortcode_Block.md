@@ -7,7 +7,7 @@ A Gutenberg Block that acts as a wrapper for a shortcode.
 
 
 * Full name: `\BigCommerce\Editor\Gutenberg\Blocks\Shortcode_Block`
-* Parent class: [`\BigCommerce\Editor\Gutenberg\Blocks\Gutenberg_Block`](./Gutenberg_Block.md)
+* Parent class: [`\BigCommerce\Editor\Gutenberg\Blocks\Gutenberg_Block`](./classes/BigCommerce/Editor/Gutenberg/Blocks/Gutenberg_Block.md)
 * This class is an **Abstract class**
 
 
@@ -22,6 +22,7 @@ URL for the assets.
 ```php
 protected string $assets_url
 ```
+
 
 
 
@@ -43,6 +44,7 @@ protected string $shortcode
 
 
 
+
 ***
 
 ### icon
@@ -58,6 +60,7 @@ protected string $icon
 
 
 
+
 ***
 
 ### category
@@ -67,6 +70,7 @@ The category under which the block is listed.
 ```php
 protected string $category
 ```
+
 
 
 
@@ -393,7 +397,7 @@ Ensures that the extending class defines a NAME constant.
 **Throws:**
 <p>If NAME constant is not set in the extending class.</p>
 
-- [`LogicException`](../../../../LogicException.md)
+- [`LogicException`](./classes/LogicException.md)
 
 
 
@@ -558,4 +562,4 @@ The configuration data.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

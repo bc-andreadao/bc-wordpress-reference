@@ -9,7 +9,7 @@ Subclasses are expected to define their own service registration logic.
 
 * Full name: `\Provider`
 * This class implements:
-[`\ServiceProviderInterface`](./ServiceProviderInterface.md)
+[`\ServiceProviderInterface`](./classes/ServiceProviderInterface.md)
 * This class is an **Abstract class**
 
 
@@ -24,6 +24,7 @@ Subclasses are expected to define their own service registration logic.
 ```php
 protected array $callbacks
 ```
+
 
 
 
@@ -100,7 +101,7 @@ The registered callback.
 **Throws:**
 <p>If the identifier is already in use.</p>
 
-- [`InvalidArgumentException`](./InvalidArgumentException.md)
+- [`InvalidArgumentException`](./classes/InvalidArgumentException.md)
 
 
 
@@ -108,4 +109,4 @@ The registered callback.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

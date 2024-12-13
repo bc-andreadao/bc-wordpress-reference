@@ -8,7 +8,7 @@ Registers services and hooks to manage custom rewrite rules, flushing
 permalinks, and handling requests via custom endpoints.
 
 * Full name: `\BigCommerce\Container\Rewrites`
-* Parent class: [`Provider`](./Provider.md)
+* Parent class: [`Provider`](./classes/BigCommerce/Container/Provider.md)
 
 
 ## Constants
@@ -53,4 +53,4 @@ Services include:
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

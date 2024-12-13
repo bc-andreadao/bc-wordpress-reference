@@ -7,7 +7,7 @@
 
 
 * Full name: `\BigCommerce\Rest\Rest_Controller`
-* Parent class: [`WP_REST_Controller`](../../WP_REST_Controller.md)
+* Parent class: [`WP_REST_Controller`](./classes/WP_REST_Controller.md)
 
 
 
@@ -27,6 +27,7 @@ protected $namespace_base
 
 
 
+
 ***
 
 ### version
@@ -36,6 +37,7 @@ protected $namespace_base
 ```php
 protected $version
 ```
+
 
 
 
@@ -149,4 +151,4 @@ protected parse_result(mixed $response, mixed $client, mixed $rest_response = tr
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

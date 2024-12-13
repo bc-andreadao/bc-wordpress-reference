@@ -8,7 +8,7 @@ Handles the submission and processing of gift certificate purchase forms.
 
 * Full name: `\BigCommerce\Forms\Purchase_Gift_Certificate_Handler`
 * This class implements:
-[`\BigCommerce\Forms\Form_Handler`](./Form_Handler.md)
+[`\BigCommerce\Forms\Form_Handler`](./classes/BigCommerce/Forms/Form_Handler.md)
 
 
 ## Constants
@@ -77,4 +77,4 @@ public handle_request(array $submission): void
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

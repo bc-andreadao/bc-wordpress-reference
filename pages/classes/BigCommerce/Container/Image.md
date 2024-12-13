@@ -9,7 +9,7 @@ determine if image import is allowed and modify image HTML to load images from a
 
 
 * Full name: `\BigCommerce\Container\Image`
-* Parent class: [`Provider`](./Provider.md)
+* Parent class: [`Provider`](./classes/BigCommerce/Container/Provider.md)
 
 
 
@@ -48,4 +48,4 @@ This method registers two filters:
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

@@ -8,7 +8,7 @@ Extends the Add_To_Cart class to reuse functionality for adding products to the 
 with special handling for redirecting the user to the checkout page.
 
 * Full name: `\BigCommerce\Cart\Buy_Now`
-* Parent class: [`\BigCommerce\Cart\Add_To_Cart`](./Add_To_Cart.md)
+* Parent class: [`\BigCommerce\Cart\Add_To_Cart`](./classes/BigCommerce/Cart/Add_To_Cart.md)
 
 
 ## Constants
@@ -237,4 +237,4 @@ The variant ID.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

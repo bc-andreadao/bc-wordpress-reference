@@ -9,7 +9,7 @@ to fetch banners and their associated details, such as name, content, location,
 and visibility.
 
 * Full name: `\BigCommerce\Api\Banners_Api`
-* Parent class: [`\BigCommerce\Api\v2ApiAdapter`](./v2ApiAdapter.md)
+* Parent class: [`\BigCommerce\Api\v2ApiAdapter`](./classes/BigCommerce/Api/v2ApiAdapter.md)
 
 
 
@@ -118,7 +118,7 @@ The result of the method call.
 **Throws:**
 <p>If the method is not found.</p>
 
-- [`BadMethodCallException`](../../BadMethodCallException.md)
+- [`BadMethodCallException`](./classes/BadMethodCallException.md)
 
 
 
@@ -151,4 +151,4 @@ The store hash.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

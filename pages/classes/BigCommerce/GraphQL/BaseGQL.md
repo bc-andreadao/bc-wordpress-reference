@@ -37,6 +37,7 @@ protected string $token
 
 
 
+
 ***
 
 ### impersonation_token
@@ -52,6 +53,7 @@ protected string $impersonation_token
 
 
 
+
 ***
 
 ### config
@@ -61,6 +63,7 @@ protected string $impersonation_token
 ```php
 protected \BigCommerce\Api\v3\Configuration $config
 ```
+
 
 
 
@@ -249,7 +252,7 @@ The parsed response data.
 **Throws:**
 <p>If the request fails or the response is invalid.</p>
 
-- [`ApiException`](../Api/v3/ApiException.md)
+- [`ApiException`](./classes/BigCommerce/Api/v3/ApiException.md)
 
 
 
@@ -286,7 +289,7 @@ The parsed response data.
 **Throws:**
 <p>If the response is invalid.</p>
 
-- [`ApiException`](../Api/v3/ApiException.md)
+- [`ApiException`](./classes/BigCommerce/Api/v3/ApiException.md)
 
 
 
@@ -456,4 +459,4 @@ The request headers.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

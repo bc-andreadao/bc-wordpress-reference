@@ -27,6 +27,7 @@ protected array $supported
 
 
 
+
 ***
 
 ## Methods
@@ -66,4 +67,4 @@ The theme instance, or a Null_Theme if unsupported.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

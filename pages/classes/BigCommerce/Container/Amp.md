@@ -11,7 +11,7 @@ The AMP class manages the AMP checkout redirect, template override initializatio
 BigCommerce's storefront rendering system to ensure AMP-compatible pages.
 
 * Full name: `\BigCommerce\Container\Amp`
-* Parent class: [`Provider`](./Provider.md)
+* Parent class: [`Provider`](./classes/BigCommerce/Container/Provider.md)
 
 
 ## Constants
@@ -62,4 +62,4 @@ public register(\Pimple\Container $container): mixed
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

@@ -7,7 +7,7 @@
 
 
 * Full name: `\BigCommerce\Rest\Pricing_Controller`
-* Parent class: [`\BigCommerce\Rest\Rest_Controller`](./Rest_Controller.md)
+* Parent class: [`\BigCommerce\Rest\Rest_Controller`](./classes/BigCommerce/Rest/Rest_Controller.md)
 
 
 
@@ -335,4 +335,4 @@ The formatted currency string or the empty value.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

@@ -7,7 +7,7 @@ Handle retrieving information about the store from APIv2.
 
 
 * Full name: `\BigCommerce\Api\Store_Api`
-* Parent class: [`\BigCommerce\Api\v2ApiAdapter`](./v2ApiAdapter.md)
+* Parent class: [`\BigCommerce\Api\v2ApiAdapter`](./classes/BigCommerce/Api/v2ApiAdapter.md)
 
 
 
@@ -50,7 +50,7 @@ The generated JWT login token.
 **Throws:**
 <p>If the client secret is missing or other errors occur.</p>
 
-- [`Exception`](../../Exception.md)
+- [`Exception`](./classes/Exception.md)
 
 
 
@@ -284,7 +284,7 @@ The result of the method call.
 **Throws:**
 <p>If the method is not found.</p>
 
-- [`BadMethodCallException`](../../BadMethodCallException.md)
+- [`BadMethodCallException`](./classes/BadMethodCallException.md)
 
 
 
@@ -317,4 +317,4 @@ The store hash.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

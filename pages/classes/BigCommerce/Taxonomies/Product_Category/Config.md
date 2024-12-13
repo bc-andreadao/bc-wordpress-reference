@@ -7,7 +7,7 @@
 
 
 * Full name: `\BigCommerce\Taxonomies\Product_Category\Config`
-* Parent class: [`\BigCommerce\Taxonomies\Taxonomy_Config`](../Taxonomy_Config.md)
+* Parent class: [`\BigCommerce\Taxonomies\Taxonomy_Config`](./classes/BigCommerce/Taxonomies/Taxonomy_Config.md)
 
 
 
@@ -261,4 +261,4 @@ protected get_caps(): mixed
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

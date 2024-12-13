@@ -27,6 +27,7 @@ protected $supported_version
 
 
 
+
 ***
 
 ### templates
@@ -36,6 +37,7 @@ protected $supported_version
 ```php
 protected $templates
 ```
+
 
 
 
@@ -129,4 +131,4 @@ True if the version is supported, false otherwise.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

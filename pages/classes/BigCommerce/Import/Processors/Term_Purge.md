@@ -8,7 +8,7 @@ Deletes imported terms that no longer exist in BigCommerce
 
 * Full name: `\BigCommerce\Import\Processors\Term_Purge`
 * This class implements:
-[`\BigCommerce\Import\Processors\Import_Processor`](./Import_Processor.md)
+[`\BigCommerce\Import\Processors\Import_Processor`](./classes/BigCommerce/Import/Processors/Import_Processor.md)
 * This class is an **Abstract class**
 
 
@@ -34,6 +34,7 @@ public \BigCommerce\Api\v3\Api\CatalogApi $catalog_api
 
 
 
+
 ***
 
 ### batch_size
@@ -43,6 +44,7 @@ public \BigCommerce\Api\v3\Api\CatalogApi $catalog_api
 ```php
 public int $batch_size
 ```
+
 
 
 
@@ -205,7 +207,7 @@ protected get_remote_term_ids(int[] $ids): int[]
 
 **Throws:**
 
-- [`ApiException`](../../Api/v3/ApiException.md)
+- [`ApiException`](./classes/BigCommerce/Api/v3/ApiException.md)
 
 
 
@@ -330,4 +332,4 @@ protected delete_option(string $option): bool
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

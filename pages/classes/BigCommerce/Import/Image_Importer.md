@@ -154,4 +154,4 @@ public static has_local_featured_image(int $post_id): bool
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

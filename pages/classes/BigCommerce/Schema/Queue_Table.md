@@ -7,7 +7,7 @@ Class Queue_Table
 
 
 * Full name: `\BigCommerce\Schema\Queue_Table`
-* Parent class: [`\BigCommerce\Schema\Table_Maker`](./Table_Maker.md)
+* Parent class: [`\BigCommerce\Schema\Table_Maker`](./classes/BigCommerce/Schema/Table_Maker.md)
 
 
 ## Constants
@@ -34,6 +34,7 @@ protected $schema_version
 
 
 
+
 ***
 
 ### tables
@@ -43,6 +44,7 @@ protected $schema_version
 ```php
 protected array $tables
 ```
+
 
 
 
@@ -220,4 +222,4 @@ table prefix for the current blog
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

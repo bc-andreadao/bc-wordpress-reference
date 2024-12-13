@@ -439,4 +439,4 @@ The customer group object associated with the customer.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

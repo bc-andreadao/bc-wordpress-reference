@@ -7,7 +7,7 @@ A block to add one or more products into the post content.
 
 
 * Full name: `\BigCommerce\Editor\Gutenberg\Blocks\Products`
-* Parent class: [`\BigCommerce\Editor\Gutenberg\Blocks\Shortcode_Block`](./Shortcode_Block.md)
+* Parent class: [`\BigCommerce\Editor\Gutenberg\Blocks\Shortcode_Block`](./classes/BigCommerce/Editor/Gutenberg/Blocks/Shortcode_Block.md)
 
 
 ## Constants
@@ -32,6 +32,7 @@ protected string $shortcode
 
 
 
+
 ***
 
 ### category
@@ -41,6 +42,7 @@ The category for this block.
 ```php
 protected string $category
 ```
+
 
 
 
@@ -647,4 +649,4 @@ The HTML image for the block.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

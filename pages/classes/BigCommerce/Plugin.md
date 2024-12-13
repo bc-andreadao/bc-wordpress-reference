@@ -31,6 +31,7 @@ protected static $_instance
 * This property is **static**.
 
 
+
 ***
 
 ### container
@@ -40,6 +41,7 @@ protected static $_instance
 ```php
 protected \Pimple\Container $container
 ```
+
 
 
 
@@ -245,7 +247,7 @@ public static instance(null|\ArrayAccess $container = null): self
 
 **Throws:**
 
-- [`Exception`](../Exception.md)
+- [`Exception`](./classes/Exception.md)
 
 
 
@@ -274,4 +276,4 @@ public static activate(): mixed
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

@@ -7,7 +7,7 @@ Amp_Cart_Actions class
 
 
 * Full name: `\BigCommerce\Templates\Amp_Cart_Actions`
-* Parent class: [`\BigCommerce\Templates\Cart_Actions`](./Cart_Actions.md)
+* Parent class: [`\BigCommerce\Templates\Cart_Actions`](./classes/BigCommerce/Templates/Cart_Actions.md)
 
 
 ## Constants
@@ -382,4 +382,4 @@ protected get_actions(mixed $cart): mixed
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

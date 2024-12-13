@@ -9,7 +9,7 @@ Implements the JsonSerializable interface to allow conversion to JSON.
 
 * Full name: `\BigCommerce\CLI\Resources\Resource`
 * This class implements:
-[`\JsonSerializable`](../../../JsonSerializable.md)
+[`\JsonSerializable`](./classes/JsonSerializable.md)
 
 
 
@@ -436,4 +436,4 @@ Data representing the object for JSON encoding.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

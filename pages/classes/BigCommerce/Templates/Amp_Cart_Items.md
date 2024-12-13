@@ -7,7 +7,7 @@ Amp_Cart_Items class
 
 
 * Full name: `\BigCommerce\Templates\Amp_Cart_Items`
-* Parent class: [`\BigCommerce\Templates\Cart_Items`](./Cart_Items.md)
+* Parent class: [`\BigCommerce\Templates\Cart_Items`](./classes/BigCommerce/Templates/Cart_Items.md)
 
 
 ## Constants
@@ -376,4 +376,4 @@ protected get_fallback_image(): mixed
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

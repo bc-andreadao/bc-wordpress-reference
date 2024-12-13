@@ -7,7 +7,7 @@ Class Currency_Switcher_Widget
 A widget to display a currency switcher
 
 * Full name: `\BigCommerce\Widgets\Currency_Switcher_Widget`
-* Parent class: [`WP_Widget`](../../WP_Widget.md)
+* Parent class: [`WP_Widget`](./classes/WP_Widget.md)
 
 
 ## Constants
@@ -130,4 +130,4 @@ public form(array $instance): mixed
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

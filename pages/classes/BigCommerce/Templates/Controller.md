@@ -27,6 +27,7 @@ protected $template
 
 
 
+
 ***
 
 ### options
@@ -36,6 +37,7 @@ protected $template
 ```php
 protected $options
 ```
+
 
 
 
@@ -57,6 +59,7 @@ protected string $wrapper_tag
 
 
 
+
 ***
 
 ### wrapper_classes
@@ -72,6 +75,7 @@ protected string[] $wrapper_classes
 
 
 
+
 ***
 
 ### wrapper_attributes
@@ -81,6 +85,7 @@ protected string[] $wrapper_classes
 ```php
 protected string[] $wrapper_attributes
 ```
+
 
 
 
@@ -379,4 +384,4 @@ The formatted currency string or the empty value.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

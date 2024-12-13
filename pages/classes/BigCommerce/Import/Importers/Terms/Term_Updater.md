@@ -7,7 +7,7 @@ This class is responsible for updating an existing term in WordPress with data f
 It extends the Term_Saver class and implements logic to save term details and associated metadata.
 
 * Full name: `\BigCommerce\Import\Importers\Terms\Term_Updater`
-* Parent class: [`\BigCommerce\Import\Importers\Terms\Term_Saver`](./Term_Saver.md)
+* Parent class: [`\BigCommerce\Import\Importers\Terms\Term_Saver`](./classes/BigCommerce/Import/Importers/Terms/Term_Saver.md)
 
 
 
@@ -468,4 +468,4 @@ The calculated hash.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

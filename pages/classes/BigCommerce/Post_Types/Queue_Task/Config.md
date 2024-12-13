@@ -7,7 +7,7 @@
 
 
 * Full name: `\BigCommerce\Post_Types\Queue_Task\Config`
-* Parent class: [`\BigCommerce\Post_Types\Post_Type_Config`](../Post_Type_Config.md)
+* Parent class: [`\BigCommerce\Post_Types\Post_Type_Config`](./classes/BigCommerce/Post_Types/Post_Type_Config.md)
 
 
 
@@ -186,4 +186,4 @@ Filterable with post_type_labels_{$post_type_name}
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

@@ -7,7 +7,7 @@ This class is responsible for mapping the BigCommerce brand data to a WordPress 
 It extends the Term_Mapper class and specifies the taxonomy used for the brand mapping.
 
 * Full name: `\BigCommerce\Import\Mappers\Brand_Mapper`
-* Parent class: [`\BigCommerce\Import\Mappers\Term_Mapper`](./Term_Mapper.md)
+* Parent class: [`\BigCommerce\Import\Mappers\Term_Mapper`](./classes/BigCommerce/Import/Mappers/Term_Mapper.md)
 
 
 
@@ -21,6 +21,7 @@ It extends the Term_Mapper class and specifies the taxonomy used for the brand m
 ```php
 protected string $taxonomy
 ```
+
 
 
 
@@ -56,7 +57,7 @@ Throws an exception if the taxonomy is not set.
 **Throws:**
 <p>If the taxonomy is not set.</p>
 
-- [`RuntimeException`](../../../RuntimeException.md)
+- [`RuntimeException`](./classes/RuntimeException.md)
 
 
 
@@ -128,4 +129,4 @@ The ID of the found term, or 0 if not found.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

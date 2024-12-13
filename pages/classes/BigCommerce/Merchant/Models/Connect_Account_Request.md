@@ -8,7 +8,7 @@
 
 * Full name: `\BigCommerce\Merchant\Models\Connect_Account_Request`
 * This class implements:
-[`\JsonSerializable`](../../../JsonSerializable.md)
+[`\JsonSerializable`](./classes/JsonSerializable.md)
 
 
 
@@ -67,4 +67,4 @@ public jsonSerialize(): mixed
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

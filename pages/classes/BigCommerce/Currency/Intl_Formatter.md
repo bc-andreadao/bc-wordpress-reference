@@ -8,7 +8,7 @@ Formatter class for currency values using PHP's intl extension.
 
 * Full name: `\BigCommerce\Currency\Intl_Formatter`
 * This class implements:
-[`\BigCommerce\Currency\Currency_Formatter`](./Currency_Formatter.md)
+[`\BigCommerce\Currency\Currency_Formatter`](./classes/BigCommerce/Currency/Currency_Formatter.md)
 
 
 
@@ -76,4 +76,4 @@ The formatted currency value.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

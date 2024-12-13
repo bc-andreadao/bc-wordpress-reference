@@ -8,7 +8,7 @@ including gift certificates.
 
 
 * Full name: `\BigCommerce\Api\Marketing_Api`
-* Parent class: [`\BigCommerce\Api\v2ApiAdapter`](./v2ApiAdapter.md)
+* Parent class: [`\BigCommerce\Api\v2ApiAdapter`](./classes/BigCommerce/Api/v2ApiAdapter.md)
 
 
 
@@ -48,7 +48,7 @@ The gift certificate resource object.
 **Throws:**
 <p>If no gift certificate matches the provided code, or if the API call fails.</p>
 
-- [`ApiException`](./v3/ApiException.md)
+- [`ApiException`](./classes/BigCommerce/Api/v3/ApiException.md)
 
 
 
@@ -117,7 +117,7 @@ The result of the method call.
 **Throws:**
 <p>If the method is not found.</p>
 
-- [`BadMethodCallException`](../../BadMethodCallException.md)
+- [`BadMethodCallException`](./classes/BadMethodCallException.md)
 
 
 
@@ -150,4 +150,4 @@ The store hash.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

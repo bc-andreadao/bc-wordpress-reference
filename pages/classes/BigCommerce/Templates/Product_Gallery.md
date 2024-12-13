@@ -7,7 +7,7 @@
 
 
 * Full name: `\BigCommerce\Templates\Product_Gallery`
-* Parent class: [`\BigCommerce\Templates\Controller`](./Controller.md)
+* Parent class: [`\BigCommerce\Templates\Controller`](./classes/BigCommerce/Templates/Controller.md)
 
 
 ## Constants
@@ -40,6 +40,7 @@ protected $template
 
 
 
+
 ***
 
 ### wrapper_tag
@@ -55,6 +56,7 @@ protected string $wrapper_tag
 
 
 
+
 ***
 
 ### wrapper_classes
@@ -64,6 +66,7 @@ protected string $wrapper_tag
 ```php
 protected string[] $wrapper_classes
 ```
+
 
 
 
@@ -575,4 +578,4 @@ public get_headless_images(\BigCommerce\Post_Types\Product\Product $product): ar
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

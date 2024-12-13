@@ -7,7 +7,7 @@ Handles the creation and saving of BigCommerce products into WordPress.
 
 
 * Full name: `\BigCommerce\Import\Importers\Products\Product_Creator`
-* Parent class: [`\BigCommerce\Import\Importers\Products\Product_Saver`](./Product_Saver.md)
+* Parent class: [`\BigCommerce\Import\Importers\Products\Product_Saver`](./classes/BigCommerce/Import/Importers/Products/Product_Saver.md)
 
 
 
@@ -396,4 +396,4 @@ protected send_notifications(): void
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

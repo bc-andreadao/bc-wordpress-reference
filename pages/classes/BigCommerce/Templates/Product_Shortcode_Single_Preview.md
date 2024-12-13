@@ -7,7 +7,7 @@
 
 
 * Full name: `\BigCommerce\Templates\Product_Shortcode_Single_Preview`
-* Parent class: [`\BigCommerce\Templates\Product_Shortcode_Single`](./Product_Shortcode_Single.md)
+* Parent class: [`\BigCommerce\Templates\Product_Shortcode_Single`](./classes/BigCommerce/Templates/Product_Shortcode_Single.md)
 
 
 
@@ -680,4 +680,4 @@ protected get_specs(\BigCommerce\Post_Types\Product\Product $product): mixed
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

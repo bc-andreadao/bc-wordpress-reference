@@ -9,7 +9,7 @@ It ensures that the provided wishlist and product IDs are valid, removes the ite
 and returns a success or error message accordingly.
 
 * Full name: `\BigCommerce\Accounts\Wishlists\Actions\Remove_Item`
-* Parent class: [`\BigCommerce\Accounts\Wishlists\Actions\Wishlist_Action`](./Wishlist_Action.md)
+* Parent class: [`\BigCommerce\Accounts\Wishlists\Actions\Wishlist_Action`](./classes/BigCommerce/Accounts/Wishlists/Actions/Wishlist_Action.md)
 
 
 ## Constants
@@ -85,7 +85,7 @@ The sanitized and validated request data.
 **Throws:**
 <p>If the wishlist ID or product ID is invalid, or if the nonce is incorrect.</p>
 
-- [`InvalidArgumentException`](../../../../InvalidArgumentException.md)
+- [`InvalidArgumentException`](./classes/InvalidArgumentException.md)
 
 
 
@@ -217,10 +217,10 @@ The customer's wishlist.
 **Throws:**
 <p>If the wishlist cannot be found or accessed.</p>
 
-- [`RuntimeException`](../../../../RuntimeException.md)
+- [`RuntimeException`](./classes/RuntimeException.md)
 <p>If the wishlist does not belong to the customer.</p>
 
-- [`InvalidArgumentException`](../../../../InvalidArgumentException.md)
+- [`InvalidArgumentException`](./classes/InvalidArgumentException.md)
 
 
 
@@ -259,4 +259,4 @@ The customer ID associated with the user.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

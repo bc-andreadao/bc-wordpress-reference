@@ -9,7 +9,7 @@ This class is typically used when API configuration is missing or incomplete.
 Attempts to make API calls using this client will throw an exception.
 
 * Full name: `\BigCommerce\Api\Null_Client`
-* Parent class: [`\BigCommerce\Api\Base_Client`](./Base_Client.md)
+* Parent class: [`\BigCommerce\Api\Base_Client`](./classes/BigCommerce/Api/Base_Client.md)
 
 
 
@@ -55,7 +55,7 @@ This method does not return a value; it always throws an exception.
 **Throws:**
 <p>Always thrown with a message indicating missing settings.</p>
 
-- [`ConfigurationRequiredException`](./ConfigurationRequiredException.md)
+- [`ConfigurationRequiredException`](./classes/BigCommerce/Api/ConfigurationRequiredException.md)
 
 
 
@@ -120,4 +120,4 @@ Returns the Configuration object used by this API client.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

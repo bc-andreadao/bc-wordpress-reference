@@ -10,7 +10,7 @@ This class handles:
 - WordPress shortcode registration.
 
 * Full name: `\BigCommerce\Container\Shortcodes`
-* Parent class: [`Provider`](./Provider.md)
+* Parent class: [`Provider`](./classes/BigCommerce/Container/Provider.md)
 
 
 ## Constants
@@ -68,4 +68,4 @@ Hook registered:
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

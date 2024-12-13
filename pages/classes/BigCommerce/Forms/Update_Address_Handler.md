@@ -10,7 +10,7 @@ customer's address in BigCommerce, and provides appropriate success or error mes
 
 * Full name: `\BigCommerce\Forms\Update_Address_Handler`
 * This class implements:
-[`\BigCommerce\Forms\Form_Handler`](./Form_Handler.md)
+[`\BigCommerce\Forms\Form_Handler`](./classes/BigCommerce/Forms/Form_Handler.md)
 
 
 ## Constants
@@ -52,4 +52,4 @@ public handle_request(array $submission): void
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

@@ -9,7 +9,7 @@ the Import_Strategy interface and provides a method for processing a term that s
 
 * Full name: `\BigCommerce\Import\Importers\Terms\Term_Ignorer`
 * This class implements:
-[`\BigCommerce\Import\Import_Strategy`](../../Import_Strategy.md)
+[`\BigCommerce\Import\Import_Strategy`](./classes/BigCommerce/Import/Import_Strategy.md)
 
 
 
@@ -23,6 +23,7 @@ the Import_Strategy interface and provides a method for processing a term that s
 ```php
 protected \ArrayAccess $bc_term
 ```
+
 
 
 
@@ -44,6 +45,7 @@ protected string $taxonomy
 
 
 
+
 ***
 
 ### term_id
@@ -53,6 +55,7 @@ protected string $taxonomy
 ```php
 protected int $term_id
 ```
+
 
 
 
@@ -121,4 +124,4 @@ The term ID after skipping the import.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

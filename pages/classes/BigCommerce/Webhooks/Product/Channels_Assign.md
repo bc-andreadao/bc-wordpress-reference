@@ -7,7 +7,7 @@
 
 
 * Full name: `\BigCommerce\Webhooks\Product\Channels_Assign`
-* Parent class: [`\BigCommerce\Webhooks\Product\Channels_Manager`](./Channels_Manager.md)
+* Parent class: [`\BigCommerce\Webhooks\Product\Channels_Manager`](./classes/BigCommerce/Webhooks/Product/Channels_Manager.md)
 
 
 
@@ -131,4 +131,4 @@ protected maybe_get_existing_product(mixed $product_id): mixed
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

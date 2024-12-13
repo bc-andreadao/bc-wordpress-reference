@@ -20,7 +20,7 @@ Query Args:
  - order: sort results by title. Valid values are 'asc' or 'desc' (case sensitive), defaults to 'asc'.
 
 * Full name: `\BigCommerce\Rest\Shortcode_Controller`
-* Parent class: [`\BigCommerce\Rest\Products_Controller`](./Products_Controller.md)
+* Parent class: [`\BigCommerce\Rest\Products_Controller`](./classes/BigCommerce/Rest/Products_Controller.md)
 
 
 
@@ -848,4 +848,4 @@ Item schema data, conforming to the JSON Schema specification.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

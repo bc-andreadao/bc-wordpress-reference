@@ -7,7 +7,7 @@
 
 
 * Full name: `\BigCommerce\Templates\Mini_Cart_Summary`
-* Parent class: [`\BigCommerce\Templates\Cart_Summary`](./Cart_Summary.md)
+* Parent class: [`\BigCommerce\Templates\Cart_Summary`](./classes/BigCommerce/Templates/Cart_Summary.md)
 
 
 
@@ -21,6 +21,7 @@
 ```php
 protected $template
 ```
+
 
 
 
@@ -317,4 +318,4 @@ protected build_attribute_string(array $attributes): string
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

@@ -40,6 +40,7 @@ public \Monolog\Logger $log
 
 
 
+
 ***
 
 ### webhook_log
@@ -49,6 +50,7 @@ public \Monolog\Logger $log
 ```php
 public $webhook_log
 ```
+
 
 
 
@@ -70,6 +72,7 @@ public string $log_path
 
 
 
+
 ***
 
 ### log_folder_path
@@ -79,6 +82,7 @@ public string $log_path
 ```php
 public string $log_folder_path
 ```
+
 
 
 
@@ -302,4 +306,4 @@ public add_log_to_diagnostics(mixed $diagnostics): mixed
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

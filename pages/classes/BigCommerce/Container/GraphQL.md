@@ -9,7 +9,7 @@ method configures these services to be accessed globally through the container.
 
 
 * Full name: `\BigCommerce\Container\GraphQL`
-* Parent class: [`Provider`](./Provider.md)
+* Parent class: [`Provider`](./classes/BigCommerce/Container/Provider.md)
 
 
 ## Constants
@@ -58,4 +58,4 @@ that can be accessed via the container.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

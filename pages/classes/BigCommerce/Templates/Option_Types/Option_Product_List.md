@@ -7,7 +7,7 @@
 
 
 * Full name: `\BigCommerce\Templates\Option_Types\Option_Product_List`
-* Parent class: [`\BigCommerce\Templates\Option_Types\Option_Radios`](./Option_Radios.md)
+* Parent class: [`\BigCommerce\Templates\Option_Types\Option_Radios`](./classes/BigCommerce/Templates/Option_Types/Option_Radios.md)
 
 
 
@@ -466,4 +466,4 @@ protected sort_options(mixed $a, mixed $b): mixed
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

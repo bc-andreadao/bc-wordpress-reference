@@ -7,7 +7,7 @@
 
 
 * Full name: `\BigCommerce\Templates\Order_Details`
-* Parent class: [`\BigCommerce\Templates\Order_Summary`](./Order_Summary.md)
+* Parent class: [`\BigCommerce\Templates\Order_Summary`](./classes/BigCommerce/Templates/Order_Summary.md)
 
 
 ## Constants
@@ -28,6 +28,7 @@
 ```php
 protected $template
 ```
+
 
 
 
@@ -503,4 +504,4 @@ protected identify_channel(mixed $order): mixed
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

@@ -48,4 +48,4 @@ public set_product_update_cron_task(mixed $params): mixed
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

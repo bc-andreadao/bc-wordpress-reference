@@ -15,7 +15,7 @@ Usage:
 
 * Full name: `\BigCommerce\Compatibility\Akismet\Akismet`
 * This class implements:
-[`\BigCommerce\Compatibility\Spam_Checker`](../Spam_Checker.md)
+[`\BigCommerce\Compatibility\Spam_Checker`](./classes/BigCommerce/Compatibility/Spam_Checker.md)
 
 
 
@@ -57,4 +57,4 @@ Returns `true` if the submission is spam, otherwise `false`.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

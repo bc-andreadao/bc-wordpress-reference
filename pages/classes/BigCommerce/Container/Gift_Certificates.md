@@ -9,7 +9,7 @@ to add a sub-navigation to the content.
 
 
 * Full name: `\BigCommerce\Container\Gift_Certificates`
-* Parent class: [`Provider`](./Provider.md)
+* Parent class: [`Provider`](./classes/BigCommerce/Container/Provider.md)
 
 
 ## Constants
@@ -53,4 +53,4 @@ filter to ensure the sub-navigation is added to the content when it is being ren
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

@@ -7,7 +7,7 @@
 
 
 * Full name: `\BigCommerce\Settings\Sections\Gift_Certificates`
-* Parent class: [`\BigCommerce\Settings\Sections\Settings_Section`](./Settings_Section.md)
+* Parent class: [`\BigCommerce\Settings\Sections\Settings_Section`](./classes/BigCommerce/Settings/Sections/Settings_Section.md)
 
 
 ## Constants
@@ -198,4 +198,4 @@ public render_page_field(mixed $args): mixed
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

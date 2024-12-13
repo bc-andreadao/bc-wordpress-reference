@@ -7,7 +7,7 @@
 
 
 * Full name: `\BigCommerce\Pages\Registration_Page`
-* Parent class: [`\BigCommerce\Pages\Required_Page`](./Required_Page.md)
+* Parent class: [`\BigCommerce\Pages\Required_Page`](./classes/BigCommerce/Pages/Required_Page.md)
 
 
 ## Constants
@@ -532,4 +532,4 @@ public add_post_state(array $post_states, \WP_Post $post): array
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

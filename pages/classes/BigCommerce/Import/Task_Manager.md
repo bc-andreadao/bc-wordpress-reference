@@ -169,7 +169,7 @@ public completed_count(mixed $state): int
 
 **Throws:**
 
-- [`No_Task_Found_Exception`](../Exceptions/No_Task_Found_Exception.md)
+- [`No_Task_Found_Exception`](./classes/BigCommerce/Exceptions/No_Task_Found_Exception.md)
 
 
 
@@ -177,4 +177,4 @@ public completed_count(mixed $state): int
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

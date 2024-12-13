@@ -9,7 +9,7 @@ The purge process involves fetching category data, identifying remote term IDs,
 and managing the state of the purge process.
 
 * Full name: `\BigCommerce\Import\Processors\Category_Purge`
-* Parent class: [`\BigCommerce\Import\Processors\Term_Purge`](./Term_Purge.md)
+* Parent class: [`\BigCommerce\Import\Processors\Term_Purge`](./classes/BigCommerce/Import/Processors/Term_Purge.md)
 
 
 
@@ -394,7 +394,7 @@ protected get_remote_term_ids(int[] $ids): int[]
 
 **Throws:**
 
-- [`ApiException`](../../Api/v3/ApiException.md)
+- [`ApiException`](./classes/BigCommerce/Api/v3/ApiException.md)
 
 
 
@@ -433,7 +433,7 @@ A collection of categories or an empty array.
 **Throws:**
 <p>Throws an exception if the API request fails.</p>
 
-- [`ApiException`](../../Api/v3/ApiException.md)
+- [`ApiException`](./classes/BigCommerce/Api/v3/ApiException.md)
 
 
 
@@ -472,7 +472,7 @@ An array of category trees.
 **Throws:**
 <p>Throws an exception if the API request fails.</p>
 
-- [`ApiException`](../../Api/v3/ApiException.md)
+- [`ApiException`](./classes/BigCommerce/Api/v3/ApiException.md)
 
 
 
@@ -480,4 +480,4 @@ An array of category trees.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

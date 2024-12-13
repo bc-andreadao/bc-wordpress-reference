@@ -9,7 +9,7 @@ the provided wishlist ID, deletes the wishlist, and redirects the user to the de
 It also triggers success or error actions based on the outcome of the operation.
 
 * Full name: `\BigCommerce\Accounts\Wishlists\Actions\Delete_Wishlist`
-* Parent class: [`\BigCommerce\Accounts\Wishlists\Actions\Wishlist_Action`](./Wishlist_Action.md)
+* Parent class: [`\BigCommerce\Accounts\Wishlists\Actions\Wishlist_Action`](./classes/BigCommerce/Accounts/Wishlists/Actions/Wishlist_Action.md)
 
 
 ## Constants
@@ -85,7 +85,7 @@ The sanitized request data, including the wishlist ID.
 **Throws:**
 <p>If the request is missing required fields or contains invalid data.</p>
 
-- [`InvalidArgumentException`](../../../../InvalidArgumentException.md)
+- [`InvalidArgumentException`](./classes/InvalidArgumentException.md)
 
 
 
@@ -217,10 +217,10 @@ The customer's wishlist.
 **Throws:**
 <p>If the wishlist cannot be found or accessed.</p>
 
-- [`RuntimeException`](../../../../RuntimeException.md)
+- [`RuntimeException`](./classes/RuntimeException.md)
 <p>If the wishlist does not belong to the customer.</p>
 
-- [`InvalidArgumentException`](../../../../InvalidArgumentException.md)
+- [`InvalidArgumentException`](./classes/InvalidArgumentException.md)
 
 
 
@@ -259,4 +259,4 @@ The customer ID associated with the user.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

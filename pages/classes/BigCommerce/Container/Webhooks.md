@@ -9,7 +9,7 @@ to process webhook requests, manage their lifecycle, and integrate
 with BigCommerce APIs.
 
 * Full name: `\BigCommerce\Container\Webhooks`
-* Parent class: [`Provider`](./Provider.md)
+* Parent class: [`Provider`](./classes/BigCommerce/Container/Provider.md)
 
 
 ## Constants
@@ -76,4 +76,4 @@ for processing and managing webhook events.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

@@ -7,7 +7,7 @@ Extends WP_Parser's Importer class to modify the import behavior for class metho
 
 
 * Full name: `\BigCommerce\CLI\Documentation\Data_Importer`
-* Parent class: [`Importer`](../../../WP_Parser/Importer.md)
+* Parent class: [`Importer`](./classes/WP_Parser/Importer.md)
 
 
 
@@ -50,4 +50,4 @@ Post ID of the method if successfully imported, false otherwise.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

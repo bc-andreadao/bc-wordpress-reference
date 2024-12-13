@@ -8,7 +8,7 @@ It specifies the supported version of the theme, maps template files to correspo
 and loads additional compatibility functions.
 
 * Full name: `\BigCommerce\Compatibility\Themes\Flatsome\Flatsome`
-* Parent class: [`\BigCommerce\Compatibility\Themes\Theme`](../Theme.md)
+* Parent class: [`\BigCommerce\Compatibility\Themes\Theme`](./classes/BigCommerce/Compatibility/Themes/Theme.md)
 
 
 
@@ -28,6 +28,7 @@ protected string $supported_version
 
 
 
+
 ***
 
 ### templates
@@ -37,6 +38,7 @@ Template files mapped to their corresponding template classes.
 ```php
 protected array $templates
 ```
+
 
 
 
@@ -156,4 +158,4 @@ True if the version is supported, false otherwise.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

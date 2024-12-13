@@ -7,7 +7,7 @@
 
 
 * Full name: `\BigCommerce\Settings\Sections\Onboarding_Import_Settings`
-* Parent class: [`\BigCommerce\Settings\Sections\Settings_Section`](./Settings_Section.md)
+* Parent class: [`\BigCommerce\Settings\Sections\Settings_Section`](./classes/BigCommerce/Settings/Sections/Settings_Section.md)
 
 
 ## Constants
@@ -26,6 +26,7 @@
 ```php
 protected $options
 ```
+
 
 
 
@@ -250,4 +251,4 @@ public enable_customer_webhooks_toggle(): mixed
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

@@ -7,7 +7,7 @@
 
 
 * Full name: `\BigCommerce\Rest\Terms_Controller`
-* Parent class: [`\BigCommerce\Rest\Rest_Controller`](./Rest_Controller.md)
+* Parent class: [`\BigCommerce\Rest\Rest_Controller`](./classes/BigCommerce/Rest/Rest_Controller.md)
 
 
 
@@ -225,4 +225,4 @@ protected parse_result(mixed $response, mixed $client, mixed $rest_response = tr
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

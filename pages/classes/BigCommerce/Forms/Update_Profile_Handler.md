@@ -8,7 +8,7 @@ Handles the profile update form submission process.
 
 * Full name: `\BigCommerce\Forms\Update_Profile_Handler`
 * This class implements:
-[`\BigCommerce\Forms\Form_Handler`](./Form_Handler.md)
+[`\BigCommerce\Forms\Form_Handler`](./classes/BigCommerce/Forms/Form_Handler.md)
 
 
 ## Constants
@@ -50,4 +50,4 @@ public handle_request(array $submission): void
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

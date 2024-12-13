@@ -8,7 +8,7 @@ This class provides common functionality for importing terms into WordPress.
 It interacts with BigCommerce's API and uses GraphQL data for creating or updating terms.
 
 * Full name: `\BigCommerce\Import\Processors\Category_Import`
-* Parent class: [`\BigCommerce\Import\Processors\Term_Import`](./Term_Import.md)
+* Parent class: [`\BigCommerce\Import\Processors\Term_Import`](./classes/BigCommerce/Import/Processors/Term_Import.md)
 
 
 
@@ -149,7 +149,7 @@ The processed category data from GraphQL response.
 **Throws:**
 <p>Throws an exception if GraphQL request fails.</p>
 
-- [`ApiException`](../../Api/v3/ApiException.md)
+- [`ApiException`](./classes/BigCommerce/Api/v3/ApiException.md)
 
 
 
@@ -248,7 +248,7 @@ The category data response.
 **Throws:**
 <p>Throws an exception if API request fails.</p>
 
-- [`ApiException`](../../Api/v3/ApiException.md)
+- [`ApiException`](./classes/BigCommerce/Api/v3/ApiException.md)
 
 
 
@@ -581,7 +581,7 @@ The API response object.
 **Throws:**
 <p>If the API request fails.</p>
 
-- [`ApiException`](../../Api/v3/ApiException.md)
+- [`ApiException`](./classes/BigCommerce/Api/v3/ApiException.md)
 
 
 
@@ -734,7 +734,7 @@ A collection of categories or an empty array.
 **Throws:**
 <p>Throws an exception if the API request fails.</p>
 
-- [`ApiException`](../../Api/v3/ApiException.md)
+- [`ApiException`](./classes/BigCommerce/Api/v3/ApiException.md)
 
 
 
@@ -773,7 +773,7 @@ An array of category trees.
 **Throws:**
 <p>Throws an exception if the API request fails.</p>
 
-- [`ApiException`](../../Api/v3/ApiException.md)
+- [`ApiException`](./classes/BigCommerce/Api/v3/ApiException.md)
 
 
 
@@ -781,4 +781,4 @@ An array of category trees.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

@@ -8,7 +8,7 @@ and registers dependencies related to post metadata processing within the contai
 
 
 * Full name: `\BigCommerce\Container\Post_Meta`
-* Parent class: [`Provider`](./Provider.md)
+* Parent class: [`Provider`](./classes/BigCommerce/Container/Provider.md)
 
 
 
@@ -46,4 +46,4 @@ It is called during the registration phase of the container setup.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

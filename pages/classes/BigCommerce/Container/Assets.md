@@ -8,7 +8,7 @@ configuration, and localization for both the admin and frontend.
 
 
 * Full name: `\BigCommerce\Container\Assets`
-* Parent class: [`Provider`](./Provider.md)
+* Parent class: [`Provider`](./classes/BigCommerce/Container/Provider.md)
 
 
 ## Constants
@@ -114,4 +114,4 @@ public frontend(\Pimple\Container $container): mixed
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

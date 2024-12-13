@@ -7,7 +7,7 @@ A placeholder class for themes that do not require any compatibility layer.
 This class extends the base Theme class but does not add any additional functionality.
 
 * Full name: `\BigCommerce\Compatibility\Themes\Null_Theme`
-* Parent class: [`\BigCommerce\Compatibility\Themes\Theme`](./Theme.md)
+* Parent class: [`\BigCommerce\Compatibility\Themes\Theme`](./classes/BigCommerce/Compatibility/Themes/Theme.md)
 
 
 
@@ -99,4 +99,4 @@ True if the version is supported, false otherwise.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

@@ -7,7 +7,7 @@ This class handles the process of purging (deleting) BigCommerce brand terms fro
 It extends the base Term_Purge class and provides the specific functionality for purging brand terms.
 
 * Full name: `\BigCommerce\Import\Processors\Brand_Purge`
-* Parent class: [`\BigCommerce\Import\Processors\Term_Purge`](./Term_Purge.md)
+* Parent class: [`\BigCommerce\Import\Processors\Term_Purge`](./classes/BigCommerce/Import/Processors/Term_Purge.md)
 
 
 
@@ -390,7 +390,7 @@ protected get_remote_term_ids(int[] $ids): int[]
 
 **Throws:**
 
-- [`ApiException`](../../Api/v3/ApiException.md)
+- [`ApiException`](./classes/BigCommerce/Api/v3/ApiException.md)
 
 
 
@@ -398,4 +398,4 @@ protected get_remote_term_ids(int[] $ids): int[]
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

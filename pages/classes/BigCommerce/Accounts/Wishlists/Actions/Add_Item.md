@@ -8,7 +8,7 @@ This class processes a request to add a product to the wishlist, sanitizes the r
 verifies its validity, adds the item, and then provides a success or error message accordingly.
 
 * Full name: `\BigCommerce\Accounts\Wishlists\Actions\Add_Item`
-* Parent class: [`\BigCommerce\Accounts\Wishlists\Actions\Wishlist_Action`](./Wishlist_Action.md)
+* Parent class: [`\BigCommerce\Accounts\Wishlists\Actions\Wishlist_Action`](./classes/BigCommerce/Accounts/Wishlists/Actions/Wishlist_Action.md)
 
 
 ## Constants
@@ -83,7 +83,7 @@ The sanitized request data, including the wishlist and product IDs.
 **Throws:**
 <p>If the request is invalid or missing required data.</p>
 
-- [`InvalidArgumentException`](../../../../InvalidArgumentException.md)
+- [`InvalidArgumentException`](./classes/InvalidArgumentException.md)
 
 
 
@@ -215,10 +215,10 @@ The customer's wishlist.
 **Throws:**
 <p>If the wishlist cannot be found or accessed.</p>
 
-- [`RuntimeException`](../../../../RuntimeException.md)
+- [`RuntimeException`](./classes/RuntimeException.md)
 <p>If the wishlist does not belong to the customer.</p>
 
-- [`InvalidArgumentException`](../../../../InvalidArgumentException.md)
+- [`InvalidArgumentException`](./classes/InvalidArgumentException.md)
 
 
 
@@ -257,4 +257,4 @@ The customer ID associated with the user.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

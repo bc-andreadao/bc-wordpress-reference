@@ -8,7 +8,7 @@ Handles rendering both the order history list and individual order details.
 
 * Full name: `\BigCommerce\Shortcodes\Order_History`
 * This class implements:
-[`\BigCommerce\Shortcodes\Shortcode`](./Shortcode.md)
+[`\BigCommerce\Shortcodes\Shortcode`](./classes/BigCommerce/Shortcodes/Shortcode.md)
 
 
 ## Constants
@@ -108,4 +108,4 @@ The rendered HTML output or an empty string for unauthorized users.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

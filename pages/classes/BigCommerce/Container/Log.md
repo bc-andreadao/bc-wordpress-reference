@@ -8,7 +8,7 @@ It registers services for logging, defines constants for log paths, and handles 
 during the BigCommerce import process, such as logging errors and diagnostics.
 
 * Full name: `\BigCommerce\Container\Log`
-* Parent class: [`Provider`](./Provider.md)
+* Parent class: [`Provider`](./classes/BigCommerce/Container/Provider.md)
 
 
 ## Constants
@@ -54,4 +54,4 @@ for logging during the BigCommerce import process.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

@@ -8,7 +8,7 @@ Overrides the template controller factory to replace default
 template controllers with AMP-specific counterparts when required.
 
 * Full name: `\BigCommerce\Amp\Amp_Controller_Factory`
-* Parent class: [`\BigCommerce\Templates\Controller_Factory`](../Templates/Controller_Factory.md)
+* Parent class: [`\BigCommerce\Templates\Controller_Factory`](./classes/BigCommerce/Templates/Controller_Factory.md)
 
 
 
@@ -85,4 +85,4 @@ public get_controller(string $classname, array $options = [], string $template =
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

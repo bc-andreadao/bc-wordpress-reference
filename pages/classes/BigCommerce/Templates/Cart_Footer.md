@@ -7,7 +7,7 @@
 
 
 * Full name: `\BigCommerce\Templates\Cart_Footer`
-* Parent class: [`\BigCommerce\Templates\Controller`](./Controller.md)
+* Parent class: [`\BigCommerce\Templates\Controller`](./classes/BigCommerce/Templates/Controller.md)
 
 
 ## Constants
@@ -35,6 +35,7 @@ protected $template
 
 
 
+
 ***
 
 ### wrapper_tag
@@ -50,6 +51,7 @@ protected string $wrapper_tag
 
 
 
+
 ***
 
 ### wrapper_classes
@@ -59,6 +61,7 @@ protected string $wrapper_tag
 ```php
 protected string[] $wrapper_classes
 ```
+
 
 
 
@@ -513,4 +516,4 @@ protected build_attribute_string(array $attributes): string
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

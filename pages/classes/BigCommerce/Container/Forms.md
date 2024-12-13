@@ -8,7 +8,7 @@ It registers form handlers and provides functionality to process form actions, h
 This class is part of the container and utilizes dependency injection to manage the various handlers for each action.
 
 * Full name: `\BigCommerce\Container\Forms`
-* Parent class: [`Provider`](./Provider.md)
+* Parent class: [`Provider`](./classes/BigCommerce/Container/Provider.md)
 
 
 ## Constants
@@ -60,4 +60,4 @@ This method sets up actions for handling form submissions, errors, success, redi
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

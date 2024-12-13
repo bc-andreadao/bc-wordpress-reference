@@ -21,6 +21,34 @@ This is an automatically generated documentation for **Documentation**.
 
 
 
+#### Functions
+
+| Function | Description |
+|----------|-------------|
+| [`is_account_page`](./functions/is_account_page().md) | Checks if the current page is the account page.|
+| [`is_cart`](./functions/is_cart().md) | Checks if the current page is the cart page.|
+| [`is_checkout`](./functions/is_checkout().md) | Checks if the current page is the checkout page.|
+| [`is_product`](./functions/is_product().md) | Checks if the current page is a product page.|
+| [`is_product_category`](./functions/is_product_category().md) | Checks if the current page is a product category page.|
+| [`is_product_tag`](./functions/is_product_tag().md) | Checks if the current page is a product tag page.|
+| [`is_product_taxonomy`](./functions/is_product_taxonomy().md) | Checks if the current page is a product taxonomy page.|
+| [`is_shop`](./functions/is_shop().md) | Checks if the current page is the shop page.|
+| [`is_woocommerce_activated`](./functions/is_woocommerce_activated().md) | |
+| [`wc`](./functions/wc().md) | Retrieves the WooCommerce facade instance from the container.|
+| [`wc_get_cart_url`](./functions/wc_get_cart_url().md) | Retrieves the URL of the cart page.|
+| [`wc_get_checkout_url`](./functions/wc_get_checkout_url().md) | Retrieves the URL of the checkout page.|
+| [`wc_get_image_size`](./functions/wc_get_image_size().md) | Retrieves the WooCommerce image size.|
+| [`wc_get_page_id`](./functions/wc_get_page_id().md) | Retrieves the ID of a WooCommerce page.|
+| [`wc_get_template`](./functions/wc_get_template().md) | Retrieves and renders a WooCommerce template.|
+| [`wc_get_template_html`](./functions/wc_get_template_html().md) | Retrieves the HTML content for a WooCommerce template.|
+| [`wc_get_template_part`](./functions/wc_get_template_part().md) | Retrieves a template part for WooCommerce.|
+| [`wc_locate_template`](./functions/wc_locate_template().md) | Locates a WooCommerce template.|
+| [`wc_print_notices`](./functions/wc_print_notices().md) | Prints WooCommerce notices.|
+| [`woocommerce_mini_cart`](./functions/woocommerce_mini_cart().md) | Displays the mini cart for WooCommerce.|
+| [`woocommerce_reset_loop`](./functions/woocommerce_reset_loop().md) | Resets the WooCommerce loop.|
+| [`wp_remove_targeted_link_rel_filters`](./functions/wp_remove_targeted_link_rel_filters().md) | Removes the filters added by wp_init_targeted_link_rel_filters()|
+| [`wp_unschedule_hook`](./functions/wp_unschedule_hook().md) | Unschedules all events attached to the hook.|
+
 
 ### \BigCommerce
 
@@ -30,6 +58,7 @@ This is an automatically generated documentation for **Documentation**.
 |-------|-------------|
 | [`Api_Factory`](./classes/BigCommerce/Api_Factory.md) | |
 | [`Plugin`](./classes/BigCommerce/Plugin.md) | |
+
 
 
 
@@ -55,6 +84,7 @@ This is an automatically generated documentation for **Documentation**.
 
 
 
+
 ### \BigCommerce\Accounts\Roles
 
 #### Classes
@@ -62,7 +92,6 @@ This is an automatically generated documentation for **Documentation**.
 | Class | Description |
 |-------|-------------|
 | [`Customer`](./classes/BigCommerce/Accounts/Roles/Customer.md) | Class Customer|
-
 
 
 #### Interfaces
@@ -89,6 +118,7 @@ This is an automatically generated documentation for **Documentation**.
 
 
 
+
 ### \BigCommerce\Accounts\Wishlists\Actions
 
 #### Classes
@@ -102,6 +132,7 @@ This is an automatically generated documentation for **Documentation**.
 | [`Remove_Item`](./classes/BigCommerce/Accounts/Wishlists/Actions/Remove_Item.md) | Handles the logic for removing an item from a customer&#039;s wishlist.|
 | [`Request_Router`](./classes/BigCommerce/Accounts/Wishlists/Actions/Request_Router.md) | Class Request_Router|
 | [`Wishlist_Action`](./classes/BigCommerce/Accounts/Wishlists/Actions/Wishlist_Action.md) | Abstract class for handling wishlist-related actions.|
+
 
 
 
@@ -124,6 +155,7 @@ This is an automatically generated documentation for **Documentation**.
 
 
 
+
 ### \BigCommerce\Analytics
 
 #### Classes
@@ -137,6 +169,7 @@ This is an automatically generated documentation for **Documentation**.
 
 
 
+
 ### \BigCommerce\Analytics\Events
 
 #### Classes
@@ -145,6 +178,7 @@ This is an automatically generated documentation for **Documentation**.
 |-------|-------------|
 | [`Add_To_Cart`](./classes/BigCommerce/Analytics/Events/Add_To_Cart.md) | Class Add_To_Cart|
 | [`View_Product`](./classes/BigCommerce/Analytics/Events/View_Product.md) | Class View_Product|
+
 
 
 
@@ -174,7 +208,6 @@ This is an automatically generated documentation for **Documentation**.
 | [`Webhooks_Api`](./classes/BigCommerce/Api/Webhooks_Api.md) | Creates an adapter class for the BC v2 API webhook endpoint.|
 | [`v2ApiAdapter`](./classes/BigCommerce/Api/v2ApiAdapter.md) | Provides an adapter for interacting with the BigCommerce API. This class includes methods for<br />retrieving collections and resources, as well as creating, updating, and deleting resources.|
 
-
 #### Traits
 
 | Trait | Description |
@@ -198,6 +231,7 @@ This is an automatically generated documentation for **Documentation**.
 
 
 
+
 ### \BigCommerce\Assets\Theme
 
 #### Classes
@@ -213,6 +247,7 @@ This is an automatically generated documentation for **Documentation**.
 
 
 
+
 ### \BigCommerce\Banners
 
 #### Classes
@@ -220,6 +255,7 @@ This is an automatically generated documentation for **Documentation**.
 | Class | Description |
 |-------|-------------|
 | [`Banners`](./classes/BigCommerce/Banners/Banners.md) | Handles the management and display of banners on various pages of the BigCommerce WordPress theme. It<br />provides methods to configure JavaScript settings, fetch banners from the API, and filter banners based<br />on the current page context, visibility, and date range.|
+
 
 
 
@@ -238,6 +274,7 @@ This is an automatically generated documentation for **Documentation**.
 
 
 
+
 ### \BigCommerce\CLI\Documentation
 
 #### Classes
@@ -247,6 +284,7 @@ This is an automatically generated documentation for **Documentation**.
 | [`Build_Docs`](./classes/BigCommerce/CLI/Documentation/Build_Docs.md) | Register build docs command and related functionality|
 | [`Data_Importer`](./classes/BigCommerce/CLI/Documentation/Data_Importer.md) | Extends WP_Parser&#039;s Importer class to modify the import behavior for class methods and hooks.|
 | [`Import_Docs`](./classes/BigCommerce/CLI/Documentation/Import_Docs.md) | Class Import_Docs|
+
 
 
 
@@ -264,6 +302,7 @@ This is an automatically generated documentation for **Documentation**.
 
 
 
+
 ### \BigCommerce\Cache
 
 #### Classes
@@ -271,6 +310,7 @@ This is an automatically generated documentation for **Documentation**.
 | Class | Description |
 |-------|-------------|
 | [`Cache_Handler`](./classes/BigCommerce/Cache/Cache_Handler.md) | Cache_Handler class|
+
 
 
 
@@ -295,6 +335,7 @@ This is an automatically generated documentation for **Documentation**.
 
 
 
+
 ### \BigCommerce\Checkout
 
 #### Classes
@@ -307,6 +348,7 @@ This is an automatically generated documentation for **Documentation**.
 
 
 
+
 ### \BigCommerce\Compatibility
 
 #### Classes
@@ -314,7 +356,6 @@ This is an automatically generated documentation for **Documentation**.
 | Class | Description |
 |-------|-------------|
 | [`Template_Compatibility`](./classes/BigCommerce/Compatibility/Template_Compatibility.md) | Provides compatibility functionality to override WooCommerce page templates.|
-
 
 
 #### Interfaces
@@ -336,6 +377,7 @@ This is an automatically generated documentation for **Documentation**.
 
 
 
+
 ### \BigCommerce\Compatibility\Matomo
 
 #### Classes
@@ -343,6 +385,7 @@ This is an automatically generated documentation for **Documentation**.
 | Class | Description |
 |-------|-------------|
 | [`Matomo`](./classes/BigCommerce/Compatibility/Matomo/Matomo.md) | This class integrates BigCommerce with Matomo (formerly Piwik), a web analytics platform. It provides functionality for<br />modifying the JavaScript configuration for tracking user interactions with custom variables in Matomo.|
+
 
 
 
@@ -360,6 +403,7 @@ This is an automatically generated documentation for **Documentation**.
 
 
 
+
 ### \BigCommerce\Compatibility\Themes\Flatsome
 
 #### Classes
@@ -367,6 +411,7 @@ This is an automatically generated documentation for **Documentation**.
 | Class | Description |
 |-------|-------------|
 | [`Flatsome`](./classes/BigCommerce/Compatibility/Themes/Flatsome/Flatsome.md) | This class defines the compatibility layer for the Flatsome theme in the BigCommerce ecosystem.|
+
 
 
 
@@ -382,6 +427,7 @@ This is an automatically generated documentation for **Documentation**.
 
 
 
+
 ### \BigCommerce\Compatibility\WooCommerce
 
 #### Classes
@@ -390,6 +436,7 @@ This is an automatically generated documentation for **Documentation**.
 |-------|-------------|
 | [`Cart`](./classes/BigCommerce/Compatibility/WooCommerce/Cart.md) | This class handles the interaction between the WooCommerce cart and BigCommerce&#039;s cart API.|
 | [`Facade`](./classes/BigCommerce/Compatibility/WooCommerce/Facade.md) | This class acts as a facade for the WooCommerce cart, providing a simplified interface for interacting with the BigCommerce cart.|
+
 
 
 
@@ -440,6 +487,7 @@ This is an automatically generated documentation for **Documentation**.
 
 
 
+
 ### \BigCommerce\Currency
 
 #### Classes
@@ -452,14 +500,11 @@ This is an automatically generated documentation for **Documentation**.
 | [`Intl_Formatter`](./classes/BigCommerce/Currency/Intl_Formatter.md) | Formatter class for currency values using PHP&#039;s intl extension.|
 | [`USD_Formatter`](./classes/BigCommerce/Currency/USD_Formatter.md) | Formatter class for currency values specifically in USD.|
 
-
 #### Traits
 
 | Trait | Description |
 |-------|-------------|
 | [`With_Currency`](./classes/BigCommerce/Currency/With_Currency.md) | Provides currency formatting functionality for classes.|
-
-
 
 #### Interfaces
 
@@ -480,6 +525,7 @@ This is an automatically generated documentation for **Documentation**.
 
 
 
+
 ### \BigCommerce\Customizer\Controls
 
 #### Classes
@@ -491,6 +537,7 @@ This is an automatically generated documentation for **Documentation**.
 
 
 
+
 ### \BigCommerce\Customizer\Panels
 
 #### Classes
@@ -498,6 +545,7 @@ This is an automatically generated documentation for **Documentation**.
 | Class | Description |
 |-------|-------------|
 | [`Primary`](./classes/BigCommerce/Customizer/Panels/Primary.md) | Class Primary|
+
 
 
 
@@ -520,6 +568,7 @@ This is an automatically generated documentation for **Documentation**.
 
 
 
+
 ### \BigCommerce\Editor
 
 #### Classes
@@ -532,6 +581,7 @@ This is an automatically generated documentation for **Documentation**.
 
 
 
+
 ### \BigCommerce\Editor\Gutenberg
 
 #### Classes
@@ -539,6 +589,7 @@ This is an automatically generated documentation for **Documentation**.
 | Class | Description |
 |-------|-------------|
 | [`Migrate_Blocks`](./classes/BigCommerce/Editor/Gutenberg/Migrate_Blocks.md) | Handles the migration of shortcodes to Gutenberg blocks in the editor. When a post is loaded in the<br />Gutenberg editor, this class manages the transition from legacy shortcodes to dynamic blocks<br />specific to the BigCommerce platform.|
+
 
 
 
@@ -568,6 +619,7 @@ This is an automatically generated documentation for **Documentation**.
 
 
 
+
 ### \BigCommerce\Exceptions
 
 #### Classes
@@ -578,6 +630,7 @@ This is an automatically generated documentation for **Documentation**.
 | [`Component_Not_Found_Exception`](./classes/BigCommerce/Exceptions/Component_Not_Found_Exception.md) | Exception thrown when a component cannot be found in the system.|
 | [`No_Task_Found_Exception`](./classes/BigCommerce/Exceptions/No_Task_Found_Exception.md) | Exception thrown when a task cannot be found in the system.|
 | [`Product_Not_Found_Exception`](./classes/BigCommerce/Exceptions/Product_Not_Found_Exception.md) | Exception thrown when a product cannot be found in the system.|
+
 
 
 
@@ -601,13 +654,25 @@ This is an automatically generated documentation for **Documentation**.
 | [`Update_Profile_Handler`](./classes/BigCommerce/Forms/Update_Profile_Handler.md) | Handles the profile update form submission process.|
 
 
-
 #### Interfaces
 
 | Interface | Description |
 |-----------|-------------|
 | [`Form_Handler`](./classes/BigCommerce/Forms/Form_Handler.md) | Interface for handling form submissions.|
 
+
+
+### \BigCommerce\Functions
+
+
+
+
+#### Functions
+
+| Function | Description |
+|----------|-------------|
+| [`product_post_reviews`](./functions/BigCommerce/Functions/product_post_reviews().md) | Render reviews section for a product by post ID|
+| [`product_reviews`](./functions/BigCommerce/Functions/product_reviews().md) | Render reviews section for a product by BigCommerce ID|
 
 
 ### \BigCommerce\Gift_Certificates
@@ -617,6 +682,7 @@ This is an automatically generated documentation for **Documentation**.
 | Class | Description |
 |-------|-------------|
 | [`Sub_Nav`](./classes/BigCommerce/Gift_Certificates/Sub_Nav.md) | This class is responsible for adding a sub-navigation menu to the gift certificate and balance check pages.|
+
 
 
 
@@ -637,6 +703,7 @@ This is an automatically generated documentation for **Documentation**.
 
 
 
+
 ### \BigCommerce\Import
 
 #### Classes
@@ -649,14 +716,11 @@ This is an automatically generated documentation for **Documentation**.
 | [`Task_Definition`](./classes/BigCommerce/Import/Task_Definition.md) | |
 | [`Task_Manager`](./classes/BigCommerce/Import/Task_Manager.md) | Class Task_Manager|
 
-
 #### Traits
 
 | Trait | Description |
 |-------|-------------|
 | [`No_Cache_Options`](./classes/BigCommerce/Import/No_Cache_Options.md) | Trait No_Cache_Options|
-
-
 
 #### Interfaces
 
@@ -684,6 +748,7 @@ This is an automatically generated documentation for **Documentation**.
 
 
 
+
 ### \BigCommerce\Import\Importers\Terms
 
 #### Classes
@@ -699,6 +764,7 @@ This is an automatically generated documentation for **Documentation**.
 
 
 
+
 ### \BigCommerce\Import\Mappers
 
 #### Classes
@@ -708,6 +774,7 @@ This is an automatically generated documentation for **Documentation**.
 | [`Brand_Mapper`](./classes/BigCommerce/Import/Mappers/Brand_Mapper.md) | This class is responsible for mapping the BigCommerce brand data to a WordPress term.|
 | [`Product_Category_Mapper`](./classes/BigCommerce/Import/Mappers/Product_Category_Mapper.md) | This class is responsible for mapping the BigCommerce product category data to a WordPress term.|
 | [`Term_Mapper`](./classes/BigCommerce/Import/Mappers/Term_Mapper.md) | This abstract class provides the base functionality for mapping BigCommerce terms to WordPress terms.|
+
 
 
 
@@ -741,14 +808,11 @@ This is an automatically generated documentation for **Documentation**.
 | [`Term_Import`](./classes/BigCommerce/Import/Processors/Term_Import.md) | Abstract class for processing term imports.|
 | [`Term_Purge`](./classes/BigCommerce/Import/Processors/Term_Purge.md) | Class Term_Purge|
 
-
 #### Traits
 
 | Trait | Description |
 |-------|-------------|
 | [`CategoriesTrees`](./classes/BigCommerce/Import/Processors/CategoriesTrees.md) | This trait provides methods for working with BigCommerce category trees.|
-
-
 
 #### Interfaces
 
@@ -776,6 +840,7 @@ This is an automatically generated documentation for **Documentation**.
 
 
 
+
 ### \BigCommerce\Logging
 
 #### Classes
@@ -783,6 +848,7 @@ This is an automatically generated documentation for **Documentation**.
 | Class | Description |
 |-------|-------------|
 | [`Error_Log`](./classes/BigCommerce/Logging/Error_Log.md) | Class Log|
+
 
 
 
@@ -795,7 +861,6 @@ This is an automatically generated documentation for **Documentation**.
 |-------|-------------|
 | [`Channel_Update_Task`](./classes/BigCommerce/Manager/Channel_Update_Task.md) | |
 | [`Manager`](./classes/BigCommerce/Manager/Manager.md) | |
-
 
 
 #### Interfaces
@@ -821,6 +886,7 @@ This is an automatically generated documentation for **Documentation**.
 
 
 
+
 ### \BigCommerce\Merchant\Models
 
 #### Classes
@@ -831,6 +897,7 @@ This is an automatically generated documentation for **Documentation**.
 | [`Connect_Account_Request`](./classes/BigCommerce/Merchant/Models/Connect_Account_Request.md) | |
 | [`Create_Account_Request`](./classes/BigCommerce/Merchant/Models/Create_Account_Request.md) | |
 | [`Customer_Login_Request`](./classes/BigCommerce/Merchant/Models/Customer_Login_Request.md) | |
+
 
 
 
@@ -847,6 +914,7 @@ This is an automatically generated documentation for **Documentation**.
 
 
 
+
 ### \BigCommerce\Nav_Menu
 
 #### Classes
@@ -856,6 +924,7 @@ This is an automatically generated documentation for **Documentation**.
 | [`Dynamic_Menu_Items`](./classes/BigCommerce/Nav_Menu/Dynamic_Menu_Items.md) | |
 | [`Nav_Items_Customizer`](./classes/BigCommerce/Nav_Menu/Nav_Items_Customizer.md) | Responsible for adding the BigCommerce nav items<br />into the theme customizer|
 | [`Nav_Items_Meta_Box`](./classes/BigCommerce/Nav_Menu/Nav_Items_Meta_Box.md) | Responsible for handling the BigCommerce menu items<br />in the nav menu admin|
+
 
 
 
@@ -883,6 +952,7 @@ This is an automatically generated documentation for **Documentation**.
 
 
 
+
 ### \BigCommerce\Post_Types
 
 #### Classes
@@ -890,6 +960,7 @@ This is an automatically generated documentation for **Documentation**.
 | Class | Description |
 |-------|-------------|
 | [`Post_Type_Config`](./classes/BigCommerce/Post_Types/Post_Type_Config.md) | |
+
 
 
 
@@ -921,6 +992,7 @@ This is an automatically generated documentation for **Documentation**.
 
 
 
+
 ### \BigCommerce\Post_Types\Queue_Task
 
 #### Classes
@@ -929,6 +1001,7 @@ This is an automatically generated documentation for **Documentation**.
 |-------|-------------|
 | [`Config`](./classes/BigCommerce/Post_Types/Queue_Task/Config.md) | |
 | [`Queue_Task`](./classes/BigCommerce/Post_Types/Queue_Task/Queue_Task.md) | |
+
 
 
 
@@ -945,6 +1018,7 @@ This is an automatically generated documentation for **Documentation**.
 
 
 
+
 ### \BigCommerce\Proxy
 
 #### Classes
@@ -954,6 +1028,7 @@ This is an automatically generated documentation for **Documentation**.
 | [`AMP_Cart_Controller`](./classes/BigCommerce/Proxy/AMP_Cart_Controller.md) | AMP_Cart_Controller class|
 | [`Proxy_Cache`](./classes/BigCommerce/Proxy/Proxy_Cache.md) | Proxy_Cache class|
 | [`Proxy_Controller`](./classes/BigCommerce/Proxy/Proxy_Controller.md) | Proxy_Controller class|
+
 
 
 
@@ -980,6 +1055,7 @@ This is an automatically generated documentation for **Documentation**.
 
 
 
+
 ### \BigCommerce\Reviews
 
 #### Classes
@@ -990,6 +1066,7 @@ This is an automatically generated documentation for **Documentation**.
 | [`Review_Builder`](./classes/BigCommerce/Reviews/Review_Builder.md) | |
 | [`Review_Cache`](./classes/BigCommerce/Reviews/Review_Cache.md) | Class Review_Cache|
 | [`Review_Fetcher`](./classes/BigCommerce/Reviews/Review_Fetcher.md) | |
+
 
 
 
@@ -1006,6 +1083,7 @@ This is an automatically generated documentation for **Documentation**.
 
 
 
+
 ### \BigCommerce\Schema
 
 #### Classes
@@ -1017,6 +1095,7 @@ This is an automatically generated documentation for **Documentation**.
 | [`Schema`](./classes/BigCommerce/Schema/Schema.md) | |
 | [`Table_Maker`](./classes/BigCommerce/Schema/Table_Maker.md) | Class Table_Maker|
 | [`User_Roles`](./classes/BigCommerce/Schema/User_Roles.md) | |
+
 
 
 
@@ -1040,6 +1119,7 @@ This is an automatically generated documentation for **Documentation**.
 
 
 
+
 ### \BigCommerce\Settings\Screens
 
 #### Classes
@@ -1058,6 +1138,7 @@ This is an automatically generated documentation for **Documentation**.
 | [`Settings_Screen`](./classes/BigCommerce/Settings/Screens/Settings_Screen.md) | Abstract base class for managing plugin settings screens.|
 | [`Store_Type_Screen`](./classes/BigCommerce/Settings/Screens/Store_Type_Screen.md) | Class Store_Type_Screen|
 | [`Welcome_Screen`](./classes/BigCommerce/Settings/Screens/Welcome_Screen.md) | Abstract base class for managing plugin settings screens.|
+
 
 
 
@@ -1086,7 +1167,6 @@ This is an automatically generated documentation for **Documentation**.
 | [`Troubleshooting_Diagnostics`](./classes/BigCommerce/Settings/Sections/Troubleshooting_Diagnostics.md) | Class Troubleshooting_Diagnostics|
 | [`Units`](./classes/BigCommerce/Settings/Sections/Units.md) | Class Units|
 | [`Wishlists`](./classes/BigCommerce/Settings/Sections/Wishlists.md) | Class Wishlists|
-
 
 #### Traits
 
@@ -1121,7 +1201,6 @@ This is an automatically generated documentation for **Documentation**.
 | [`Wishlist`](./classes/BigCommerce/Shortcodes/Wishlist.md) | |
 
 
-
 #### Interfaces
 
 | Interface | Description |
@@ -1141,6 +1220,7 @@ This is an automatically generated documentation for **Documentation**.
 
 
 
+
 ### \BigCommerce\Taxonomies\Availability
 
 #### Classes
@@ -1153,6 +1233,7 @@ This is an automatically generated documentation for **Documentation**.
 
 
 
+
 ### \BigCommerce\Taxonomies\Brand
 
 #### Classes
@@ -1161,6 +1242,7 @@ This is an automatically generated documentation for **Documentation**.
 |-------|-------------|
 | [`Brand`](./classes/BigCommerce/Taxonomies/Brand/Brand.md) | |
 | [`Config`](./classes/BigCommerce/Taxonomies/Brand/Config.md) | |
+
 
 
 
@@ -1185,6 +1267,7 @@ This is an automatically generated documentation for **Documentation**.
 
 
 
+
 ### \BigCommerce\Taxonomies\Condition
 
 #### Classes
@@ -1197,6 +1280,7 @@ This is an automatically generated documentation for **Documentation**.
 
 
 
+
 ### \BigCommerce\Taxonomies\Flag
 
 #### Classes
@@ -1205,6 +1289,7 @@ This is an automatically generated documentation for **Documentation**.
 |-------|-------------|
 | [`Config`](./classes/BigCommerce/Taxonomies/Flag/Config.md) | |
 | [`Flag`](./classes/BigCommerce/Taxonomies/Flag/Flag.md) | |
+
 
 
 
@@ -1223,6 +1308,7 @@ This is an automatically generated documentation for **Documentation**.
 
 
 
+
 ### \BigCommerce\Taxonomies\Product_Type
 
 #### Classes
@@ -1231,6 +1317,7 @@ This is an automatically generated documentation for **Documentation**.
 |-------|-------------|
 | [`Config`](./classes/BigCommerce/Taxonomies/Product_Type/Config.md) | |
 | [`Product_Type`](./classes/BigCommerce/Taxonomies/Product_Type/Product_Type.md) | |
+
 
 
 
@@ -1353,7 +1440,6 @@ This is an automatically generated documentation for **Documentation**.
 | [`Wishlist_Not_Available`](./classes/BigCommerce/Templates/Wishlist_Not_Available.md) | |
 | [`Wishlist_Product`](./classes/BigCommerce/Templates/Wishlist_Product.md) | Class Wishlist_Product|
 
-
 #### Traits
 
 | Trait | Description |
@@ -1386,6 +1472,7 @@ This is an automatically generated documentation for **Documentation**.
 
 
 
+
 ### \BigCommerce\Util
 
 #### Classes
@@ -1394,6 +1481,7 @@ This is an automatically generated documentation for **Documentation**.
 |-------|-------------|
 | [`Cart_Item_Iterator`](./classes/BigCommerce/Util/Cart_Item_Iterator.md) | |
 | [`Kses`](./classes/BigCommerce/Util/Kses.md) | |
+
 
 
 
@@ -1410,7 +1498,6 @@ This is an automatically generated documentation for **Documentation**.
 | [`Webhook_Cron_Tasks`](./classes/BigCommerce/Webhooks/Webhook_Cron_Tasks.md) | Class Webhook_Cron_Tasks|
 | [`Webhook_Listener`](./classes/BigCommerce/Webhooks/Webhook_Listener.md) | Class Webhook_Listener|
 | [`Webhook_Versioning`](./classes/BigCommerce/Webhooks/Webhook_Versioning.md) | Class Webhook_Versioning|
-
 
 #### Traits
 
@@ -1440,6 +1527,7 @@ This is an automatically generated documentation for **Documentation**.
 
 
 
+
 ### \BigCommerce\Webhooks\Product
 
 #### Classes
@@ -1462,6 +1550,7 @@ This is an automatically generated documentation for **Documentation**.
 
 
 
+
 ### \BigCommerce\Widgets
 
 #### Classes
@@ -1475,5 +1564,6 @@ This is an automatically generated documentation for **Documentation**.
 
 
 
+
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

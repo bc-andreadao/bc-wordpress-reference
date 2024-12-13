@@ -8,7 +8,7 @@ Formatter class for currency values specifically in USD.
 
 * Full name: `\BigCommerce\Currency\USD_Formatter`
 * This class implements:
-[`\BigCommerce\Currency\Currency_Formatter`](./Currency_Formatter.md)
+[`\BigCommerce\Currency\Currency_Formatter`](./classes/BigCommerce/Currency/Currency_Formatter.md)
 
 
 
@@ -49,4 +49,4 @@ The formatted currency value in USD.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

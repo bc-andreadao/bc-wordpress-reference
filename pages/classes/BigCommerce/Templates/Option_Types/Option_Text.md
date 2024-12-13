@@ -7,7 +7,7 @@
 
 
 * Full name: `\BigCommerce\Templates\Option_Types\Option_Text`
-* Parent class: [`\BigCommerce\Templates\Option_Types\Option_Type`](./Option_Type.md)
+* Parent class: [`\BigCommerce\Templates\Option_Types\Option_Type`](./classes/BigCommerce/Templates/Option_Types/Option_Type.md)
 
 
 ## Constants
@@ -28,6 +28,7 @@
 ```php
 protected $template
 ```
+
 
 
 
@@ -459,4 +460,4 @@ protected sort_options(mixed $a, mixed $b): mixed
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

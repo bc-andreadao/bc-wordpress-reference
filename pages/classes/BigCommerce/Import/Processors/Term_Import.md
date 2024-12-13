@@ -9,7 +9,7 @@ It interacts with BigCommerce's API and uses GraphQL data for creating or updati
 
 * Full name: `\BigCommerce\Import\Processors\Term_Import`
 * This class implements:
-[`\BigCommerce\Import\Processors\Import_Processor`](./Import_Processor.md)
+[`\BigCommerce\Import\Processors\Import_Processor`](./classes/BigCommerce/Import/Processors/Import_Processor.md)
 * This class is an **Abstract class**
 
 
@@ -36,6 +36,7 @@ public \BigCommerce\Api\v3\Api\CatalogApi $catalog_api
 
 
 
+
 ***
 
 ### gql_processor
@@ -51,6 +52,7 @@ public \BigCommerce\GraphQL\GraphQL_Processor $gql_processor
 
 
 
+
 ***
 
 ### batch_size
@@ -60,6 +62,7 @@ public \BigCommerce\GraphQL\GraphQL_Processor $gql_processor
 ```php
 public int $batch_size
 ```
+
 
 
 
@@ -281,7 +284,7 @@ The API response object.
 **Throws:**
 <p>If the API request fails.</p>
 
-- [`ApiException`](../../Api/v3/ApiException.md)
+- [`ApiException`](./classes/BigCommerce/Api/v3/ApiException.md)
 
 
 
@@ -520,4 +523,4 @@ protected delete_option(string $option): bool
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

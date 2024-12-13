@@ -8,7 +8,7 @@ functionality, such as filtering default headers for BigCommerce API requests.
 This class allows developers to modify API behavior through WordPress filters.
 
 * Full name: `\BigCommerce\Api\Configuration`
-* Parent class: [`Configuration`](./v3/Configuration.md)
+* Parent class: [`Configuration`](./classes/BigCommerce/Api/v3/Configuration.md)
 
 
 
@@ -43,4 +43,4 @@ An array of default headers to be included with API requests.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

@@ -10,7 +10,7 @@ into JavaScript settings via a filter hook.
 The `banners` service is registered, allowing the application to interact with the banners API and manage banner-related data.
 
 * Full name: `\BigCommerce\Container\Banners`
-* Parent class: [`Provider`](./Provider.md)
+* Parent class: [`Provider`](./classes/BigCommerce/Container/Provider.md)
 
 
 ## Constants
@@ -54,4 +54,4 @@ to integrate banner-specific configurations into JavaScript settings.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

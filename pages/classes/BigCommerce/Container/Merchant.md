@@ -8,7 +8,7 @@ Provides functionality for creating and connecting merchant accounts, checking a
 statuses, and setting up the onboarding API.
 
 * Full name: `\BigCommerce\Container\Merchant`
-* Parent class: [`Provider`](./Provider.md)
+* Parent class: [`Provider`](./classes/BigCommerce/Container/Provider.md)
 
 
 ## Constants
@@ -56,4 +56,4 @@ status checks, and setup status.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

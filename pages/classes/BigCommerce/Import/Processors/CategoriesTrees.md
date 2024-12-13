@@ -47,7 +47,7 @@ A collection of categories or an empty array.
 **Throws:**
 <p>Throws an exception if the API request fails.</p>
 
-- [`ApiException`](../../Api/v3/ApiException.md)
+- [`ApiException`](./classes/BigCommerce/Api/v3/ApiException.md)
 
 
 
@@ -86,12 +86,12 @@ An array of category trees.
 **Throws:**
 <p>Throws an exception if the API request fails.</p>
 
-- [`ApiException`](../../Api/v3/ApiException.md)
+- [`ApiException`](./classes/BigCommerce/Api/v3/ApiException.md)
 
 
 
 ***
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13
 

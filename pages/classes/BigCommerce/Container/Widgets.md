@@ -7,7 +7,7 @@ Registers and manages widgets for the application.
 Includes widgets for product categories, mini cart, and currency switcher.
 
 * Full name: `\BigCommerce\Container\Widgets`
-* Parent class: [`Provider`](./Provider.md)
+* Parent class: [`Provider`](./classes/BigCommerce/Container/Provider.md)
 
 
 ## Constants
@@ -49,4 +49,4 @@ Registers a list of widgets and hooks them into WordPress using `widgets_init`.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

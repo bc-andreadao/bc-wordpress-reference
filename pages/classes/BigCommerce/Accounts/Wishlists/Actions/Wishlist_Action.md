@@ -29,6 +29,7 @@ protected \BigCommerce\Api\v3\Api\WishlistsApi $wishlists
 
 
 
+
 ***
 
 ## Methods
@@ -156,10 +157,10 @@ The customer's wishlist.
 **Throws:**
 <p>If the wishlist cannot be found or accessed.</p>
 
-- [`RuntimeException`](../../../../RuntimeException.md)
+- [`RuntimeException`](./classes/RuntimeException.md)
 <p>If the wishlist does not belong to the customer.</p>
 
-- [`InvalidArgumentException`](../../../../InvalidArgumentException.md)
+- [`InvalidArgumentException`](./classes/InvalidArgumentException.md)
 
 
 
@@ -198,4 +199,4 @@ The customer ID associated with the user.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

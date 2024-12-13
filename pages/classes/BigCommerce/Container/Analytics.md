@@ -8,7 +8,7 @@ This class provides integration for popular analytics platforms like Facebook Pi
 It also manages the registration of event tracking for actions such as adding to cart and viewing products.
 
 * Full name: `\BigCommerce\Container\Analytics`
-* Parent class: [`Provider`](./Provider.md)
+* Parent class: [`Provider`](./classes/BigCommerce/Container/Provider.md)
 
 
 ## Constants
@@ -55,4 +55,4 @@ and event listeners for tracking various interactions such as add-to-cart and pr
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

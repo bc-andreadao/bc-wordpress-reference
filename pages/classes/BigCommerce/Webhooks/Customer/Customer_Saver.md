@@ -27,6 +27,7 @@ public \BigCommerce\Api\v3\Api\CustomersApi $customers_api
 
 
 
+
 ***
 
 ## Methods
@@ -252,4 +253,4 @@ protected save_customer_channel_data(\WP_User $user, \BigCommerce\Api\v3\Model\C
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

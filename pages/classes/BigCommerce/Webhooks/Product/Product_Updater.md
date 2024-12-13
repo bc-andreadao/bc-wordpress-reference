@@ -78,7 +78,7 @@ Applies temporary filters to prevent unintended listing updates or deletions dur
 **Throws:**
 <p>If the API request for product data fails.</p>
 
-- [`ApiException`](../../Api/v3/ApiException.md)
+- [`ApiException`](./classes/BigCommerce/Api/v3/ApiException.md)
 
 
 
@@ -86,4 +86,4 @@ Applies temporary filters to prevent unintended listing updates or deletions dur
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

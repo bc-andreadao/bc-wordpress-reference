@@ -7,7 +7,7 @@ Class Multiple_Checkboxes
 A customizer control that renders as a list of checkboxes.
 
 * Full name: `\BigCommerce\Customizer\Controls\Multiple_Checkboxes`
-* Parent class: [`WP_Customize_Control`](../../../WP_Customize_Control.md)
+* Parent class: [`WP_Customize_Control`](./classes/WP_Customize_Control.md)
 
 
 
@@ -21,6 +21,7 @@ The control type.
 ```php
 public string $type
 ```
+
 
 
 
@@ -56,4 +57,4 @@ to store the selected values for the Customizer API.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

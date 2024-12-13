@@ -9,7 +9,7 @@ API communication and can be extended for specific API clients.
 
 
 * Full name: `\BigCommerce\Api\Base_Client`
-* Parent class: [`ApiClient`](./v3/ApiClient.md)
+* Parent class: [`ApiClient`](./classes/BigCommerce/Api/v3/ApiClient.md)
 
 
 
@@ -23,6 +23,7 @@ Configuration for the API client
 ```php
 protected \BigCommerce\Api\Configuration $config
 ```
+
 
 
 
@@ -89,4 +90,4 @@ Returns the Configuration object used by this API client.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

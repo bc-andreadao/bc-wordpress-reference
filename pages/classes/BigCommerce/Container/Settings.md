@@ -8,7 +8,7 @@ This class is responsible for registering settings screens, handling API credent
 and managing various onboarding steps in the BigCommerce plugin.
 
 * Full name: `\BigCommerce\Container\Settings`
-* Parent class: [`Provider`](./Provider.md)
+* Parent class: [`Provider`](./classes/BigCommerce/Container/Provider.md)
 
 
 ## Constants
@@ -94,4 +94,4 @@ public register(\Pimple\Container $container): void
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

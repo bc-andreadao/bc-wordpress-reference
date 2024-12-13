@@ -7,7 +7,7 @@ Exception thrown when a component cannot be found in the system.
 
 
 * Full name: `\BigCommerce\Exceptions\Component_Not_Found_Exception`
-* Parent class: [`RuntimeException`](../../RuntimeException.md)
+* Parent class: [`RuntimeException`](./classes/RuntimeException.md)
 
 
 
@@ -15,4 +15,4 @@ Exception thrown when a component cannot be found in the system.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

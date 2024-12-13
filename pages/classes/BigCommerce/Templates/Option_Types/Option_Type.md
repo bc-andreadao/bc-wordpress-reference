@@ -7,7 +7,7 @@
 
 
 * Full name: `\BigCommerce\Templates\Option_Types\Option_Type`
-* Parent class: [`\BigCommerce\Templates\Controller`](../Controller.md)
+* Parent class: [`\BigCommerce\Templates\Controller`](./classes/BigCommerce/Templates/Controller.md)
 * This class is an **Abstract class**
 
 
@@ -473,4 +473,4 @@ protected build_attribute_string(array $attributes): string
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

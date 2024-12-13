@@ -9,7 +9,7 @@ This command deletes key options related to the BigCommerce integration, allowin
 Usage: wp bigcommerce dev reset-plugin
 
 * Full name: `\BigCommerce\CLI\Reset_Plugin`
-* Parent class: [`\BigCommerce\CLI\Command`](./Command.md)
+* Parent class: [`\BigCommerce\CLI\Command`](./classes/BigCommerce/CLI/Command.md)
 
 
 
@@ -256,4 +256,4 @@ passed to the command via WP-CLI.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

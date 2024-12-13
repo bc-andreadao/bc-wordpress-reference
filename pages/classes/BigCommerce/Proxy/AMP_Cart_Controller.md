@@ -7,7 +7,7 @@ AMP_Cart_Controller class
 
 
 * Full name: `\BigCommerce\Proxy\AMP_Cart_Controller`
-* Parent class: [`\BigCommerce\Proxy\Proxy_Controller`](./Proxy_Controller.md)
+* Parent class: [`\BigCommerce\Proxy\Proxy_Controller`](./classes/BigCommerce/Proxy/Proxy_Controller.md)
 
 
 
@@ -396,4 +396,4 @@ public route(\WP_REST_Request $request): string
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

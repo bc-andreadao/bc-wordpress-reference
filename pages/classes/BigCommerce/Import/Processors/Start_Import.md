@@ -8,7 +8,7 @@
 
 * Full name: `\BigCommerce\Import\Processors\Start_Import`
 * This class implements:
-[`\BigCommerce\Import\Processors\Import_Processor`](./Import_Processor.md)
+[`\BigCommerce\Import\Processors\Import_Processor`](./classes/BigCommerce/Import/Processors/Import_Processor.md)
 
 
 
@@ -39,4 +39,4 @@ public run(): mixed
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

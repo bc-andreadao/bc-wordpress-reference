@@ -8,7 +8,7 @@ Strategy for skipping a product during the import process.
 
 * Full name: `\BigCommerce\Import\Importers\Products\Product_Ignorer`
 * This class implements:
-[`\BigCommerce\Import\Import_Strategy`](../../Import_Strategy.md)
+[`\BigCommerce\Import\Import_Strategy`](./classes/BigCommerce/Import/Import_Strategy.md)
 
 
 
@@ -74,4 +74,4 @@ The WordPress post ID of the skipped product.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

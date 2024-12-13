@@ -7,7 +7,7 @@ Handles the import process for products from BigCommerce.
 This class defines a WP-CLI command to import products from a connected BigCommerce store. It provides functionality for full or partial imports, the option to force a refresh of products, and hooks for tracking the progress of the import. Additionally, it manages logging for the import process and allows for managing product data through various stages of the import.
 
 * Full name: `\BigCommerce\CLI\Import_Products`
-* Parent class: [`\BigCommerce\CLI\Command`](./Command.md)
+* Parent class: [`\BigCommerce\CLI\Command`](./classes/BigCommerce/CLI/Command.md)
 
 
 
@@ -253,4 +253,4 @@ passed to the command via WP-CLI.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

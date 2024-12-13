@@ -7,7 +7,7 @@ Class Import_Docs
 Handles the import of plugin documentation from a previously built JSON file.
 
 * Full name: `\BigCommerce\CLI\Documentation\Import_Docs`
-* Parent class: [`\BigCommerce\CLI\Command`](../Command.md)
+* Parent class: [`\BigCommerce\CLI\Command`](./classes/BigCommerce/CLI/Command.md)
 
 
 
@@ -132,7 +132,7 @@ public run(array $args, array $assoc_args): void
 
 **Throws:**
 
-- [`ExitException`](../../../WP_CLI/ExitException.md)
+- [`ExitException`](./classes/WP_CLI/ExitException.md)
 
 
 
@@ -273,4 +273,4 @@ passed to the command via WP-CLI.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

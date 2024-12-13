@@ -8,7 +8,7 @@
 
 * Full name: `\BigCommerce\Manager\Channel_Update_Task`
 * This class implements:
-[`\BigCommerce\Manager\Task`](./Task.md)
+[`\BigCommerce\Manager\Task`](./classes/BigCommerce/Manager/Task.md)
 
 
 
@@ -45,4 +45,4 @@ public handle(array $args): bool
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

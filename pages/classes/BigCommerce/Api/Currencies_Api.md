@@ -8,7 +8,7 @@ Provides a method to fetch and process a collection of currencies,
 returning their properties as an associative array.
 
 * Full name: `\BigCommerce\Api\Currencies_Api`
-* Parent class: [`\BigCommerce\Api\v2ApiAdapter`](./v2ApiAdapter.md)
+* Parent class: [`\BigCommerce\Api\v2ApiAdapter`](./classes/BigCommerce/Api/v2ApiAdapter.md)
 
 
 
@@ -45,7 +45,7 @@ as an associative array of its properties.
 <p>Handles exceptions gracefully, returning an empty array
 if the API call fails.</p>
 
-- [`Exception`](../../Exception.md)
+- [`Exception`](./classes/Exception.md)
 
 
 
@@ -114,7 +114,7 @@ The result of the method call.
 **Throws:**
 <p>If the method is not found.</p>
 
-- [`BadMethodCallException`](../../BadMethodCallException.md)
+- [`BadMethodCallException`](./classes/BadMethodCallException.md)
 
 
 
@@ -147,4 +147,4 @@ The store hash.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

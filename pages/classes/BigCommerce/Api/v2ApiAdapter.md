@@ -27,6 +27,7 @@ protected $apiClient
 
 
 
+
 ***
 
 ### client_class
@@ -36,6 +37,7 @@ protected $apiClient
 ```php
 protected $client_class
 ```
+
 
 
 
@@ -106,7 +108,7 @@ The result of the method call.
 **Throws:**
 <p>If the method is not found.</p>
 
-- [`BadMethodCallException`](../../BadMethodCallException.md)
+- [`BadMethodCallException`](./classes/BadMethodCallException.md)
 
 
 
@@ -139,4 +141,4 @@ The store hash.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

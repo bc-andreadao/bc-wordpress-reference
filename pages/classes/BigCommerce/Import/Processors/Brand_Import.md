@@ -8,7 +8,7 @@ and provides the specific functionality for importing and updating brand terms i
 
 
 * Full name: `\BigCommerce\Import\Processors\Brand_Import`
-* Parent class: [`\BigCommerce\Import\Processors\Term_Import`](./Term_Import.md)
+* Parent class: [`\BigCommerce\Import\Processors\Term_Import`](./classes/BigCommerce/Import/Processors/Term_Import.md)
 
 
 
@@ -22,6 +22,7 @@ and provides the specific functionality for importing and updating brand terms i
 ```php
 protected array $batch
 ```
+
 
 
 
@@ -172,7 +173,7 @@ The list of brand terms fetched from the BigCommerce API.
 **Throws:**
 <p>If there is an error retrieving the data.</p>
 
-- [`Exception`](../../../Exception.md)
+- [`Exception`](./classes/Exception.md)
 
 
 
@@ -531,7 +532,7 @@ The API response object.
 **Throws:**
 <p>If the API request fails.</p>
 
-- [`ApiException`](../../Api/v3/ApiException.md)
+- [`ApiException`](./classes/BigCommerce/Api/v3/ApiException.md)
 
 
 
@@ -653,4 +654,4 @@ protected set_page(int $page): void
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13

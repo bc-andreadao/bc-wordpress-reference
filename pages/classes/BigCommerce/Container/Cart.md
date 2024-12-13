@@ -16,7 +16,7 @@ The class also sets up necessary action and filter hooks to integrate these serv
 into the WordPress environment, ensuring that cart operations are handled effectively.
 
 * Full name: `\BigCommerce\Container\Cart`
-* Parent class: [`Provider`](./Provider.md)
+* Parent class: [`Provider`](./classes/BigCommerce/Container/Provider.md)
 
 
 ## Constants
@@ -68,4 +68,4 @@ action and filter hooks to manage cart behavior throughout the application.
 
 
 ***
-> Automatically generated on 2024-12-10
+> Automatically generated on 2024-12-13
