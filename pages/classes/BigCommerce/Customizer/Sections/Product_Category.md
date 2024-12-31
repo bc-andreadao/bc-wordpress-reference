@@ -104,4 +104,4 @@ protected add_sub_categories_control(\WP_Customize_Manager $wp_customize): void
 
 
 ***
-> Automatically generated on 2024-12-13
+> Automatically generated on 2024-12-31

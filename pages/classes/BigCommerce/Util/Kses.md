@@ -44,4 +44,4 @@ public product_description_allowed_html(array $allowed_tags, string $context): a
 
 
 ***
-> Automatically generated on 2024-12-13
+> Automatically generated on 2024-12-31

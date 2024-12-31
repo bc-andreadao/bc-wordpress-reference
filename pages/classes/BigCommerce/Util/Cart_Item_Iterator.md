@@ -43,4 +43,4 @@ public static factory(\BigCommerce\Api\v3\Model\Cart $cart): \Generator
 
 
 ***
-> Automatically generated on 2024-12-13
+> Automatically generated on 2024-12-31

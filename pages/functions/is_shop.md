@@ -21,4 +21,4 @@ This function has no parameters.
 True if the current page is the shop page, false otherwise.
 
 ***
-> Automatically generated on 2024-12-13
+> Automatically generated on 2024-12-31

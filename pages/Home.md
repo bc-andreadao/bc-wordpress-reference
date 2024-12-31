@@ -792,7 +792,7 @@ This is an automatically generated documentation for **Documentation**.
 | [`Channel_Initializer`](./classes/BigCommerce/Import/Processors/Channel_Initializer.md) | Initializes a channel by linking it to the full product catalog.|
 | [`Cleanup`](./classes/BigCommerce/Import/Processors/Cleanup.md) | Handles the cleanup process for BigCommerce imports, including purging product and user transients,<br />cleaning up queued tasks, and flushing cache related to products and customer groups.|
 | [`Currencies`](./classes/BigCommerce/Import/Processors/Currencies.md) | This class handles fetching, processing, and storing currency information from BigCommerce.|
-| [`Default_Customer_Group`](./classes/BigCommerce/Import/Processors/Default_Customer_Group.md) | |
+| [`Default_Customer_Group`](./classes/BigCommerce/Import/Processors/Default_Customer_Group.md) | Handles operations related to the default customer group for BigCommerce integrations.|
 | [`Deleted_Product_Marker`](./classes/BigCommerce/Import/Processors/Deleted_Product_Marker.md) | |
 | [`Error_Handler`](./classes/BigCommerce/Import/Processors/Error_Handler.md) | |
 | [`Headless`](./classes/BigCommerce/Import/Processors/Headless.md) | |
@@ -1566,4 +1566,4 @@ This is an automatically generated documentation for **Documentation**.
 
 
 ***
-> Automatically generated on 2024-12-13
+> Automatically generated on 2024-12-31

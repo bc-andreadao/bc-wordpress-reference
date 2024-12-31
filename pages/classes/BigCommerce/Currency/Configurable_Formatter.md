@@ -78,4 +78,4 @@ The formatted currency value with the symbol in the configured position.
 
 
 ***
-> Automatically generated on 2024-12-13
+> Automatically generated on 2024-12-31

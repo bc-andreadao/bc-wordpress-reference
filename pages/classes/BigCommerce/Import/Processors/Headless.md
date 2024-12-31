@@ -44,4 +44,4 @@ public maybe_switch_headless(mixed $old_value, mixed $new_value): void
 
 
 ***
-> Automatically generated on 2024-12-13
+> Automatically generated on 2024-12-31

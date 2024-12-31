@@ -131,4 +131,4 @@ protected maybe_get_existing_product(mixed $product_id): mixed
 
 
 ***
-> Automatically generated on 2024-12-13
+> Automatically generated on 2024-12-31

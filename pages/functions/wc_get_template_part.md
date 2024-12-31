@@ -24,4 +24,4 @@ Retrieves a template part for WooCommerce.
 The rendered template part.
 
 ***
-> Automatically generated on 2024-12-13
+> Automatically generated on 2024-12-31

@@ -578,4 +578,4 @@ public get_headless_images(\BigCommerce\Post_Types\Product\Product $product): ar
 
 
 ***
-> Automatically generated on 2024-12-13
+> Automatically generated on 2024-12-31

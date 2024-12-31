@@ -2,7 +2,7 @@
 
 # Default_Customer_Group
 
-
+Handles operations related to the default customer group for BigCommerce integrations.
 
 
 
@@ -13,7 +13,7 @@
 
 | Constant | Visibility | Type | Value |
 |:---------|:-----------|:-----|:------|
-|`DEFAULT_GROUP`|public| |&#039;bigcommerce_customers_default_group&#039;|
+|`DEFAULT_GROUP`|public|string|&#039;bigcommerce_customers_default_group&#039;|
 
 
 ## Methods
@@ -21,7 +21,7 @@
 
 ### __construct
 
-
+Constructor to initialize the Price Lists API.
 
 ```php
 public __construct(\BigCommerce\Api\v3\Api\PriceListsApi $price_list_api): mixed
@@ -38,7 +38,7 @@ public __construct(\BigCommerce\Api\v3\Api\PriceListsApi $price_list_api): mixed
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `$price_list_api` | **\BigCommerce\Api\v3\Api\PriceListsApi** |  |
+| `$price_list_api` | **\BigCommerce\Api\v3\Api\PriceListsApi** | API instance for Price Lists. |
 
 
 
@@ -48,10 +48,10 @@ public __construct(\BigCommerce\Api\v3\Api\PriceListsApi $price_list_api): mixed
 
 ### run
 
-
+Main function to execute the default group processing.
 
 ```php
-public run(): mixed
+public run(): void
 ```
 
 
@@ -69,7 +69,7 @@ public run(): mixed
 
 ### get_default_group
 
-Retrieve group_ids from Price Collection Assignments and get first default customer group
+Retrieve group IDs from Price Collection Assignments and fetch the first default customer group.
 
 ```php
 protected get_default_group(): false|mixed
@@ -83,6 +83,10 @@ protected get_default_group(): false|mixed
 
 
 
+**Return Value:**
+
+The ID of the default customer group or false if none found.
+
 
 
 
@@ -90,7 +94,7 @@ protected get_default_group(): false|mixed
 
 ### get_default_customer_groups
 
-
+Retrieve all default customer groups from BigCommerce.
 
 ```php
 protected get_default_customer_groups(): array|null
@@ -104,6 +108,10 @@ protected get_default_customer_groups(): array|null
 
 
 
+**Return Value:**
+
+An array of default customer group IDs or null if none found.
+
 
 
 
@@ -111,4 +119,4 @@ protected get_default_customer_groups(): array|null
 
 
 ***
-> Automatically generated on 2024-12-13
+> Automatically generated on 2024-12-31

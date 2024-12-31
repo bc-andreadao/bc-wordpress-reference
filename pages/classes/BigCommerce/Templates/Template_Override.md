@@ -199,4 +199,4 @@ public include_product_template(string|bool $template): string|bool
 
 
 ***
-> Automatically generated on 2024-12-13
+> Automatically generated on 2024-12-31

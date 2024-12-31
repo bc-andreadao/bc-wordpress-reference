@@ -389,4 +389,4 @@ protected render_form_template(array $product_ids): mixed
 
 
 ***
-> Automatically generated on 2024-12-13
+> Automatically generated on 2024-12-31

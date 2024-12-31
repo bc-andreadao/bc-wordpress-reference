@@ -49,4 +49,4 @@ Adds a new section for managing banners under the primary BigCommerce panel.
 
 
 ***
-> Automatically generated on 2024-12-13
+> Automatically generated on 2024-12-31

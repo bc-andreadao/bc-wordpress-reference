@@ -141,4 +141,4 @@ The list of banners retrieved from the API or cache.
 
 
 ***
-> Automatically generated on 2024-12-13
+> Automatically generated on 2024-12-31

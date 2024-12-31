@@ -160,4 +160,4 @@ This method either refreshes the product source cache or performs a pre-cache op
 
 
 ***
-> Automatically generated on 2024-12-13
+> Automatically generated on 2024-12-31

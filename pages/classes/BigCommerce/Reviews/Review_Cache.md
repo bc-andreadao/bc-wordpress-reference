@@ -70,4 +70,4 @@ public update_cache(int $product_id): void
 
 
 ***
-> Automatically generated on 2024-12-13
+> Automatically generated on 2024-12-31

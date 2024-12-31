@@ -80,4 +80,4 @@ of passwords between WordPress and the BigCommerce API.
 
 
 ***
-> Automatically generated on 2024-12-13
+> Automatically generated on 2024-12-31

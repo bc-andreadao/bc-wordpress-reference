@@ -186,4 +186,4 @@ Filterable with post_type_labels_{$post_type_name}
 
 
 ***
-> Automatically generated on 2024-12-13
+> Automatically generated on 2024-12-31

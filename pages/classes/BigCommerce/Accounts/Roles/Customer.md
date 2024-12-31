@@ -77,4 +77,4 @@ The label of the customer role.
 
 
 ***
-> Automatically generated on 2024-12-13
+> Automatically generated on 2024-12-31

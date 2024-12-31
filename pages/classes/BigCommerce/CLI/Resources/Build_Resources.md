@@ -273,4 +273,4 @@ passed to the command via WP-CLI.
 
 
 ***
-> Automatically generated on 2024-12-13
+> Automatically generated on 2024-12-31

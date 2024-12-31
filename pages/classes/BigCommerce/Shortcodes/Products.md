@@ -99,4 +99,4 @@ public render(mixed $attr, mixed $instance): string
 
 
 ***
-> Automatically generated on 2024-12-13
+> Automatically generated on 2024-12-31

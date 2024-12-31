@@ -21,4 +21,4 @@ This function has no parameters.
 The ID of the WooCommerce page, or -1 if not found.
 
 ***
-> Automatically generated on 2024-12-13
+> Automatically generated on 2024-12-31

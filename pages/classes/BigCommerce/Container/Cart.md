@@ -68,4 +68,4 @@ action and filter hooks to manage cart behavior throughout the application.
 
 
 ***
-> Automatically generated on 2024-12-13
+> Automatically generated on 2024-12-31
