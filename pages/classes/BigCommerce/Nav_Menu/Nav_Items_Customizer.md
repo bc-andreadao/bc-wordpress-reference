@@ -74,4 +74,4 @@ public register_menu_items(array $items, string $type, string $object, int $page
 
 
 ***
-> Automatically generated on 2024-12-31
+> Automatically generated on 2025-01-03

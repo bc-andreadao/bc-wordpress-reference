@@ -398,4 +398,4 @@ protected get_remote_term_ids(int[] $ids): int[]
 
 
 ***
-> Automatically generated on 2024-12-31
+> Automatically generated on 2025-01-03

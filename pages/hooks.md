@@ -5,3943 +5,3154 @@
 
 ## Actions
 
-### `pre_get_posts`
+### bigcommerce/proxy/cache_set
 
-Modify the main query to filter products based on wishlist conditions.
 
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`query` | `\WP_Query` | The main WordPress query object, which is filtered to show only wishlist-relevant products.
-
-Source: [src/BigCommerce/Accounts/Wishlists/Wishlist_Request_Parser.php](BigCommerce/Accounts/Wishlists/Wishlist_Request_Parser.php), [line 76](BigCommerce/Accounts/Wishlists/Wishlist_Request_Parser.php#L76-L81)
-
-### `pre_get_posts`
-
-Adds a filter to modify the main query for filtering by channel.
-
-This action is triggered on the `pre_get_posts` hook to apply a filter that
-modifies the query to include the channel(s) based on the provided `$channel` parameter.
-
-Checks if the specified channel
-is valid and modify the query to filter by the valid channel IDs.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`query` | `\WP_Query` | The `WP_Query` object being modified. This is the main query that will be filtered by the channel ID(s).
-
-Source: [src/BigCommerce/Rest/Products_Controller.php](BigCommerce/Rest/Products_Controller.php), [line 306](BigCommerce/Rest/Products_Controller.php#L306-L317)
-
-### `bigcommerce/import/before`
-
-Hook before the import starts.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`status` | `string` | Current status of the import.
-
-Source: [src/BigCommerce/CLI/Import_Products.php](BigCommerce/CLI/Import_Products.php), [line 118](BigCommerce/CLI/Import_Products.php#L118-L125)
-
-### `bigcommerce/import/after`
-
-Hook after the import ends.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`status` | `string` | Final status after the import.
-
-Source: [src/BigCommerce/CLI/Import_Products.php](BigCommerce/CLI/Import_Products.php), [line 127](BigCommerce/CLI/Import_Products.php#L127-L134)
-
-### `bigcommerce/import/set_status`
-
-Hook when the import status is set.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`status` | `string` | The status being set.
-
-Source: [src/BigCommerce/CLI/Import_Products.php](BigCommerce/CLI/Import_Products.php), [line 136](BigCommerce/CLI/Import_Products.php#L136-L143)
-
-### `bigcommerce/import/start`
-
-Hook when the import starts.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/CLI/Import_Products.php](BigCommerce/CLI/Import_Products.php), [line 145](BigCommerce/CLI/Import_Products.php#L145-L150)
-
-### `bigcommerce/import/fetched_ids`
-
-Hook after fetching product IDs.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`count` | `int` | Number of products added to the queue.
-
-Source: [src/BigCommerce/CLI/Import_Products.php](BigCommerce/CLI/Import_Products.php), [line 152](BigCommerce/CLI/Import_Products.php#L152-L159)
-
-### `bigcommerce/import/marked_deleted`
-
-Hook after marking products for deletion.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`count` | `int` | Number of products marked for deletion.
-
-Source: [src/BigCommerce/CLI/Import_Products.php](BigCommerce/CLI/Import_Products.php), [line 161](BigCommerce/CLI/Import_Products.php#L161-L168)
-
-### `bigcommerce/import/product/created`
-
-Hook when a product post is created.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`post_id` | `int` | The created post ID.
-`data` | `array` | Product data.
-
-Source: [src/BigCommerce/CLI/Import_Products.php](BigCommerce/CLI/Import_Products.php), [line 170](BigCommerce/CLI/Import_Products.php#L170-L178)
-
-### `bigcommerce/import/product/updated`
-
-Hook when a product post is updated.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`post_id` | `int` | The updated post ID.
-`data` | `array` | Product data.
-
-Source: [src/BigCommerce/CLI/Import_Products.php](BigCommerce/CLI/Import_Products.php), [line 180](BigCommerce/CLI/Import_Products.php#L180-L188)
-
-### `bigcommerce/import/product/skipped`
-
-Hook when a product post is skipped due to being up to date.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`post_id` | `int` | The skipped post ID.
-`data` | `array` | Product data.
-
-Source: [src/BigCommerce/CLI/Import_Products.php](BigCommerce/CLI/Import_Products.php), [line 190](BigCommerce/CLI/Import_Products.php#L190-L198)
-
-### `bigcommerce/import/fetched_currency`
-
-Hook after fetching currency code.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`currency_code` | `string` | The fetched currency code.
-
-Source: [src/BigCommerce/CLI/Import_Products.php](BigCommerce/CLI/Import_Products.php), [line 200](BigCommerce/CLI/Import_Products.php#L200-L207)
-
-### `bigcommerce/import/could_not_fetch_store_settings`
-
-Hook when store settings cannot be fetched.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/CLI/Import_Products.php](BigCommerce/CLI/Import_Products.php), [line 209](BigCommerce/CLI/Import_Products.php#L209-L214)
-
-### `bigcommerce/import/error`
-
-Hook when there is an import error.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`message` | `string` | Error message.
-`data` | `array` | Additional error data.
-
-Source: [src/BigCommerce/CLI/Import_Products.php](BigCommerce/CLI/Import_Products.php), [line 216](BigCommerce/CLI/Import_Products.php#L216-L227)
-
-### `bigcommerce/import/product/error`
-
-Hook when a product import fails.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`product_id` | `int` | The product ID.
-`catalog_api` | `\BigCommerce\Api\v3\Api\CatalogApi` | The catalog API object.
-`exception` | `\Exception` | The exception that occurred.
-
-Source: [src/BigCommerce/CLI/Import_Products.php](BigCommerce/CLI/Import_Products.php), [line 229](BigCommerce/CLI/Import_Products.php#L229-L238)
-
-### `bigcommerce/import/term/skipped`
-
-Hook when a term import is skipped.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`data` | `array` | Term data.
-
-Source: [src/BigCommerce/CLI/Import_Products.php](BigCommerce/CLI/Import_Products.php), [line 240](BigCommerce/CLI/Import_Products.php#L240-L247)
-
-### `admin_body_class`
-
-Adds a custom body class to the admin panel.
-
-This action hook adds a custom class to the admin body tag by calling the
-`set_admin_body_class` method when the `admin_body_class` hook is triggered.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`classes` | `string` | The existing body classes.
-
-Source: [src/BigCommerce/Settings/Screens/Abstract_Screen.php](BigCommerce/Settings/Screens/Abstract_Screen.php), [line 175](BigCommerce/Settings/Screens/Abstract_Screen.php#L175-L185)
-
-### `admin_menu`
-
-Triggers an action for unregistered settings screens in the admin menu when the admin menu is loaded
-
-This hook is intended to handle cases where settings
-screens are not registered. The action is executed with a priority of 10000 to ensure
-it's called after other actions have been triggered.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Settings/Screens/Abstract_Screen.php](BigCommerce/Settings/Screens/Abstract_Screen.php), [line 490](BigCommerce/Settings/Screens/Abstract_Screen.php#L490-L501)
-
-### `bigcommerce/channel/error/could_not_fetch_listing`
-
-Handles errors when a listing cannot be fetched from the BigCommerce API.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`channel_id` | `int` | The channel ID.
-`listing_id` | `int` | The listing ID.
-`e` | `\BigCommerce\Api\v3\ApiException` | The exception thrown during the fetch attempt.
-
-Source: [src/BigCommerce/Post_Types/Product/Reset_Listing.php](BigCommerce/Post_Types/Product/Reset_Listing.php), [line 167](BigCommerce/Post_Types/Product/Reset_Listing.php#L167-L174)
-
-### `bigcommerce/channel/error/could_not_update_listing`
-
-Handles errors when a listing update fails in the BigCommerce API.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`channel_id` | `int` | The channel ID.
-`listing_id` | `int` | The listing ID.
-`e` | `\BigCommerce\Api\v3\ApiException` | The exception thrown during the update attempt.
-
-Source: [src/BigCommerce/Post_Types/Product/Reset_Listing.php](BigCommerce/Post_Types/Product/Reset_Listing.php), [line 176](BigCommerce/Post_Types/Product/Reset_Listing.php#L176-L183)
-
-### `bigcommerce/import/error`
-
-Adds an error handler for the 'bigcommerce/import/error' action hook.
-
-This hook listens for errors during the product import process. If an error occurs, the handler adds
-the error message to the `WP_Error` object for further processing.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`message` | `string` | The error message to be logged if the import fails.
-
-Source: [src/BigCommerce/Post_Types/Product/Single_Product_Sync.php](BigCommerce/Post_Types/Product/Single_Product_Sync.php), [line 110](BigCommerce/Post_Types/Product/Single_Product_Sync.php#L110-L118)
-
-### `admin_print_scripts-post.php`
-
-Inline script added for the Gutenberg editor initialization.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Assets/Admin/Scripts.php](BigCommerce/Assets/Admin/Scripts.php), [line 83](BigCommerce/Assets/Admin/Scripts.php#L83-L88)
-
-### `admin_print_footer_scripts`
-
-Enqueue admin and Gutenberg scripts.
-
-Registers and enqueues required scripts, and localizes them with configuration
-and localization data. Delays certain script outputs until after the admin footer scripts.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Assets/Admin/Scripts.php](BigCommerce/Assets/Admin/Scripts.php), [line 47](BigCommerce/Assets/Admin/Scripts.php#L47-L99)
-
-### `admin_footer-{$GLOBALS}[hook_suffix]`
-
-Process the script queue again for the current admin footer.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Assets/Admin/Scripts.php](BigCommerce/Assets/Admin/Scripts.php), [line 113](BigCommerce/Assets/Admin/Scripts.php#L113-L116)
-
-### `plugins_loaded`
-
-Configures the static properties of the global V2 API client upon plugin load.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Api.php](BigCommerce/Container/Api.php), [line 231](BigCommerce/Container/Api.php#L231-L251)
-
-### `update_option_Import_Settings::ENABLE_PRODUCTS_WEBHOOKS`
-
-Triggered when the option to enable product webhooks is updated.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`old_value` | `mixed` | The previous value of the option.
-`new_value` | `mixed` | The new value of the option.
-`option_name` | `string` | The name of the option being updated.
-
-Source: [src/BigCommerce/Container/Webhooks.php](BigCommerce/Container/Webhooks.php), [line 359](BigCommerce/Container/Webhooks.php#L359-L367)
-
-### `add_option_Import_Settings::ENABLE_PRODUCTS_WEBHOOKS`
-
-Listens for the addition of the product webhooks status option
-and updates the webhook status accordingly.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`option_name` | `string` | The name of the option being added.
-`value` | `mixed` | The value of the option being added.
-
-Source: [src/BigCommerce/Container/Webhooks.php](BigCommerce/Container/Webhooks.php), [line 369](BigCommerce/Container/Webhooks.php#L369-L378)
-
-### `update_option_Import_Settings::ENABLE_CUSTOMER_WEBHOOKS`
-
-Triggers whenever the customer webhook enable/disable option
-is updated, allowing related settings or functionalities to adjust.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`old_value` | `mixed` | The previous value of the option.
-`new_value` | `mixed` | The new value of the option.
-`option_name` | `string` | The name of the option being updated.
-
-Source: [src/BigCommerce/Container/Webhooks.php](BigCommerce/Container/Webhooks.php), [line 391](BigCommerce/Container/Webhooks.php#L391-L401)
-
-### `add_option_Import_Settings::ENABLE_CUSTOMER_WEBHOOKS`
-
-Triggered when the customer webhook enable/disable option is added for the first time.
-
-This allows related settings or functionalities to adjust when the option is initialized.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`option_name` | `string` | The name of the option being added.
-`value` | `mixed` | The value of the option being added.
-
-Source: [src/BigCommerce/Container/Webhooks.php](BigCommerce/Container/Webhooks.php), [line 403](BigCommerce/Container/Webhooks.php#L403-L415)
-
-### `bigcommerce/settings/webhoooks_updated`
-
-Triggered when webhook settings are updated in BigCommerce.
-
-Ensures that the webhooks version is checked and updated as necessary.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Webhooks.php](BigCommerce/Container/Webhooks.php), [line 430](BigCommerce/Container/Webhooks.php#L430-L439)
-
-### `bigcommerce/action_endpoint/webhook`
-
-Handles incoming webhook requests from BigCommerce.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`args` | `array` | The request arguments received from the webhook.
-
-Source: [src/BigCommerce/Container/Webhooks.php](BigCommerce/Container/Webhooks.php), [line 458](BigCommerce/Container/Webhooks.php#L458-L467)
-
-### `bigcommerce/webhooks/customer_deleted`
-
-Triggered when a customer is deleted via a webhook.
-
-Handles customer deletion tasks based on the provided parameters.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`params` | `array` | An array of parameters containing details about the deleted customer.
-
-Source: [src/BigCommerce/Container/Webhooks.php](BigCommerce/Container/Webhooks.php), [line 475](BigCommerce/Container/Webhooks.php#L475-L490)
-
-### `bigcommerce/webhooks/customer_created`
-
-Handles the "customer created" webhook event.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`customer_id` | `int` | The ID of the customer created.
-
-Source: [src/BigCommerce/Container/Webhooks.php](BigCommerce/Container/Webhooks.php), [line 492](BigCommerce/Container/Webhooks.php#L492-L505)
-
-### `bigcommerce/webhooks/customer_updated`
-
-Triggered when a customer is updated via a webhook.
-
-Updates the customer's information based on the provided ID.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`customer_id` | `int` | The ID of the customer being updated.
-
-Source: [src/BigCommerce/Container/Webhooks.php](BigCommerce/Container/Webhooks.php), [line 507](BigCommerce/Container/Webhooks.php#L507-L522)
-
-### `Customer_Channel_Webhook::HOOK`
-
-Triggered when a customer's channel access is updated via a webhook.
-
-Updates the customer's access to the specified channels.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`customer_id` | `int` | The ID of the customer.
-`channels_id` | `array` | An array of channel IDs the customer has access to.
-
-Source: [src/BigCommerce/Container/Webhooks.php](BigCommerce/Container/Webhooks.php), [line 524](BigCommerce/Container/Webhooks.php#L524-L540)
-
-### `bigcommerce/webhooks/product_inventory_updated`
-
-Handles the "product inventory updated" webhook event.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`params` | `array` | Parameters for the updated product, including product ID.
-
-Source: [src/BigCommerce/Container/Webhooks.php](BigCommerce/Container/Webhooks.php), [line 555](BigCommerce/Container/Webhooks.php#L555-L569)
-
-### `bigcommerce/webhooks/product_updated`
-
-Handles the "product updated" webhook event.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`params` | `array` | The parameters of the updated product, including product ID.
-
-Source: [src/BigCommerce/Container/Webhooks.php](BigCommerce/Container/Webhooks.php), [line 571](BigCommerce/Container/Webhooks.php#L571-L585)
-
-### `bigcommerce/webhooks/product_deleted`
-
-Triggered when a product is deleted via a webhook.
-
-Handles product deletion tasks based on the provided parameters.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`params` | `array` | An array of parameters containing details about the deleted product.
-
-Source: [src/BigCommerce/Container/Webhooks.php](BigCommerce/Container/Webhooks.php), [line 587](BigCommerce/Container/Webhooks.php#L587-L602)
-
-### `bigcommerce/webhooks/product_created`
-
-Triggered when a product is created via a webhook.
-
-Handles the creation of a product based on the provided parameters.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`params` | `array` | An array of parameters containing details about the created product.
-
-Source: [src/BigCommerce/Container/Webhooks.php](BigCommerce/Container/Webhooks.php), [line 604](BigCommerce/Container/Webhooks.php#L604-L619)
-
-### `sprintf()`
-
-Triggered when a product is assigned to a channel via a webhook.
-
-Handles tasks related to assigning a product to a specific channel.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`product_id` | `int` | The ID of the product.
-`channel_id` | `int` | The ID of the channel the product is assigned to.
-
-Source: [src/BigCommerce/Container/Webhooks.php](BigCommerce/Container/Webhooks.php), [line 621](BigCommerce/Container/Webhooks.php#L621-L637)
-
-### `sprintf()`
-
-Triggered when a product is unassigned from a channel via a webhook.
-
-Handles tasks related to unassigning a product from a specific channel.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`product_id` | `int` | The ID of the product.
-`channel_id` | `int` | The ID of the channel the product is unassigned from.
-
-Source: [src/BigCommerce/Container/Webhooks.php](BigCommerce/Container/Webhooks.php), [line 639](BigCommerce/Container/Webhooks.php#L639-L655)
-
-### `Channels_Management_Webhook::CHANNEL_CURRENCY_UPDATE_HOOK`
-
-Handles the "channel currency updated" webhook event.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`channel_id` | `int` | The ID of the channel whose currency was updated.
-
-Source: [src/BigCommerce/Container/Webhooks.php](BigCommerce/Container/Webhooks.php), [line 657](BigCommerce/Container/Webhooks.php#L657-L670)
-
-### `Channels_Management_Webhook::CHANNEL_UPDATED_HOOK`
-
-Triggered when a channel is updated via a webhook.
-
-Handles tasks related to updating channel details.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`channel_id` | `int` | The ID of the channel being updated.
-
-Source: [src/BigCommerce/Container/Webhooks.php](BigCommerce/Container/Webhooks.php), [line 672](BigCommerce/Container/Webhooks.php#L672-L683)
-
-### `Webhook_Cron_Tasks::UPDATE_PRODUCT`
-
-Triggered by the cron task to update a product.
-
-Handles the product update process for the specified product ID.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`product_id` | `int` | The ID of the product to update.
-
-Source: [src/BigCommerce/Container/Webhooks.php](BigCommerce/Container/Webhooks.php), [line 695](BigCommerce/Container/Webhooks.php#L695-L706)
-
-### `admin_init`
-
-Ensures required pages exist during the `admin_init` action.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Pages.php](BigCommerce/Container/Pages.php), [line 211](BigCommerce/Container/Pages.php#L211-L221)
-
-### `trashed_post`
-
-Clears page options when a page is trashed.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`post_id` | `int` | The ID of the post being trashed.
-
-Source: [src/BigCommerce/Container/Pages.php](BigCommerce/Container/Pages.php), [line 230](BigCommerce/Container/Pages.php#L230-L235)
-
-### `deleted_post`
-
-Clears page options when a page is deleted.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`post_id` | `int` | The ID of the post being deleted.
-
-Source: [src/BigCommerce/Container/Pages.php](BigCommerce/Container/Pages.php), [line 237](BigCommerce/Container/Pages.php#L237-L242)
-
-### `display_post_states`
-
-Adds custom post states to display required pages in admin post lists.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`post_states` | `array` | Current post states.
-`post` | `\BigCommerce\Container\WP_Post` | The current post object.
-
-Source: [src/BigCommerce/Container/Pages.php](BigCommerce/Container/Pages.php), [line 244](BigCommerce/Container/Pages.php#L244-L257)
-
-### `bigcommerce/settings/accounts/after_page_field/page=Registration_Page::NAME`
-
-Adds a registration notice after the registration page field in settings.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Pages.php](BigCommerce/Container/Pages.php), [line 259](BigCommerce/Container/Pages.php#L259-L266)
-
-### `the_content`
-
-Filters the content of required pages.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`content` | `string` | The original page content.
-
-Source: [src/BigCommerce/Container/Pages.php](BigCommerce/Container/Pages.php), [line 268](BigCommerce/Container/Pages.php#L268-L282)
-
-### `template_redirect`
-
-Action hook that checks for the presence of specific shortcodes (`Cart` and `Checkout`) during the template redirect and handles caching logic accordingly.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Cart.php](BigCommerce/Container/Cart.php), [line 179](BigCommerce/Container/Cart.php#L179-L189)
-
-### `bigcommerce/do_not_cache`
-
-Action hook that disables caching for cart and checkout pages.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Cart.php](BigCommerce/Container/Cart.php), [line 192](BigCommerce/Container/Cart.php#L192-L199)
-
-### `bigcommerce/action_endpoint/Buy_Now::ACTION`
-
-Action hook that handles the Buy Now request.
-
-This hook is triggered when the `bigcommerce/action_endpoint/<ACTION>` endpoint
-for the `Buy_Now` action is called. It processes the Buy Now request and handles
-adding the item to the cart.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`args` | `array` | The arguments passed to the action (e.g., product details).
-
-Source: [src/BigCommerce/Container/Cart.php](BigCommerce/Container/Cart.php), [line 207](BigCommerce/Container/Cart.php#L207-L220)
-
-### `bigcommerce/action_endpoint/Add_To_Cart::ACTION`
-
-Action hook that handles adding an item to the cart.
-
-This hook is triggered when the `bigcommerce/action_endpoint/<ACTION>` endpoint
-for the `Add_To_Cart` action is called. It processes the request to add an item to
-the cart.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`args` | `array` | The arguments passed to the action (e.g., product details).
-
-Source: [src/BigCommerce/Container/Cart.php](BigCommerce/Container/Cart.php), [line 232](BigCommerce/Container/Cart.php#L232-L245)
-
-### `bigcommerce/action_endpoint/Cart_Recovery::ACTION`
-
-Action hook that handles recovering an abandoned cart.
-
-This hook is triggered when the `bigcommerce/action_endpoint/<ACTION>` endpoint
-for the `Cart_Recovery` action is called. It processes the request to recover an
-abandoned cart.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`args` | `array` | The arguments passed to the action (e.g., cart recovery data).
-
-Source: [src/BigCommerce/Container/Cart.php](BigCommerce/Container/Cart.php), [line 247](BigCommerce/Container/Cart.php#L247-L260)
-
-### `bigcommerce/action_endpoint/Checkout::ACTION`
-
-Action hook that handles the checkout request.
-
-This hook is triggered when the `bigcommerce/action_endpoint/<ACTION>` endpoint
-for the `Checkout` action is called. It processes the checkout request and handles
-the cart during the checkout process.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`args` | `array` | The arguments passed to the action (e.g., checkout data).
-
-Source: [src/BigCommerce/Container/Cart.php](BigCommerce/Container/Cart.php), [line 288](BigCommerce/Container/Cart.php#L288-L301)
-
-### `plugins_loaded`
-
-Hook registers database tables during the `plugins_loaded` action.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Schema.php](BigCommerce/Container/Schema.php), [line 99](BigCommerce/Container/Schema.php#L99-L105)
-
-### `admin_init`
-
-Hook registers user roles during the `admin_init` action.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Schema.php](BigCommerce/Container/Schema.php), [line 141](BigCommerce/Container/Schema.php#L141-L146)
-
-### `init`
-
-Registers the custom action route during WordPress initialization.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Rewrites.php](BigCommerce/Container/Rewrites.php), [line 53](BigCommerce/Container/Rewrites.php#L53-L58)
-
-### `parse_request`
-
-Handles incoming requests for the custom action route.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`wp` | `\WP` | The WordPress environment instance containing the query vars.
-
-Source: [src/BigCommerce/Container/Rewrites.php](BigCommerce/Container/Rewrites.php), [line 60](BigCommerce/Container/Rewrites.php#L60-L67)
-
-### `wp_loaded`
-
-Flushes rewrite rules after WordPress has fully loaded.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Rewrites.php](BigCommerce/Container/Rewrites.php), [line 80](BigCommerce/Container/Rewrites.php#L80-L85)
-
-### `update_option_Product_Archive::ARCHIVE_SLUG`
-
-Schedules a flush when the Product Archive Slug option is updated.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Rewrites.php](BigCommerce/Container/Rewrites.php), [line 94](BigCommerce/Container/Rewrites.php#L94-L97)
-
-### `update_option_Product_Archive::CATEGORY_SLUG`
-
-Schedules a flush when the Product Archive Category Slug option is updated.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Rewrites.php](BigCommerce/Container/Rewrites.php), [line 99](BigCommerce/Container/Rewrites.php#L99-L102)
-
-### `update_option_Product_Archive::BRAND_SLUG`
-
-Schedules a flush when the Product Archive Brand Slug option is updated.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Rewrites.php](BigCommerce/Container/Rewrites.php), [line 104](BigCommerce/Container/Rewrites.php#L104-L107)
-
-### `add_option_Product_Archive::ARCHIVE_SLUG`
-
-Schedules a flush when the Product Archive Slug option is added.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Rewrites.php](BigCommerce/Container/Rewrites.php), [line 109](BigCommerce/Container/Rewrites.php#L109-L112)
-
-### `add_option_Product_Archive::CATEGORY_SLUG`
-
-Schedules a flush when the Product Archive Category Slug option is added.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Rewrites.php](BigCommerce/Container/Rewrites.php), [line 114](BigCommerce/Container/Rewrites.php#L114-L117)
-
-### `add_option_Product_Archive::BRAND_SLUG`
-
-Schedules a flush when the Product Archive Brand Slug option is added.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Rewrites.php](BigCommerce/Container/Rewrites.php), [line 119](BigCommerce/Container/Rewrites.php#L119-L122)
-
-### `after_setup_theme`
-
-Hook registers all WordPress shortcodes during the `after_setup_theme` action.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Shortcodes.php](BigCommerce/Container/Shortcodes.php), [line 174](BigCommerce/Container/Shortcodes.php#L174-L191)
-
-### `customize_register`
-
-Registers customizer panels and sections in WordPress.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`wp_customize` | `\WP_Customize_Manager` | The WordPress Customizer manager instance.
-
-Source: [src/BigCommerce/Container/Theme_Customizer.php](BigCommerce/Container/Theme_Customizer.php), [line 167](BigCommerce/Container/Theme_Customizer.php#L167-L188)
-
-### `wp_head`
-
-Outputs customizer styles in the WordPress head section.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Theme_Customizer.php](BigCommerce/Container/Theme_Customizer.php), [line 190](BigCommerce/Container/Theme_Customizer.php#L190-L195)
-
-### `admin_menu`
-
-Registers the settings screen in the WordPress admin menu.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 357](BigCommerce/Container/Settings.php#L357-L363)
-
-### `bigcommerce/settings/after_form/page=Settings_Screen::NAME`
-
-Adds a support message after the settings form for the specific settings page.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`container` | `array` | Dependency injection container.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 374](BigCommerce/Container/Settings.php#L374-L381)
-
-### `admin_init`
-
-Redirects to the settings screen upon plugin activation.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 426](BigCommerce/Container/Settings.php#L426-L435)
-
-### `bigcommerce/settings/register/screen=Settings_Screen::NAME`
-
-Registers settings for a specific screen.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`screen` | `string` | The screen identifier.
-`settings` | `array` | The settings to register.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 447](BigCommerce/Container/Settings.php#L447-L453)
-
-### `bigcommerce/settings/register/screen=Api_Credentials_Screen::NAME`
-
-Registers settings for a specific screen.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`screen` | `string` | The screen identifier.
-`settings` | `array` | The settings to register.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 455](BigCommerce/Container/Settings.php#L455-L461)
-
-### `bigcommerce/settings/render/credentials`
-
-Renders API credentials description for the credentials section.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`container` | `array` | Dependency injection container.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 463](BigCommerce/Container/Settings.php#L463-L470)
-
-### `update_option_Api_Credentials::OPTION_STORE_URL`
-
-Performs actions after an API credential option is updated.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`old_value` | `mixed` | The old option value.
-`value` | `mixed` | The new option value.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 590](BigCommerce/Container/Settings.php#L590-L596)
-
-### `update_option_Api_Credentials::OPTION_CLIENT_ID`
-
-Performs actions after an API credential option is updated.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`old_value` | `mixed` | The old option value.
-`value` | `mixed` | The new option value.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 598](BigCommerce/Container/Settings.php#L598-L604)
-
-### `update_option_Api_Credentials::OPTION_CLIENT_SECRET`
-
-Performs actions after an API credential option is updated.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`old_value` | `mixed` | The old option value.
-`value` | `mixed` | The new option value.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 606](BigCommerce/Container/Settings.php#L606-L612)
-
-### `update_option_Api_Credentials::OPTION_ACCESS_TOKEN`
-
-Performs actions after an API credential option is updated.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`old_value` | `mixed` | The old option value.
-`value` | `mixed` | The new option value.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 614](BigCommerce/Container/Settings.php#L614-L620)
-
-### `admin_notices`
-
-Adds a notice for credentials required on certain admin screens.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 628](BigCommerce/Container/Settings.php#L628-L646)
-
-### `bigcommerce/settings/register/screen=Settings_Screen::NAME`
-
-Registers API status settings and flushes the status cache on load.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`hook` | `string` | The screen hook suffix.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 652](BigCommerce/Container/Settings.php#L652-L663)
-
-### `load-{$hook}`
-
-Flushes the API status cache.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 659](BigCommerce/Container/Settings.php#L659-L662)
-
-### `bigcommerce/settings/register/screen=Settings_Screen::NAME`
-
-Registers cart settings section.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 672](BigCommerce/Container/Settings.php#L672-L677)
-
-### `bigcommerce/settings/register/screen=Settings_Screen::NAME`
-
-Registers gift certificate settings section.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 690](BigCommerce/Container/Settings.php#L690-L695)
-
-### `bigcommerce/settings/register/screen=Settings_Screen::NAME`
-
-Registers the settings section for the import functionality on the settings screen.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 711](BigCommerce/Container/Settings.php#L711-L714)
-
-### `bigcommerce/settings/register/screen=Connect_Channel_Screen::NAME`
-
-Registers the fields for connecting channels to the import functionality on the settings screen.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 716](BigCommerce/Container/Settings.php#L716-L721)
-
-### `bigcommerce/settings/header/import_status`
-
-Renders the import button in the settings header.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 727](BigCommerce/Container/Settings.php#L727-L732)
-
-### `admin_post_Import_Now::ACTION`
-
-Handles the import request from the admin panel.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 749](BigCommerce/Container/Settings.php#L749-L752)
-
-### `admin_notices`
-
-Displays import notices in the admin area if the import process is complete.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 754](BigCommerce/Container/Settings.php#L754-L761)
-
-### `bigcommerce/settings/section/after_fields/id=Import_Settings::NAME`
-
-Renders the import status after the fields section in the settings screen.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 773](BigCommerce/Container/Settings.php#L773-L776)
-
-### `bigcommerce/settings/before_title/page=Onboarding_Complete_Screen::NAME`
-
-Renders the import status before the title on the onboarding complete screen.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 778](BigCommerce/Container/Settings.php#L778-L781)
-
-### `bigcommerce/settings/import/product_list_table_notice`
-
-Displays the current import status notice in the product list table.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 783](BigCommerce/Container/Settings.php#L783-L790)
-
-### `bigcommerce/import/before`
-
-Caches the import queue size before initiating the import process, if certain product statuses
-are marked for deletion.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`status` | `string` | The current status of the import process.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 792](BigCommerce/Container/Settings.php#L792-L802)
-
-### `wp_ajax_Import_Status::AJAX_ACTION_IMPORT_STATUS`
-
-This hook is triggered during an AJAX call to validate the current status
-of the import process. It ensures that the request is valid and checks
-the current state of the import.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 805](BigCommerce/Container/Settings.php#L805-L812)
-
-### `wp_ajax_Import_Status::AJAX_ACTION_IMPORT_STATUS`
-
-Handles the current status message for the import process via an AJAX request.
-
-This hook responds to an AJAX request by providing the current status
-message of the import process. It ensures the user gets real-time feedback
-during import operations.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 815](BigCommerce/Container/Settings.php#L815-L824)
-
-### `update_option_Import_Settings::HEADLESS_FLAG`
-
-Switches import behavior when the headless flag is updated. It adjusts the import behavior based on the new value of the flag.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`old_value` | `mixed` | The old value of the option.
-`new_value` | `mixed` | The new value of the option.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 826](BigCommerce/Container/Settings.php#L826-L833)
-
-### `bigcommerce/settings/register/screen=Settings_Screen::NAME`
-
-Registers the currency settings section in the BigCommerce settings screen.
-
-This hook adds a currency settings section to the BigCommerce settings
-screen, allowing configuration of currency-related settings.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 841](BigCommerce/Container/Settings.php#L841-L849)
-
-### `bigcommerce/settings/register/screen=Settings_Screen::NAME`
-
-Registers the "Next Steps" section in the BigCommerce settings screen.
-
-This hook adds a "Next Steps" section to the BigCommerce settings screen,
-providing guidance for merchants on the next steps in setting up their store.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 859](BigCommerce/Container/Settings.php#L859-L867)
-
-### `bigcommerce/settings/register/screen=Settings_Screen::NAME`
-
-Registers the account settings section in the BigCommerce settings screen.
-
-This hook adds an account settings section to the BigCommerce settings screen,
-allowing configuration of account-related settings such as login, registration,
-and user-specific pages.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 885](BigCommerce/Container/Settings.php#L885-L894)
-
-### `init`
-
-Adds default global logins during the initialization phase.
-
-This hook ensures that the default global login settings are added to
-the account configuration when the system initializes.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 896](BigCommerce/Container/Settings.php#L896-L904)
-
-### `update_option_Account_Settings::ALLOW_GLOBAL_LOGINS`
-
-Synchronizes global logins when the "Allow Global Logins" setting is updated.
-
-This hook is triggered when the "Allow Global Logins" option is updated. It
-synchronizes the global login settings based on the new value.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`old_value` | `mixed` | The previous value of the global logins setting.
-`new_value` | `mixed` | The updated value of the global logins setting.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 906](BigCommerce/Container/Settings.php#L906-L917)
-
-### `bigcommerce/settings/register/screen=Settings_Screen::NAME`
-
-Registers the analytics settings section in the BigCommerce settings screen.
-
-This hook adds an analytics settings section to the BigCommerce settings screen,
-allowing configuration of analytics-related settings like Facebook Pixel and Google Analytics.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 925](BigCommerce/Container/Settings.php#L925-L933)
-
-### `update_option_Analytics_Settings::FACEBOOK_PIXEL`
-
-Updates the Facebook Pixel ID when the setting is updated.
-
-This hook triggers when the Facebook Pixel ID setting is updated and updates the
-associated analytics section.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`old_value` | `mixed` | The previous value of the Facebook Pixel ID.
-`new_value` | `mixed` | The new value of the Facebook Pixel ID.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 935](BigCommerce/Container/Settings.php#L935-L946)
-
-### `update_option_Analytics_Settings::GOOGLE_ANALYTICS`
-
-Updates the Google Analytics setting when the option is updated.
-
-This hook triggers when the Google Analytics setting is updated and updates
-the associated analytics section.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`old_value` | `mixed` | The previous value of the Google Analytics setting.
-`new_value` | `mixed` | The new value of the Google Analytics setting.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 948](BigCommerce/Container/Settings.php#L948-L959)
-
-### `bigcommerce/settings/register/screen=Settings_Screen::NAME`
-
-Registers the reviews settings section in the BigCommerce settings screen.
-
-This hook adds a reviews settings section to the BigCommerce settings screen,
-allowing configuration of product review settings.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 968](BigCommerce/Container/Settings.php#L968-L976)
-
-### `admin_menu`
-
-Registers the welcome screen settings page in the admin menu.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 986](BigCommerce/Container/Settings.php#L986-L993)
-
-### `admin_menu`
-
-Registers the create account screen settings page in the admin menu.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`container` | `\Pimple\Container` | The container instance holding the service dependencies.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 1016](BigCommerce/Container/Settings.php#L1016-L1024)
-
-### `admin_post_Create_Account_Screen::NAME`
-
-Handles the submission for creating a BigCommerce account.
-
-This action is triggered when a user submits the form to create a new BigCommerce account.
-It processes the request and handles the form submission logic.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 1039](BigCommerce/Container/Settings.php#L1039-L1049)
-
-### `bigcommerce/settings/register/screen=Create_Account_Screen::NAME`
-
-Registers a new account section for the Create Account screen.
-
-This action is triggered to register a new account section for the Create Account screen
-in the BigCommerce settings.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 1051](BigCommerce/Container/Settings.php#L1051-L1061)
-
-### `bigcommerce/create_account/validate_request`
-
-Validates the request for creating a new BigCommerce account.
-
-This action is triggered when a request is made to create a new account. It validates
-the submission data and checks for any errors before processing the request.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`submission` | `array` | The submitted data from the account creation form.
-`errors` | `array` | The array of validation errors, if any.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 1063](BigCommerce/Container/Settings.php#L1063-L1075)
-
-### `admin_menu`
-
-Registers the Store Type screen in the BigCommerce settings menu.
-
-This action is triggered to display the Store Type screen during the BigCommerce
-onboarding process, where users can select the type of store they want to set up.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 1077](BigCommerce/Container/Settings.php#L1077-L1087)
-
-### `admin_post_Store_Type_Screen::ACTION_BLOG`
-
-Handles the submission for choosing the blog store type.
-
-This action is triggered when a user selects the blog store type during the
-BigCommerce onboarding process. It processes the submission and updates the store configuration.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 1089](BigCommerce/Container/Settings.php#L1089-L1099)
-
-### `admin_post_Store_Type_Screen::ACTION_FULL_STORE`
-
-Handles the submission for choosing the full store type.
-
-This action is triggered when a user selects the full store type during the
-BigCommerce onboarding process. It processes the submission and updates the store configuration.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 1101](BigCommerce/Container/Settings.php#L1101-L1111)
-
-### `admin_menu`
-
-Registers the Channel screen in the BigCommerce settings menu.
-
-This action is triggered to display the Channel selection screen during the BigCommerce
-onboarding process, where users can connect a store channel.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 1113](BigCommerce/Container/Settings.php#L1113-L1123)
-
-### `bigcommerce/settings/register/screen=Connect_Channel_Screen::NAME`
-
-Registers settings sections for selecting channels and importing settings.
-
-This action is triggered to register settings sections for the Channel setup
-and Onboarding Import Settings sections.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 1125](BigCommerce/Container/Settings.php#L1125-L1136)
-
-### `bigcommerce/settings/register/screen=Settings_Screen::NAME`
-
-Registers the Channel Settings section in the BigCommerce settings menu.
-
-This action is triggered to register the Channel Settings section for the
-Settings Screen, where users can configure their channels.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 1138](BigCommerce/Container/Settings.php#L1138-L1148)
-
-### `admin_post_Channel_Settings::POST_ACTION`
-
-Handles the channel operation actions in the settings screen.
-
-This action is triggered when a channel operation is submitted in the BigCommerce settings.
-It processes the submitted action and updates the channel configuration.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 1150](BigCommerce/Container/Settings.php#L1150-L1162)
-
-### `bigcommerce/channel/promote`
-
-Promotes a channel in the BigCommerce settings.
-
-This action is triggered when a channel is promoted in the BigCommerce settings. It
-updates the channel configuration to reflect the promotion status.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`term` | `\WP_Term` | The channel term being promoted.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 1164](BigCommerce/Container/Settings.php#L1164-L1175)
-
-### `admin_menu`
-
-Registers the Pending Account screen in the BigCommerce settings menu.
-
-This action is triggered to display the Pending Account screen during the BigCommerce
-onboarding process, which provides users with a pending account notification.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 1177](BigCommerce/Container/Settings.php#L1177-L1187)
-
-### `admin_menu`
-
-Registers the API Credentials screen in the admin menu.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`container` | `\Pimple\Container` | The container instance holding the service dependencies.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 1205](BigCommerce/Container/Settings.php#L1205-L1213)
-
-### `admin_action_update`
-
-Handles the validation of API credentials during the admin action update.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`container` | `\Pimple\Container` | The container instance holding the service dependencies.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 1226](BigCommerce/Container/Settings.php#L1226-L1234)
-
-### `admin_menu`
-
-Provides various screens and settings for BigCommerce.
-
-This class is responsible for registering settings screens, handling API credentials,
-and managing various onboarding steps in the BigCommerce plugin.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 51](BigCommerce/Container/Settings.php#L51-L1247)
-
-### `admin_menu`
-
-Provides various screens and settings for BigCommerce.
-
-This class is responsible for registering settings screens, handling API credentials,
-and managing various onboarding steps in the BigCommerce plugin.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 51](BigCommerce/Container/Settings.php#L51-L1262)
-
-### `bigcommerce/settings/register/screen=Nav_Menu_Screen::NAME`
-
-Provides various screens and settings for BigCommerce.
-
-This class is responsible for registering settings screens, handling API credentials,
-and managing various onboarding steps in the BigCommerce plugin.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 51](BigCommerce/Container/Settings.php#L51-L1274)
-
-### `admin_post_Nav_Menu_Screen::NAME`
-
-Handles the submission of the Nav Menu setup screen.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 1276](BigCommerce/Container/Settings.php#L1276-L1283)
-
-### `bigcommerce/settings/unregistered_screen`
-
-Redirects to the appropriate screen when an unregistered screen is encountered.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`unregistered_screen` | `string` | The name of the unregistered screen.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 1285](BigCommerce/Container/Settings.php#L1285-L1307)
-
-### `bigcommerce/settings/after_form/page=Api_Credentials_Screen::NAME`
-
-Registers a callback function to be executed after the form on the API credentials screen. The callback adds a "start over" link to the settings screen.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 1318](BigCommerce/Container/Settings.php#L1318-L1319)
-
-### `bigcommerce/settings/after_form/page=Create_Account_Screen::NAME`
-
-Registers a callback function to be executed after the form on the create account screen. The callback adds a "start over" link to the settings screen.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 1320](BigCommerce/Container/Settings.php#L1320-L1321)
-
-### `bigcommerce/settings/after_form/page=Connect_Channel_Screen::NAME`
-
-Registers a callback function to be executed after the form on the connect channel screen. The callback adds a "start over" link to the settings screen.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 1322](BigCommerce/Container/Settings.php#L1322-L1323)
-
-### `bigcommerce/settings/after_form/page=Store_Type_Screen::NAME`
-
-Registers a callback function to be executed after the form on the store type screen. The callback adds a "start over" link to the settings screen.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 1324](BigCommerce/Container/Settings.php#L1324-L1325)
-
-### `bigcommerce/settings/after_content/page=Pending_Account_Screen::NAME`
-
-Registers a callback function to be executed after the form on the pending account screen. The callback adds a "start over" link to the settings screen.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 1326](BigCommerce/Container/Settings.php#L1326-L1327)
-
-### `admin_post_Start_Over::ACTION`
-
-Resets the credentials when the "start over" action is triggered.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 1329](BigCommerce/Container/Settings.php#L1329-L1332)
-
-### `bigcommerce/settings/onboarding/progress`
-
-Registers a callback to render the onboarding progress bar on the 'bigcommerce/settings/onboarding/progress' hook.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`progress_bar` | `callable` | The callback function to render the progress bar.
-`priority` | `int` | The priority at which the callback should be executed. Defaults to 10.
-`accepted_args` | `int` | The number of arguments the callback accepts. Defaults to 0.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 1350](BigCommerce/Container/Settings.php#L1350-L1358)
-
-### `bigcommerce/settings/before_title/page=Welcome_Screen::NAME`
-
-Registers a callback to display the onboarding subheader before the title on the Welcome screen.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`subheader` | `callable` | The callback function to display the subheader.
-`priority` | `int` | The priority at which the callback should be executed. Defaults to 10.
-`accepted_args` | `int` | The number of arguments the callback accepts. Defaults to 0.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 1364](BigCommerce/Container/Settings.php#L1364-L1372)
-
-### `bigcommerce/settings/before_title/page=Create_Account_Screen::NAME`
-
-Registers a callback to display the onboarding subheader before the title on the Create Account screen.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`subheader` | `callable` | The callback function to display the subheader.
-`priority` | `int` | The priority at which the callback should be executed. Defaults to 10.
-`accepted_args` | `int` | The number of arguments the callback accepts. Defaults to 0.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 1374](BigCommerce/Container/Settings.php#L1374-L1382)
-
-### `bigcommerce/settings/before_title/page=Api_Credentials_Screen::NAME`
-
-Registers a callback to display the onboarding subheader before the title on the API Credentials screen.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`subheader` | `callable` | The callback function to display the subheader.
-`priority` | `int` | The priority at which the callback should be executed. Defaults to 10.
-`accepted_args` | `int` | The number of arguments the callback accepts. Defaults to 0.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 1384](BigCommerce/Container/Settings.php#L1384-L1392)
-
-### `bigcommerce/settings/before_title/page=Pending_Account_Screen::NAME`
-
-Registers a callback to display the onboarding subheader before the title on the Pending Account screen.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`subheader` | `callable` | The callback function to display the subheader.
-`priority` | `int` | The priority at which the callback should be executed. Defaults to 10.
-`accepted_args` | `int` | The number of arguments the callback accepts. Defaults to 0.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 1394](BigCommerce/Container/Settings.php#L1394-L1402)
-
-### `bigcommerce/settings/before_title/page=Connect_Channel_Screen::NAME`
-
-Registers a callback to display the onboarding subheader before the title on the Connect Channel screen.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`subheader` | `callable` | The callback function to display the subheader.
-`priority` | `int` | The priority at which the callback should be executed. Defaults to 10.
-`accepted_args` | `int` | The number of arguments the callback accepts. Defaults to 0.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 1404](BigCommerce/Container/Settings.php#L1404-L1412)
-
-### `bigcommerce/settings/before_title/page=Store_Type_Screen::NAME`
-
-Registers a callback to display the onboarding subheader before the title on the Store Type screen.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`subheader` | `callable` | The callback function to display the subheader.
-`priority` | `int` | The priority at which the callback should be executed. Defaults to 10.
-`accepted_args` | `int` | The number of arguments the callback accepts. Defaults to 0.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 1414](BigCommerce/Container/Settings.php#L1414-L1422)
-
-### `bigcommerce/settings/before_title/page=Nav_Menu_Screen::NAME`
-
-Registers a callback to display the onboarding subheader before the title on the Navigation Menu screen.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`subheader` | `callable` | The callback function to display the subheader.
-`priority` | `int` | The priority at which the callback should be executed. Defaults to 10.
-`accepted_args` | `int` | The number of arguments the callback accepts. Defaults to 0.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 1424](BigCommerce/Container/Settings.php#L1424-L1432)
-
-### `load-nav-menus.php`
-
-Registers a callback to set the navigation menu screen options when the 'load-nav-menus.php' hook is triggered.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 1445](BigCommerce/Container/Settings.php#L1445-L1451)
-
-### `bigcommerce/settings/register/screen=Settings_Screen::NAME`
-
-Registers a callback to register diagnostics settings on the 'bigcommerce/settings/register/screen=' hook for the specified screen.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 1475](BigCommerce/Container/Settings.php#L1475-L1478)
-
-### `wp_ajax_Troubleshooting_Diagnostics::AJAX_ACTION`
-
-Registers a callback to handle diagnostics data retrieval for the specified AJAX action.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 1480](BigCommerce/Container/Settings.php#L1480-L1483)
-
-### `wp_ajax_Troubleshooting_Diagnostics::AJAX_ACTION_IMPORT_ERRORS`
-
-Registers a callback to handle import errors retrieval for the specified AJAX action.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 1485](BigCommerce/Container/Settings.php#L1485-L1488)
-
-### `admin_post_Troubleshooting_Diagnostics::SYNC_SITE_URL`
-
-Registers a callback to sync the site URL when the admin post action is triggered.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 1490](BigCommerce/Container/Settings.php#L1490-L1493)
-
-### `admin_post_Troubleshooting_Diagnostics::ABORT_NAME`
-
-Registers a callback to abort the import when the admin post action is triggered.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 1495](BigCommerce/Container/Settings.php#L1495-L1498)
-
-### `admin_post_Troubleshooting_Diagnostics::FLUSH_USER`
-
-Registers a callback to handle cache flush requests for the user.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 1504](BigCommerce/Container/Settings.php#L1504-L1505)
-
-### `admin_post_Troubleshooting_Diagnostics::FLUSH_PRODUCTS`
-
-Registers a callback to handle cache flush requests for the products.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 1506](BigCommerce/Container/Settings.php#L1506-L1507)
-
-### `admin_menu`
-
-Registers the resources settings page in the admin menu.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 1517](BigCommerce/Container/Settings.php#L1517-L1520)
-
-### `init`
-
-Registers the necessary post types and handlers during the 'init' action.
-
-This action is triggered on the 'init' hook to register several post types and
-related configurations, including the product post type, queue task, synchronization logs,
-and GraphQL product handlers. These handlers are instantiated from the container and
-are responsible for managing product data, tasks, synchronization, and GraphQL operations.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 128](BigCommerce/Container/Post_Types.php#L128-L143)
-
-### `pre_get_posts`
-
-Action triggered before WordPress queries are retrieved to filter product queries.
-
-This action hooks into the `pre_get_posts` event and modifies the query by filtering
-it using the `filter_queries` method of the `PRODUCT_QUERY` container instance.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`query` | `\WP_Query` | The WordPress query object to be modified.
-
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 185](BigCommerce/Container/Post_Types.php#L185-L197)
-
-### `pre_handle_404`
-
-Action triggered before the 404 handler to filter non-visible product categories.
-
-This action hooks into the `pre_handle_404` event to handle non-visible product categories
-by checking if the current category or archive is visible based on the setting in the customizer.
-If the category is non-visible, it returns a 404 response.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`preempt` | `bool` | Whether the 404 handling should be preempted.
-
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 227](BigCommerce/Container/Post_Types.php#L227-L263)
-
-### `add_meta_boxes_Product\Product::NAME`
-
-Action triggered to remove the featured image meta box for product posts.
-
-This action hooks into the `add_meta_boxes_{post_type}` event and removes the featured
-image meta box from the product post type using the `remove_featured_image_meta_box` method
-of the `PRODUCT_ADMIN` container instance.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`post` | `\WP_Post` | The post object for which the meta box is being added.
-
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 304](BigCommerce/Container/Post_Types.php#L304-L317)
-
-### `load-post.php`
-
-Action triggered on the 'load-post.php' hook to initialize post admin functionalities.
-
-This action triggers the `$load_post_admin_hooks` callback when loading the `post.php` page in the WordPress admin
-to initialize various post-related admin functionalities.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 322](BigCommerce/Container/Post_Types.php#L322-L330)
-
-### `wp_ajax_inline-save`
-
-Action triggered on the 'wp_ajax_inline-save' hook to handle inline post saving functionality.
-
-This action triggers the `$load_post_admin_hooks` callback during an AJAX request to save a post inline.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 332](BigCommerce/Container/Post_Types.php#L332-L339)
-
-### `load-edit.php`
-
-Action triggered on the 'load-edit.php' hook to initialize the post editing page admin functionalities.
-
-This action triggers the `$load_post_admin_hooks` callback when loading the `edit.php` page in the WordPress admin
-to initialize various editing-related functionalities.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 341](BigCommerce/Container/Post_Types.php#L341-L349)
-
-### `rest_api_init`
-
-Action triggered on the 'rest_api_init' hook to initialize REST API routes for post handling.
-
-This action triggers the `$load_post_admin_hooks` callback during the REST API initialization process.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 351](BigCommerce/Container/Post_Types.php#L351-L358)
-
-### `admin_notices`
-
-Action triggered to show admin notices in the product list table.
-
-This action is used to display admin notices in the product list table using the `list_table_admin_notices` method.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 426](BigCommerce/Container/Post_Types.php#L426-L435)
-
-### `before_delete_post`
-
-Action triggered before deleting a product to clean up associated data.
-
-This action is triggered before a product is deleted, allowing for the removal of any associated product data
-using the `delete_product_data` method.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`post_id` | `int` | The ID of the post being deleted.
-
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 481](BigCommerce/Container/Post_Types.php#L481-L493)
-
-### `bigcommerce/import/before`
-
-Action triggered before the BigCommerce import process begins to disable updates.
-
-This action disables updates or deletions of product listings in BigCommerce during the import process.
-Do not push updates back upstream when running an import.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 495](BigCommerce/Container/Post_Types.php#L495-L524)
-
-### `bigcommerce/import/after`
-
-Action triggered after the BigCommerce import process to re-enable updates.
-
-This action re-enables the updates and deletions of product listings in BigCommerce after the import process.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 526](BigCommerce/Container/Post_Types.php#L526-L536)
-
-### `manage_bigcommerce_product_posts_custom_column`
-
-Adds BigCommerce product ID values to custom columns in the admin product list.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`columns` | `array` | The existing columns in the admin product list.
-`post_id` | `int` | The post ID.
-
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 551](BigCommerce/Container/Post_Types.php#L551-L561)
-
-### `manage_bigcommerce_product_posts_custom_column`
-
-Adds BigCommerce product thumbnail image to custom columns in the admin product list.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`columns` | `array` | The existing columns in the admin product list.
-`post_id` | `int` | The post ID.
-
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 563](BigCommerce/Container/Post_Types.php#L563-L573)
-
-### `bigcommerce/import/start`
-
-Creates a sync entry when an import starts.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`error` | `string` | Error message (if any).
-
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 614](BigCommerce/Container/Post_Types.php#L614-L625)
-
-### `bigcommerce/import/error`
-
-Logs an error during the import process.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`error` | `string` | Error message encountered during the import process.
-
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 627](BigCommerce/Container/Post_Types.php#L627-L638)
-
-### `bigcommerce/import/logs/rotate`
-
-Completes the sync when the logs are rotated.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`log` | `string` | The log data.
-
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 640](BigCommerce/Container/Post_Types.php#L640-L651)
-
-### `admin_bar_menu`
-
-Modifies the admin bar links for editing products.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`wp_admin_bar` | `\BigCommerce\Container\WP_Admin_Bar` | The admin bar instance.
-
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 719](BigCommerce/Container/Post_Types.php#L719-L730)
-
-### `admin_post_Product\Reset_Listing::ACTION`
-
-Handles the reset listing request via an admin action.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 759](BigCommerce/Container/Post_Types.php#L759-L768)
-
-### `admin_post_Product\Single_Product_Sync::ACTION`
-
-Handles product resync on admin post action.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 795](BigCommerce/Container/Post_Types.php#L795-L802)
-
-### `post_submitbox_misc_actions`
-
-Adds a channel indicator message in the post submitbox.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`post` | `\BigCommerce\Container\WP_Post` | The post object.
-
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 817](BigCommerce/Container/Post_Types.php#L817-L828)
-
-### `save_post`
-
-Syncs post data to an external channel when the post is saved.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`post_id` | `int` | The post ID.
-`post` | `\BigCommerce\Container\WP_Post` | The post object.
-
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 858](BigCommerce/Container/Post_Types.php#L858-L868)
-
-### `before_delete_post`
-
-Deletes post data from an external channel when the post is deleted.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`post_id` | `int` | The post ID.
-
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 870](BigCommerce/Container/Post_Types.php#L870-L879)
-
-### `widgets_init`
-
-Registers each widget in the container during the `widgets_init` action.
-
-This action hooks into `widgets_init` to register the defined widgets with WordPress.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`` | `void` | 
-
-Source: [src/BigCommerce/Container/Widgets.php](BigCommerce/Container/Widgets.php), [line 41](BigCommerce/Container/Widgets.php#L41-L54)
-
-### `wp_login`
-
-Action hook to connect customer ID after successful login.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`username` | `string` | Username of the logged-in user
-`user` | `\BigCommerce\Container\WP_User` | The WP user object
-
-Source: [src/BigCommerce/Container/Accounts.php](BigCommerce/Container/Accounts.php), [line 216](BigCommerce/Container/Accounts.php#L216-L224)
-
-### `lostpassword_post`
-
-Action hook for handling lost password errors.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`error` | `\WP_Error` | Error object from the lost password process.
-
-Source: [src/BigCommerce/Container/Accounts.php](BigCommerce/Container/Accounts.php), [line 271](BigCommerce/Container/Accounts.php#L271-L278)
-
-### `template_redirect`
-
-Redirect account pages to authentication pages and vice versa.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Accounts.php](BigCommerce/Container/Accounts.php), [line 290](BigCommerce/Container/Accounts.php#L290-L296)
-
-### `user_register`
-
-Action hook for creating a customer when a new user registers.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`user_id` | `int` | The new user ID.
-`userdata` | `array` | The user data.
-
-Source: [src/BigCommerce/Container/Accounts.php](BigCommerce/Container/Accounts.php), [line 331](BigCommerce/Container/Accounts.php#L331-L339)
-
-### `show_user_profile`
-
-Registers profile-related services and actions.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`container` | `\Pimple\Container` | The dependency injection container
-
-Source: [src/BigCommerce/Container/Accounts.php](BigCommerce/Container/Accounts.php), [line 392](BigCommerce/Container/Accounts.php#L392-L431)
-
-### `edit_user_profile`
-
-Registers profile-related services and actions.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`container` | `\Pimple\Container` | The dependency injection container
-
-Source: [src/BigCommerce/Container/Accounts.php](BigCommerce/Container/Accounts.php), [line 392](BigCommerce/Container/Accounts.php#L392-L432)
-
-### `personal_options_update`
-
-Registers profile-related services and actions.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`container` | `\Pimple\Container` | The dependency injection container
-
-Source: [src/BigCommerce/Container/Accounts.php](BigCommerce/Container/Accounts.php), [line 392](BigCommerce/Container/Accounts.php#L392-L433)
-
-### `edit_user_profile_update`
-
-Registers profile-related services and actions.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`container` | `\Pimple\Container` | The dependency injection container
-
-Source: [src/BigCommerce/Container/Accounts.php](BigCommerce/Container/Accounts.php), [line 392](BigCommerce/Container/Accounts.php#L392-L434)
-
-### `parse_request`
-
-Action to handle address deletion requests
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Accounts.php](BigCommerce/Container/Accounts.php), [line 448](BigCommerce/Container/Accounts.php#L448-L451)
-
-### `parse_request`
-
-Action to handle public wishlist requests
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Accounts.php](BigCommerce/Container/Accounts.php), [line 482](BigCommerce/Container/Accounts.php#L482-L485)
-
-### `bigcommerce/action_endpoint/Wishlist_Actions\Request_Router::ACTION`
-
-Handle the wishlist action request
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Accounts.php](BigCommerce/Container/Accounts.php), [line 492](BigCommerce/Container/Accounts.php#L492-L495)
-
-### `bigcommerce/wishlist_endpoint/Wishlist_Actions\Create_Wishlist::ACTION`
-
-Handle create wishlist request
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Accounts.php](BigCommerce/Container/Accounts.php), [line 502](BigCommerce/Container/Accounts.php#L502-L505)
-
-### `bigcommerce/wishlist_endpoint/Wishlist_Actions\Edit_Wishlist::ACTION`
-
-Handle edit wishlist request
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Accounts.php](BigCommerce/Container/Accounts.php), [line 512](BigCommerce/Container/Accounts.php#L512-L515)
-
-### `bigcommerce/wishlist_endpoint/Wishlist_Actions\Delete_Wishlist::ACTION`
-
-Handle delete wishlist request
+Fires when a result has been cached.
 
 **Arguments**
 
-No arguments.
-
-Source: [src/BigCommerce/Container/Accounts.php](BigCommerce/Container/Accounts.php), [line 522](BigCommerce/Container/Accounts.php#L522-L525)
-
-### `bigcommerce/wishlist_endpoint/Wishlist_Actions\Add_Item::ACTION`
-
-Handle add item to wishlist request
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Accounts.php](BigCommerce/Container/Accounts.php), [line 532](BigCommerce/Container/Accounts.php#L532-L535)
-
-### `bigcommerce/wishlist_endpoint/Wishlist_Actions\Remove_Item::ACTION`
-
-Handle remove item from wishlist request
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Accounts.php](BigCommerce/Container/Accounts.php), [line 542](BigCommerce/Container/Accounts.php#L542-L545)
-
-### `bigcommerce/template=components/products/product-single.php/data`
-
-Registers and handles wishlist-related services and actions.
-
-**Arguments**
-
 Argument | Type | Description
 -------- | ---- | -----------
-`container` | `\Pimple\Container` | The dependency injection container
-
-Source: [src/BigCommerce/Container/Accounts.php](BigCommerce/Container/Accounts.php), [line 471](BigCommerce/Container/Accounts.php#L471-L556)
-
-### `after_password_reset`
-
-Sync password reset with BigCommerce
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Accounts.php](BigCommerce/Container/Accounts.php), [line 571](BigCommerce/Container/Accounts.php#L571-L574)
-
-### `profile_update`
-
-Sync password change with BigCommerce
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Accounts.php](BigCommerce/Container/Accounts.php), [line 576](BigCommerce/Container/Accounts.php#L576-L579)
-
-### `bigcommerce/sync_global_logins`
-
-Sync global logins with BigCommerce
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Accounts.php](BigCommerce/Container/Accounts.php), [line 592](BigCommerce/Container/Accounts.php#L592-L595)
-
-### `bigcommerce/channel/promote`
-
-Schedule global logins sync
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Accounts.php](BigCommerce/Container/Accounts.php), [line 597](BigCommerce/Container/Accounts.php#L597-L600)
-
-### `parse_request`
-
-Parses incoming requests and triggers the corresponding form action
-when the `bc-action` parameter is present. Dynamically fires
-a `bigcommerce/form/action=<action>` hook based on the value of `bc-action`.
-
-**Arguments**
-
-No arguments.
+`result` | `array\|\WP_Error` | Result from API call.
+`request` | `\WP_REST_Request` | API request.
 
-Source: [src/BigCommerce/Container/Forms.php](BigCommerce/Container/Forms.php), [line 122](BigCommerce/Container/Forms.php#L122-L132)
+Source: [src/BigCommerce/Proxy/Proxy_Cache.php](BigCommerce/Proxy/Proxy_Cache.php), [line 165](BigCommerce/Proxy/Proxy_Cache.php#L165-L171)
 
-### `bigcommerce/form/action=Delete_Address_Handler::ACTION`
+### bigcommerce/proxy/cache_get
 
-Triggered when the form submission specifies `delete_address` as the `bc-action` parameter.
 
-Handles the removal of an address from the user's account.
+Result retrieved from cache.
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`submission` | `array` | The sanitized form submission data containing details for the address to be deleted.
+`result` | `array` | Result returned from cache.
+`request` | `\WP_REST_Request` | API request.
 
-Source: [src/BigCommerce/Container/Forms.php](BigCommerce/Container/Forms.php), [line 138](BigCommerce/Container/Forms.php#L138-L146)
+Source: [src/BigCommerce/Proxy/Proxy_Cache.php](BigCommerce/Proxy/Proxy_Cache.php), [line 220](BigCommerce/Proxy/Proxy_Cache.php#L220-L226)
 
-### `bigcommerce/form/action=Update_Address_Handler::ACTION`
+### bigcommerce/proxy/request_received
 
-Triggered when the form submission specifies `update_address` as the `bc-action` parameter.
 
-Handles updating an existing address in the user account by processing and validating the form data.
-Developers can hook into this action to extend or customize address update behavior.
+Fires before a proxy REST request is run.
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`submission` | `array` | The sanitized form submission data (typically from $_POST), containing user-provided fields for the address update.
+`request` | `\WP_REST_Request` | API request.
 
-Source: [src/BigCommerce/Container/Forms.php](BigCommerce/Container/Forms.php), [line 152](BigCommerce/Container/Forms.php#L152-L161)
+Source: [src/BigCommerce/Proxy/Proxy_Controller.php](BigCommerce/Proxy/Proxy_Controller.php), [line 331](BigCommerce/Proxy/Proxy_Controller.php#L331-L336)
 
-### `bigcommerce/form/action=Update_Profile_Handler::ACTION`
+### bigcommerce/proxy/raw_response_received
 
-Triggered when the form submission specifies `update_profile` as the `bc-action` parameter.
 
-Handles updates to the user's profile details, such as name or email address.
+Raw API response received.
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`submission` | `array` | The sanitized form submission data containing user profile fields to be updated.
+`response` | `object\|array` | Response from BigCommerce API.
+`route` | `string` | Route requested.
+`request` | `\WP_REST_Request` | API request.
 
-Source: [src/BigCommerce/Container/Forms.php](BigCommerce/Container/Forms.php), [line 167](BigCommerce/Container/Forms.php#L167-L175)
+Source: [src/BigCommerce/Proxy/Proxy_Controller.php](BigCommerce/Proxy/Proxy_Controller.php), [line 363](BigCommerce/Proxy/Proxy_Controller.php#L363-L370)
 
-### `bigcommerce/form/action=Registration_Handler::ACTION`
+### bigcommerce/proxy/response_received
 
-Triggered when the form submission specifies `register` as the `bc-action` parameter.
 
-Handles user registration by validating input data and creating a new account.
+Do something with the response before it is returned. E.g. Import the product(s) and/or cache it.
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`submission` | `array` | The sanitized form submission data containing user registration details such as name, email, and password.
+`result` | `array\|\WP_Error` | Result from API call.
+`request` | `\WP_REST_Request` | API request.
 
-Source: [src/BigCommerce/Container/Forms.php](BigCommerce/Container/Forms.php), [line 181](BigCommerce/Container/Forms.php#L181-L189)
+Source: [src/BigCommerce/Proxy/Proxy_Controller.php](BigCommerce/Proxy/Proxy_Controller.php), [line 379](BigCommerce/Proxy/Proxy_Controller.php#L379-L385)
 
-### `bigcommerce/form/action=Purchase_Gift_Certificate_Handler::ACTION`
+### bigcommerce/form/error
 
-Triggered when the form submission specifies `purchase_gift_certificate` as the `bc-action` parameter.
 
-Handles the purchase of a gift certificate by processing user input and creating a cart item.
+Triggered when a form has errors that prevent completion.
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`submission` | `array` | The sanitized form submission data containing gift certificate purchase details.
+`errors` | `\WP_Error` | The message that will display to the user
+`submission` | `array` | The data submitted to the form
 
-Source: [src/BigCommerce/Container/Forms.php](BigCommerce/Container/Forms.php), [line 195](BigCommerce/Container/Forms.php#L195-L203)
+Source: [src/BigCommerce/Forms/Registration_Handler.php](BigCommerce/Forms/Registration_Handler.php), [line 76](BigCommerce/Forms/Registration_Handler.php#L76-L82)
 
-### `bigcommerce/form/action=Product_Review_Handler::ACTION`
+Source: [src/BigCommerce/Cart/Add_To_Cart.php](BigCommerce/Cart/Add_To_Cart.php), [line 28](BigCommerce/Cart/Add_To_Cart.php#L28-L28)
 
-Triggered when the form submission specifies `product_review` as the `bc-action` parameter.
+Source: [src/BigCommerce/Cart/Add_To_Cart.php](BigCommerce/Cart/Add_To_Cart.php), [line 148](BigCommerce/Cart/Add_To_Cart.php#L148-L148)
 
-Processes product reviews submitted by customers and saves them to the catalog system.
+Source: [src/BigCommerce/Cart/Buy_Now.php](BigCommerce/Cart/Buy_Now.php), [line 69](BigCommerce/Cart/Buy_Now.php#L69-L69)
 
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`submission` | `array` | The sanitized form submission data containing customer review details such as rating and comments.
+Source: [src/BigCommerce/Cart/Cart_Recovery.php](BigCommerce/Cart/Cart_Recovery.php), [line 86](BigCommerce/Cart/Cart_Recovery.php#L86-L86)
 
-Source: [src/BigCommerce/Container/Forms.php](BigCommerce/Container/Forms.php), [line 209](BigCommerce/Container/Forms.php#L209-L217)
+Source: [src/BigCommerce/Cart/Checkout.php](BigCommerce/Cart/Checkout.php), [line 55](BigCommerce/Cart/Checkout.php#L55-L55)
 
-### `bigcommerce/form/action=Switch_Currency_Handler::ACTION`
+Source: [src/BigCommerce/Cart/Checkout.php](BigCommerce/Cart/Checkout.php), [line 81](BigCommerce/Cart/Checkout.php#L81-L81)
 
-Handles the currency switch action in the BigCommerce form submission.
+Source: [src/BigCommerce/Forms/Update_Address_Handler.php](BigCommerce/Forms/Update_Address_Handler.php), [line 43](BigCommerce/Forms/Update_Address_Handler.php#L43-L43)
 
-This action is triggered when the user submits a form that includes a request to switch
-the currency. The callback function handles the form submission and invokes the
-`Switch_Currency_Handler` to process the currency change request.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`submission` | `array` | The form submission data, including the selected currency.
-`container` | `\BigCommerce\Forms\Switch_Currency_Handler` | The container holding the `SWITCH_CURRENCY` handler.
+Source: [src/BigCommerce/Forms/Update_Address_Handler.php](BigCommerce/Forms/Update_Address_Handler.php), [line 60](BigCommerce/Forms/Update_Address_Handler.php#L60-L60)
 
-Source: [src/BigCommerce/Container/Forms.php](BigCommerce/Container/Forms.php), [line 247](BigCommerce/Container/Forms.php#L247-L263)
+Source: [src/BigCommerce/Forms/Delete_Address_Handler.php](BigCommerce/Forms/Delete_Address_Handler.php), [line 33](BigCommerce/Forms/Delete_Address_Handler.php#L33-L33)
 
-### `bigcommerce/form/error`
+Source: [src/BigCommerce/Forms/Registration_Handler.php](BigCommerce/Forms/Registration_Handler.php), [line 112](BigCommerce/Forms/Registration_Handler.php#L112-L112)
 
-Triggered when an error occurs during a form submission. Allows developers to handle or log form submission errors.
+Source: [src/BigCommerce/Forms/Switch_Currency_Handler.php](BigCommerce/Forms/Switch_Currency_Handler.php), [line 75](BigCommerce/Forms/Switch_Currency_Handler.php#L75-L75)
 
-**Arguments**
+Source: [src/BigCommerce/Forms/Product_Review_Handler.php](BigCommerce/Forms/Product_Review_Handler.php), [line 52](BigCommerce/Forms/Product_Review_Handler.php#L52-L58)
 
-Argument | Type | Description
--------- | ---- | -----------
-`error` | `\WP_Error` | The error object representing the validation or processing error. Contains error codes and messages.
-`submission` | `array` | The sanitized form submission data (usually $_POST).
-`redirect` | `string` | The URL to redirect the user after processing the error. Defaults to the home URL.
+Source: [src/BigCommerce/Forms/Product_Review_Handler.php](BigCommerce/Forms/Product_Review_Handler.php), [line 85](BigCommerce/Forms/Product_Review_Handler.php#L85-L85)
 
-Source: [src/BigCommerce/Container/Forms.php](BigCommerce/Container/Forms.php), [line 271](BigCommerce/Container/Forms.php#L271-L280)
+Source: [src/BigCommerce/Forms/Update_Profile_Handler.php](BigCommerce/Forms/Update_Profile_Handler.php), [line 43](BigCommerce/Forms/Update_Profile_Handler.php#L43-L43)
 
-### `bigcommerce/form/success`
+Source: [src/BigCommerce/Forms/Update_Profile_Handler.php](BigCommerce/Forms/Update_Profile_Handler.php), [line 79](BigCommerce/Forms/Update_Profile_Handler.php#L79-L79)
 
-Handles form success and processes related actions.
+Source: [src/BigCommerce/Forms/Update_Profile_Handler.php](BigCommerce/Forms/Update_Profile_Handler.php), [line 88](BigCommerce/Forms/Update_Profile_Handler.php#L88-L88)
 
-**Arguments**
+Source: [src/BigCommerce/Forms/Purchase_Gift_Certificate_Handler.php](BigCommerce/Forms/Purchase_Gift_Certificate_Handler.php), [line 72](BigCommerce/Forms/Purchase_Gift_Certificate_Handler.php#L72-L78)
 
-Argument | Type | Description
--------- | ---- | -----------
-`message` | `string` | The success message.
-`submission` | `array` | The form submission data.
-`url` | `string\|null` | Optional redirect URL.
-`data` | `array` | Additional data associated with the submission.
+Source: [src/BigCommerce/Forms/Purchase_Gift_Certificate_Handler.php](BigCommerce/Forms/Purchase_Gift_Certificate_Handler.php), [line 105](BigCommerce/Forms/Purchase_Gift_Certificate_Handler.php#L105-L105)
 
-Source: [src/BigCommerce/Container/Forms.php](BigCommerce/Container/Forms.php), [line 301](BigCommerce/Container/Forms.php#L301-L313)
+Source: [src/BigCommerce/Accounts/Wishlists/Actions/Edit_Wishlist.php](BigCommerce/Accounts/Wishlists/Actions/Edit_Wishlist.php), [line 56](BigCommerce/Accounts/Wishlists/Actions/Edit_Wishlist.php#L56-L56)
 
-### `bigcommerce/form/redirect`
+Source: [src/BigCommerce/Accounts/Wishlists/Actions/Add_Item.php](BigCommerce/Accounts/Wishlists/Actions/Add_Item.php), [line 70](BigCommerce/Accounts/Wishlists/Actions/Add_Item.php#L70-L70)
 
-Handles the form redirect action.
+Source: [src/BigCommerce/Accounts/Wishlists/Actions/Create_Wishlist.php](BigCommerce/Accounts/Wishlists/Actions/Create_Wishlist.php), [line 60](BigCommerce/Accounts/Wishlists/Actions/Create_Wishlist.php#L60-L60)
 
-**Arguments**
+Source: [src/BigCommerce/Accounts/Wishlists/Actions/Delete_Wishlist.php](BigCommerce/Accounts/Wishlists/Actions/Delete_Wishlist.php), [line 47](BigCommerce/Accounts/Wishlists/Actions/Delete_Wishlist.php#L47-L47)
 
-Argument | Type | Description
--------- | ---- | -----------
-`url` | `string` | The redirect URL.
+Source: [src/BigCommerce/Accounts/Wishlists/Actions/Remove_Item.php](BigCommerce/Accounts/Wishlists/Actions/Remove_Item.php), [line 73](BigCommerce/Accounts/Wishlists/Actions/Remove_Item.php#L73-L73)
 
-Source: [src/BigCommerce/Container/Forms.php](BigCommerce/Container/Forms.php), [line 321](BigCommerce/Container/Forms.php#L321-L330)
+### bigcommerce/form/success
 
-### `init`
 
-Registers CLI commands during the `init` hook.
+Triggered when a form is successfully processed.
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`` | `void` | 
+`message` | `string` | The message that will display to the user.
+`submission` | `array` | The data submitted to the form.
+`url` | `string` | The URL to redirect the user to.
+`data` | `array` | Additional data to store with the message.
 
-Source: [src/BigCommerce/Container/Cli.php](BigCommerce/Container/Cli.php), [line 90](BigCommerce/Container/Cli.php#L90-L107)
+Source: [src/BigCommerce/Cart/Add_To_Cart.php](BigCommerce/Cart/Add_To_Cart.php), [line 101](BigCommerce/Cart/Add_To_Cart.php#L101-L115)
 
-### `bigcommerce/import/start`
+Source: [src/BigCommerce/Forms/Update_Address_Handler.php](BigCommerce/Forms/Update_Address_Handler.php), [line 72](BigCommerce/Forms/Update_Address_Handler.php#L72-L72)
 
-Action to truncate the log when the BigCommerce import starts.
+Source: [src/BigCommerce/Forms/Update_Address_Handler.php](BigCommerce/Forms/Update_Address_Handler.php), [line 80](BigCommerce/Forms/Update_Address_Handler.php#L80-L80)
 
-This action is triggered at the start of the BigCommerce import process. It clears or truncates the log file to ensure that old logs do not interfere with the new import process.
+Source: [src/BigCommerce/Forms/Delete_Address_Handler.php](BigCommerce/Forms/Delete_Address_Handler.php), [line 43](BigCommerce/Forms/Delete_Address_Handler.php#L43-L43)
 
-**Arguments**
+Source: [src/BigCommerce/Forms/Registration_Handler.php](BigCommerce/Forms/Registration_Handler.php), [line 177](BigCommerce/Forms/Registration_Handler.php#L177-L185)
 
-No arguments.
+Source: [src/BigCommerce/Forms/Switch_Currency_Handler.php](BigCommerce/Forms/Switch_Currency_Handler.php), [line 104](BigCommerce/Forms/Switch_Currency_Handler.php#L104-L112)
 
-Source: [src/BigCommerce/Container/Log.php](BigCommerce/Container/Log.php), [line 89](BigCommerce/Container/Log.php#L89-L98)
+Source: [src/BigCommerce/Forms/Product_Review_Handler.php](BigCommerce/Forms/Product_Review_Handler.php), [line 96](BigCommerce/Forms/Product_Review_Handler.php#L96-L96)
 
-### `bigcommerce/import/product/error`
+Source: [src/BigCommerce/Forms/Update_Profile_Handler.php](BigCommerce/Forms/Update_Profile_Handler.php), [line 99](BigCommerce/Forms/Update_Profile_Handler.php#L99-L99)
 
-Action to log product import errors.
+Source: [src/BigCommerce/Forms/Purchase_Gift_Certificate_Handler.php](BigCommerce/Forms/Purchase_Gift_Certificate_Handler.php), [line 126](BigCommerce/Forms/Purchase_Gift_Certificate_Handler.php#L126-L133)
 
-This action is triggered when a product import encounters an error. It logs the error details including the product ID, catalog API, and the exception that caused the error.
+Source: [src/BigCommerce/Accounts/Wishlists/Actions/Edit_Wishlist.php](BigCommerce/Accounts/Wishlists/Actions/Edit_Wishlist.php), [line 54](BigCommerce/Accounts/Wishlists/Actions/Edit_Wishlist.php#L54-L54)
 
-**Arguments**
+Source: [src/BigCommerce/Accounts/Wishlists/Actions/Add_Item.php](BigCommerce/Accounts/Wishlists/Actions/Add_Item.php), [line 68](BigCommerce/Accounts/Wishlists/Actions/Add_Item.php#L68-L68)
 
-Argument | Type | Description
--------- | ---- | -----------
-`product_id` | `int` | The ID of the product being imported.
-`catalog_api` | `\BigCommerce\Api\v3\Api\CatalogApi` | The catalog API instance used to fetch product data.
-`exception` | `\Exception` | The exception that was thrown during the import.
+Source: [src/BigCommerce/Accounts/Wishlists/Actions/Create_Wishlist.php](BigCommerce/Accounts/Wishlists/Actions/Create_Wishlist.php), [line 58](BigCommerce/Accounts/Wishlists/Actions/Create_Wishlist.php#L58-L58)
 
-Source: [src/BigCommerce/Container/Log.php](BigCommerce/Container/Log.php), [line 100](BigCommerce/Container/Log.php#L100-L112)
+Source: [src/BigCommerce/Accounts/Wishlists/Actions/Delete_Wishlist.php](BigCommerce/Accounts/Wishlists/Actions/Delete_Wishlist.php), [line 45](BigCommerce/Accounts/Wishlists/Actions/Delete_Wishlist.php#L45-L45)
 
-### `bigcommerce/log`
+Source: [src/BigCommerce/Accounts/Wishlists/Actions/Remove_Item.php](BigCommerce/Accounts/Wishlists/Actions/Remove_Item.php), [line 71](BigCommerce/Accounts/Wishlists/Actions/Remove_Item.php#L71-L71)
 
-Action to log messages during the BigCommerce logging process.
+### bigcommerce/do_not_cache
 
-This action is triggered when a log entry needs to be created. It logs the message, context, level, and path to the log file.
+Source: [src/BigCommerce/Cart/Cache_Control.php](BigCommerce/Cart/Cache_Control.php), [line 30](BigCommerce/Cart/Cache_Control.php#L30-L30)
 
-**Arguments**
+### bigcommerce/form/before_redirect
 
-Argument | Type | Description
--------- | ---- | -----------
-`level` | `string` | The log level (e.g., INFO, ERROR).
-`message` | `string` | The log message to be recorded.
-`context` | `array` | Additional context for the log entry.
-`path` | `string` | The path where the log is being written.
+Source: [src/BigCommerce/Forms/Form_Redirect.php](BigCommerce/Forms/Form_Redirect.php), [line 34](BigCommerce/Forms/Form_Redirect.php#L34-L34)
+
+### bigcommerce/form/redirect
 
-Source: [src/BigCommerce/Container/Log.php](BigCommerce/Container/Log.php), [line 130](BigCommerce/Container/Log.php#L130-L141)
+Source: [src/BigCommerce/Forms/Error_Handler.php](BigCommerce/Forms/Error_Handler.php), [line 43](BigCommerce/Forms/Error_Handler.php#L43-L43)
 
-### `bigcommerce/import/log`
+Source: [src/BigCommerce/Forms/Success_Handler.php](BigCommerce/Forms/Success_Handler.php), [line 54](BigCommerce/Forms/Success_Handler.php#L54-L54)
 
-Action to log messages during the BigCommerce import process.
+### bigcommerce/log
 
-This action is triggered during the BigCommerce import process to log important messages. It captures the log level, message, context, and path for further troubleshooting.
 
+Fires when a product has been deleted in the BigCommerce store.
+
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`level` | `string` | The log level (e.g., INFO, ERROR).
-`message` | `string` | The log message to be recorded.
-`context` | `array` | Additional context for the log entry.
+`product_id` | `int` | BigCommerce product ID.
 
-Source: [src/BigCommerce/Container/Log.php](BigCommerce/Container/Log.php), [line 143](BigCommerce/Container/Log.php#L143-L153)
+Source: [src/BigCommerce/Webhooks/Product/Product_Delete_Webhook.php](BigCommerce/Webhooks/Product/Product_Delete_Webhook.php), [line 30](BigCommerce/Webhooks/Product/Product_Delete_Webhook.php#L30-L37)
 
-### `bigcommerce/import/error`
+Source: [src/BigCommerce/GraphQL/BaseGQL.php](BigCommerce/GraphQL/BaseGQL.php), [line 151](BigCommerce/GraphQL/BaseGQL.php#L151-L153)
 
-Action to log import errors during the BigCommerce import process.
+Source: [src/BigCommerce/GraphQL/BaseGQL.php](BigCommerce/GraphQL/BaseGQL.php), [line 182](BigCommerce/GraphQL/BaseGQL.php#L182-L184)
 
-This action is triggered when there is an error during the import process. It logs the error message and context for further analysis.
+Source: [src/BigCommerce/Import/Task_Manager.php](BigCommerce/Import/Task_Manager.php), [line 93](BigCommerce/Import/Task_Manager.php#L93-L96)
 
-**Arguments**
+Source: [src/BigCommerce/Import/Task_Manager.php](BigCommerce/Import/Task_Manager.php), [line 101](BigCommerce/Import/Task_Manager.php#L101-L104)
 
-Argument | Type | Description
--------- | ---- | -----------
-`message` | `string` | The error message to be logged.
-`context` | `array` | Additional context for the error.
+Source: [src/BigCommerce/Import/Task_Manager.php](BigCommerce/Import/Task_Manager.php), [line 105](BigCommerce/Import/Task_Manager.php#L105-L105)
 
-Source: [src/BigCommerce/Container/Log.php](BigCommerce/Container/Log.php), [line 155](BigCommerce/Container/Log.php#L155-L166)
+Source: [src/BigCommerce/Import/Task_Manager.php](BigCommerce/Import/Task_Manager.php), [line 129](BigCommerce/Import/Task_Manager.php#L129-L129)
 
-### `wp_kses_allowed_html`
+Source: [src/BigCommerce/Import/Processors/Deleted_Product_Marker.php](BigCommerce/Import/Processors/Deleted_Product_Marker.php), [line 69](BigCommerce/Import/Processors/Deleted_Product_Marker.php#L69-L71)
 
-Adds a callback to filter allowed HTML tags in KSES for product descriptions.
+Source: [src/BigCommerce/Import/Processors/Deleted_Product_Marker.php](BigCommerce/Import/Processors/Deleted_Product_Marker.php), [line 88](BigCommerce/Import/Processors/Deleted_Product_Marker.php#L88-L91)
 
-This action hooks into `wp_kses_allowed_html` to filter the allowed HTML tags
-for product descriptions based on the provided context.
+Source: [src/BigCommerce/Import/Processors/Storefront_Processor.php](BigCommerce/Import/Processors/Storefront_Processor.php), [line 54](BigCommerce/Import/Processors/Storefront_Processor.php#L54-L54)
 
-**Arguments**
+Source: [src/BigCommerce/Import/Processors/Storefront_Processor.php](BigCommerce/Import/Processors/Storefront_Processor.php), [line 59](BigCommerce/Import/Processors/Storefront_Processor.php#L59-L59)
 
-Argument | Type | Description
--------- | ---- | -----------
-`allowed_tags` | `string\|array` | The allowed HTML tags.
-`context` | `string` | The context for the allowed tags (e.g., 'post', 'comment', etc.).
+Source: [src/BigCommerce/Import/Processors/Storefront_Processor.php](BigCommerce/Import/Processors/Storefront_Processor.php), [line 84](BigCommerce/Import/Processors/Storefront_Processor.php#L84-L84)
 
-Source: [src/BigCommerce/Container/Util.php](BigCommerce/Container/Util.php), [line 33](BigCommerce/Container/Util.php#L33-L54)
+Source: [src/BigCommerce/Import/Processors/Storefront_Processor.php](BigCommerce/Import/Processors/Storefront_Processor.php), [line 89](BigCommerce/Import/Processors/Storefront_Processor.php#L89-L91)
 
-### `bigcommerce/create_account/submit_request`
+Source: [src/BigCommerce/Import/Processors/Storefront_Processor.php](BigCommerce/Import/Processors/Storefront_Processor.php), [line 110](BigCommerce/Import/Processors/Storefront_Processor.php#L110-L114)
 
-Action to handle the submission of account creation requests.
+Source: [src/BigCommerce/Import/Processors/Storefront_Processor.php](BigCommerce/Import/Processors/Storefront_Processor.php), [line 118](BigCommerce/Import/Processors/Storefront_Processor.php#L118-L120)
 
-This action processes data submitted for account creation, logs errors,
-and invokes the Create_Account service to handle the request.
+Source: [src/BigCommerce/Import/Processors/Storefront_Processor.php](BigCommerce/Import/Processors/Storefront_Processor.php), [line 139](BigCommerce/Import/Processors/Storefront_Processor.php#L139-L141)
 
-**Arguments**
+Source: [src/BigCommerce/Import/Processors/Storefront_Processor.php](BigCommerce/Import/Processors/Storefront_Processor.php), [line 146](BigCommerce/Import/Processors/Storefront_Processor.php#L146-L148)
 
-Argument | Type | Description
--------- | ---- | -----------
-`data` | `array` | Submitted data for account creation.
-`errors` | `array` | An array of errors, if any, encountered during submission.
+Source: [src/BigCommerce/Import/Processors/Storefront_Processor.php](BigCommerce/Import/Processors/Storefront_Processor.php), [line 157](BigCommerce/Import/Processors/Storefront_Processor.php#L157-L161)
 
-Source: [src/BigCommerce/Container/Merchant.php](BigCommerce/Container/Merchant.php), [line 119](BigCommerce/Container/Merchant.php#L119-L132)
+Source: [src/BigCommerce/Import/Processors/Storefront_Processor.php](BigCommerce/Import/Processors/Storefront_Processor.php), [line 165](BigCommerce/Import/Processors/Storefront_Processor.php#L165-L167)
 
-### `admin_post_Connect_Account::CONNECT_ACTION`
+Source: [src/BigCommerce/Import/Processors/Storefront_Processor.php](BigCommerce/Import/Processors/Storefront_Processor.php), [line 185](BigCommerce/Import/Processors/Storefront_Processor.php#L185-L185)
 
-Action to handle the account connection process.
+Source: [src/BigCommerce/Import/Processors/Storefront_Processor.php](BigCommerce/Import/Processors/Storefront_Processor.php), [line 190](BigCommerce/Import/Processors/Storefront_Processor.php#L190-L192)
 
-Triggers the Connect_Account service to connect the merchant's account.
+Source: [src/BigCommerce/Import/Processors/Storefront_Processor.php](BigCommerce/Import/Processors/Storefront_Processor.php), [line 202](BigCommerce/Import/Processors/Storefront_Processor.php#L202-L206)
 
-**Arguments**
+Source: [src/BigCommerce/Import/Processors/Storefront_Processor.php](BigCommerce/Import/Processors/Storefront_Processor.php), [line 210](BigCommerce/Import/Processors/Storefront_Processor.php#L210-L212)
 
-No arguments.
+Source: [src/BigCommerce/Import/Processors/Term_Purge.php](BigCommerce/Import/Processors/Term_Purge.php), [line 67](BigCommerce/Import/Processors/Term_Purge.php#L67-L71)
 
-Source: [src/BigCommerce/Container/Merchant.php](BigCommerce/Container/Merchant.php), [line 158](BigCommerce/Container/Merchant.php#L158-L167)
+Source: [src/BigCommerce/Import/Processors/Term_Purge.php](BigCommerce/Import/Processors/Term_Purge.php), [line 80](BigCommerce/Import/Processors/Term_Purge.php#L80-L80)
 
-### `bigcommerce/settings/after_content/page=Pending_Account_Screen::NAME`
+Source: [src/BigCommerce/Import/Processors/Term_Purge.php](BigCommerce/Import/Processors/Term_Purge.php), [line 89](BigCommerce/Import/Processors/Term_Purge.php#L89-L91)
 
-Action to render the account status placeholder on settings pages.
+Source: [src/BigCommerce/Import/Processors/Term_Purge.php](BigCommerce/Import/Processors/Term_Purge.php), [line 99](BigCommerce/Import/Processors/Term_Purge.php#L99-L102)
 
-Displays a placeholder for account status on specific admin settings pages.
+Source: [src/BigCommerce/Import/Processors/Headless_Product_Processor.php](BigCommerce/Import/Processors/Headless_Product_Processor.php), [line 74](BigCommerce/Import/Processors/Headless_Product_Processor.php#L74-L74)
 
-**Arguments**
+Source: [src/BigCommerce/Import/Processors/Headless_Product_Processor.php](BigCommerce/Import/Processors/Headless_Product_Processor.php), [line 91](BigCommerce/Import/Processors/Headless_Product_Processor.php#L91-L91)
 
-No arguments.
+Source: [src/BigCommerce/Import/Processors/Headless_Product_Processor.php](BigCommerce/Import/Processors/Headless_Product_Processor.php), [line 136](BigCommerce/Import/Processors/Headless_Product_Processor.php#L136-L136)
 
-Source: [src/BigCommerce/Container/Merchant.php](BigCommerce/Container/Merchant.php), [line 181](BigCommerce/Container/Merchant.php#L181-L190)
+Source: [src/BigCommerce/Import/Processors/Headless_Product_Processor.php](BigCommerce/Import/Processors/Headless_Product_Processor.php), [line 158](BigCommerce/Import/Processors/Headless_Product_Processor.php#L158-L161)
 
-### `wp_ajax_Account_Status::STATUS_AJAX`
+Source: [src/BigCommerce/Import/Processors/Headless_Product_Processor.php](BigCommerce/Import/Processors/Headless_Product_Processor.php), [line 166](BigCommerce/Import/Processors/Headless_Product_Processor.php#L166-L168)
 
-Action to handle AJAX requests for account status updates.
+Source: [src/BigCommerce/Import/Processors/Headless_Product_Processor.php](BigCommerce/Import/Processors/Headless_Product_Processor.php), [line 177](BigCommerce/Import/Processors/Headless_Product_Processor.php#L177-L179)
 
-Handles requests to check and refresh the merchant's account status.
+Source: [src/BigCommerce/Import/Processors/Default_Customer_Group.php](BigCommerce/Import/Processors/Default_Customer_Group.php), [line 67](BigCommerce/Import/Processors/Default_Customer_Group.php#L67-L69)
 
-**Arguments**
+Source: [src/BigCommerce/Import/Processors/Default_Customer_Group.php](BigCommerce/Import/Processors/Default_Customer_Group.php), [line 93](BigCommerce/Import/Processors/Default_Customer_Group.php#L93-L96)
 
-No arguments.
+Source: [src/BigCommerce/Import/Processors/Default_Customer_Group.php](BigCommerce/Import/Processors/Default_Customer_Group.php), [line 110](BigCommerce/Import/Processors/Default_Customer_Group.php#L110-L110)
 
-Source: [src/BigCommerce/Container/Merchant.php](BigCommerce/Container/Merchant.php), [line 192](BigCommerce/Container/Merchant.php#L192-L201)
+Source: [src/BigCommerce/Import/Processors/Store_Settings.php](BigCommerce/Import/Processors/Store_Settings.php), [line 63](BigCommerce/Import/Processors/Store_Settings.php#L63-L63)
 
-### `bigcommerce/pending_account/check_status`
+Source: [src/BigCommerce/Import/Processors/Store_Settings.php](BigCommerce/Import/Processors/Store_Settings.php), [line 99](BigCommerce/Import/Processors/Store_Settings.php#L99-L101)
 
-Action to handle status checks for pending accounts.
+Source: [src/BigCommerce/Import/Processors/Store_Settings.php](BigCommerce/Import/Processors/Store_Settings.php), [line 136](BigCommerce/Import/Processors/Store_Settings.php#L136-L139)
 
-Processes errors during status checks and updates the account status as needed.
+Source: [src/BigCommerce/Import/Processors/Store_Settings.php](BigCommerce/Import/Processors/Store_Settings.php), [line 152](BigCommerce/Import/Processors/Store_Settings.php#L152-L152)
 
-**Arguments**
+Source: [src/BigCommerce/Import/Processors/Store_Settings.php](BigCommerce/Import/Processors/Store_Settings.php), [line 165](BigCommerce/Import/Processors/Store_Settings.php#L165-L165)
 
-Argument | Type | Description
--------- | ---- | -----------
-`errors` | `array` | An array of errors encountered during the status check.
+Source: [src/BigCommerce/Import/Processors/Brand_Import.php](BigCommerce/Import/Processors/Brand_Import.php), [line 131](BigCommerce/Import/Processors/Brand_Import.php#L131-L134)
 
-Source: [src/BigCommerce/Container/Merchant.php](BigCommerce/Container/Merchant.php), [line 203](BigCommerce/Container/Merchant.php#L203-L213)
+Source: [src/BigCommerce/Import/Processors/Brand_Import.php](BigCommerce/Import/Processors/Brand_Import.php), [line 136](BigCommerce/Import/Processors/Brand_Import.php#L136-L136)
 
-### `rest_api_init`
+Source: [src/BigCommerce/Import/Processors/Product_Data_Fetcher.php](BigCommerce/Import/Processors/Product_Data_Fetcher.php), [line 49](BigCommerce/Import/Processors/Product_Data_Fetcher.php#L49-L52)
 
-Registers the proxy controller routes when the REST API is initialized.
+Source: [src/BigCommerce/Import/Processors/Product_Data_Fetcher.php](BigCommerce/Import/Processors/Product_Data_Fetcher.php), [line 60](BigCommerce/Import/Processors/Product_Data_Fetcher.php#L60-L60)
 
-This action hooks into the `rest_api_init` action and ensures that the
-proxy controller's routes are registered during the API initialization process.
+Source: [src/BigCommerce/Import/Processors/Product_Data_Fetcher.php](BigCommerce/Import/Processors/Product_Data_Fetcher.php), [line 67](BigCommerce/Import/Processors/Product_Data_Fetcher.php#L67-L70)
 
-**Arguments**
+Source: [src/BigCommerce/Import/Processors/Product_Data_Fetcher.php](BigCommerce/Import/Processors/Product_Data_Fetcher.php), [line 78](BigCommerce/Import/Processors/Product_Data_Fetcher.php#L78-L83)
 
-Argument | Type | Description
--------- | ---- | -----------
-`container` | `\Pimple\Container` | The container instance.
+Source: [src/BigCommerce/Import/Processors/Product_Data_Fetcher.php](BigCommerce/Import/Processors/Product_Data_Fetcher.php), [line 85](BigCommerce/Import/Processors/Product_Data_Fetcher.php#L85-L85)
 
-Source: [src/BigCommerce/Container/Proxy.php](BigCommerce/Container/Proxy.php), [line 108](BigCommerce/Container/Proxy.php#L108-L124)
+Source: [src/BigCommerce/Import/Processors/Product_Data_Fetcher.php](BigCommerce/Import/Processors/Product_Data_Fetcher.php), [line 90](BigCommerce/Import/Processors/Product_Data_Fetcher.php#L90-L90)
 
-### `bigcommerce/proxy/response_received`
+Source: [src/BigCommerce/Import/Processors/Product_Data_Fetcher.php](BigCommerce/Import/Processors/Product_Data_Fetcher.php), [line 91](BigCommerce/Import/Processors/Product_Data_Fetcher.php#L91-L94)
 
-Action triggered when a response is received from the proxy.
+Source: [src/BigCommerce/Import/Processors/Product_Data_Fetcher.php](BigCommerce/Import/Processors/Product_Data_Fetcher.php), [line 127](BigCommerce/Import/Processors/Product_Data_Fetcher.php#L127-L129)
 
-This action hooks into the `bigcommerce/proxy/response_received` event and
-handles the caching of the result after the response is received.
+Source: [src/BigCommerce/Import/Processors/Product_Data_Fetcher.php](BigCommerce/Import/Processors/Product_Data_Fetcher.php), [line 151](BigCommerce/Import/Processors/Product_Data_Fetcher.php#L151-L154)
 
-**Arguments**
+Source: [src/BigCommerce/Import/Processors/Product_Data_Fetcher.php](BigCommerce/Import/Processors/Product_Data_Fetcher.php), [line 183](BigCommerce/Import/Processors/Product_Data_Fetcher.php#L183-L185)
 
-Argument | Type | Description
--------- | ---- | -----------
-`result` | `mixed` | The response result from the proxy request.
-`args` | `array` | The arguments passed to the proxy request.
+Source: [src/BigCommerce/Import/Processors/Currencies.php](BigCommerce/Import/Processors/Currencies.php), [line 68](BigCommerce/Import/Processors/Currencies.php#L68-L68)
 
-Source: [src/BigCommerce/Container/Proxy.php](BigCommerce/Container/Proxy.php), [line 183](BigCommerce/Container/Proxy.php#L183-L206)
+Source: [src/BigCommerce/Import/Processors/Currencies.php](BigCommerce/Import/Processors/Currencies.php), [line 105](BigCommerce/Import/Processors/Currencies.php#L105-L105)
 
-### `bigcommerce/webhooks/product_updated`
+Source: [src/BigCommerce/Import/Processors/Currencies.php](BigCommerce/Import/Processors/Currencies.php), [line 108](BigCommerce/Import/Processors/Currencies.php#L108-L110)
 
-Action triggered when a product is updated.
+Source: [src/BigCommerce/Import/Processors/Currencies.php](BigCommerce/Import/Processors/Currencies.php), [line 114](BigCommerce/Import/Processors/Currencies.php#L114-L118)
 
-This action hooks into the `bigcommerce/webhooks/product_updated` event and
-handles clearing the cache for the updated product.
+Source: [src/BigCommerce/Import/Processors/Currencies.php](BigCommerce/Import/Processors/Currencies.php), [line 122](BigCommerce/Import/Processors/Currencies.php#L122-L126)
 
-**Arguments**
+Source: [src/BigCommerce/Import/Processors/Queue_Runner.php](BigCommerce/Import/Processors/Queue_Runner.php), [line 69](BigCommerce/Import/Processors/Queue_Runner.php#L69-L71)
 
-Argument | Type | Description
--------- | ---- | -----------
-`product_id` | `array` | The updated product ID.
+Source: [src/BigCommerce/Import/Processors/Queue_Runner.php](BigCommerce/Import/Processors/Queue_Runner.php), [line 86](BigCommerce/Import/Processors/Queue_Runner.php#L86-L89)
 
-Source: [src/BigCommerce/Container/Proxy.php](BigCommerce/Container/Proxy.php), [line 208](BigCommerce/Container/Proxy.php#L208-L226)
+Source: [src/BigCommerce/Import/Processors/Queue_Runner.php](BigCommerce/Import/Processors/Queue_Runner.php), [line 90](BigCommerce/Import/Processors/Queue_Runner.php#L90-L90)
 
-### `rest_api_init`
+Source: [src/BigCommerce/Import/Processors/Queue_Runner.php](BigCommerce/Import/Processors/Queue_Runner.php), [line 100](BigCommerce/Import/Processors/Queue_Runner.php#L100-L103)
 
-Registers the AMP cart controller routes when the REST API is initialized.
+Source: [src/BigCommerce/Import/Processors/Queue_Runner.php](BigCommerce/Import/Processors/Queue_Runner.php), [line 120](BigCommerce/Import/Processors/Queue_Runner.php#L120-L123)
 
-This action hooks into the `rest_api_init` action and ensures that the
-AMP cart controller's routes are registered during the API initialization process.
+Source: [src/BigCommerce/Import/Processors/Queue_Runner.php](BigCommerce/Import/Processors/Queue_Runner.php), [line 128](BigCommerce/Import/Processors/Queue_Runner.php#L128-L133)
 
-**Arguments**
+Source: [src/BigCommerce/Import/Processors/Queue_Runner.php](BigCommerce/Import/Processors/Queue_Runner.php), [line 150](BigCommerce/Import/Processors/Queue_Runner.php#L150-L152)
 
-No arguments.
+Source: [src/BigCommerce/Import/Processors/Queue_Runner.php](BigCommerce/Import/Processors/Queue_Runner.php), [line 171](BigCommerce/Import/Processors/Queue_Runner.php#L171-L174)
 
-Source: [src/BigCommerce/Container/Proxy.php](BigCommerce/Container/Proxy.php), [line 248](BigCommerce/Container/Proxy.php#L248-L262)
+Source: [src/BigCommerce/Import/Processors/Queue_Runner.php](BigCommerce/Import/Processors/Queue_Runner.php), [line 185](BigCommerce/Import/Processors/Queue_Runner.php#L185-L188)
 
-### `media_buttons`
+Source: [src/BigCommerce/Import/Processors/Queue_Runner.php](BigCommerce/Import/Processors/Queue_Runner.php), [line 195](BigCommerce/Import/Processors/Queue_Runner.php#L195-L199)
 
-Renders the "Add Products" button in the media buttons section of the editor.
+Source: [src/BigCommerce/Import/Processors/Queue_Runner.php](BigCommerce/Import/Processors/Queue_Runner.php), [line 210](BigCommerce/Import/Processors/Queue_Runner.php#L210-L213)
 
-This action adds a custom button to the media buttons section in the WordPress admin
-editor, which triggers the rendering of the products button when clicked.
+Source: [src/BigCommerce/Import/Processors/Queue_Runner.php](BigCommerce/Import/Processors/Queue_Runner.php), [line 224](BigCommerce/Import/Processors/Queue_Runner.php#L224-L226)
 
-**Arguments**
+Source: [src/BigCommerce/Import/Processors/ProductCleanup.php](BigCommerce/Import/Processors/ProductCleanup.php), [line 72](BigCommerce/Import/Processors/ProductCleanup.php#L72-L74)
 
-Argument | Type | Description
--------- | ---- | -----------
-`editor_id` | `string` | The ID of the editor instance.
+Source: [src/BigCommerce/Import/Processors/ProductCleanup.php](BigCommerce/Import/Processors/ProductCleanup.php), [line 79](BigCommerce/Import/Processors/ProductCleanup.php#L79-L79)
 
-Source: [src/BigCommerce/Container/Editor.php](BigCommerce/Container/Editor.php), [line 77](BigCommerce/Container/Editor.php#L77-L87)
+Source: [src/BigCommerce/Import/Processors/Category_Import.php](BigCommerce/Import/Processors/Category_Import.php), [line 57](BigCommerce/Import/Processors/Category_Import.php#L57-L57)
 
-### `enqueue_block_editor_assets`
+Source: [src/BigCommerce/Import/Processors/Category_Import.php](BigCommerce/Import/Processors/Category_Import.php), [line 80](BigCommerce/Import/Processors/Category_Import.php#L80-L80)
 
-Enqueues the dialog template assets for the block editor.
+Source: [src/BigCommerce/Import/Processors/Category_Import.php](BigCommerce/Import/Processors/Category_Import.php), [line 89](BigCommerce/Import/Processors/Category_Import.php#L89-L89)
 
-This action ensures that the dialog template is loaded when the block editor is used,
-either by directly rendering it or by delaying the output until the appropriate time.
+Source: [src/BigCommerce/Import/Processors/Category_Import.php](BigCommerce/Import/Processors/Category_Import.php), [line 93](BigCommerce/Import/Processors/Category_Import.php#L93-L93)
 
-**Arguments**
+Source: [src/BigCommerce/Import/Processors/Category_Import.php](BigCommerce/Import/Processors/Category_Import.php), [line 97](BigCommerce/Import/Processors/Category_Import.php#L97-L97)
 
-No arguments.
+Source: [src/BigCommerce/Import/Processors/Category_Import.php](BigCommerce/Import/Processors/Category_Import.php), [line 101](BigCommerce/Import/Processors/Category_Import.php#L101-L101)
 
-Source: [src/BigCommerce/Container/Editor.php](BigCommerce/Container/Editor.php), [line 101](BigCommerce/Container/Editor.php#L101-L127)
+Source: [src/BigCommerce/Import/Processors/Category_Import.php](BigCommerce/Import/Processors/Category_Import.php), [line 106](BigCommerce/Import/Processors/Category_Import.php#L106-L106)
 
-### `admin_enqueue_scripts`
+Source: [src/BigCommerce/Import/Processors/Category_Import.php](BigCommerce/Import/Processors/Category_Import.php), [line 121](BigCommerce/Import/Processors/Category_Import.php#L121-L121)
 
-Enqueues the dialog template assets for the block editor.
+Source: [src/BigCommerce/Import/Processors/Start_Import.php](BigCommerce/Import/Processors/Start_Import.php), [line 12](BigCommerce/Import/Processors/Start_Import.php#L12-L12)
 
-This action ensures that the dialog template is loaded when the block editor is used,
-either by directly rendering it or by delaying the output until the appropriate time.
-If Gutenberg is already enabled, the callback is triggered immediately, otherwise,
-it is delayed until the `admin_enqueue_scripts` action is called.
+Source: [src/BigCommerce/Import/Processors/Channel_Initializer.php](BigCommerce/Import/Processors/Channel_Initializer.php), [line 105](BigCommerce/Import/Processors/Channel_Initializer.php#L105-L108)
 
-**Arguments**
+Source: [src/BigCommerce/Import/Processors/Channel_Initializer.php](BigCommerce/Import/Processors/Channel_Initializer.php), [line 146](BigCommerce/Import/Processors/Channel_Initializer.php#L146-L146)
 
-No arguments.
+Source: [src/BigCommerce/Import/Processors/Channel_Initializer.php](BigCommerce/Import/Processors/Channel_Initializer.php), [line 155](BigCommerce/Import/Processors/Channel_Initializer.php#L155-L155)
 
-Source: [src/BigCommerce/Container/Editor.php](BigCommerce/Container/Editor.php), [line 117](BigCommerce/Container/Editor.php#L117-L125)
+Source: [src/BigCommerce/Import/Processors/Channel_Initializer.php](BigCommerce/Import/Processors/Channel_Initializer.php), [line 164](BigCommerce/Import/Processors/Channel_Initializer.php#L164-L167)
 
-### `admin_print_footer_scripts`
+Source: [src/BigCommerce/Import/Processors/Channel_Initializer.php](BigCommerce/Import/Processors/Channel_Initializer.php), [line 181](BigCommerce/Import/Processors/Channel_Initializer.php#L181-L181)
 
-Prints the editor dialog template in the footer when the block editor is not enabled.
+Source: [src/BigCommerce/Import/Processors/Channel_Initializer.php](BigCommerce/Import/Processors/Channel_Initializer.php), [line 199](BigCommerce/Import/Processors/Channel_Initializer.php#L199-L202)
 
-This action ensures that the dialog template is included in the footer when not using
-the block editor, so that it can still be rendered for the classic editor.
+Source: [src/BigCommerce/Import/Processors/Channel_Initializer.php](BigCommerce/Import/Processors/Channel_Initializer.php), [line 209](BigCommerce/Import/Processors/Channel_Initializer.php#L209-L212)
 
-**Arguments**
+Source: [src/BigCommerce/Import/Processors/Channel_Initializer.php](BigCommerce/Import/Processors/Channel_Initializer.php), [line 235](BigCommerce/Import/Processors/Channel_Initializer.php#L235-L237)
 
-No arguments.
+Source: [src/BigCommerce/Import/Processors/Channel_Initializer.php](BigCommerce/Import/Processors/Channel_Initializer.php), [line 250](BigCommerce/Import/Processors/Channel_Initializer.php#L250-L250)
 
-Source: [src/BigCommerce/Container/Editor.php](BigCommerce/Container/Editor.php), [line 129](BigCommerce/Container/Editor.php#L129-L135)
+Source: [src/BigCommerce/Import/Processors/Channel_Initializer.php](BigCommerce/Import/Processors/Channel_Initializer.php), [line 258](BigCommerce/Import/Processors/Channel_Initializer.php#L258-L260)
 
-### `init`
+Source: [src/BigCommerce/Import/Processors/Image_Resizer.php](BigCommerce/Import/Processors/Image_Resizer.php), [line 40](BigCommerce/Import/Processors/Image_Resizer.php#L40-L40)
 
-Registers the Gutenberg blocks for the block editor.
+Source: [src/BigCommerce/Import/Processors/Image_Resizer.php](BigCommerce/Import/Processors/Image_Resizer.php), [line 42](BigCommerce/Import/Processors/Image_Resizer.php#L42-L45)
 
-This action registers all the custom blocks related to BigCommerce that will be available
-in the Gutenberg editor. It checks if the `register_block_type` function is available
-before registering the blocks.
+Source: [src/BigCommerce/Import/Processors/Image_Resizer.php](BigCommerce/Import/Processors/Image_Resizer.php), [line 63](BigCommerce/Import/Processors/Image_Resizer.php#L63-L66)
 
-**Arguments**
+Source: [src/BigCommerce/Import/Processors/Image_Resizer.php](BigCommerce/Import/Processors/Image_Resizer.php), [line 74](BigCommerce/Import/Processors/Image_Resizer.php#L74-L77)
 
-No arguments.
+Source: [src/BigCommerce/Import/Processors/Image_Resizer.php](BigCommerce/Import/Processors/Image_Resizer.php), [line 83](BigCommerce/Import/Processors/Image_Resizer.php#L83-L85)
 
-Source: [src/BigCommerce/Container/Editor.php](BigCommerce/Container/Editor.php), [line 183](BigCommerce/Container/Editor.php#L183-L198)
+Source: [src/BigCommerce/Import/Processors/Term_Import.php](BigCommerce/Import/Processors/Term_Import.php), [line 114](BigCommerce/Import/Processors/Term_Import.php#L114-L117)
 
-### `admin_head`
+Source: [src/BigCommerce/Import/Processors/Term_Import.php](BigCommerce/Import/Processors/Term_Import.php), [line 129](BigCommerce/Import/Processors/Term_Import.php#L129-L132)
 
-Enqueues customizer styles for the admin area.
+Source: [src/BigCommerce/Import/Processors/Term_Import.php](BigCommerce/Import/Processors/Term_Import.php), [line 139](BigCommerce/Import/Processors/Term_Import.php#L139-L139)
 
-This action ensures that customizer styles are applied to the admin area, affecting
-how elements are displayed and styled within the backend of the WordPress site.
+Source: [src/BigCommerce/Import/Processors/Cleanup.php](BigCommerce/Import/Processors/Cleanup.php), [line 114](BigCommerce/Import/Processors/Cleanup.php#L114-L114)
 
-**Arguments**
+Source: [src/BigCommerce/Import/Processors/Cleanup.php](BigCommerce/Import/Processors/Cleanup.php), [line 138](BigCommerce/Import/Processors/Cleanup.php#L138-L138)
 
-No arguments.
+Source: [src/BigCommerce/Import/Processors/Cleanup.php](BigCommerce/Import/Processors/Cleanup.php), [line 141](BigCommerce/Import/Processors/Cleanup.php#L141-L143)
 
-Source: [src/BigCommerce/Container/Editor.php](BigCommerce/Container/Editor.php), [line 231](BigCommerce/Container/Editor.php#L231-L239)
+Source: [src/BigCommerce/Import/Processors/Listing_Fetcher.php](BigCommerce/Import/Processors/Listing_Fetcher.php), [line 84](BigCommerce/Import/Processors/Listing_Fetcher.php#L84-L87)
 
-### `wp_head`
+Source: [src/BigCommerce/Import/Processors/Listing_Fetcher.php](BigCommerce/Import/Processors/Listing_Fetcher.php), [line 100](BigCommerce/Import/Processors/Listing_Fetcher.php#L100-L100)
 
-Outputs Segment analytics tracking code in the header. Injects the necessary JavaScript for Segment tracking on all pages.
+Source: [src/BigCommerce/Import/Processors/Listing_Fetcher.php](BigCommerce/Import/Processors/Listing_Fetcher.php), [line 116](BigCommerce/Import/Processors/Listing_Fetcher.php#L116-L118)
 
-**Arguments**
+Source: [src/BigCommerce/Import/Runner/AsyncProcessing_Runner.php](BigCommerce/Import/Runner/AsyncProcessing_Runner.php), [line 26](BigCommerce/Import/Runner/AsyncProcessing_Runner.php#L26-L28)
 
-No arguments.
+Source: [src/BigCommerce/Import/Runner/AsyncProcessing_Runner.php](BigCommerce/Import/Runner/AsyncProcessing_Runner.php), [line 34](BigCommerce/Import/Runner/AsyncProcessing_Runner.php#L34-L36)
 
-Source: [src/BigCommerce/Container/Analytics.php](BigCommerce/Container/Analytics.php), [line 100](BigCommerce/Container/Analytics.php#L100-L103)
+Source: [src/BigCommerce/Import/Runner/Lock_Monitor.php](BigCommerce/Import/Runner/Lock_Monitor.php), [line 42](BigCommerce/Import/Runner/Lock_Monitor.php#L42-L44)
 
-### `init`
+Source: [src/BigCommerce/Accounts/Customer.php](BigCommerce/Accounts/Customer.php), [line 426](BigCommerce/Accounts/Customer.php#L426-L426)
 
-Initializes the cron job processing for the import.
+Source: [src/BigCommerce/Accounts/Register.php](BigCommerce/Accounts/Register.php), [line 94](BigCommerce/Accounts/Register.php#L94-L96)
 
-This action is hooked to the 'init' hook to ensure that cron jobs are processed during the init phase.
+Source: [src/BigCommerce/Accounts/Register.php](BigCommerce/Accounts/Register.php), [line 97](BigCommerce/Accounts/Register.php#L97-L99)
 
-**Arguments**
+Source: [src/BigCommerce/Accounts/Register.php](BigCommerce/Accounts/Register.php), [line 148](BigCommerce/Accounts/Register.php#L148-L151)
 
-No arguments.
+Source: [src/BigCommerce/Accounts/Register.php](BigCommerce/Accounts/Register.php), [line 152](BigCommerce/Accounts/Register.php#L152-L154)
 
-Source: [src/BigCommerce/Container/Import.php](BigCommerce/Container/Import.php), [line 265](BigCommerce/Container/Import.php#L265-L275)
+Source: [src/BigCommerce/Rest/Terms_Controller.php](BigCommerce/Rest/Terms_Controller.php), [line 82](BigCommerce/Rest/Terms_Controller.php#L82-L82)
 
-### `init`
+Source: [src/BigCommerce/Rest/Terms_Controller.php](BigCommerce/Rest/Terms_Controller.php), [line 95](BigCommerce/Rest/Terms_Controller.php#L95-L95)
 
-Fired on the 'init' action to schedule a queue processor task.
+Source: [src/BigCommerce/Rest/Products_Controller.php](BigCommerce/Rest/Products_Controller.php), [line 145](BigCommerce/Rest/Products_Controller.php#L145-L145)
 
-This hook schedules the queue processor if necessary, using the `$schedules` array.
+Source: [src/BigCommerce/Rest/Products_Controller.php](BigCommerce/Rest/Products_Controller.php), [line 264](BigCommerce/Rest/Products_Controller.php#L264-L264)
 
-**Arguments**
+Source: [src/BigCommerce/Rest/Products_Controller.php](BigCommerce/Rest/Products_Controller.php), [line 330](BigCommerce/Rest/Products_Controller.php#L330-L332)
 
-Argument | Type | Description
--------- | ---- | -----------
-`schedules` | `array` | The array of scheduled tasks.
+Source: [src/BigCommerce/Webhooks/Product/Channel_Updater.php](BigCommerce/Webhooks/Product/Channel_Updater.php), [line 14](BigCommerce/Webhooks/Product/Channel_Updater.php#L14-L16)
 
-Source: [src/BigCommerce/Container/Import.php](BigCommerce/Container/Import.php), [line 291](BigCommerce/Container/Import.php#L291-L302)
+Source: [src/BigCommerce/Webhooks/Product/Channel_Updater.php](BigCommerce/Webhooks/Product/Channel_Updater.php), [line 25](BigCommerce/Webhooks/Product/Channel_Updater.php#L25-L27)
 
-### `init`
+Source: [src/BigCommerce/Webhooks/Product/Channel_Updater.php](BigCommerce/Webhooks/Product/Channel_Updater.php), [line 51](BigCommerce/Webhooks/Product/Channel_Updater.php#L51-L54)
 
-Runs the lock expiration check during the init phase.
+Source: [src/BigCommerce/Webhooks/Product/Channel_Updater.php](BigCommerce/Webhooks/Product/Channel_Updater.php), [line 59](BigCommerce/Webhooks/Product/Channel_Updater.php#L59-L62)
 
-**Arguments**
+Source: [src/BigCommerce/Webhooks/Product/Channels_UnAssign.php](BigCommerce/Webhooks/Product/Channels_UnAssign.php), [line 17](BigCommerce/Webhooks/Product/Channels_UnAssign.php#L17-L19)
 
-No arguments.
+Source: [src/BigCommerce/Webhooks/Product/Channels_Management_Webhook.php](BigCommerce/Webhooks/Product/Channels_Management_Webhook.php), [line 35](BigCommerce/Webhooks/Product/Channels_Management_Webhook.php#L35-L37)
 
-Source: [src/BigCommerce/Container/Import.php](BigCommerce/Container/Import.php), [line 304](BigCommerce/Container/Import.php#L304-L311)
+Source: [src/BigCommerce/Webhooks/Product/Channels_Management_Webhook.php](BigCommerce/Webhooks/Product/Channels_Management_Webhook.php), [line 50](BigCommerce/Webhooks/Product/Channels_Management_Webhook.php#L50-L53)
 
-### `update_option_Import_Settings::OPTION_FREQUENCY`
+Source: [src/BigCommerce/Webhooks/Product/Channels_Management_Webhook.php](BigCommerce/Webhooks/Product/Channels_Management_Webhook.php), [line 59](BigCommerce/Webhooks/Product/Channels_Management_Webhook.php#L59-L62)
 
-Updates the cron schedule when the import frequency setting is updated.
+Source: [src/BigCommerce/Webhooks/Product/Channels_Management_Webhook.php](BigCommerce/Webhooks/Product/Channels_Management_Webhook.php), [line 70](BigCommerce/Webhooks/Product/Channels_Management_Webhook.php#L70-L74)
 
-**Arguments**
+Source: [src/BigCommerce/Webhooks/Product/Product_Update_Webhook.php](BigCommerce/Webhooks/Product/Product_Update_Webhook.php), [line 30](BigCommerce/Webhooks/Product/Product_Update_Webhook.php#L30-L37)
 
-Argument | Type | Description
--------- | ---- | -----------
-`old_value` | `string` | The old value of the cron schedule.
-`new_value` | `string` | The new value of the cron schedule.
+Source: [src/BigCommerce/Webhooks/Product/Channels_Assign.php](BigCommerce/Webhooks/Product/Channels_Assign.php), [line 16](BigCommerce/Webhooks/Product/Channels_Assign.php#L16-L18)
 
-Source: [src/BigCommerce/Container/Import.php](BigCommerce/Container/Import.php), [line 313](BigCommerce/Container/Import.php#L313-L324)
+Source: [src/BigCommerce/Webhooks/Product/Channels_Assign.php](BigCommerce/Webhooks/Product/Channels_Assign.php), [line 26](BigCommerce/Webhooks/Product/Channels_Assign.php#L26-L29)
 
-### `bigcommerce/import/run`
+Source: [src/BigCommerce/Webhooks/Product/Channels_Assign.php](BigCommerce/Webhooks/Product/Channels_Assign.php), [line 46](BigCommerce/Webhooks/Product/Channels_Assign.php#L46-L49)
 
-Starts the import process when the `bigcommerce/import/run` action is triggered.
+Source: [src/BigCommerce/Webhooks/Product/Channels_Assign.php](BigCommerce/Webhooks/Product/Channels_Assign.php), [line 50](BigCommerce/Webhooks/Product/Channels_Assign.php#L50-L50)
 
-**Arguments**
+Source: [src/BigCommerce/Webhooks/Product/Channels_Assign.php](BigCommerce/Webhooks/Product/Channels_Assign.php), [line 62](BigCommerce/Webhooks/Product/Channels_Assign.php#L62-L65)
 
-Argument | Type | Description
--------- | ---- | -----------
-`status` | `string` | The status of the import process.
+Source: [src/BigCommerce/Webhooks/Product/Channels_Assign.php](BigCommerce/Webhooks/Product/Channels_Assign.php), [line 100](BigCommerce/Webhooks/Product/Channels_Assign.php#L100-L103)
 
-Source: [src/BigCommerce/Container/Import.php](BigCommerce/Container/Import.php), [line 326](BigCommerce/Container/Import.php#L326-L334)
+Source: [src/BigCommerce/Webhooks/Product/Channels_Assign.php](BigCommerce/Webhooks/Product/Channels_Assign.php), [line 104](BigCommerce/Webhooks/Product/Channels_Assign.php#L104-L104)
 
-### `Runner\Cron_Runner::START_CRON`
+Source: [src/BigCommerce/Webhooks/Product/Product_Create_Webhook.php](BigCommerce/Webhooks/Product/Product_Create_Webhook.php), [line 28](BigCommerce/Webhooks/Product/Product_Create_Webhook.php#L28-L35)
 
-Begins the import process when the `Runner\Cron_Runner::START_CRON` action is triggered.
+Source: [src/BigCommerce/Webhooks/Product/Channels_Currency_Update.php](BigCommerce/Webhooks/Product/Channels_Currency_Update.php), [line 22](BigCommerce/Webhooks/Product/Channels_Currency_Update.php#L22-L24)
 
-**Arguments**
+Source: [src/BigCommerce/Webhooks/Product/Channels_Currency_Update.php](BigCommerce/Webhooks/Product/Channels_Currency_Update.php), [line 29](BigCommerce/Webhooks/Product/Channels_Currency_Update.php#L29-L31)
 
-No arguments.
+Source: [src/BigCommerce/Webhooks/Product/Channels_Currency_Update.php](BigCommerce/Webhooks/Product/Channels_Currency_Update.php), [line 42](BigCommerce/Webhooks/Product/Channels_Currency_Update.php#L42-L44)
 
-Source: [src/BigCommerce/Container/Import.php](BigCommerce/Container/Import.php), [line 336](BigCommerce/Container/Import.php#L336-L345)
+Source: [src/BigCommerce/Webhooks/Product/Channels_Currency_Update.php](BigCommerce/Webhooks/Product/Channels_Currency_Update.php), [line 62](BigCommerce/Webhooks/Product/Channels_Currency_Update.php#L62-L67)
 
-### `Runner\Cron_Runner::CONTINUE_CRON`
+Source: [src/BigCommerce/Webhooks/Product/Channels_Currency_Update.php](BigCommerce/Webhooks/Product/Channels_Currency_Update.php), [line 93](BigCommerce/Webhooks/Product/Channels_Currency_Update.php#L93-L95)
 
-Continues the import process when the `Runner\Cron_Runner::CONTINUE_CRON` action is triggered.
+Source: [src/BigCommerce/Webhooks/Product/Product_Inventory_Update_Webhook.php](BigCommerce/Webhooks/Product/Product_Inventory_Update_Webhook.php), [line 33](BigCommerce/Webhooks/Product/Product_Inventory_Update_Webhook.php#L33-L40)
 
-**Arguments**
+Source: [src/BigCommerce/Webhooks/Product/Channels_Manager.php](BigCommerce/Webhooks/Product/Channels_Manager.php), [line 42](BigCommerce/Webhooks/Product/Channels_Manager.php#L42-L44)
 
-No arguments.
+Source: [src/BigCommerce/Webhooks/Product/Product_Creator.php](BigCommerce/Webhooks/Product/Product_Creator.php), [line 60](BigCommerce/Webhooks/Product/Product_Creator.php#L60-L60)
 
-Source: [src/BigCommerce/Container/Import.php](BigCommerce/Container/Import.php), [line 347](BigCommerce/Container/Import.php#L347-L354)
+Source: [src/BigCommerce/Webhooks/Product/Product_Creator.php](BigCommerce/Webhooks/Product/Product_Creator.php), [line 105](BigCommerce/Webhooks/Product/Product_Creator.php#L105-L105)
 
-### `Runner\AsyncProcessing_Runner::CONTINUE_IMPORT`
+Source: [src/BigCommerce/Webhooks/Product/Product_Creator.php](BigCommerce/Webhooks/Product/Product_Creator.php), [line 138](BigCommerce/Webhooks/Product/Product_Creator.php#L138-L138)
 
-Executes the asynchronous import when the `Runner\AsyncProcessing_Runner::CONTINUE_IMPORT` action is triggered.
+Source: [src/BigCommerce/Webhooks/Product/Product_Updater.php](BigCommerce/Webhooks/Product/Product_Updater.php), [line 115](BigCommerce/Webhooks/Product/Product_Updater.php#L115-L115)
 
-**Arguments**
+Source: [src/BigCommerce/Webhooks/Webhook.php](BigCommerce/Webhooks/Webhook.php), [line 154](BigCommerce/Webhooks/Webhook.php#L154-L154)
 
-No arguments.
+Source: [src/BigCommerce/Webhooks/Webhook.php](BigCommerce/Webhooks/Webhook.php), [line 230](BigCommerce/Webhooks/Webhook.php#L230-L232)
 
-Source: [src/BigCommerce/Container/Import.php](BigCommerce/Container/Import.php), [line 356](BigCommerce/Container/Import.php#L356-L366)
+Source: [src/BigCommerce/Webhooks/Webhook.php](BigCommerce/Webhooks/Webhook.php), [line 261](BigCommerce/Webhooks/Webhook.php#L261-L263)
 
-### `Processors\Cleanup::CLEAN_USERS_TRANSIENT`
+Source: [src/BigCommerce/Webhooks/Customer/Customer_Creator.php](BigCommerce/Webhooks/Customer/Customer_Creator.php), [line 39](BigCommerce/Webhooks/Customer/Customer_Creator.php#L39-L42)
 
-Cleans up customer group transients when the `Processors\Cleanup::CLEAN_USERS_TRANSIENT` action is triggered.
+Source: [src/BigCommerce/Webhooks/Customer/Customer_Creator.php](BigCommerce/Webhooks/Customer/Customer_Creator.php), [line 52](BigCommerce/Webhooks/Customer/Customer_Creator.php#L52-L55)
 
-**Arguments**
+Source: [src/BigCommerce/Webhooks/Customer/Customer_Channel_Updater.php](BigCommerce/Webhooks/Customer/Customer_Channel_Updater.php), [line 35](BigCommerce/Webhooks/Customer/Customer_Channel_Updater.php#L35-L37)
 
-No arguments.
+Source: [src/BigCommerce/Webhooks/Customer/Customer_Updater.php](BigCommerce/Webhooks/Customer/Customer_Updater.php), [line 30](BigCommerce/Webhooks/Customer/Customer_Updater.php#L30-L32)
 
-Source: [src/BigCommerce/Container/Import.php](BigCommerce/Container/Import.php), [line 368](BigCommerce/Container/Import.php#L368-L375)
+Source: [src/BigCommerce/Webhooks/Customer/Customer_Update_Webhook.php](BigCommerce/Webhooks/Customer/Customer_Update_Webhook.php), [line 32](BigCommerce/Webhooks/Customer/Customer_Update_Webhook.php#L32-L39)
 
-### `Processors\Cleanup::PURGE_PRODUCTS`
+Source: [src/BigCommerce/Webhooks/Customer/Customer_Saver.php](BigCommerce/Webhooks/Customer/Customer_Saver.php), [line 40](BigCommerce/Webhooks/Customer/Customer_Saver.php#L40-L45)
 
-Purges deleted products when the `Processors\Cleanup::PURGE_PRODUCTS` action is triggered.
+Source: [src/BigCommerce/Webhooks/Customer/Customer_Saver.php](BigCommerce/Webhooks/Customer/Customer_Saver.php), [line 112](BigCommerce/Webhooks/Customer/Customer_Saver.php#L112-L114)
 
-**Arguments**
+Source: [src/BigCommerce/Webhooks/Customer/Customer_Saver.php](BigCommerce/Webhooks/Customer/Customer_Saver.php), [line 123](BigCommerce/Webhooks/Customer/Customer_Saver.php#L123-L125)
 
-No arguments.
+Source: [src/BigCommerce/Webhooks/Customer/Customer_Saver.php](BigCommerce/Webhooks/Customer/Customer_Saver.php), [line 152](BigCommerce/Webhooks/Customer/Customer_Saver.php#L152-L155)
 
-Source: [src/BigCommerce/Container/Import.php](BigCommerce/Container/Import.php), [line 377](BigCommerce/Container/Import.php#L377-L384)
+Source: [src/BigCommerce/Webhooks/Customer/Customer_Create_Webhook.php](BigCommerce/Webhooks/Customer/Customer_Create_Webhook.php), [line 29](BigCommerce/Webhooks/Customer/Customer_Create_Webhook.php#L29-L36)
 
-### `Processors\Cleanup::CLEAN_PRODUCTS_TRANSIENT`
+Source: [src/BigCommerce/Webhooks/Customer/Customer_Channel_Webhook.php](BigCommerce/Webhooks/Customer/Customer_Channel_Webhook.php), [line 33](BigCommerce/Webhooks/Customer/Customer_Channel_Webhook.php#L33-L40)
 
-Cleans product data transients when the `Processors\Cleanup::CLEAN_PRODUCTS_TRANSIENT` action is triggered.
+Source: [src/BigCommerce/Webhooks/Customer/Customer_Delete_Webhook.php](BigCommerce/Webhooks/Customer/Customer_Delete_Webhook.php), [line 30](BigCommerce/Webhooks/Customer/Customer_Delete_Webhook.php#L30-L37)
 
-**Arguments**
+Source: [src/BigCommerce/Settings/Import_Status.php](BigCommerce/Settings/Import_Status.php), [line 250](BigCommerce/Settings/Import_Status.php#L250-L252)
 
-Argument | Type | Description
--------- | ---- | -----------
-`offset` | `int` | The offset for fetching data.
-`partially` | `bool` | Whether to fetch partially or not.
+Source: [src/BigCommerce/Settings/Import_Status.php](BigCommerce/Settings/Import_Status.php), [line 253](BigCommerce/Settings/Import_Status.php#L253-L257)
 
-Source: [src/BigCommerce/Container/Import.php](BigCommerce/Container/Import.php), [line 386](BigCommerce/Container/Import.php#L386-L395)
+Source: [src/BigCommerce/Settings/Abort_Import.php](BigCommerce/Settings/Abort_Import.php), [line 36](BigCommerce/Settings/Abort_Import.php#L36-L36)
 
-### `Manager::CRON_PROCESSOR`
+Source: [src/BigCommerce/Post_Types/Product/Product.php](BigCommerce/Post_Types/Product/Product.php), [line 469](BigCommerce/Post_Types/Product/Product.php#L469-L469)
 
-Processes postponed tasks when the `Manager::CRON_PROCESSOR` action is triggered.
+Source: [src/BigCommerce/Taxonomies/Channel/Channel_Synchronizer.php](BigCommerce/Taxonomies/Channel/Channel_Synchronizer.php), [line 65](BigCommerce/Taxonomies/Channel/Channel_Synchronizer.php#L65-L70)
 
-**Arguments**
+Source: [src/BigCommerce/Taxonomies/Channel/Channel_Synchronizer.php](BigCommerce/Taxonomies/Channel/Channel_Synchronizer.php), [line 71](BigCommerce/Taxonomies/Channel/Channel_Synchronizer.php#L71-L71)
 
-No arguments.
+Source: [src/BigCommerce/Taxonomies/Channel/Channel_Synchronizer.php](BigCommerce/Taxonomies/Channel/Channel_Synchronizer.php), [line 85](BigCommerce/Taxonomies/Channel/Channel_Synchronizer.php#L85-L85)
 
-Source: [src/BigCommerce/Container/Import.php](BigCommerce/Container/Import.php), [line 397](BigCommerce/Container/Import.php#L397-L404)
+Source: [src/BigCommerce/Taxonomies/Channel/Channel_Synchronizer.php](BigCommerce/Taxonomies/Channel/Channel_Synchronizer.php), [line 86](BigCommerce/Taxonomies/Channel/Channel_Synchronizer.php#L86-L86)
 
-### `bigcommerce/import/start`
+Source: [src/BigCommerce/Taxonomies/Channel/Channel_Synchronizer.php](BigCommerce/Taxonomies/Channel/Channel_Synchronizer.php), [line 184](BigCommerce/Taxonomies/Channel/Channel_Synchronizer.php#L184-L184)
 
-Starts the import process when the `bigcommerce/import/start` action is triggered.
+Source: [src/BigCommerce/Taxonomies/Channel/Connections.php](BigCommerce/Taxonomies/Channel/Connections.php), [line 106](BigCommerce/Taxonomies/Channel/Connections.php#L106-L109)
 
-**Arguments**
+Source: [src/BigCommerce/Manager/Manager.php](BigCommerce/Manager/Manager.php), [line 29](BigCommerce/Manager/Manager.php#L29-L29)
 
-No arguments.
+Source: [src/BigCommerce/Manager/Manager.php](BigCommerce/Manager/Manager.php), [line 36](BigCommerce/Manager/Manager.php#L36-L38)
 
-Source: [src/BigCommerce/Container/Import.php](BigCommerce/Container/Import.php), [line 519](BigCommerce/Container/Import.php#L519-L524)
+Source: [src/BigCommerce/Manager/Manager.php](BigCommerce/Manager/Manager.php), [line 48](BigCommerce/Manager/Manager.php#L48-L50)
 
-### `bigcommerce/import/run`
+Source: [src/BigCommerce/Manager/Manager.php](BigCommerce/Manager/Manager.php), [line 55](BigCommerce/Manager/Manager.php#L55-L57)
 
-Fired when the 'bigcommerce/import/run' action is triggered to process the next import task.
+Source: [src/BigCommerce/Container/Import.php](BigCommerce/Container/Import.php), [line 633](BigCommerce/Container/Import.php#L633-L633)
 
-This hook attempts to run the next task in the import process and handles any exceptions by triggering error and log actions.
+Source: [src/BigCommerce/Api/Api_Scopes_Validator.php](BigCommerce/Api/Api_Scopes_Validator.php), [line 90](BigCommerce/Api/Api_Scopes_Validator.php#L90-L92)
 
-**Arguments**
+Source: [src/BigCommerce/Api/Api_Scopes_Validator.php](BigCommerce/Api/Api_Scopes_Validator.php), [line 108](BigCommerce/Api/Api_Scopes_Validator.php#L108-L110)
 
-Argument | Type | Description
--------- | ---- | -----------
-`status` | `string` | The status of the current import process.
+### login_form
 
-Source: [src/BigCommerce/Container/Import.php](BigCommerce/Container/Import.php), [line 621](BigCommerce/Container/Import.php#L621-L635)
+Source: [src/BigCommerce/Templates/Login_Form.php](BigCommerce/Templates/Login_Form.php), [line 39](BigCommerce/Templates/Login_Form.php#L39-L39)
 
-### `bigcommerce/import/error`
+### bigcommerce/import/marked_deleted
 
-Fired when an error occurs during the BigCommerce import process.
 
-This hook allows handling errors and custom logging or responses when an import error is encountered.
+Triggered when a batch of posts have been marked for deletion, due
+to removal from the BigCommerce store, or the disconnection of a channel
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`error` | `string` | The error message from the import process.
+`count` | `int` | The number of deletions added to the queue
+`posts_to_delete` | `int[]` | The IDs of the posts that will be deleted
 
-Source: [src/BigCommerce/Container/Import.php](BigCommerce/Container/Import.php), [line 641](BigCommerce/Container/Import.php#L641-L648)
+Source: [src/BigCommerce/Import/Processors/Deleted_Product_Marker.php](BigCommerce/Import/Processors/Deleted_Product_Marker.php), [line 102](BigCommerce/Import/Processors/Deleted_Product_Marker.php#L102-L109)
 
-### `bigcommerce/import/before`
+### bigcommerce/import/error
 
-Fired before the BigCommerce import process begins. This hook is used to execute any necessary tasks before starting the import, such as cache flushing.
+Source: [src/BigCommerce/Import/Processors/Term_Purge.php](BigCommerce/Import/Processors/Term_Purge.php), [line 76](BigCommerce/Import/Processors/Term_Purge.php#L76-L79)
 
-**Arguments**
-
-No arguments.
+Source: [src/BigCommerce/Import/Processors/Headless_Product_Processor.php](BigCommerce/Import/Processors/Headless_Product_Processor.php), [line 132](BigCommerce/Import/Processors/Headless_Product_Processor.php#L132-L135)
 
-Source: [src/BigCommerce/Container/Import.php](BigCommerce/Container/Import.php), [line 659](BigCommerce/Container/Import.php#L659-L660)
+Source: [src/BigCommerce/Import/Processors/Category_Import.php](BigCommerce/Import/Processors/Category_Import.php), [line 116](BigCommerce/Import/Processors/Category_Import.php#L116-L119)
 
-### `bigcommerce/import/after`
+Source: [src/BigCommerce/Import/Processors/Channel_Initializer.php](BigCommerce/Import/Processors/Channel_Initializer.php), [line 128](BigCommerce/Import/Processors/Channel_Initializer.php#L128-L128)
 
-Fired after the BigCommerce import process finishes. This hook is used to execute any necessary tasks after the import, such as cache flushing.
+Source: [src/BigCommerce/Import/Processors/Channel_Initializer.php](BigCommerce/Import/Processors/Channel_Initializer.php), [line 142](BigCommerce/Import/Processors/Channel_Initializer.php#L142-L145)
 
-**Arguments**
+Source: [src/BigCommerce/Import/Processors/Channel_Initializer.php](BigCommerce/Import/Processors/Channel_Initializer.php), [line 177](BigCommerce/Import/Processors/Channel_Initializer.php#L177-L180)
 
-No arguments.
+Source: [src/BigCommerce/Import/Processors/Channel_Initializer.php](BigCommerce/Import/Processors/Channel_Initializer.php), [line 246](BigCommerce/Import/Processors/Channel_Initializer.php#L246-L249)
 
-Source: [src/BigCommerce/Container/Import.php](BigCommerce/Container/Import.php), [line 662](BigCommerce/Container/Import.php#L662-L663)
+Source: [src/BigCommerce/Import/Processors/Listing_Fetcher.php](BigCommerce/Import/Processors/Listing_Fetcher.php), [line 57](BigCommerce/Import/Processors/Listing_Fetcher.php#L57-L57)
 
-### `admin_enqueue_scripts`
+Source: [src/BigCommerce/Import/Processors/Listing_Fetcher.php](BigCommerce/Import/Processors/Listing_Fetcher.php), [line 96](BigCommerce/Import/Processors/Listing_Fetcher.php#L96-L99)
 
-Enqueues admin scripts and styles.
+Source: [src/BigCommerce/Webhooks/Product/Product_Creator.php](BigCommerce/Webhooks/Product/Product_Creator.php), [line 59](BigCommerce/Webhooks/Product/Product_Creator.php#L59-L59)
 
-**Arguments**
+Source: [src/BigCommerce/Webhooks/Product/Product_Creator.php](BigCommerce/Webhooks/Product/Product_Creator.php), [line 101](BigCommerce/Webhooks/Product/Product_Creator.php#L101-L104)
 
-No arguments.
+Source: [src/BigCommerce/Webhooks/Product/Product_Creator.php](BigCommerce/Webhooks/Product/Product_Creator.php), [line 134](BigCommerce/Webhooks/Product/Product_Creator.php#L134-L137)
 
-Source: [src/BigCommerce/Container/Assets.php](BigCommerce/Container/Assets.php), [line 152](BigCommerce/Container/Assets.php#L152-L163)
+Source: [src/BigCommerce/Webhooks/Product/Product_Updater.php](BigCommerce/Webhooks/Product/Product_Updater.php), [line 68](BigCommerce/Webhooks/Product/Product_Updater.php#L68-L68)
 
-### `admin_enqueue_scripts`
+Source: [src/BigCommerce/Webhooks/Product/Product_Updater.php](BigCommerce/Webhooks/Product/Product_Updater.php), [line 111](BigCommerce/Webhooks/Product/Product_Updater.php#L111-L114)
 
-Removes Google Site Kit scripts on BigCommerce admin pages to prevent conflicts.
+Source: [src/BigCommerce/Taxonomies/Channel/BC_Status.php](BigCommerce/Taxonomies/Channel/BC_Status.php), [line 29](BigCommerce/Taxonomies/Channel/BC_Status.php#L29-L29)
 
-**Arguments**
+Source: [src/BigCommerce/Container/Import.php](BigCommerce/Container/Import.php), [line 632](BigCommerce/Container/Import.php#L632-L632)
 
-No arguments.
+### bigcommerce/import/fetched_currency
 
-Source: [src/BigCommerce/Container/Assets.php](BigCommerce/Container/Assets.php), [line 165](BigCommerce/Container/Assets.php#L165-L176)
+Source: [src/BigCommerce/Import/Processors/Store_Settings.php](BigCommerce/Import/Processors/Store_Settings.php), [line 117](BigCommerce/Import/Processors/Store_Settings.php#L117-L117)
 
-### `after_setup_theme`
+### bigcommerce/import/fetched_store_settings
 
-Registers custom image sizes for the theme.
+Source: [src/BigCommerce/Import/Processors/Store_Settings.php](BigCommerce/Import/Processors/Store_Settings.php), [line 118](BigCommerce/Import/Processors/Store_Settings.php#L118-L118)
 
-**Arguments**
+### bigcommerce/import/could_not_fetch_store_settings
 
-No arguments.
+Source: [src/BigCommerce/Import/Processors/Store_Settings.php](BigCommerce/Import/Processors/Store_Settings.php), [line 121](BigCommerce/Import/Processors/Store_Settings.php#L121-L121)
 
-Source: [src/BigCommerce/Container/Assets.php](BigCommerce/Container/Assets.php), [line 213](BigCommerce/Container/Assets.php#L213-L221)
+### bigcommerce/import/fetched_products
 
-### `wp_enqueue_scripts`
 
-Enqueues frontend scripts and styles.
+Triggered when a batch of products have been fetched from the BigCommerce
+API and stored in the import queue
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`hook_suffix` | `string` | The current page's hook suffix.
+`count` | `int` | The number of products added to the queue
+`api_response` | `\BigCommerce\Api\v3\Model\ProductCollectionResponse` | The response received from the BigCommerce API
 
-Source: [src/BigCommerce/Container/Assets.php](BigCommerce/Container/Assets.php), [line 223](BigCommerce/Container/Assets.php#L223-L235)
+Source: [src/BigCommerce/Import/Processors/Product_Data_Fetcher.php](BigCommerce/Import/Processors/Product_Data_Fetcher.php), [line 168](BigCommerce/Import/Processors/Product_Data_Fetcher.php#L168-L175)
 
-### `init`
+### bigcommerce/import/fetched_currencies
 
-Register all taxonomy configurations during the 'init' action.
+Source: [src/BigCommerce/Import/Processors/Currencies.php](BigCommerce/Import/Processors/Currencies.php), [line 83](BigCommerce/Import/Processors/Currencies.php#L83-L83)
 
-**Arguments**
+### bigcommerce/import/could_not_fetch_currency_settings
 
-No arguments.
+Source: [src/BigCommerce/Import/Processors/Currencies.php](BigCommerce/Import/Processors/Currencies.php), [line 85](BigCommerce/Import/Processors/Currencies.php#L85-L85)
 
-Source: [src/BigCommerce/Container/Taxonomies.php](BigCommerce/Container/Taxonomies.php), [line 190](BigCommerce/Container/Taxonomies.php#L190-L199)
+### Cron_Runner::START_CRON
 
-### `pre_get_posts`
+Source: [src/BigCommerce/Import/Processors/Headless.php](BigCommerce/Import/Processors/Headless.php), [line 28](BigCommerce/Import/Processors/Headless.php#L28-L28)
 
-Apply Product Category filters to the query before fetching posts.
+Source: [src/BigCommerce/Settings/Import_Now.php](BigCommerce/Settings/Import_Now.php), [line 144](BigCommerce/Settings/Import_Now.php#L144-L144)
 
-**Arguments**
+### bigcommerce/import/log
 
-Argument | Type | Description
--------- | ---- | -----------
-`query` | `\BigCommerce\Container\WP_Query` | The query object.
+Source: [src/BigCommerce/Import/Image_Importer.php](BigCommerce/Import/Image_Importer.php), [line 68](BigCommerce/Import/Image_Importer.php#L68-L71)
 
-Source: [src/BigCommerce/Container/Taxonomies.php](BigCommerce/Container/Taxonomies.php), [line 229](BigCommerce/Container/Taxonomies.php#L229-L237)
+Source: [src/BigCommerce/Import/Image_Importer.php](BigCommerce/Import/Image_Importer.php), [line 89](BigCommerce/Import/Image_Importer.php#L89-L92)
 
-### `parse_tax_query`
+Source: [src/BigCommerce/Import/Image_Importer.php](BigCommerce/Import/Image_Importer.php), [line 180](BigCommerce/Import/Image_Importer.php#L180-L183)
 
-Hide child categories by default during tax query parsing.
+Source: [src/BigCommerce/Import/Image_Importer.php](BigCommerce/Import/Image_Importer.php), [line 208](BigCommerce/Import/Image_Importer.php#L208-L211)
 
-**Arguments**
+Source: [src/BigCommerce/Import/Importers/Terms/Term_Updater.php](BigCommerce/Import/Importers/Terms/Term_Updater.php), [line 29](BigCommerce/Import/Importers/Terms/Term_Updater.php#L29-L32)
 
-Argument | Type | Description
--------- | ---- | -----------
-`query` | `\BigCommerce\Container\WP_Tax_Query` | The tax query object.
+Source: [src/BigCommerce/Import/Importers/Terms/Term_Creator.php](BigCommerce/Import/Importers/Terms/Term_Creator.php), [line 29](BigCommerce/Import/Importers/Terms/Term_Creator.php#L29-L32)
 
-Source: [src/BigCommerce/Container/Taxonomies.php](BigCommerce/Container/Taxonomies.php), [line 239](BigCommerce/Container/Taxonomies.php#L239-L245)
+Source: [src/BigCommerce/Post_Types/Product/Product.php](BigCommerce/Post_Types/Product/Product.php), [line 465](BigCommerce/Post_Types/Product/Product.php#L465-L468)
 
-### `bigcommerce/import/start`
+### bigcommerce/import/product/skipped
 
-Fires when the BigCommerce import process starts.
 
-This hook cancels any ongoing import process if necessary.
+Fires when a product is skipped during the import process.
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`container` | `\Pimple\Container` | The container object.
+`post_id` | `int` | The WordPress post ID of the skipped product.
+`product` | `\BigCommerce\Api\v3\Model\Product` | The product data from the BigCommerce API.
+`listing` | `\BigCommerce\Api\v3\Model\Listing` | The channel listing data.
+`channel_term` | `\WP_Term` | The term representing the product's channel.
+`catalog` | `\BigCommerce\Api\v3\Api\CatalogApi` | The Catalog API instance used for product operations.
 
-Source: [src/BigCommerce/Container/Taxonomies.php](BigCommerce/Container/Taxonomies.php), [line 291](BigCommerce/Container/Taxonomies.php#L291-L299)
+Source: [src/BigCommerce/Import/Importers/Products/Product_Ignorer.php](BigCommerce/Import/Importers/Products/Product_Ignorer.php), [line 67](BigCommerce/Import/Importers/Products/Product_Ignorer.php#L67-L76)
 
-### `admin_notices`
+### bigcommerce/import/product/saved
 
-Fires when an admin notice should be displayed.
 
-This hook is used to trigger the admin notice for the channel synchronization status.
+A product has been saved by the import process
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`container` | `\Pimple\Container` | The container object.
-
-Source: [src/BigCommerce/Container/Taxonomies.php](BigCommerce/Container/Taxonomies.php), [line 302](BigCommerce/Container/Taxonomies.php#L302-L310)
-
-### `bigcommerce/settings/before_form/page=Connect_Channel_Screen::NAME`
-
-This class is responsible for managing and registering taxonomies for BigCommerce integration. It defines constants for various taxonomies and handles their configuration and filtering via WordPress hooks.
-
-**Arguments**
+`post_id` | `int` | The Post ID of the skipped product
+`product` | `\BigCommerce\Api\v3\Model\Product` | The product data
+`listing` | `\BigCommerce\Api\v3\Model\Listing` | The channel listing data
+`catalog` | `\BigCommerce\Api\v3\Api\CatalogApi` | The Catalog API instance
 
-No arguments.
+Source: [src/BigCommerce/Import/Importers/Products/Product_Saver.php](BigCommerce/Import/Importers/Products/Product_Saver.php), [line 235](BigCommerce/Import/Importers/Products/Product_Saver.php#L235-L243)
 
-Source: [src/BigCommerce/Container/Taxonomies.php](BigCommerce/Container/Taxonomies.php), [line 30](BigCommerce/Container/Taxonomies.php#L30-L318)
+### bigcommerce/import/product/created
 
-### `bigcommerce/import/start`
 
-This class is responsible for managing and registering taxonomies for BigCommerce integration. It defines constants for various taxonomies and handles their configuration and filtering via WordPress hooks.
+Fires after a product has been created during the import process.
 
 **Arguments**
 
-No arguments.
+Argument | Type | Description
+-------- | ---- | -----------
+`post_id` | `int` | The WordPress post ID of the created product.
+`product` | `\BigCommerce\Api\v3\Model\Product` | The product data from the BigCommerce API.
+`listing` | `\BigCommerce\Api\v3\Model\Listing` | The channel listing data from the BigCommerce API.
+`catalog` | `\BigCommerce\Api\v3\Api\CatalogApi` | The Catalog API instance used for the import.
 
-Source: [src/BigCommerce/Container/Taxonomies.php](BigCommerce/Container/Taxonomies.php), [line 30](BigCommerce/Container/Taxonomies.php#L30-L319)
+Source: [src/BigCommerce/Import/Importers/Products/Product_Creator.php](BigCommerce/Import/Importers/Products/Product_Creator.php), [line 58](BigCommerce/Import/Importers/Products/Product_Creator.php#L58-L66)
 
-### `bigcommerce/settings/before_form/page=Settings_Screen::NAME`
+### bigcommerce/import/product/updated
 
-Registers a callback for initial channel sync before the form on the settings screen.
 
-This action triggers a channel sync before the form is displayed in the settings.
+A product has been updated by the import process
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`container` | `\Pimple\Container` | The container object.
+`post_id` | `int` | The Post ID of the updated product
+`product` | `\BigCommerce\Api\v3\Model\Product` | The product data
+`listing` | `\BigCommerce\Api\v3\Model\Listing` | The channel listing data
+`catalog` | `\BigCommerce\Api\v3\Api\CatalogApi` | The Catalog API instance
 
-Source: [src/BigCommerce/Container/Taxonomies.php](BigCommerce/Container/Taxonomies.php), [line 321](BigCommerce/Container/Taxonomies.php#L321-L329)
+Source: [src/BigCommerce/Import/Importers/Products/Product_Updater.php](BigCommerce/Import/Importers/Products/Product_Updater.php), [line 24](BigCommerce/Import/Importers/Products/Product_Updater.php#L24-L32)
 
-### `edited_Channel\Channel::NAME`
+### bigcommerce/import/term/skipped
 
-Registers an action when the channel name is edited.
 
-This hook triggers a function to handle channel name changes upon term edit.
+A term has been skipped for import.
 
+This action is triggered when a term is skipped for import. It allows other functions to react
+to the skipping of the term.
+
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`term_id` | `int` | The term ID of the edited channel.
+`bc_term` | `array` | The BigCommerce term data.
+`taxonomy` | `string` | The taxonomy of the term.
+`term_id` | `int` | The term ID in WordPress.
 
-Source: [src/BigCommerce/Container/Taxonomies.php](BigCommerce/Container/Taxonomies.php), [line 331](BigCommerce/Container/Taxonomies.php#L331-L339)
+Source: [src/BigCommerce/Import/Importers/Terms/Term_Ignorer.php](BigCommerce/Import/Importers/Terms/Term_Ignorer.php), [line 53](BigCommerce/Import/Importers/Terms/Term_Ignorer.php#L53-L63)
 
-### `admin_menu`
+### bigcommerce/import/start
 
-Registers an action to create the first channel when the admin menu is loaded.
+Source: [src/BigCommerce/Import/Runner/Cron_Runner.php](BigCommerce/Import/Runner/Cron_Runner.php), [line 30](BigCommerce/Import/Runner/Cron_Runner.php#L30-L30)
 
-This action checks certain conditions and triggers the creation of the first channel.
+Source: [src/BigCommerce/Import/Runner/CLI_Runner.php](BigCommerce/Import/Runner/CLI_Runner.php), [line 22](BigCommerce/Import/Runner/CLI_Runner.php#L22-L22)
 
-**Arguments**
+### bigcommerce/import/before
 
-Argument | Type | Description
--------- | ---- | -----------
-`container` | `\Pimple\Container` | The container object.
+Source: [src/BigCommerce/Import/Runner/Cron_Runner.php](BigCommerce/Import/Runner/Cron_Runner.php), [line 52](BigCommerce/Import/Runner/Cron_Runner.php#L52-L52)
 
-Source: [src/BigCommerce/Container/Taxonomies.php](BigCommerce/Container/Taxonomies.php), [line 346](BigCommerce/Container/Taxonomies.php#L346-L361)
+Source: [src/BigCommerce/Import/Runner/AsyncProcessing_Runner.php](BigCommerce/Import/Runner/AsyncProcessing_Runner.php), [line 43](BigCommerce/Import/Runner/AsyncProcessing_Runner.php#L43-L43)
 
-### `load-edit.php`
+Source: [src/BigCommerce/Import/Runner/CLI_Runner.php](BigCommerce/Import/Runner/CLI_Runner.php), [line 29](BigCommerce/Import/Runner/CLI_Runner.php#L29-L29)
 
-Registers actions for filtering the product list table based on the selected channel.
+### bigcommerce/import/run
 
-This action filters the product list table on the admin page based on the selected channel.
+Source: [src/BigCommerce/Import/Runner/Cron_Runner.php](BigCommerce/Import/Runner/Cron_Runner.php), [line 53](BigCommerce/Import/Runner/Cron_Runner.php#L53-L53)
 
-**Arguments**
+Source: [src/BigCommerce/Import/Runner/AsyncProcessing_Runner.php](BigCommerce/Import/Runner/AsyncProcessing_Runner.php), [line 44](BigCommerce/Import/Runner/AsyncProcessing_Runner.php#L44-L44)
 
-Argument | Type | Description
--------- | ---- | -----------
-`container` | `\Pimple\Container` | The container object.
+Source: [src/BigCommerce/Import/Runner/CLI_Runner.php](BigCommerce/Import/Runner/CLI_Runner.php), [line 30](BigCommerce/Import/Runner/CLI_Runner.php#L30-L30)
 
-Source: [src/BigCommerce/Container/Taxonomies.php](BigCommerce/Container/Taxonomies.php), [line 398](BigCommerce/Container/Taxonomies.php#L398-L437)
+### bigcommerce/import/after
 
-### `pre_get_posts`
+Source: [src/BigCommerce/Import/Runner/Cron_Runner.php](BigCommerce/Import/Runner/Cron_Runner.php), [line 54](BigCommerce/Import/Runner/Cron_Runner.php#L54-L54)
 
-Filters the query by the selected channel before the posts are retrieved.
+Source: [src/BigCommerce/Import/Runner/AsyncProcessing_Runner.php](BigCommerce/Import/Runner/AsyncProcessing_Runner.php), [line 45](BigCommerce/Import/Runner/AsyncProcessing_Runner.php#L45-L45)
 
-This action applies a filter to modify the query based on the selected channel.
+Source: [src/BigCommerce/Import/Runner/CLI_Runner.php](BigCommerce/Import/Runner/CLI_Runner.php), [line 31](BigCommerce/Import/Runner/CLI_Runner.php#L31-L31)
 
-**Arguments**
+### self::CONTINUE_CRON
 
-Argument | Type | Description
--------- | ---- | -----------
-`query` | `\BigCommerce\Container\WP_Query` | The query object.
+Source: [src/BigCommerce/Import/Runner/Cron_Runner.php](BigCommerce/Import/Runner/Cron_Runner.php), [line 75](BigCommerce/Import/Runner/Cron_Runner.php#L75-L75)
 
-Source: [src/BigCommerce/Container/Taxonomies.php](BigCommerce/Container/Taxonomies.php), [line 443](BigCommerce/Container/Taxonomies.php#L443-L453)
+### bigcommerce/import/set_status
 
-### `pre_option_BigCommerce\Settings\Sections\Currency::CURRENCY_CODE`
+Source: [src/BigCommerce/Import/Runner/Status.php](BigCommerce/Import/Runner/Status.php), [line 76](BigCommerce/Import/Runner/Status.php#L76-L76)
 
-Filters the currency code before the option is retrieved.
+### bigcommerce/import/logs/rotate
 
-This action applies a filter to modify the currency code based on the selected channel.
 
+Rotate out the current log into the previous log slot
+
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`currency_code` | `string` | The currency code to be filtered.
-`container` | `\Pimple\Container` | The container object.
+`log` | `array` | The current log
 
-Source: [src/BigCommerce/Container/Taxonomies.php](BigCommerce/Container/Taxonomies.php), [line 459](BigCommerce/Container/Taxonomies.php#L459-L468)
+Source: [src/BigCommerce/Import/Runner/Status.php](BigCommerce/Import/Runner/Status.php), [line 86](BigCommerce/Import/Runner/Status.php#L86-L91)
 
-### `bigcommerce/channel/updated_channel_id`
+### bigcommerce/import/logs/rotated
 
-Sets routes for a specific channel when the channel ID is updated.
 
-This action hooks into the `bigcommerce/channel/updated_channel_id` event and triggers the
-`set_routes` method of the `Routes` class to update the routes for the specified channel.
+Logs have been rotated
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`channel_id` | `int` | The ID of the updated channel.
+`log` | `array` | The previous log
 
-Source: [src/BigCommerce/Container/Taxonomies.php](BigCommerce/Container/Taxonomies.php), [line 476](BigCommerce/Container/Taxonomies.php#L476-L488)
+Source: [src/BigCommerce/Import/Runner/Status.php](BigCommerce/Import/Runner/Status.php), [line 94](BigCommerce/Import/Runner/Status.php#L94-L99)
 
-### `bigcommerce/routes/cron/update`
+### bigcommerce/wishlist_endpoint/{$action}
 
-Updates routes via a cron job.
+Source: [src/BigCommerce/Accounts/Wishlists/Actions/Request_Router.php](BigCommerce/Accounts/Wishlists/Actions/Request_Router.php), [line 40](BigCommerce/Accounts/Wishlists/Actions/Request_Router.php#L40-L40)
 
-This action hooks into the `bigcommerce/routes/cron/update` event and triggers the
-`update_routes` method of the `Routes` class to perform an update to the routes.
+### bigcommerce/table_maker/created_table
 
-**Arguments**
+Source: [src/BigCommerce/Schema/Table_Maker.php](BigCommerce/Schema/Table_Maker.php), [line 66](BigCommerce/Schema/Table_Maker.php#L66-L66)
 
-No arguments.
+### bigcommerce/webhooks/product_deleted
 
-Source: [src/BigCommerce/Container/Taxonomies.php](BigCommerce/Container/Taxonomies.php), [line 490](BigCommerce/Container/Taxonomies.php#L490-L500)
+Source: [src/BigCommerce/Webhooks/Product/Product_Delete_Webhook.php](BigCommerce/Webhooks/Product/Product_Delete_Webhook.php), [line 38](BigCommerce/Webhooks/Product/Product_Delete_Webhook.php#L38-L38)
 
-### `update_option_show_on_front`
+### self::CHANNEL_UPDATED_HOOK
 
-Schedules a route update when the `show_on_front` option is updated.
+Source: [src/BigCommerce/Webhooks/Product/Channels_Management_Webhook.php](BigCommerce/Webhooks/Product/Channels_Management_Webhook.php), [line 48](BigCommerce/Webhooks/Product/Channels_Management_Webhook.php#L48-L48)
 
-Triggers the `schedule_update_routes` method of the `Routes` class whenever the `show_on_front` option is updated.
+### self::CHANNEL_CURRENCY_UPDATE_HOOK
 
-**Arguments**
+Source: [src/BigCommerce/Webhooks/Product/Channels_Management_Webhook.php](BigCommerce/Webhooks/Product/Channels_Management_Webhook.php), [line 84](BigCommerce/Webhooks/Product/Channels_Management_Webhook.php#L84-L84)
 
-No arguments.
+### sprintf()
 
-Source: [src/BigCommerce/Container/Taxonomies.php](BigCommerce/Container/Taxonomies.php), [line 506](BigCommerce/Container/Taxonomies.php#L506-L513)
+Source: [src/BigCommerce/Webhooks/Product/Channels_Management_Webhook.php](BigCommerce/Webhooks/Product/Channels_Management_Webhook.php), [line 90](BigCommerce/Webhooks/Product/Channels_Management_Webhook.php#L90-L90)
 
-### `add_option_show_on_front`
+Source: [src/BigCommerce/Webhooks/Product/Channels_Management_Webhook.php](BigCommerce/Webhooks/Product/Channels_Management_Webhook.php), [line 95](BigCommerce/Webhooks/Product/Channels_Management_Webhook.php#L95-L95)
 
-Schedules a route update when the `show_on_front` option is added.
+### bigcommerce/webhooks/product_updated
 
-Triggers the `schedule_update_routes` method of the `Routes` class whenever the `show_on_front` option is added.
+Source: [src/BigCommerce/Webhooks/Product/Product_Update_Webhook.php](BigCommerce/Webhooks/Product/Product_Update_Webhook.php), [line 38](BigCommerce/Webhooks/Product/Product_Update_Webhook.php#L38-L38)
 
-**Arguments**
+### bigcommerce/import/update_product/skipped
 
-No arguments.
+
+Fires if product update import skipped.
+
+**Arguments**
 
-Source: [src/BigCommerce/Container/Taxonomies.php](BigCommerce/Container/Taxonomies.php), [line 515](BigCommerce/Container/Taxonomies.php#L515-L522)
+Argument | Type | Description
+-------- | ---- | -----------
+`message` | `string` | Message.
+`product_bc_id` | `int` | Product BC ID.
 
-### `update_option_permalink_structure`
+Source: [src/BigCommerce/Webhooks/Product/Channels_Assign.php](BigCommerce/Webhooks/Product/Channels_Assign.php), [line 82](BigCommerce/Webhooks/Product/Channels_Assign.php#L82-L88)
 
-Schedules a route update when the `permalink_structure` option is updated.
+Source: [src/BigCommerce/Webhooks/Product/Product_Updater.php](BigCommerce/Webhooks/Product/Product_Updater.php), [line 139](BigCommerce/Webhooks/Product/Product_Updater.php#L139-L145)
 
-Triggers the `schedule_update_routes` method of the `Routes` class whenever the `permalink_structure` option is updated.
+### bigcommerce/webhooks/product_created
 
-**Arguments**
+Source: [src/BigCommerce/Webhooks/Product/Product_Create_Webhook.php](BigCommerce/Webhooks/Product/Product_Create_Webhook.php), [line 36](BigCommerce/Webhooks/Product/Product_Create_Webhook.php#L36-L36)
 
-No arguments.
+### bigcommerce/webhooks/product_inventory_updated
 
-Source: [src/BigCommerce/Container/Taxonomies.php](BigCommerce/Container/Taxonomies.php), [line 524](BigCommerce/Container/Taxonomies.php#L524-L531)
+Source: [src/BigCommerce/Webhooks/Product/Product_Inventory_Update_Webhook.php](BigCommerce/Webhooks/Product/Product_Inventory_Update_Webhook.php), [line 41](BigCommerce/Webhooks/Product/Product_Inventory_Update_Webhook.php#L41-L41)
 
-### `add_option_permalink_structure`
+### bigcommerce/webhooks/webhook_updated
 
-Schedules a route update when the `permalink_structure` option is added.
 
-Triggers the `schedule_update_routes` method of the `Routes` class whenever the `permalink_structure` option is added.
+Fires when a webhook is added to the BigCommerce database.
 
 **Arguments**
 
-No arguments.
+Argument | Type | Description
+-------- | ---- | -----------
+`` | `int` | Webhook ID.
+`` | `string` | Webhook action name.
+`` | `string` | Webhook scope.
+
+Source: [src/BigCommerce/Webhooks/Webhook.php](BigCommerce/Webhooks/Webhook.php), [line 172](BigCommerce/Webhooks/Webhook.php#L172-L179)
 
-Source: [src/BigCommerce/Container/Taxonomies.php](BigCommerce/Container/Taxonomies.php), [line 533](BigCommerce/Container/Taxonomies.php#L533-L540)
+Source: [src/BigCommerce/Webhooks/Webhook.php](BigCommerce/Webhooks/Webhook.php), [line 126](BigCommerce/Webhooks/Webhook.php#L126-L126)
 
-### `update_option_Cart_Page::NAME`
+### bigcommerce/webhooks/update_failed
 
-Schedules a route update when the `Cart_Page` option is updated.
 
-Triggers the `schedule_update_routes` method of the `Routes` class whenever the `Cart_Page` option is updated.
+Fires after webhook update failed.
 
 **Arguments**
 
-No arguments.
+Argument | Type | Description
+-------- | ---- | -----------
+`` | `\BigCommerce\Webhooks\Webhook` | Webhook Webhook class.
+`result` | `array` | Result.
 
-Source: [src/BigCommerce/Container/Taxonomies.php](BigCommerce/Container/Taxonomies.php), [line 542](BigCommerce/Container/Taxonomies.php#L542-L549)
+Source: [src/BigCommerce/Webhooks/Webhook.php](BigCommerce/Webhooks/Webhook.php), [line 146](BigCommerce/Webhooks/Webhook.php#L146-L152)
 
-### `add_option_Cart_Page::NAME`
+### bigcommerce/webhooks/delete_failed
 
-Schedules a route update when the `Cart_Page` option is updated or added.
 
-Triggers the `schedule_update_routes` method of the `Routes` class whenever the `Cart_Page` option is added.
+Fires after webhook delete failed.
 
 **Arguments**
 
-No arguments.
+Argument | Type | Description
+-------- | ---- | -----------
+`` | `\BigCommerce\Webhooks\Webhook` | Webhook Webhook class.
+`result` | `array` | Result.
 
-Source: [src/BigCommerce/Container/Taxonomies.php](BigCommerce/Container/Taxonomies.php), [line 551](BigCommerce/Container/Taxonomies.php#L551-L558)
+Source: [src/BigCommerce/Webhooks/Webhook.php](BigCommerce/Webhooks/Webhook.php), [line 222](BigCommerce/Webhooks/Webhook.php#L222-L228)
 
-### `update_option_Login_Page::NAME`
+### bigcommerce/webhooks/webhook_deleted
 
-Schedules a route update when the `Login_Page` option is updated.
 
-Triggers the `schedule_update_routes` method of the `Routes` class whenever the `Login_Page` option is updated.
+Fires when a webhook is deleted from the BigCommerce database.
 
 **Arguments**
 
-No arguments.
+Argument | Type | Description
+-------- | ---- | -----------
+`` | `int` | Webhook ID.
+`` | `string` | Webhook action name.
+`` | `string` | Webhook scope.
 
-Source: [src/BigCommerce/Container/Taxonomies.php](BigCommerce/Container/Taxonomies.php), [line 560](BigCommerce/Container/Taxonomies.php#L560-L567)
+Source: [src/BigCommerce/Webhooks/Webhook.php](BigCommerce/Webhooks/Webhook.php), [line 235](BigCommerce/Webhooks/Webhook.php#L235-L242)
 
-### `add_option_Login_Page::NAME`
+### bigcommerce/webhooks/self::NAME
 
-Schedules a route update when the `Login_Page` option is added.
 
-Triggers the `schedule_update_routes` method of the `Routes` class whenever the `Login_Page` option is added.
+Fires when a product inventory webhooks has been received from the BigCommerce store.
 
 **Arguments**
 
-No arguments.
+Argument | Type | Description
+-------- | ---- | -----------
+`product_id` | `int` | BigCommerce product ID.
 
-Source: [src/BigCommerce/Container/Taxonomies.php](BigCommerce/Container/Taxonomies.php), [line 569](BigCommerce/Container/Taxonomies.php#L569-L576)
+Source: [src/BigCommerce/Webhooks/Checkout_Complete_Webhook.php](BigCommerce/Webhooks/Checkout_Complete_Webhook.php), [line 28](BigCommerce/Webhooks/Checkout_Complete_Webhook.php#L28-L33)
 
-### `update_option_Account_Page::NAME`
+### bigcommerce/settings/webhoooks_updated
 
-Schedules a route update when the `Account_Page` option is updated.
 
-Triggers the `schedule_update_routes` method of the `Routes` class whenever the `Account_Page` option is updated.
+This hook is documented in src/BigCommerce/Webhooks/Webhook.php.
 
 **Arguments**
 
 No arguments.
 
-Source: [src/BigCommerce/Container/Taxonomies.php](BigCommerce/Container/Taxonomies.php), [line 578](BigCommerce/Container/Taxonomies.php#L578-L585)
+Source: [src/BigCommerce/Webhooks/Status.php](BigCommerce/Webhooks/Status.php), [line 107](BigCommerce/Webhooks/Status.php#L107-L110)
 
-### `add_option_Account_Page::NAME`
+### bigcommerce/webhooks/customer_updated
 
-Schedules a route update when the `Account_Page` option is added.
+Source: [src/BigCommerce/Webhooks/Customer/Customer_Update_Webhook.php](BigCommerce/Webhooks/Customer/Customer_Update_Webhook.php), [line 40](BigCommerce/Webhooks/Customer/Customer_Update_Webhook.php#L40-L40)
 
-Triggers the `schedule_update_routes` method of the `Routes` class whenever the `Account_Page` option is added.
+### bigcommerce/webhooks/customer_created
 
-**Arguments**
+Source: [src/BigCommerce/Webhooks/Customer/Customer_Create_Webhook.php](BigCommerce/Webhooks/Customer/Customer_Create_Webhook.php), [line 37](BigCommerce/Webhooks/Customer/Customer_Create_Webhook.php#L37-L37)
 
-No arguments.
+### self::HOOK
 
-Source: [src/BigCommerce/Container/Taxonomies.php](BigCommerce/Container/Taxonomies.php), [line 587](BigCommerce/Container/Taxonomies.php#L587-L594)
+Source: [src/BigCommerce/Webhooks/Customer/Customer_Channel_Webhook.php](BigCommerce/Webhooks/Customer/Customer_Channel_Webhook.php), [line 42](BigCommerce/Webhooks/Customer/Customer_Channel_Webhook.php#L42-L42)
 
-### `update_option_Shipping_Returns_Page::NAME`
+### bigcommerce/webhooks/customer_deleted
 
-Schedules a route update when the `Shipping_Returns_Page` option is updated.
+Source: [src/BigCommerce/Webhooks/Customer/Customer_Delete_Webhook.php](BigCommerce/Webhooks/Customer/Customer_Delete_Webhook.php), [line 38](BigCommerce/Webhooks/Customer/Customer_Delete_Webhook.php#L38-L38)
 
-Triggers the `schedule_update_routes` method of the `Routes` class whenever the `Shipping_Returns_Page` option is updated.
+### bigcommerce/settings/import/product_list_table_notice
 
-**Arguments**
+Source: [src/BigCommerce/Settings/Import_Now.php](BigCommerce/Settings/Import_Now.php), [line 177](BigCommerce/Settings/Import_Now.php#L177-L177)
 
-No arguments.
+### bigcommerce/settings/before_title/page=static::NAME
 
-Source: [src/BigCommerce/Container/Taxonomies.php](BigCommerce/Container/Taxonomies.php), [line 596](BigCommerce/Container/Taxonomies.php#L596-L603)
+Source: [src/BigCommerce/Settings/Screens/Abstract_Screen.php](BigCommerce/Settings/Screens/Abstract_Screen.php), [line 133](BigCommerce/Settings/Screens/Abstract_Screen.php#L133-L133)
 
-### `add_option_Shipping_Returns_Page::NAME`
+### bigcommerce/settings/register/screen=static::NAME
 
-Schedules a route update when the `Shipping_Returns_Page` option is added.
 
-Triggers the `schedule_update_routes` method of the `Routes` class whenever the `Shipping_Returns_Page` option is added.
+Triggered after registering a settings screen. The dynamic
+portion of the hook is the name of the screen.
 
 **Arguments**
 
-No arguments.
+Argument | Type | Description
+-------- | ---- | -----------
+`hook_suffix` | `string` | The hook suffix generated for the screen
+`name` | `string` | The name of the screen
+
+Source: [src/BigCommerce/Settings/Screens/Abstract_Screen.php](BigCommerce/Settings/Screens/Abstract_Screen.php), [line 187](BigCommerce/Settings/Screens/Abstract_Screen.php#L187-L194)
 
-Source: [src/BigCommerce/Container/Taxonomies.php](BigCommerce/Container/Taxonomies.php), [line 605](BigCommerce/Container/Taxonomies.php#L605-L612)
+### bigcommerce/settings/after_start_form/page=static::NAME
 
-### `update_option_Product_Archive::ARCHIVE_SLUG`
 
-Schedules a route update when the `Product_Archive::ARCHIVE_SLUG` option is updated.
+Triggered after the opening <form> tag on the settings screen form finishes rendering.
 
-Triggers the `schedule_update_routes` method of the `Routes` class whenever the `Product_Archive::ARCHIVE_SLUG` option is updated.
+The dynamic portion of the hook is the identifier of the settings screen.
 
 **Arguments**
 
-No arguments.
+Argument | Type | Description
+-------- | ---- | -----------
+`hook_suffix` | `string` | The hook suffix generated for the screen
+
+Source: [src/BigCommerce/Settings/Screens/Abstract_Screen.php](BigCommerce/Settings/Screens/Abstract_Screen.php), [line 254](BigCommerce/Settings/Screens/Abstract_Screen.php#L254-L260)
 
-Source: [src/BigCommerce/Container/Taxonomies.php](BigCommerce/Container/Taxonomies.php), [line 614](BigCommerce/Container/Taxonomies.php#L614-L621)
+### bigcommerce/settings/before_end_form/page=static::NAME
 
-### `add_option_Product_Archive::ARCHIVE_SLUG`
 
-Schedules a route update when the `Product_Archive::ARCHIVE_SLUG` option is added.
+Triggered before the closing </form> tag on the settings screen form finishes rendering.
 
-Triggers the `schedule_update_routes` method of the `Routes` class whenever the `Product_Archive::ARCHIVE_SLUG` option is added.
+The dynamic portion of the hook is the identifier of the settings screen.
 
 **Arguments**
 
-No arguments.
+Argument | Type | Description
+-------- | ---- | -----------
+`hook_suffix` | `string` | The hook suffix generated for the screen
+
+Source: [src/BigCommerce/Settings/Screens/Abstract_Screen.php](BigCommerce/Settings/Screens/Abstract_Screen.php), [line 269](BigCommerce/Settings/Screens/Abstract_Screen.php#L269-L275)
 
-Source: [src/BigCommerce/Container/Taxonomies.php](BigCommerce/Container/Taxonomies.php), [line 623](BigCommerce/Container/Taxonomies.php#L623-L630)
+### bigcommerce/settings/before_form/page=static::NAME
 
-### `update_option_Product_Archive::CATEGORY_SLUG`
 
-Schedules a route update when the `Product_Archive::CATEGORY_SLUG` option is updated.
+Triggered before the settings screen form starts to render.
 
-Triggers the `schedule_update_routes` method of the `Routes` class whenever the `Product_Archive::CATEGORY_SLUG` option is updated.
+The dynamic portion of the hook is the identifier of the settings screen.
 
 **Arguments**
 
-No arguments.
+Argument | Type | Description
+-------- | ---- | -----------
+`hook_suffix` | `string` | The hook suffix generated for the screen
+
+Source: [src/BigCommerce/Settings/Screens/Abstract_Screen.php](BigCommerce/Settings/Screens/Abstract_Screen.php), [line 314](BigCommerce/Settings/Screens/Abstract_Screen.php#L314-L320)
 
-Source: [src/BigCommerce/Container/Taxonomies.php](BigCommerce/Container/Taxonomies.php), [line 632](BigCommerce/Container/Taxonomies.php#L632-L639)
+### bigcommerce/settings/after_form/page=static::NAME
 
-### `add_option_Product_Archive::CATEGORY_SLUG`
 
-Schedules a route update when the `Product_Archive::CATEGORY_SLUG` option is added.
+Triggered after the settings screen form finishes rendering.
 
-Triggers the `schedule_update_routes` method of the `Routes` class whenever the `Product_Archive::CATEGORY_SLUG` option is added.
+The dynamic portion of the hook is the identifier of the settings screen.
 
 **Arguments**
 
-No arguments.
+Argument | Type | Description
+-------- | ---- | -----------
+`hook_suffix` | `string` | The hook suffix generated for the screen
+
+Source: [src/BigCommerce/Settings/Screens/Abstract_Screen.php](BigCommerce/Settings/Screens/Abstract_Screen.php), [line 329](BigCommerce/Settings/Screens/Abstract_Screen.php#L329-L335)
 
-Source: [src/BigCommerce/Container/Taxonomies.php](BigCommerce/Container/Taxonomies.php), [line 641](BigCommerce/Container/Taxonomies.php#L641-L648)
+### bigcommerce/settings/section/before/id={$section}[id]
 
-### `update_option_Product_Archive::BRAND_SLUG`
 
-Schedules a route update when the `Product_Archive::BRAND_SLUG` option is updated.
+Fires before rendering a settings section.
 
-Triggers the `schedule_update_routes` method of the `Routes` class whenever the `Product_Archive::BRAND_SLUG` option is updated.
+The dynamic portion of the hook name is the section ID.
 
 **Arguments**
 
-No arguments.
+Argument | Type | Description
+-------- | ---- | -----------
+`section` | `array` | 
+
+Source: [src/BigCommerce/Settings/Screens/Abstract_Screen.php](BigCommerce/Settings/Screens/Abstract_Screen.php), [line 354](BigCommerce/Settings/Screens/Abstract_Screen.php#L354-L360)
 
-Source: [src/BigCommerce/Container/Taxonomies.php](BigCommerce/Container/Taxonomies.php), [line 650](BigCommerce/Container/Taxonomies.php#L650-L657)
+### bigcommerce/settings/section/after/id={$section}[id]
 
-### `add_option_Product_Archive::BRAND_SLUG`
 
-Schedules a route update when the `Product_Archive::BRAND_SLUG` option is added.
+Fires after rendering a settings section.
 
-Triggers the `schedule_update_routes` method of the `Routes` class whenever the `Product_Archive::BRAND_SLUG` option is added.
+The dynamic portion of the hook name is the section ID.
 
 **Arguments**
 
-No arguments.
+Argument | Type | Description
+-------- | ---- | -----------
+`section` | `array` | 
+
+Source: [src/BigCommerce/Settings/Screens/Abstract_Screen.php](BigCommerce/Settings/Screens/Abstract_Screen.php), [line 370](BigCommerce/Settings/Screens/Abstract_Screen.php#L370-L376)
 
-Source: [src/BigCommerce/Container/Taxonomies.php](BigCommerce/Container/Taxonomies.php), [line 659](BigCommerce/Container/Taxonomies.php#L659-L666)
+### bigcommerce/settings/section/before_title/id={$section}[id]
 
-### `bigcommerce/channel/connection_changed`
 
-Schedules a route update when the channel connection changes.
+Fires before rendering the title of a settings section.
 
-Triggers the `schedule_update_routes` method in the `Routes` class to ensure routes are updated
-when the channel connection status changes.
+The dynamic portion of the hook name is the section ID.
 
 **Arguments**
 
-No arguments.
+Argument | Type | Description
+-------- | ---- | -----------
+`section` | `array` | 
+
+Source: [src/BigCommerce/Settings/Screens/Abstract_Screen.php](BigCommerce/Settings/Screens/Abstract_Screen.php), [line 391](BigCommerce/Settings/Screens/Abstract_Screen.php#L391-L397)
 
-Source: [src/BigCommerce/Container/Taxonomies.php](BigCommerce/Container/Taxonomies.php), [line 668](BigCommerce/Container/Taxonomies.php#L668-L676)
+### bigcommerce/settings/section/after_title/id={$section}[id]
 
-### `update_option_home`
 
-Updates site home route when the site's home option is updated.
+Fires after rendering the title of a settings section.
 
-Triggers the `update_site_home` method of the `Routes` class to refresh the site home route when the `home` option is changed.
+The dynamic portion of the hook name is the section ID.
 
 **Arguments**
 
-No arguments.
+Argument | Type | Description
+-------- | ---- | -----------
+`section` | `array` | 
+
+Source: [src/BigCommerce/Settings/Screens/Abstract_Screen.php](BigCommerce/Settings/Screens/Abstract_Screen.php), [line 403](BigCommerce/Settings/Screens/Abstract_Screen.php#L403-L409)
 
-Source: [src/BigCommerce/Container/Taxonomies.php](BigCommerce/Container/Taxonomies.php), [line 678](BigCommerce/Container/Taxonomies.php#L678-L687)
+### bigcommerce/settings/section/before_callback/id={$section}[id]
 
-### `post_updated`
 
-Updates the route's permalink when a post is updated.
+Fires before calling the callback of a settings section.
 
-Checks if a route is associated with
-the post and triggering the `update_route_permalink` method of the `Routes` class to update
-the permalink if needed.
+The dynamic portion of the hook name is the section ID.
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`post_id` | `int` | The ID of the updated post.
-`new_post` | `object` | The new post object after the update.
-`old_post` | `object` | The old post object before the update.
+`section` | `array` | 
 
-Source: [src/BigCommerce/Container/Taxonomies.php](BigCommerce/Container/Taxonomies.php), [line 689](BigCommerce/Container/Taxonomies.php#L689-L704)
+Source: [src/BigCommerce/Settings/Screens/Abstract_Screen.php](BigCommerce/Settings/Screens/Abstract_Screen.php), [line 427](BigCommerce/Settings/Screens/Abstract_Screen.php#L427-L433)
 
-### `bigcommerce/import/fetched_store_settings`
+### bigcommerce/settings/section/after_callback/id={$section}[id]
 
-Checks and updates routes after fetching store settings during an import.
 
-Triggers the `maybe_update_routes` method of the `Routes` class to ensure routes are updated
-after store settings are fetched during the import process.
+Fires after calling the callback of a settings section.
 
+The dynamic portion of the hook name is the section ID.
+
 **Arguments**
 
-No arguments.
+Argument | Type | Description
+-------- | ---- | -----------
+`section` | `array` | 
 
-Source: [src/BigCommerce/Container/Taxonomies.php](BigCommerce/Container/Taxonomies.php), [line 706](BigCommerce/Container/Taxonomies.php#L706-L716)
+Source: [src/BigCommerce/Settings/Screens/Abstract_Screen.php](BigCommerce/Settings/Screens/Abstract_Screen.php), [line 439](BigCommerce/Settings/Screens/Abstract_Screen.php#L439-L445)
 
-### `rest_api_init`
+### bigcommerce/settings/section/before_fields/id={$section}[id]
 
-Initializes REST API routes during the 'rest_api_init' action.
 
+Fires before rendering the fields of a settings section.
+
+The dynamic portion of the hook name is the section ID.
+
 **Arguments**
 
-No arguments.
+Argument | Type | Description
+-------- | ---- | -----------
+`section` | `array` | 
+`has_fields` | `bool` | Whether the settings section has any fields to render
+
+Source: [src/BigCommerce/Settings/Screens/Abstract_Screen.php](BigCommerce/Settings/Screens/Abstract_Screen.php), [line 449](BigCommerce/Settings/Screens/Abstract_Screen.php#L449-L456)
 
-Source: [src/BigCommerce/Container/Rest.php](BigCommerce/Container/Rest.php), [line 371](BigCommerce/Container/Rest.php#L371-L384)
+### bigcommerce/settings/section/after_fields/id={$section}[id]
 
-### `bigcommerce/action_endpoint/Amp_Cart::CHECKOUT_REDIRECT_ACTION`
 
-This action is triggered when the AMP checkout redirect endpoint is accessed.
+Fires after rendering the fields of a settings section.
 
-The callback handles the redirection request using the AMP Cart instance.
+The dynamic portion of the hook name is the section ID.
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`args` | `array` | Arguments passed to the action.
+`section` | `array` | 
+`has_fields` | `bool` | Whether the settings section has any fields to render
 
-Source: [src/BigCommerce/Container/Amp.php](BigCommerce/Container/Amp.php), [line 151](BigCommerce/Container/Amp.php#L151-L165)
+Source: [src/BigCommerce/Settings/Screens/Abstract_Screen.php](BigCommerce/Settings/Screens/Abstract_Screen.php), [line 464](BigCommerce/Settings/Screens/Abstract_Screen.php#L464-L471)
 
-### `wp`
+### bigcommerce/settings/unregistered_screen
 
-Initializes AMP template overrides based on the current request context.
+Source: [src/BigCommerce/Settings/Screens/Abstract_Screen.php](BigCommerce/Settings/Screens/Abstract_Screen.php), [line 500](BigCommerce/Settings/Screens/Abstract_Screen.php#L500-L500)
 
-This action determines if AMP template overrides should be enabled, typically
-for rendering plugin templates in AMP-compatible mode. When enabled, it applies
-various filters to modify template paths, data, and behaviors specific to AMP.
+### bigcommerce/settings/onboarding/progress
 
-**Arguments**
+Source: [src/BigCommerce/Settings/Screens/Onboarding_Screen.php](BigCommerce/Settings/Screens/Onboarding_Screen.php), [line 18](BigCommerce/Settings/Screens/Onboarding_Screen.php#L18-L18)
 
-Argument | Type | Description
--------- | ---- | -----------
-`wp` | `\BigCommerce\Container\WP` | The WordPress environment object passed to the 'wp' action. Provides access to query variables and the request context.
+### bigcommerce/settings/after_content/page=static::NAME
 
-Source: [src/BigCommerce/Container/Amp.php](BigCommerce/Container/Amp.php), [line 171](BigCommerce/Container/Amp.php#L171-L387)
 
-### `bigcommerce/form/before_redirect`
+Triggered before the settings screen form starts to render.
 
-Action to modify AMP redirect headers before form submission.
+The dynamic portion of the hook is the identifier of the settings screen.
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`url` | `string` | The URL being redirected to.
+`hook_suffix` | `string` | The hook suffix generated for the screen
 
-Source: [src/BigCommerce/Container/Amp.php](BigCommerce/Container/Amp.php), [line 389](BigCommerce/Container/Amp.php#L389-L396)
+Source: [src/BigCommerce/Settings/Screens/Pending_Account_Screen.php](BigCommerce/Settings/Screens/Pending_Account_Screen.php), [line 47](BigCommerce/Settings/Screens/Pending_Account_Screen.php#L47-L53)
 
-### `amp_post_template_css`
+### bigcommerce/create_account/validate_request
 
-Action to output custom AMP CSS for a post template.
+Source: [src/BigCommerce/Settings/Screens/Create_Account_Screen.php](BigCommerce/Settings/Screens/Create_Account_Screen.php), [line 79](BigCommerce/Settings/Screens/Create_Account_Screen.php#L79-L79)
 
-**Arguments**
+### bigcommerce/create_account/submit_request
 
-No arguments.
+Source: [src/BigCommerce/Settings/Screens/Create_Account_Screen.php](BigCommerce/Settings/Screens/Create_Account_Screen.php), [line 82](BigCommerce/Settings/Screens/Create_Account_Screen.php#L82-L82)
 
-Source: [src/BigCommerce/Container/Amp.php](BigCommerce/Container/Amp.php), [line 398](BigCommerce/Container/Amp.php#L398-L402)
+### bigcommerce/settings/header/import_status
 
-### `amp_post_template_head`
 
-Action to output AMP-specific scripts in the `<head>` section.
+Triggered after rendering the last import date in the settings header
 
 **Arguments**
 
 No arguments.
 
-Source: [src/BigCommerce/Container/Amp.php](BigCommerce/Container/Amp.php), [line 418](BigCommerce/Container/Amp.php#L418-L421)
+Source: [src/BigCommerce/Settings/Screens/Settings_Screen.php](BigCommerce/Settings/Screens/Settings_Screen.php), [line 64](BigCommerce/Settings/Screens/Settings_Screen.php#L64-L67)
 
-### `after_setup_theme`
+### bigcommerce/settings/render/channel_select
 
-Action to register AMP-specific menus after theme setup.
+Source: [src/BigCommerce/Settings/Sections/Channel_Select.php](BigCommerce/Settings/Sections/Channel_Select.php), [line 71](BigCommerce/Settings/Sections/Channel_Select.php#L71-L71)
 
-**Arguments**
+### bigcommerce/settings/render/gift_certificates
 
-No arguments.
+Source: [src/BigCommerce/Settings/Sections/Gift_Certificates.php](BigCommerce/Settings/Sections/Gift_Certificates.php), [line 34](BigCommerce/Settings/Sections/Gift_Certificates.php#L34-L34)
 
-Source: [src/BigCommerce/Container/Amp.php](BigCommerce/Container/Amp.php), [line 423](BigCommerce/Container/Amp.php#L423-L428)
+### bigcommerce/settings/render/nav_menu_options/top
 
-### `admin_notices`
+Source: [src/BigCommerce/Settings/Sections/Nav_Menu_Options.php](BigCommerce/Settings/Sections/Nav_Menu_Options.php), [line 25](BigCommerce/Settings/Sections/Nav_Menu_Options.php#L25-L25)
 
-Action to display AMP admin notices in the WordPress admin.
+### bigcommerce/settings/accounts/before_page_field
 
-**Arguments**
+Source: [src/BigCommerce/Settings/Sections/WithPages.php](BigCommerce/Settings/Sections/WithPages.php), [line 17](BigCommerce/Settings/Sections/WithPages.php#L17-L17)
 
-No arguments.
+### bigcommerce/settings/accounts/before_page_field/page={$option}
 
-Source: [src/BigCommerce/Container/Amp.php](BigCommerce/Container/Amp.php), [line 444](BigCommerce/Container/Amp.php#L444-L450)
+Source: [src/BigCommerce/Settings/Sections/WithPages.php](BigCommerce/Settings/Sections/WithPages.php), [line 18](BigCommerce/Settings/Sections/WithPages.php#L18-L18)
 
-### `setup_theme`
+### bigcommerce/settings/accounts/after_page_field
 
-Hooks into 'setup_theme' to load compatibility functions for WooCommerce.
+Source: [src/BigCommerce/Settings/Sections/WithPages.php](BigCommerce/Settings/Sections/WithPages.php), [line 38](BigCommerce/Settings/Sections/WithPages.php#L38-L38)
 
-This action is triggered during theme setup to ensure compatibility with WooCommerce
-when activating or updating the plugin.
+### bigcommerce/settings/accounts/after_page_field/page={$option}
 
-**Arguments**
+Source: [src/BigCommerce/Settings/Sections/WithPages.php](BigCommerce/Settings/Sections/WithPages.php), [line 39](BigCommerce/Settings/Sections/WithPages.php#L39-L39)
 
-No arguments.
+### bigcommerce/settings/render/cart
 
-Source: [src/BigCommerce/Container/Compatibility.php](BigCommerce/Container/Compatibility.php), [line 106](BigCommerce/Container/Compatibility.php#L106-L121)
+Source: [src/BigCommerce/Settings/Sections/Cart.php](BigCommerce/Settings/Sections/Cart.php), [line 149](BigCommerce/Settings/Sections/Cart.php#L149-L149)
 
-### `wp`
+### bigcommerce/settings/render/accounts
 
-Hooks into 'wp' to fix Flatsome theme compatibility for the account page.
+Source: [src/BigCommerce/Settings/Sections/Account_Settings.php](BigCommerce/Settings/Sections/Account_Settings.php), [line 37](BigCommerce/Settings/Sections/Account_Settings.php#L37-L37)
 
-This action is triggered when WordPress initializes the current page to ensure
-that the Flatsome theme's content fix is removed for the account page.
+### bigcommerce/sync_global_logins
 
-**Arguments**
+Source: [src/BigCommerce/Settings/Sections/Account_Settings.php](BigCommerce/Settings/Sections/Account_Settings.php), [line 150](BigCommerce/Settings/Sections/Account_Settings.php#L150-L150)
 
-No arguments.
+### bigcommerce/settings/render/analytics
 
-Source: [src/BigCommerce/Container/Compatibility.php](BigCommerce/Container/Compatibility.php), [line 123](BigCommerce/Container/Compatibility.php#L123-L135)
+Source: [src/BigCommerce/Settings/Sections/Analytics.php](BigCommerce/Settings/Sections/Analytics.php), [line 50](BigCommerce/Settings/Sections/Analytics.php#L50-L50)
 
-### `init`
+### bigcommerce/channel/connection_changed
 
-Hooks into 'init' to disable WooCommerce shortcodes in Flatsome theme.
 
-This action is triggered during the initialization of WordPress to replace
-WooCommerce-related shortcodes with a null return for compatibility with the Flatsome theme.
+Triggered when the channel(s) connected to the site have changed
 
 **Arguments**
 
-No arguments.
+Argument | Type | Description
+-------- | ---- | -----------
+`channel` | `\WP_Term` | The Channel term updated
+`status` | `string` | The status set on the channel
 
-Source: [src/BigCommerce/Container/Compatibility.php](BigCommerce/Container/Compatibility.php), [line 137](BigCommerce/Container/Compatibility.php#L137-L156)
+Source: [src/BigCommerce/Settings/Sections/Channels.php](BigCommerce/Settings/Sections/Channels.php), [line 304](BigCommerce/Settings/Sections/Channels.php#L304-L310)
 
-### `init`
+Source: [src/BigCommerce/Settings/Sections/Channels.php](BigCommerce/Settings/Sections/Channels.php), [line 322](BigCommerce/Settings/Sections/Channels.php#L322-L328)
 
-Hooks into 'init' to load compatibility functions for WordPress 4.9.
+Source: [src/BigCommerce/Settings/Sections/Channels.php](BigCommerce/Settings/Sections/Channels.php), [line 364](BigCommerce/Settings/Sections/Channels.php#L364-L370)
 
-This action checks if the current WordPress version is below 4.9 and includes
-compatibility functions specific to that version.
+### bigcommerce/settings/render/currency
 
-**Arguments**
+Source: [src/BigCommerce/Settings/Sections/Currency.php](BigCommerce/Settings/Sections/Currency.php), [line 89](BigCommerce/Settings/Sections/Currency.php#L89-L89)
 
-No arguments.
+### bigcommerce/settings/render/product_reviews
 
-Source: [src/BigCommerce/Container/Compatibility.php](BigCommerce/Container/Compatibility.php), [line 158](BigCommerce/Container/Compatibility.php#L158-L170)
+Source: [src/BigCommerce/Settings/Sections/Reviews.php](BigCommerce/Settings/Sections/Reviews.php), [line 29](BigCommerce/Settings/Sections/Reviews.php#L29-L29)
 
-### `init`
+### bigcommerce/settings/render/credentials
 
-Hooks into 'init' to load compatibility functions for WordPress 5.1.
+Source: [src/BigCommerce/Settings/Sections/Api_Credentials.php](BigCommerce/Settings/Sections/Api_Credentials.php), [line 31](BigCommerce/Settings/Sections/Api_Credentials.php#L31-L31)
 
-This action checks if the current WordPress version is below 5.1 and includes
-compatibility functions specific to that version.
+### bigcommerce/settings/api_credentials_updated
 
+
+Fires (once per pageload) when an API credential setting updates.
+
 **Arguments**
 
 No arguments.
 
-Source: [src/BigCommerce/Container/Compatibility.php](BigCommerce/Container/Compatibility.php), [line 172](BigCommerce/Container/Compatibility.php#L172-L184)
+Source: [src/BigCommerce/Settings/Sections/Api_Credentials.php](BigCommerce/Settings/Sections/Api_Credentials.php), [line 208](BigCommerce/Settings/Sections/Api_Credentials.php#L208-L211)
 
-### `pre_option_woocommerce_myaccount_page_id`
+### Webhook_Cron_Tasks::UPDATE_PRODUCT
 
-Filters the My Account page ID for WooCommerce.
+Source: [src/BigCommerce/Post_Types/Product/Single_Product_Sync.php](BigCommerce/Post_Types/Product/Single_Product_Sync.php), [line 134](BigCommerce/Post_Types/Product/Single_Product_Sync.php#L134-L134)
 
-This action is triggered when retrieving the 'woocommerce_myaccount_page_id' option.
-It ensures that the correct page ID is used for logged-in users.
+### bigcommerce/channel/error/could_not_fetch_listing
 
-**Arguments**
 
-No arguments.
+Error triggered when fetching a listing fails
 
-Source: [src/BigCommerce/Container/Compatibility.php](BigCommerce/Container/Compatibility.php), [line 186](BigCommerce/Container/Compatibility.php#L186-L199)
+**Arguments**
 
-### `admin_notices`
+Argument | Type | Description
+-------- | ---- | -----------
+`channel_id` | `int` | 
+`listing_id` | `int` | 
+`e` | `\BigCommerce\Api\v3\ApiException` | 
 
-Displays an admin notice to verify checkout requirements if the setup status meets the requirements.
+Source: [src/BigCommerce/Post_Types/Product/Channel_Sync.php](BigCommerce/Post_Types/Product/Channel_Sync.php), [line 65](BigCommerce/Post_Types/Product/Channel_Sync.php#L65-L72)
 
-**Arguments**
+Source: [src/BigCommerce/Post_Types/Product/Channel_Sync.php](BigCommerce/Post_Types/Product/Channel_Sync.php), [line 108](BigCommerce/Post_Types/Product/Channel_Sync.php#L108-L115)
 
-No arguments.
+Source: [src/BigCommerce/Post_Types/Product/Channel_Sync.php](BigCommerce/Post_Types/Product/Channel_Sync.php), [line 214](BigCommerce/Post_Types/Product/Channel_Sync.php#L214-L221)
 
-Source: [src/BigCommerce/Container/Checkout.php](BigCommerce/Container/Checkout.php), [line 57](BigCommerce/Container/Checkout.php#L57-L62)
+### bigcommerce/channel/error/could_not_update_listing
 
-### `admin_post_Requirements_Notice::REFRESH`
 
-Refreshes the checkout requirements status by calling the `refresh_status` method.
+Error triggered when updating a listing fails
 
 **Arguments**
-
-No arguments.
 
-Source: [src/BigCommerce/Container/Checkout.php](BigCommerce/Container/Checkout.php), [line 64](BigCommerce/Container/Checkout.php#L64-L67)
+Argument | Type | Description
+-------- | ---- | -----------
+`channel_id` | `int` | 
+`listing_id` | `int` | 
+`e` | `\BigCommerce\Api\v3\ApiException` | 
 
-### `load-nav-menus.php`
+Source: [src/BigCommerce/Post_Types/Product/Channel_Sync.php](BigCommerce/Post_Types/Product/Channel_Sync.php), [line 91](BigCommerce/Post_Types/Product/Channel_Sync.php#L91-L98)
 
-Adds a metabox for navigation items.
+Source: [src/BigCommerce/Post_Types/Product/Channel_Sync.php](BigCommerce/Post_Types/Product/Channel_Sync.php), [line 240](BigCommerce/Post_Types/Product/Channel_Sync.php#L240-L247)
 
-**Arguments**
+### bigcommerce/query/sort
 
-No arguments.
+Source: [src/BigCommerce/Post_Types/Product/Query.php](BigCommerce/Post_Types/Product/Query.php), [line 216](BigCommerce/Post_Types/Product/Query.php#L216-L216)
 
-Source: [src/BigCommerce/Container/Nav_Menu.php](BigCommerce/Container/Nav_Menu.php), [line 93](BigCommerce/Container/Nav_Menu.php#L93-L100)
+### bigcommerce/channel/promote
 
-### `wp_ajax_add-menu-item`
 
-Handles AJAX requests to add menu items.
+Triggers the promotion of a channel to the "Primary" state
 
 **Arguments**
-
-No arguments.
 
-Source: [src/BigCommerce/Container/Nav_Menu.php](BigCommerce/Container/Nav_Menu.php), [line 102](BigCommerce/Container/Nav_Menu.php#L102-L109)
+Argument | Type | Description
+-------- | ---- | -----------
+`term` | `\WP_Term` | The Channel term associated with the BigCommerce channel
 
-### `added_post_meta`
+Source: [src/BigCommerce/Taxonomies/Channel/Channel_Connector.php](BigCommerce/Taxonomies/Channel/Channel_Connector.php), [line 66](BigCommerce/Taxonomies/Channel/Channel_Connector.php#L66-L71)
 
-Registers review-related services in the container.
+Source: [src/BigCommerce/Taxonomies/Channel/Channel_Connector.php](BigCommerce/Taxonomies/Channel/Channel_Connector.php), [line 148](BigCommerce/Taxonomies/Channel/Channel_Connector.php#L148-L153)
 
-Services include:
-- Product update listener for tracking metadata changes.
-- Review fetcher for retrieving reviews from the API.
-- Review cache for caching reviews and updating the cache on product updates.
+### bigcommerce/channel/error/could_not_create_channel
 
-**Arguments**
+Source: [src/BigCommerce/Taxonomies/Channel/Channel_Connector.php](BigCommerce/Taxonomies/Channel/Channel_Connector.php), [line 109](BigCommerce/Taxonomies/Channel/Channel_Connector.php#L109-L109)
 
-Argument | Type | Description
--------- | ---- | -----------
-`container` | `\Pimple\Container` | The DI container for registering services.
+### bigcommerce/update_site_home/error
 
-Source: [src/BigCommerce/Container/Reviews.php](BigCommerce/Container/Reviews.php), [line 39](BigCommerce/Container/Reviews.php#L39-L74)
+Source: [src/BigCommerce/Taxonomies/Channel/Routes.php](BigCommerce/Taxonomies/Channel/Routes.php), [line 128](BigCommerce/Taxonomies/Channel/Routes.php#L128-L128)
 
-### `updated_post_meta`
+### bigcommerce/channel/error/could_not_update_route
 
-Registers review-related services in the container.
+Source: [src/BigCommerce/Taxonomies/Channel/Routes.php](BigCommerce/Taxonomies/Channel/Routes.php), [line 348](BigCommerce/Taxonomies/Channel/Routes.php#L348-L348)
 
-Services include:
-- Product update listener for tracking metadata changes.
-- Review fetcher for retrieving reviews from the API.
-- Review cache for caching reviews and updating the cache on product updates.
+### bigcommerce/action_endpoint/{$endpoint}
 
-**Arguments**
+Source: [src/BigCommerce/Rewrites/Action_Endpoint.php](BigCommerce/Rewrites/Action_Endpoint.php), [line 30](BigCommerce/Rewrites/Action_Endpoint.php#L30-L30)
 
-Argument | Type | Description
--------- | ---- | -----------
-`container` | `\Pimple\Container` | The DI container for registering services.
+### bigcommerce/form/action={$action}[bc-action]
 
-Source: [src/BigCommerce/Container/Reviews.php](BigCommerce/Container/Reviews.php), [line 39](BigCommerce/Container/Reviews.php#L39-L75)
+Source: [src/BigCommerce/Container/Forms.php](BigCommerce/Container/Forms.php), [line 130](BigCommerce/Container/Forms.php#L130-L130)
 
-### `Product_Update_Listener::TRIGGER_UPDATE`
+### bigcommerce/import/task_manager/init
 
-Callback for updating the review cache.
 
-Triggered when a product update event occurs.
+Triggered when the task manager for the import has finished initializing
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`product_id` | `int` | The ID of the updated product.
+`manager` | `\BigCommerce\Import\Task_Manager` | The task manager object
 
-Source: [src/BigCommerce/Container/Reviews.php](BigCommerce/Container/Reviews.php), [line 99](BigCommerce/Container/Reviews.php#L99-L108)
+Source: [src/BigCommerce/Container/Import.php](BigCommerce/Container/Import.php), [line 611](BigCommerce/Container/Import.php#L611-L616)
 
 ## Filters
 
-### `bigcommerce/customer/create/args`
+### bigcommerce/onboarding/success_redirect
 
-Filters the arguments used to create a customer in BigCommerce.
 
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`data` | `array` | The customer creation arguments.
-
-Source: [src/BigCommerce/Forms/Registration_Handler.php](BigCommerce/Forms/Registration_Handler.php), [line 136](BigCommerce/Forms/Registration_Handler.php#L136-L141)
-
-### `bigcommerce/currency/code`
-
-Filter the currency code used for cart operations.
-
-This filter temporarily overrides the currency code to use the new currency
-during the cart recreation process.
+Filters onboarding success redirect.
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`new_currency_code` | `string` | The currency code to use.
+`success_redirect` | `string` | URL.
 
-Source: [src/BigCommerce/Forms/Switch_Currency_Handler.php](BigCommerce/Forms/Switch_Currency_Handler.php), [line 181](BigCommerce/Forms/Switch_Currency_Handler.php#L181-L189)
+Source: [src/BigCommerce/Merchant/Connect_Account.php](BigCommerce/Merchant/Connect_Account.php), [line 75](BigCommerce/Merchant/Connect_Account.php#L75-L80)
 
-### `bigcommerce/cart/cart_id`
+Source: [src/BigCommerce/Merchant/Account_Status.php](BigCommerce/Merchant/Account_Status.php), [line 119](BigCommerce/Merchant/Account_Status.php#L119-L122)
 
-Filter the cart ID used for cart operations.
+### bigcommerce/onboarding/error_redirect
 
-This filter temporarily overrides the cart ID to use the value from the COOKIE
-global during the cart recreation process.
+
+Filters onboarding error redirect.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`success_redirect` | `string` | URL.
+
+Source: [src/BigCommerce/Merchant/Connect_Account.php](BigCommerce/Merchant/Connect_Account.php), [line 84](BigCommerce/Merchant/Connect_Account.php#L84-L89)
+
+Source: [src/BigCommerce/Merchant/Account_Status.php](BigCommerce/Merchant/Account_Status.php), [line 73](BigCommerce/Merchant/Account_Status.php#L73-L73)
+
+### bigcommerce/oauth_connector/installation_url
+
+
+Filters oauth connector installation url.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`url` | `string` | Url.
+
+Source: [src/BigCommerce/Merchant/Onboarding_Api.php](BigCommerce/Merchant/Onboarding_Api.php), [line 96](BigCommerce/Merchant/Onboarding_Api.php#L96-L101)
+
+### bigcommerce/settings/next-steps/required
+
+
+Filter the array of next steps required for setting up the
+BigCommerce store.
 
 **Arguments**
 
 No arguments.
 
-Source: [src/BigCommerce/Forms/Switch_Currency_Handler.php](BigCommerce/Forms/Switch_Currency_Handler.php), [line 196](BigCommerce/Forms/Switch_Currency_Handler.php#L196-L204)
+Source: [src/BigCommerce/Merchant/Setup_Status.php](BigCommerce/Merchant/Setup_Status.php), [line 212](BigCommerce/Merchant/Setup_Status.php#L212-L221)
 
-### `bigcommerce/button/purchase`
+### bigcommerce/settings/next-steps/optional
 
-Filter to overwrite the purchase button HTML.
 
-Temporarily modifies the button in the product form preview to be disabled.
+Filter the array of optional next steps for setting up the
+BigCommerce store.
+
+**Arguments**
+
+No arguments.
+
+Source: [src/BigCommerce/Merchant/Setup_Status.php](BigCommerce/Merchant/Setup_Status.php), [line 256](BigCommerce/Merchant/Setup_Status.php#L256-L265)
+
+### bigcommerce/logger/formatter
+
+Source: [src/BigCommerce/Logging/Error_Log.php](BigCommerce/Logging/Error_Log.php), [line 71](BigCommerce/Logging/Error_Log.php#L71-L71)
+
+### bigcommerce/logger/channel
+
+Source: [src/BigCommerce/Logging/Error_Log.php](BigCommerce/Logging/Error_Log.php), [line 74](BigCommerce/Logging/Error_Log.php#L74-L74)
+
+### bigcommerce/logger/handler
+
+Source: [src/BigCommerce/Logging/Error_Log.php](BigCommerce/Logging/Error_Log.php), [line 85](BigCommerce/Logging/Error_Log.php#L85-L85)
+
+### bigcommerce/logger/level
+
+
+Filter the logging level. Defaults to 'debug'.
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`html` | `string` | The original button HTML.
-`post_id` | `int` | The product post ID.
-`label` | `string` | The label for the button.
+`` | `string\|int` | The logging level, as either a PSR-3 LogLevel string or a Monolog integer.
 
-Source: [src/BigCommerce/Templates/Product_Form_Preview.php](BigCommerce/Templates/Product_Form_Preview.php), [line 46](BigCommerce/Templates/Product_Form_Preview.php#L46-L57)
+Source: [src/BigCommerce/Logging/Error_Log.php](BigCommerce/Logging/Error_Log.php), [line 104](BigCommerce/Logging/Error_Log.php#L104-L109)
 
-### `pre_term_description`
+### bigcommerce/css/customizer_styles
 
-Filters the term description before it is saved or displayed.
 
-This hook is used to apply content sanitization to term descriptions.
+Filters customizer styles CSS.
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`description` | `string` | The term description before filtering.
+`css` | `string` | The styles.
 
-Source: [src/BigCommerce/Import/Processors/Term_Import.php](BigCommerce/Import/Processors/Term_Import.php), [line 159](BigCommerce/Import/Processors/Term_Import.php#L159-L167)
+Source: [src/BigCommerce/Customizer/Styles.php](BigCommerce/Customizer/Styles.php), [line 67](BigCommerce/Customizer/Styles.php#L67-L72)
 
-### `bigcommerce/template=components/catalog/product-archive.php/data`
+### bigcommerce/product/archive/sort_options
 
-Remove the refinery component from the product archive template.
 
-This method filters the product archive template data to remove the refinery
-component, which may be used for facets or filtering options in the catalog.
+Filter the sorting options available in the BigCommerce catalog
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`template_data` | `array` | The template data array, which is modified to remove the refinery component.
+`choices` | `array` | The sorting options to use
 
-Source: [src/BigCommerce/Accounts/Wishlists/Wishlist_Request_Parser.php](BigCommerce/Accounts/Wishlists/Wishlist_Request_Parser.php), [line 83](BigCommerce/Accounts/Wishlists/Wishlist_Request_Parser.php#L83-L92)
+Source: [src/BigCommerce/Customizer/Sections/Product_Archive.php](BigCommerce/Customizer/Sections/Product_Archive.php), [line 261](BigCommerce/Customizer/Sections/Product_Archive.php#L261-L266)
 
-### `bigcommerce/template=components/catalog/product-archive.php/data`
+### bigcommerce/product/archive/filter_options
 
-Customize the page title for the product archive based on wishlist information.
 
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`template_data` | `array` | The template data array, which is modified to include the wishlist name as the page title.
-
-Source: [src/BigCommerce/Accounts/Wishlists/Wishlist_Request_Parser.php](BigCommerce/Accounts/Wishlists/Wishlist_Request_Parser.php), [line 94](BigCommerce/Accounts/Wishlists/Wishlist_Request_Parser.php#L94-L100)
-
-### `post_type_archive_title`
-
-Customize the WordPress archive title for wishlist pages.
+Filter the filtering options available in the BigCommerce catalog
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`title` | `string` | The current archive title.
-`post_type` | `string` | The post type for which the archive is being displayed.
+`choices` | `array` | The filtering options to use
 
-Source: [src/BigCommerce/Accounts/Wishlists/Wishlist_Request_Parser.php](BigCommerce/Accounts/Wishlists/Wishlist_Request_Parser.php), [line 102](BigCommerce/Accounts/Wishlists/Wishlist_Request_Parser.php#L102-L109)
+Source: [src/BigCommerce/Customizer/Sections/Product_Archive.php](BigCommerce/Customizer/Sections/Product_Archive.php), [line 316](BigCommerce/Customizer/Sections/Product_Archive.php#L316-L321)
 
-### `bigcommerce/template=components/catalog/no-results.php/data`
+### bigcommerce/proxy/request_headers
 
-Customize the "No Results" message for wishlist-related templates.
+
+Filter the request headers.
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`template_data` | `array` | The template data array, modified to include wishlist-specific "No Results" messages and labels.
+`` | `array` | Header KV pairs.
+`route` | `string` | Route requested.
+`request` | `\WP_REST_Request` | API request.
 
-Source: [src/BigCommerce/Accounts/Wishlists/Wishlist_Request_Parser.php](BigCommerce/Accounts/Wishlists/Wishlist_Request_Parser.php), [line 111](BigCommerce/Accounts/Wishlists/Wishlist_Request_Parser.php#L111-L117)
+Source: [src/BigCommerce/Proxy/Proxy_Controller.php](BigCommerce/Proxy/Proxy_Controller.php), [line 280](BigCommerce/Proxy/Proxy_Controller.php#L280-L297)
 
-### `rest_prepare_{$post->post_type}`
+### bigcommerce/proxy/response_override
 
-Filters the REST response for a post type, modifying the content if needed.
 
-This filter is triggered when preparing a REST response for a post. It ensures
-that any post content is processed before being returned to the API response.
+Filters whether the REST request should run.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`request` | `\WP_REST_Request` | 
+
+Source: [src/BigCommerce/Proxy/Proxy_Controller.php](BigCommerce/Proxy/Proxy_Controller.php), [line 307](BigCommerce/Proxy/Proxy_Controller.php#L307-L312)
+
+### bigcommerce/proxy/request
+
+
+Filters a proxy REST request before it is run.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`request` | `\WP_REST_Request` | Original request.
+
+Source: [src/BigCommerce/Proxy/Proxy_Controller.php](BigCommerce/Proxy/Proxy_Controller.php), [line 324](BigCommerce/Proxy/Proxy_Controller.php#L324-L329)
+
+### bigcommerce/proxy/result_pre
+
+
+Pre-fetch results. Can be from database or from cache.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`` | `array` | Empty array.
+`request` | `\WP_REST_Request` | API request.
+`` | `array` | Proxy configuration.
+
+Source: [src/BigCommerce/Proxy/Proxy_Controller.php](BigCommerce/Proxy/Proxy_Controller.php), [line 338](BigCommerce/Proxy/Proxy_Controller.php#L338-L345)
+
+### bigcommerce/proxy/result
+
+
+Filter the response results before returning it.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`result` | `array\|\WP_Error` | Result from API call.
+`route` | `string` | Route requested.
+`request` | `\WP_REST_Request` | API request.
+
+Source: [src/BigCommerce/Proxy/Proxy_Controller.php](BigCommerce/Proxy/Proxy_Controller.php), [line 388](BigCommerce/Proxy/Proxy_Controller.php#L388-L395)
+
+### bigcommerce/proxy/rest_response
+
+
+Filter the WordPress REST response before it gets dispatched.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`rest_response` | `\WP_REST_Response` | Response to send back to request..
+`route` | `string` | Route requested.
+`request` | `\WP_REST_Request` | API request.
+
+Source: [src/BigCommerce/Proxy/Proxy_Controller.php](BigCommerce/Proxy/Proxy_Controller.php), [line 399](BigCommerce/Proxy/Proxy_Controller.php#L399-L406)
+
+### bigcommerce/proxy/request_url
+
+
+Filters proxy request url.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`route` | `string` | Request url.
+`request` | `\WP_REST_Request` | Request.
+
+Source: [src/BigCommerce/Proxy/Proxy_Controller.php](BigCommerce/Proxy/Proxy_Controller.php), [line 676](BigCommerce/Proxy/Proxy_Controller.php#L676-L682)
+
+### bigcommerce/currency/format
+
+
+This filter is documented in src/BigCommerce/Currency/With_Currency.php.
+
+**Arguments**
+
+No arguments.
+
+Source: [src/BigCommerce/Cart/Cart_Mapper.php](BigCommerce/Cart/Cart_Mapper.php), [line 262](BigCommerce/Cart/Cart_Mapper.php#L262-L265)
+
+Source: [src/BigCommerce/Proxy/AMP_Cart_Controller.php](BigCommerce/Proxy/AMP_Cart_Controller.php), [line 75](BigCommerce/Proxy/AMP_Cart_Controller.php#L75-L79)
+
+Source: [src/BigCommerce/Proxy/AMP_Cart_Controller.php](BigCommerce/Proxy/AMP_Cart_Controller.php), [line 141](BigCommerce/Proxy/AMP_Cart_Controller.php#L141-L145)
+
+Source: [src/BigCommerce/Proxy/AMP_Cart_Controller.php](BigCommerce/Proxy/AMP_Cart_Controller.php), [line 204](BigCommerce/Proxy/AMP_Cart_Controller.php#L204-L204)
+
+Source: [src/BigCommerce/Cart/Cart_Mapper.php](BigCommerce/Cart/Cart_Mapper.php), [line 363](BigCommerce/Cart/Cart_Mapper.php#L363-L366)
+
+Source: [src/BigCommerce/Forms/Purchase_Gift_Certificate_Handler.php](BigCommerce/Forms/Purchase_Gift_Certificate_Handler.php), [line 183](BigCommerce/Forms/Purchase_Gift_Certificate_Handler.php#L183-L186)
+
+Source: [src/BigCommerce/Forms/Purchase_Gift_Certificate_Handler.php](BigCommerce/Forms/Purchase_Gift_Certificate_Handler.php), [line 187](BigCommerce/Forms/Purchase_Gift_Certificate_Handler.php#L187-L190)
+
+Source: [src/BigCommerce/Forms/Purchase_Gift_Certificate_Handler.php](BigCommerce/Forms/Purchase_Gift_Certificate_Handler.php), [line 218](BigCommerce/Forms/Purchase_Gift_Certificate_Handler.php#L218-L221)
+
+Source: [src/BigCommerce/Currency/With_Currency.php](BigCommerce/Currency/With_Currency.php), [line 24](BigCommerce/Currency/With_Currency.php#L24-L30)
+
+Source: [src/BigCommerce/Templates/Gift_Certificate_Balance_Response.php](BigCommerce/Templates/Gift_Certificate_Balance_Response.php), [line 37](BigCommerce/Templates/Gift_Certificate_Balance_Response.php#L37-L40)
+
+Source: [src/BigCommerce/Rest/Shipping_Controller.php](BigCommerce/Rest/Shipping_Controller.php), [line 317](BigCommerce/Rest/Shipping_Controller.php#L317-L320)
+
+Source: [src/BigCommerce/Rest/Coupon_Code_Controller.php](BigCommerce/Rest/Coupon_Code_Controller.php), [line 153](BigCommerce/Rest/Coupon_Code_Controller.php#L153-L156)
+
+### bigcommerce/cart/cart_id
+
+
+Filter the cart ID to use for the current request.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`cart_id` | `string` | The current cart ID.
+
+Source: [src/BigCommerce/Cart/Cart.php](BigCommerce/Cart/Cart.php), [line 60](BigCommerce/Cart/Cart.php#L60-L65)
+
+### bigcommerce/cart/cookie_lifetime
+
+
+Filter how long the cart cookie should persist.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`lifetime` | `int` | The cookie lifespan in seconds.
+
+Source: [src/BigCommerce/Cart/Cart.php](BigCommerce/Cart/Cart.php), [line 78](BigCommerce/Cart/Cart.php#L78-L83)
+
+### bigcommerce/cart/permalink
+
+
+Filter the URL to the cart page
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`url` | `string` | The URL to the cart page
+`page_id` | `int` | The ID of the cart page
+
+Source: [src/BigCommerce/Cart/Cart.php](BigCommerce/Cart/Cart.php), [line 268](BigCommerce/Cart/Cart.php#L268-L274)
+
+Source: [src/BigCommerce/Amp/Amp_Cart.php](BigCommerce/Amp/Amp_Cart.php), [line 84](BigCommerce/Amp/Amp_Cart.php#L84-L90)
+
+### bigcommerce/checkout/url
+
+
+Filters checkout url.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`checkout_url` | `string` | The URL for checking out with the given cart.
+
+Source: [src/BigCommerce/Cart/Cart.php](BigCommerce/Cart/Cart.php), [line 296](BigCommerce/Cart/Cart.php#L296-L301)
+
+Source: [src/BigCommerce/Cart/Cart.php](BigCommerce/Cart/Cart.php), [line 325](BigCommerce/Cart/Cart.php#L325-L330)
+
+Source: [src/BigCommerce/Cart/Checkout.php](BigCommerce/Cart/Checkout.php), [line 72](BigCommerce/Cart/Checkout.php#L72-L75)
+
+### bigcommerce/currency/code
+
+Source: [src/BigCommerce/Cart/Cart.php](BigCommerce/Cart/Cart.php), [line 347](BigCommerce/Cart/Cart.php#L347-L347)
+
+Source: [src/BigCommerce/Forms/Switch_Currency_Handler.php](BigCommerce/Forms/Switch_Currency_Handler.php), [line 80](BigCommerce/Forms/Switch_Currency_Handler.php#L80-L80)
+
+Source: [src/BigCommerce/Widgets/Currency_Switcher_Widget.php](BigCommerce/Widgets/Currency_Switcher_Widget.php), [line 58](BigCommerce/Widgets/Currency_Switcher_Widget.php#L58-L58)
+
+Source: [src/BigCommerce/Rest/Pricing_Controller.php](BigCommerce/Rest/Pricing_Controller.php), [line 88](BigCommerce/Rest/Pricing_Controller.php#L88-L88)
+
+Source: [src/BigCommerce/Assets/Theme/JS_Config.php](BigCommerce/Assets/Theme/JS_Config.php), [line 70](BigCommerce/Assets/Theme/JS_Config.php#L70-L70)
+
+### bigcommerce/cart/mini-cart-enabled
+
+
+Filter whether the mini-cart widget should be enabled on the current page
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`enabled` | `bool` | Whether the mini-cart is enabled
+
+Source: [src/BigCommerce/Cart/Mini_Cart.php](BigCommerce/Cart/Mini_Cart.php), [line 47](BigCommerce/Cart/Mini_Cart.php#L47-L52)
+
+### bigcommerce/cart_mapper/map
+
+
+Filter mapped cart
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`cart` | `array` | Cart data.
+
+Source: [src/BigCommerce/Cart/Cart_Mapper.php](BigCommerce/Cart/Cart_Mapper.php), [line 109](BigCommerce/Cart/Cart_Mapper.php#L109-L114)
+
+### bigcommerce/cart/menu/show_count
+
+
+Filter whether the site should show the cart count on the menu
+item for the cart page.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`show` | `bool` | Whether the cart count will be displayed
+
+Source: [src/BigCommerce/Cart/Cart_Menu_Item.php](BigCommerce/Cart/Cart_Menu_Item.php), [line 73](BigCommerce/Cart/Cart_Menu_Item.php#L73-L79)
+
+### bigcommerce/form/address/created_message
+
+
+Filters address form created message.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`message` | `string` | Message.
+
+Source: [src/BigCommerce/Forms/Update_Address_Handler.php](BigCommerce/Forms/Update_Address_Handler.php), [line 66](BigCommerce/Forms/Update_Address_Handler.php#L66-L71)
+
+### bigcommerce/form/address/updated_message
+
+
+Filters address form updated message.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`message` | `string` | Message.
+
+Source: [src/BigCommerce/Forms/Update_Address_Handler.php](BigCommerce/Forms/Update_Address_Handler.php), [line 74](BigCommerce/Forms/Update_Address_Handler.php#L74-L79)
+
+### bigcommerce/form/update_address/errors
+
+
+Filters update profile address form errors.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`errors` | `\WP_Error` | WP error.
+`submission` | `array` | Submitted data.
+
+Source: [src/BigCommerce/Forms/Update_Address_Handler.php](BigCommerce/Forms/Update_Address_Handler.php), [line 138](BigCommerce/Forms/Update_Address_Handler.php#L138-L144)
+
+### bigcommerce/form/redirect_url
+
+
+Filter the redirect URL after a form submission.
+
+Return `false` to abort the redirect.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`url` | `string` | The destination URL of the redirect.
+
+Source: [src/BigCommerce/Forms/Form_Redirect.php](BigCommerce/Forms/Form_Redirect.php), [line 23](BigCommerce/Forms/Form_Redirect.php#L23-L29)
+
+### bigcommerce/forms/show_messages
+
+Source: [src/BigCommerce/Forms/Messages.php](BigCommerce/Forms/Messages.php), [line 41](BigCommerce/Forms/Messages.php#L41-L41)
+
+### bigcommerce/forms/messages
+
+
+Filter the feedback messages that will be rendered.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`messages` | `string` | The rendered messages.
+
+Source: [src/BigCommerce/Forms/Messages.php](BigCommerce/Forms/Messages.php), [line 45](BigCommerce/Forms/Messages.php#L45-L50)
+
+Source: [src/BigCommerce/Templates/Review_Form.php](BigCommerce/Templates/Review_Form.php), [line 101](BigCommerce/Templates/Review_Form.php#L101-L106)
+
+### bigcommerce/forms/show_error_messages
+
+Source: [src/BigCommerce/Forms/Messages.php](BigCommerce/Forms/Messages.php), [line 97](BigCommerce/Forms/Messages.php#L97-L97)
+
+### bigcommerce/forms/show_success_messages
+
+Source: [src/BigCommerce/Forms/Messages.php](BigCommerce/Forms/Messages.php), [line 139](BigCommerce/Forms/Messages.php#L139-L139)
+
+### bigcommerce/messages/success/arguments
+
+
+Filter the arguments passed to the success message template.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`args` | `array` | The arguments that will be passed.
+`data` | `array` | The data that was stored with the message.
+
+Source: [src/BigCommerce/Forms/Messages.php](BigCommerce/Forms/Messages.php), [line 150](BigCommerce/Forms/Messages.php#L150-L156)
+
+### bigcommerce/form/delete_address/errors
+
+
+Filters delete address form errors.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`errors` | `\WP_Error` | WP error.
+`submission` | `array` | Submitted data.
+
+Source: [src/BigCommerce/Forms/Delete_Address_Handler.php](BigCommerce/Forms/Delete_Address_Handler.php), [line 67](BigCommerce/Forms/Delete_Address_Handler.php#L67-L73)
+
+### bigcommerce/user/default_role
+
+
+This filter is documented in src/BigCommerce/Accounts/Login.php
+
+**Arguments**
+
+No arguments.
+
+Source: [src/BigCommerce/Forms/Registration_Handler.php](BigCommerce/Forms/Registration_Handler.php), [line 152](BigCommerce/Forms/Registration_Handler.php#L152-L153)
+
+Source: [src/BigCommerce/Accounts/Login.php](BigCommerce/Accounts/Login.php), [line 238](BigCommerce/Accounts/Login.php#L238-L243)
+
+Source: [src/BigCommerce/Accounts/Login.php](BigCommerce/Accounts/Login.php), [line 454](BigCommerce/Accounts/Login.php#L454-L459)
+
+Source: [src/BigCommerce/Webhooks/Customer/Customer_Creator.php](BigCommerce/Webhooks/Customer/Customer_Creator.php), [line 62](BigCommerce/Webhooks/Customer/Customer_Creator.php#L62-L67)
+
+### bigcommerce/form/registration/success_message
+
+
+The message to display when an account is created
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`message` | `string` | 
+
+Source: [src/BigCommerce/Forms/Registration_Handler.php](BigCommerce/Forms/Registration_Handler.php), [line 170](BigCommerce/Forms/Registration_Handler.php#L170-L175)
+
+### bigcommerce/form/registration/errors
+
+
+Filters update registration form errors.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`errors` | `\WP_Error` | WP error.
+`submission` | `array` | Submitted data.
+
+Source: [src/BigCommerce/Forms/Registration_Handler.php](BigCommerce/Forms/Registration_Handler.php), [line 274](BigCommerce/Forms/Registration_Handler.php#L274-L280)
+
+### bigcommerce/form/currency_switch/success_message
+
+
+The message to display on currency switch
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`message` | `string` | 
+
+Source: [src/BigCommerce/Forms/Switch_Currency_Handler.php](BigCommerce/Forms/Switch_Currency_Handler.php), [line 97](BigCommerce/Forms/Switch_Currency_Handler.php#L97-L102)
+
+### bigcommerce/form/switch_currency/errors
+
+Source: [src/BigCommerce/Forms/Switch_Currency_Handler.php](BigCommerce/Forms/Switch_Currency_Handler.php), [line 146](BigCommerce/Forms/Switch_Currency_Handler.php#L146-L146)
+
+### bigcommerce/form/review/status
+
+Source: [src/BigCommerce/Forms/Product_Review_Handler.php](BigCommerce/Forms/Product_Review_Handler.php), [line 74](BigCommerce/Forms/Product_Review_Handler.php#L74-L74)
+
+### bigcommerce/form/review/created_message
+
+
+Filters review form created message.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`message` | `string` | Message displayed after review submission.
+
+Source: [src/BigCommerce/Forms/Product_Review_Handler.php](BigCommerce/Forms/Product_Review_Handler.php), [line 90](BigCommerce/Forms/Product_Review_Handler.php#L90-L95)
+
+### bigcommerce/product/reviews/show_form
+
+Source: [src/BigCommerce/Forms/Product_Review_Handler.php](BigCommerce/Forms/Product_Review_Handler.php), [line 110](BigCommerce/Forms/Product_Review_Handler.php#L110-L110)
+
+Source: [src/BigCommerce/Templates/Product_Reviews.php](BigCommerce/Templates/Product_Reviews.php), [line 73](BigCommerce/Templates/Product_Reviews.php#L73-L73)
+
+### bigcommerce/form/review/errors
+
+
+Filters update review form errors.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`errors` | `\WP_Error` | WP error.
+`submission` | `array` | Submitted data.
+
+Source: [src/BigCommerce/Forms/Product_Review_Handler.php](BigCommerce/Forms/Product_Review_Handler.php), [line 142](BigCommerce/Forms/Product_Review_Handler.php#L142-L148)
+
+### bigcommerce/form/profile/success_message
+
+
+Filters profile form success message.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`message` | `string` | Profile form success message.
+
+Source: [src/BigCommerce/Forms/Update_Profile_Handler.php](BigCommerce/Forms/Update_Profile_Handler.php), [line 93](BigCommerce/Forms/Update_Profile_Handler.php#L93-L98)
+
+### bigcommerce/form/update_profile/errors
+
+
+Filters update profile form errors.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`errors` | `\WP_Error` | WP error.
+`submission` | `array` | Submitted data.
+
+Source: [src/BigCommerce/Forms/Update_Profile_Handler.php](BigCommerce/Forms/Update_Profile_Handler.php), [line 157](BigCommerce/Forms/Update_Profile_Handler.php#L157-L163)
+
+### bigcommerce/form/gift_certificate/success_message
+
+
+The message to display when a gift certificate is added to the cart
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`message` | `string` | 
+
+Source: [src/BigCommerce/Forms/Purchase_Gift_Certificate_Handler.php](BigCommerce/Forms/Purchase_Gift_Certificate_Handler.php), [line 110](BigCommerce/Forms/Purchase_Gift_Certificate_Handler.php#L110-L115)
+
+### bigcommerce/form/gift_certificate/errors
+
+
+Filters update gift certificates form errors.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`errors` | `\WP_Error` | WP error.
+`submission` | `array` | Submitted data.
+
+Source: [src/BigCommerce/Forms/Purchase_Gift_Certificate_Handler.php](BigCommerce/Forms/Purchase_Gift_Certificate_Handler.php), [line 199](BigCommerce/Forms/Purchase_Gift_Certificate_Handler.php#L199-L205)
+
+### bigcommerce/gift_certificates/theme
+
+
+Filters gift certificates theme.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`theme` | `string` | Theme.
+
+Source: [src/BigCommerce/Forms/Purchase_Gift_Certificate_Handler.php](BigCommerce/Forms/Purchase_Gift_Certificate_Handler.php), [line 223](BigCommerce/Forms/Purchase_Gift_Certificate_Handler.php#L223-L228)
+
+### bigcommerce/pages/matching_page_candidates
+
+
+Filters pages matching page candidates.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`post_ids` | `array` | Post ids.
+`name` | `string` | Name.
+
+Source: [src/BigCommerce/Pages/Shipping_Returns_Page.php](BigCommerce/Pages/Shipping_Returns_Page.php), [line 83](BigCommerce/Pages/Shipping_Returns_Page.php#L83-L89)
+
+Source: [src/BigCommerce/Pages/Required_Page.php](BigCommerce/Pages/Required_Page.php), [line 208](BigCommerce/Pages/Required_Page.php#L208-L211)
+
+Source: [src/BigCommerce/Pages/Checkout_Complete_Page.php](BigCommerce/Pages/Checkout_Complete_Page.php), [line 70](BigCommerce/Pages/Checkout_Complete_Page.php#L70-L73)
+
+### bigcommerce/pages/insert_post_args
+
+
+Filters pages insert post arguments.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`args` | `array` | Arguments.
+`name` | `string` | Name.
+
+Source: [src/BigCommerce/Pages/Required_Page.php](BigCommerce/Pages/Required_Page.php), [line 223](BigCommerce/Pages/Required_Page.php#L223-L229)
+
+### wp_edit_nav_menu_walker
+
+
+This filter is documented in wp-admin/includes/nav-menu.php
+
+**Arguments**
+
+No arguments.
+
+Source: [src/BigCommerce/Nav_Menu/Nav_Items_Meta_Box.php](BigCommerce/Nav_Menu/Nav_Items_Meta_Box.php), [line 204](BigCommerce/Nav_Menu/Nav_Items_Meta_Box.php#L204-L205)
+
+### bigcommerce/gql/query_file_path
+
+Source: [src/BigCommerce/GraphQL/GraphQL_Processor.php](BigCommerce/GraphQL/GraphQL_Processor.php), [line 280](BigCommerce/GraphQL/GraphQL_Processor.php#L280-L280)
+
+### bigcommerce/settings/currency/auto-format
+
+
+Filter whether to apply auto-formatting to currencies.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`auto_format` | `bool` | Whether to enable auto-formatting.
+
+Source: [src/BigCommerce/Currency/Formatter_Factory.php](BigCommerce/Currency/Formatter_Factory.php), [line 49](BigCommerce/Currency/Formatter_Factory.php#L49-L54)
+
+### bigcommerce/currency/cookie_lifetime
+
+
+Filters the lifetime of the currency code cookie.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`lifetime` | `int` | The cookie lifespan in seconds.
+
+Source: [src/BigCommerce/Currency/Currency.php](BigCommerce/Currency/Currency.php), [line 93](BigCommerce/Currency/Currency.php#L93-L98)
+
+### bigcommerce/product/reviews/show_reviews
+
+Source: [src/BigCommerce/Templates/Product_Single.php](BigCommerce/Templates/Product_Single.php), [line 157](BigCommerce/Templates/Product_Single.php#L157-L157)
+
+### bigcommerce/template/wishlist/user/image_size
+
+Source: [src/BigCommerce/Templates/Wishlist_Product.php](BigCommerce/Templates/Wishlist_Product.php), [line 46](BigCommerce/Templates/Wishlist_Product.php#L46-L46)
+
+### bigcommerce/rest/proxy_base
+
+
+Filters the REST base use for proxy API requests.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`` | `string` | Default 'bc/v3'.
+
+Source: [src/BigCommerce/Container/Proxy.php](BigCommerce/Container/Proxy.php), [line 76](BigCommerce/Container/Proxy.php#L76-L81)
+
+Source: [src/BigCommerce/Templates/Amp_Cart_Summary.php](BigCommerce/Templates/Amp_Cart_Summary.php), [line 34](BigCommerce/Templates/Amp_Cart_Summary.php#L34-L34)
+
+Source: [src/BigCommerce/Templates/Amp_Cart_items.php](BigCommerce/Templates/Amp_Cart_items.php), [line 37](BigCommerce/Templates/Amp_Cart_items.php#L37-L37)
+
+### bigcommerce/product/inventory/should_display
+
+
+Filter whether to display inventory for a product
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`show` | `bool` | Whether to show the inventory level
+`product` | `\BigCommerce\Post_Types\Product\Product` | The product being displayed
+
+Source: [src/BigCommerce/Templates/Inventory_Level.php](BigCommerce/Templates/Inventory_Level.php), [line 76](BigCommerce/Templates/Inventory_Level.php#L76-L82)
+
+### bigcommerce/address/default_state
+
+
+This filter is documented in src/BigCommerce/Templates/Address_Form.php
+
+**Arguments**
+
+No arguments.
+
+Source: [src/BigCommerce/Settings/Sections/New_Account_Section.php](BigCommerce/Settings/Sections/New_Account_Section.php), [line 123](BigCommerce/Settings/Sections/New_Account_Section.php#L123-L126)
+
+Source: [src/BigCommerce/Templates/Address_Form.php](BigCommerce/Templates/Address_Form.php), [line 43](BigCommerce/Templates/Address_Form.php#L43-L43)
+
+Source: [src/BigCommerce/Templates/Registration_Form.php](BigCommerce/Templates/Registration_Form.php), [line 38](BigCommerce/Templates/Registration_Form.php#L38-L38)
+
+### bigcommerce/address/default_country
+
+
+This filter is documented in src/BigCommerce/Templates/Address_Form.php
+
+**Arguments**
+
+No arguments.
+
+Source: [src/BigCommerce/Settings/Sections/New_Account_Section.php](BigCommerce/Settings/Sections/New_Account_Section.php), [line 127](BigCommerce/Settings/Sections/New_Account_Section.php#L127-L130)
+
+Source: [src/BigCommerce/Templates/Address_Form.php](BigCommerce/Templates/Address_Form.php), [line 50](BigCommerce/Templates/Address_Form.php#L50-L50)
+
+Source: [src/BigCommerce/Templates/Registration_Form.php](BigCommerce/Templates/Registration_Form.php), [line 42](BigCommerce/Templates/Registration_Form.php#L42-L42)
+
+Source: [src/BigCommerce/Settings/Sections/New_Account_Section.php](BigCommerce/Settings/Sections/New_Account_Section.php), [line 155](BigCommerce/Settings/Sections/New_Account_Section.php#L155-L158)
+
+### bigcommerce/countries/data
+
+
+Filters countries data.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`countries` | `array` | Countries.
+
+Source: [src/BigCommerce/Templates/Address_Form.php](BigCommerce/Templates/Address_Form.php), [line 74](BigCommerce/Templates/Address_Form.php#L74-L79)
+
+Source: [src/BigCommerce/Templates/Shipping_Methods.php](BigCommerce/Templates/Shipping_Methods.php), [line 33](BigCommerce/Templates/Shipping_Methods.php#L33-L33)
+
+Source: [src/BigCommerce/Templates/Registration_Form.php](BigCommerce/Templates/Registration_Form.php), [line 49](BigCommerce/Templates/Registration_Form.php#L49-L52)
+
+Source: [src/BigCommerce/Settings/Sections/New_Account_Section.php](BigCommerce/Settings/Sections/New_Account_Section.php), [line 183](BigCommerce/Settings/Sections/New_Account_Section.php#L183-L186)
+
+### bigcommerce/template/gallery/image_size
+
+
+Filter the image size used for product gallery images
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`size` | `string` | The image size to use
+
+Source: [src/BigCommerce/Templates/Product_Gallery.php](BigCommerce/Templates/Product_Gallery.php), [line 54](BigCommerce/Templates/Product_Gallery.php#L54-L59)
+
+Source: [src/BigCommerce/Templates/Product_Options.php](BigCommerce/Templates/Product_Options.php), [line 247](BigCommerce/Templates/Product_Options.php#L247-L250)
+
+Source: [src/BigCommerce/Shortcodes/Product_Components.php](BigCommerce/Shortcodes/Product_Components.php), [line 134](BigCommerce/Shortcodes/Product_Components.php#L134-L139)
+
+### bigcommerce/template/gallery/thumbnail_size
+
+
+Filter the image size used for product gallery image thumbnails
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`size` | `string` | The image size to use
+
+Source: [src/BigCommerce/Templates/Product_Gallery.php](BigCommerce/Templates/Product_Gallery.php), [line 77](BigCommerce/Templates/Product_Gallery.php#L77-L82)
+
+### bigcommerce/template/gallery/zoom_size
+
+
+Filter the image size used for product gallery image thumbnails
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`size` | `string` | The image size to use
+
+Source: [src/BigCommerce/Templates/Product_Gallery.php](BigCommerce/Templates/Product_Gallery.php), [line 86](BigCommerce/Templates/Product_Gallery.php#L86-L91)
+
+Source: [src/BigCommerce/Templates/Product_Options.php](BigCommerce/Templates/Product_Options.php), [line 254](BigCommerce/Templates/Product_Options.php#L254-L257)
+
+### bigcommerce/wishlist/detail/actions
+
+
+Filter the action links that are displayed on a wishlist
+detail page
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`actions` | `string[]` | The rendered action links
+`wishlist` | `\BigCommerce\Accounts\Wishlists\Wishlist` | The wishlist being rendered
+
+Source: [src/BigCommerce/Templates/Wishlist_Detail_Header.php](BigCommerce/Templates/Wishlist_Detail_Header.php), [line 74](BigCommerce/Templates/Wishlist_Detail_Header.php#L74-L81)
+
+### bigcommerce/template/image/fallback
+
+
+Filter the fallback image for products without a featured image
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`image` | `string` | The fallback image HTML
+
+Source: [src/BigCommerce/Templates/Fallback_Image.php](BigCommerce/Templates/Fallback_Image.php), [line 47](BigCommerce/Templates/Fallback_Image.php#L47-L52)
+
+### bigcommerce/wishlist/list/actions
+
+
+Filter the action links that are displayed on a wishlist
+detail page
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`actions` | `string[]` | The rendered action links
+`wishlist` | `\BigCommerce\Accounts\Wishlists\Wishlist` | The wishlist being rendered
+
+Source: [src/BigCommerce/Templates/Wishlist_List_Row.php](BigCommerce/Templates/Wishlist_List_Row.php), [line 72](BigCommerce/Templates/Wishlist_List_Row.php#L72-L79)
+
+### bigcommerce/template/directory/theme
+
+
+This filter is documented in src/BigCommerce/Templates/Controller.php
+
+**Arguments**
+
+No arguments.
+
+Source: [src/BigCommerce/Templates/Template_Override.php](BigCommerce/Templates/Template_Override.php), [line 215](BigCommerce/Templates/Template_Override.php#L215-L218)
+
+Source: [src/BigCommerce/Templates/Template_Override.php](BigCommerce/Templates/Template_Override.php), [line 164](BigCommerce/Templates/Template_Override.php#L164-L164)
+
+Source: [src/BigCommerce/Templates/Controller.php](BigCommerce/Templates/Controller.php), [line 138](BigCommerce/Templates/Controller.php#L138-L143)
+
+Source: [src/BigCommerce/Settings/Sections/Troubleshooting_Diagnostics.php](BigCommerce/Settings/Sections/Troubleshooting_Diagnostics.php), [line 565](BigCommerce/Settings/Sections/Troubleshooting_Diagnostics.php#L565-L570)
+
+Source: [src/BigCommerce/Settings/Sections/Troubleshooting_Diagnostics.php](BigCommerce/Settings/Sections/Troubleshooting_Diagnostics.php), [line 658](BigCommerce/Settings/Sections/Troubleshooting_Diagnostics.php#L658-L661)
+
+Source: [src/BigCommerce/Amp/Amp_Template_Override.php](BigCommerce/Amp/Amp_Template_Override.php), [line 53](BigCommerce/Amp/Amp_Template_Override.php#L53-L59)
+
+### bigcommerce/template/directory/plugin
+
+
+This filter is documented in src/BigCommerce/Templates/Controller.php
+
+**Arguments**
+
+No arguments.
+
+Source: [src/BigCommerce/Templates/Template_Override.php](BigCommerce/Templates/Template_Override.php), [line 223](BigCommerce/Templates/Template_Override.php#L223-L226)
+
+Source: [src/BigCommerce/Templates/Controller.php](BigCommerce/Templates/Controller.php), [line 144](BigCommerce/Templates/Controller.php#L144-L149)
+
+Source: [src/BigCommerce/Amp/Amp_Template_Override.php](BigCommerce/Amp/Amp_Template_Override.php), [line 61](BigCommerce/Amp/Amp_Template_Override.php#L61-L67)
+
+### bigcommerce/template/path
+
+
+Filter the path to a template
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`path` | `string` | The absolute path to the template
+`relative_path` | `string` | The relative path of the requested template
+
+Source: [src/BigCommerce/Templates/Controller.php](BigCommerce/Templates/Controller.php), [line 161](BigCommerce/Templates/Controller.php#L161-L167)
+
+Source: [src/BigCommerce/Templates/Template_Override.php](BigCommerce/Templates/Template_Override.php), [line 231](BigCommerce/Templates/Template_Override.php#L231-L231)
+
+### bigcommerce/template/product_archive/thumbnail_size
+
+Source: [src/BigCommerce/Templates/Product_Archive.php](BigCommerce/Templates/Product_Archive.php), [line 37](BigCommerce/Templates/Product_Archive.php#L37-L37)
+
+### bigcommerce/template/product_list/none_option_label
+
+Source: [src/BigCommerce/Templates/Option_Types/Option_Product_List.php](BigCommerce/Templates/Option_Types/Option_Product_List.php), [line 57](BigCommerce/Templates/Option_Types/Option_Product_List.php#L57-L57)
+
+### bigcommerce/cart/continue_shopping_url
+
+
+Filter the destination of the Continue Shopping link in an empty cart
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`url` | `string` | 
+
+Source: [src/BigCommerce/Templates/Cart_Empty.php](BigCommerce/Templates/Cart_Empty.php), [line 45](BigCommerce/Templates/Cart_Empty.php#L45-L50)
+
+### bigcommerce/cart/continue_shopping_text
+
+
+Filter the wording of the Continue Shopping link in an empty cart
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`link_text` | `string` | 
+
+Source: [src/BigCommerce/Templates/Cart_Empty.php](BigCommerce/Templates/Cart_Empty.php), [line 56](BigCommerce/Templates/Cart_Empty.php#L56-L61)
+
+### bigcommerce/template/order_history/image_size
+
+Source: [src/BigCommerce/Templates/Order_Summary.php](BigCommerce/Templates/Order_Summary.php), [line 52](BigCommerce/Templates/Order_Summary.php#L52-L52)
+
+Source: [src/BigCommerce/Templates/Order_Product.php](BigCommerce/Templates/Order_Product.php), [line 41](BigCommerce/Templates/Order_Product.php#L41-L41)
+
+### bigcommerce/template/order_history/date_format
+
+Source: [src/BigCommerce/Templates/Order_Summary.php](BigCommerce/Templates/Order_Summary.php), [line 58](BigCommerce/Templates/Order_Summary.php#L58-L58)
+
+### bigcommerce/order/include_tax_in_subtotal
+
+
+Filters order included tax subtotal.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`bool` | `bool` | True or false, default false.
+`order` | `array` | Order.
+
+Source: [src/BigCommerce/Templates/Order_Summary.php](BigCommerce/Templates/Order_Summary.php), [line 73](BigCommerce/Templates/Order_Summary.php#L73-L79)
+
+### bigcommerce/order/payment_method_label
+
+
+Filter the label displayed for a payment method
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`label` | `string` | The label to display
+`method` | `string` | The payment method name
+
+Source: [src/BigCommerce/Templates/Order_Summary.php](BigCommerce/Templates/Order_Summary.php), [line 239](BigCommerce/Templates/Order_Summary.php#L239-L245)
+
+### bigcommerce/order/support_email
+
+
+Filter the support email address displayed on order detail pages.
+
+If empty, no email will display.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`email_address` | `string` | The email address to display, defaults to the value set on the BigCommerce setting screen
+
+Source: [src/BigCommerce/Templates/Order_Summary.php](BigCommerce/Templates/Order_Summary.php), [line 249](BigCommerce/Templates/Order_Summary.php#L249-L255)
+
+### bigcommerce/query/default_sort
+
+
+This filter is documents in src/BigCommerce/Post_Types/Product/Query.php
+
+**Arguments**
+
+No arguments.
+
+Source: [src/BigCommerce/Templates/Refinery.php](BigCommerce/Templates/Refinery.php), [line 108](BigCommerce/Templates/Refinery.php#L108-L111)
+
+Source: [src/BigCommerce/Post_Types/Product/Query.php](BigCommerce/Post_Types/Product/Query.php), [line 76](BigCommerce/Post_Types/Product/Query.php#L76-L81)
+
+### bigcommerce/template/controller_factory
+
+
+Filter the factory class that instantiates template controllers
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`factory` | `\BigCommerce\Templates\Controller_Factory` | The instance of the factory class
+`classname` | `string` | The name of the requested class
+
+Source: [src/BigCommerce/Templates/Controller.php](BigCommerce/Templates/Controller.php), [line 39](BigCommerce/Templates/Controller.php#L39-L45)
+
+### bigcommerce/template/options
+
+
+Filter the options passed in to a template controller
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`options` | `array` | The options for the template
+`template` | `string` | The template path
+
+Source: [src/BigCommerce/Templates/Controller.php](BigCommerce/Templates/Controller.php), [line 61](BigCommerce/Templates/Controller.php#L61-L67)
+
+### bigcommerce/template={$this->template}/options
+
+
+Filter the options passed in to a template controller
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`options` | `array` | The options for the template
+`template` | `string` | The template path
+
+Source: [src/BigCommerce/Templates/Controller.php](BigCommerce/Templates/Controller.php), [line 68](BigCommerce/Templates/Controller.php#L68-L74)
+
+### bigcommerce/template/data
+
+
+Filter the data passed in to a template
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`data` | `array` | The data for the template
+`template` | `string` | The template path
+`options` | `array` | The options from the template controller
+
+Source: [src/BigCommerce/Templates/Controller.php](BigCommerce/Templates/Controller.php), [line 94](BigCommerce/Templates/Controller.php#L94-L101)
+
+### bigcommerce/template={$this->template}/data
+
+
+Filter the data passed in to a template
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`data` | `array` | The data for the template
+`template` | `string` | The template path
+`options` | `array` | The options from the template controller
+
+Source: [src/BigCommerce/Templates/Controller.php](BigCommerce/Templates/Controller.php), [line 102](BigCommerce/Templates/Controller.php#L102-L109)
+
+### bigcommerce/template={$this->template}/output
+
+
+Filter the rendered output of the template
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`output` | `string` | The rendered template
+`template` | `string` | The template path
+`data` | `array` | The data passed to the template
+`options` | `array` | The options from the template controller
+
+Source: [src/BigCommerce/Templates/Controller.php](BigCommerce/Templates/Controller.php), [line 111](BigCommerce/Templates/Controller.php#L111-L119)
+
+### bigcommerce/template={$this->template}/path
+
+
+Filter the path to a template
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`path` | `string` | The absolute path to the template
+`relative_path` | `string` | The relative path of the requested template
+
+Source: [src/BigCommerce/Templates/Controller.php](BigCommerce/Templates/Controller.php), [line 168](BigCommerce/Templates/Controller.php#L168-L174)
+
+### bigcommerce/template/wrapper/tag
+
+Source: [src/BigCommerce/Templates/Controller.php](BigCommerce/Templates/Controller.php), [line 195](BigCommerce/Templates/Controller.php#L195-L195)
+
+### bigcommerce/template/wrapper/classes
+
+
+Filter the HTML tag of the wrapper for a template
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`classes` | `string[]` | An array of class names
+`template` | `string` | The template path
+
+Source: [src/BigCommerce/Templates/Controller.php](BigCommerce/Templates/Controller.php), [line 200](BigCommerce/Templates/Controller.php#L200-L206)
+
+### bigcommerce/template/wrapper/attributes
+
+
+Filter the HTML tag attributes of the wrapper for a template.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`attributes` | `string[]` | An array of attribute names.
+`template` | `string` | The template path.
+
+Source: [src/BigCommerce/Templates/Controller.php](BigCommerce/Templates/Controller.php), [line 209](BigCommerce/Templates/Controller.php#L209-L215)
+
+### bigcommerce/units/mass
+
+
+Filters units mass.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`mass_unit` | `string` | Mass unit.
+
+Source: [src/BigCommerce/Templates/Product_Specs.php](BigCommerce/Templates/Product_Specs.php), [line 40](BigCommerce/Templates/Product_Specs.php#L40-L45)
+
+### bigcommerce/units/length
+
+
+Filters units mass.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`length_unit` | `string` | Length unit.
+
+Source: [src/BigCommerce/Templates/Product_Specs.php](BigCommerce/Templates/Product_Specs.php), [line 46](BigCommerce/Templates/Product_Specs.php#L46-L51)
+
+### bigcommerce/product/specs
+
+
+Filters product specs.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`specs` | `array` | Specs.
+`product` | `\BigCommerce\Post_Types\Product\Product` | Product.
+
+Source: [src/BigCommerce/Templates/Product_Specs.php](BigCommerce/Templates/Product_Specs.php), [line 76](BigCommerce/Templates/Product_Specs.php#L76-L82)
+
+### bigcommerce/gift_certificates/themes
+
+
+Filters gift certificates themes.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`gift_certificate_themes` | `array` | Themes.
+
+Source: [src/BigCommerce/Templates/Gift_Certificate_Form.php](BigCommerce/Templates/Gift_Certificate_Form.php), [line 57](BigCommerce/Templates/Gift_Certificate_Form.php#L57-L87)
+
+### bigcommerce/product/variant_price
+
+Source: [src/BigCommerce/Templates/Product_Options.php](BigCommerce/Templates/Product_Options.php), [line 196](BigCommerce/Templates/Product_Options.php#L196-L196)
+
+### bigcommerce/template/featured_image/size
+
+Source: [src/BigCommerce/Templates/Product_Featured_Image.php](BigCommerce/Templates/Product_Featured_Image.php), [line 34](BigCommerce/Templates/Product_Featured_Image.php#L34-L34)
+
+### bigcommerce/form/state/errors
+
+
+Filters form state errors.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`error_data` | `array\|null` | Error data.
+
+Source: [src/BigCommerce/Templates/Form_Controller.php](BigCommerce/Templates/Form_Controller.php), [line 18](BigCommerce/Templates/Form_Controller.php#L18-L23)
+
+### bigcommerce_modified_product_ids
+
+
+Filters modified product ids.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`modified_product_ids` | `array` | Product ids.
+
+Source: [src/BigCommerce/Import/Processors/Listing_Fetcher.php](BigCommerce/Import/Processors/Listing_Fetcher.php), [line 65](BigCommerce/Import/Processors/Listing_Fetcher.php#L65-L70)
+
+### bigcommerce/import/product/post_array
+
+
+Filters the product post array before saving.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`postarr` | `array` | The post data array.
+
+Source: [src/BigCommerce/Import/Importers/Products/Product_Saver.php](BigCommerce/Import/Importers/Products/Product_Saver.php), [line 120](BigCommerce/Import/Importers/Products/Product_Saver.php#L120-L125)
+
+### bigcommerce/import/strategy/needs_refresh
+
+
+Filter whether the product should be refreshed
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`response` | `bool` | Whether the product should be refreshed
+`post_id` | `int` | The ID of the product post
+`product` | `\BigCommerce\Api\v3\Model\Product` | The product data from the API
+`listing` | `\BigCommerce\Api\v3\Model\Listing` | The channel listing data from the API
+`version` | `string` | The version of the importer
+
+Source: [src/BigCommerce/Import/Importers/Products/Product_Strategy_Factory.php](BigCommerce/Import/Importers/Products/Product_Strategy_Factory.php), [line 125](BigCommerce/Import/Importers/Products/Product_Strategy_Factory.php#L125-L134)
+
+### bigcommerce/import/product/menu_order
+
+
+Filter the menu order assigned to the product, based on the
+source product's sort_order property.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`menu_order` | `int` | The menu order to assign
+`product` | `\BigCommerce\Api\v3\Model\Product` | The source product
+
+Source: [src/BigCommerce/Import/Importers/Products/Product_Builder.php](BigCommerce/Import/Importers/Products/Product_Builder.php), [line 167](BigCommerce/Import/Importers/Products/Product_Builder.php#L167-L174)
+
+### bigcommerce/import/product/import_images
+
+Source: [src/BigCommerce/Import/Importers/Products/Product_Builder.php](BigCommerce/Import/Importers/Products/Product_Builder.php), [line 281](BigCommerce/Import/Importers/Products/Product_Builder.php#L281-L281)
+
+### bigcommerce/sku/normalized/segment/num_of_characters
+
+
+Filters normalized SKU segment's no of chars.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`num_of_characters` | `int` | No of chars.
+
+Source: [src/BigCommerce/Import/Importers/Products/Product_Builder.php](BigCommerce/Import/Importers/Products/Product_Builder.php), [line 470](BigCommerce/Import/Importers/Products/Product_Builder.php#L470-L475)
+
+### bigcommerce/sku/normalized/empty
+
+
+Filters normalized empty SKU.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`repeated_string` | `string` | empty sku.
+
+Source: [src/BigCommerce/Import/Importers/Products/Product_Builder.php](BigCommerce/Import/Importers/Products/Product_Builder.php), [line 477](BigCommerce/Import/Importers/Products/Product_Builder.php#L477-L482)
+
+### bigcommerce/sku/normalized
+
+
+Filters SKU normalized.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`normalized_sku_segments` | `array` | SKU segments.
+`sku` | `string` | SKU.
+
+Source: [src/BigCommerce/Import/Importers/Products/Product_Builder.php](BigCommerce/Import/Importers/Products/Product_Builder.php), [line 485](BigCommerce/Import/Importers/Products/Product_Builder.php#L485-L491)
+
+### bigcommerce/import/strategy/term/needs_refresh
+
+
+Filter whether the term should be refreshed
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`response` | `bool` | Whether the term should be refreshed
+`term_id` | `int` | The ID of the term
+`bc_term` | `array` | The term data from the API
+`version` | `string` | The version of the importer
+
+Source: [src/BigCommerce/Import/Importers/Terms/Term_Strategy_Factory.php](BigCommerce/Import/Importers/Terms/Term_Strategy_Factory.php), [line 87](BigCommerce/Import/Importers/Terms/Term_Strategy_Factory.php#L87-L95)
+
+### bigcommerce/import/term/data
+
+Source: [src/BigCommerce/Import/Importers/Terms/Term_Saver.php](BigCommerce/Import/Importers/Terms/Term_Saver.php), [line 230](BigCommerce/Import/Importers/Terms/Term_Saver.php#L230-L230)
+
+### bigcommerce/customer/group_info_cache_expiration
+
+
+Filter the duration of the group info cache.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`expiration` | `int` | Time until expiration, in seconds.
+`group_id` | `int` | The ID of the group being cached.
+
+Source: [src/BigCommerce/Accounts/Customer_Group_Proxy.php](BigCommerce/Accounts/Customer_Group_Proxy.php), [line 72](BigCommerce/Accounts/Customer_Group_Proxy.php#L72-L78)
+
+### bigcommerce/customer/group_info
+
+
+Filters customer group info.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`default_group` | `array` | The default group data.
+`group_id` | `int` | The group ID.
+
+Source: [src/BigCommerce/Accounts/Customer_Group.php](BigCommerce/Accounts/Customer_Group.php), [line 41](BigCommerce/Accounts/Customer_Group.php#L41-L47)
+
+### bigcommerce/customer/create/args
+
+
+Filters customer create arguments.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`new_customer_data` | `array` | Customer data.
+
+Source: [src/BigCommerce/Accounts/Login.php](BigCommerce/Accounts/Login.php), [line 103](BigCommerce/Accounts/Login.php#L103-L108)
+
+Source: [src/BigCommerce/Accounts/Register.php](BigCommerce/Accounts/Register.php), [line 132](BigCommerce/Accounts/Register.php#L132-L137)
+
+### bigcommerce/account/profile/permalink
+
+
+Filter the URL to the account profile page
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`url` | `string` | The account profile page URL
+
+Source: [src/BigCommerce/Accounts/Login.php](BigCommerce/Accounts/Login.php), [line 355](BigCommerce/Accounts/Login.php#L355-L360)
+
+### bigcommerce/accounts/login/delete_missing_user
+
+Source: [src/BigCommerce/Accounts/Login.php](BigCommerce/Accounts/Login.php), [line 540](BigCommerce/Accounts/Login.php#L540-L540)
+
+### bigcommerce/account/do_subnav
+
+Source: [src/BigCommerce/Accounts/Sub_Nav.php](BigCommerce/Accounts/Sub_Nav.php), [line 45](BigCommerce/Accounts/Sub_Nav.php#L45-L45)
+
+### bigcommerce/account/subnav/links
+
+
+Filter the links that show in the account subnav.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`links` | `array[]` | Each link will have the properties:<br>`url` - The URL of the link.<br>`label` - The label of the link.<br>`current` - Whether the link is to the current page.
+
+Source: [src/BigCommerce/Accounts/Sub_Nav.php](BigCommerce/Accounts/Sub_Nav.php), [line 94](BigCommerce/Accounts/Sub_Nav.php#L94-L102)
+
+### bigcommerce/wishlist/items
+
+
+Filter the product IDs in the wishlist
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`product_ids` | `int[]` | The list of product IDs.
+`wishlist` | `\BigCommerce\Accounts\Wishlists\Wishlist` | The wishlist object.
+
+Source: [src/BigCommerce/Accounts/Wishlists/Wishlist.php](BigCommerce/Accounts/Wishlists/Wishlist.php), [line 100](BigCommerce/Accounts/Wishlists/Wishlist.php#L100-L106)
+
+### bigcommerce/wishlist/public-url
+
+
+Filter the URL for a public wishlist
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`url` | `string` | The wishlist URL.
+`wishlist` | `\BigCommerce\Accounts\Wishlists\Wishlist` | The wishlist object.
+
+Source: [src/BigCommerce/Accounts/Wishlists/Wishlist.php](BigCommerce/Accounts/Wishlists/Wishlist.php), [line 144](BigCommerce/Accounts/Wishlists/Wishlist.php#L144-L150)
+
+### bigcommerce/wishlist/user-url
+
+
+Filter the URL for a user to manage a wishlist.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`url` | `string` | The wishlist URL.
+`wishlist` | `\BigCommerce\Accounts\Wishlists\Wishlist` | The wishlist object.
+
+Source: [src/BigCommerce/Accounts/Wishlists/Wishlist.php](BigCommerce/Accounts/Wishlists/Wishlist.php), [line 167](BigCommerce/Accounts/Wishlists/Wishlist.php#L167-L173)
+
+### bigcommerce/wishlist/edit-url
+
+
+Filter the URL for posting an update to a wishlist's settings.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`url` | `string` | The form handler URL.
+`wishlist` | `\BigCommerce\Accounts\Wishlists\Wishlist` | The wishlist object.
+
+Source: [src/BigCommerce/Accounts/Wishlists/Wishlist.php](BigCommerce/Accounts/Wishlists/Wishlist.php), [line 184](BigCommerce/Accounts/Wishlists/Wishlist.php#L184-L190)
+
+### bigcommerce/wishlist/delete-url
+
+
+Filter the URL for deleting a wishlist.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`url` | `string` | The form handler URL.
+`wishlist` | `\BigCommerce\Accounts\Wishlists\Wishlist` | The wishlist object.
+
+Source: [src/BigCommerce/Accounts/Wishlists/Wishlist.php](BigCommerce/Accounts/Wishlists/Wishlist.php), [line 201](BigCommerce/Accounts/Wishlists/Wishlist.php#L201-L207)
+
+### bigcommerce/wishlist/add-item-url
+
+
+Filter the URL for adding an item to a wishlist.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`url` | `string` | The form handler URL.
+`wishlist` | `\BigCommerce\Accounts\Wishlists\Wishlist` | The wishlist object.
+`product_id` | `int` | The ID of the product to add.
+
+Source: [src/BigCommerce/Accounts/Wishlists/Wishlist.php](BigCommerce/Accounts/Wishlists/Wishlist.php), [line 222](BigCommerce/Accounts/Wishlists/Wishlist.php#L222-L229)
+
+### bigcommerce/wishlist/remove-item-url
+
+
+Filter the URL for removing an item from a wishlist.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`url` | `string` | The form handler URL.
+`wishlist` | `\BigCommerce\Accounts\Wishlists\Wishlist` | The wishlist object.
+`product_id` | `int` | The ID of the product to remove.
+
+Source: [src/BigCommerce/Accounts/Wishlists/Wishlist.php](BigCommerce/Accounts/Wishlists/Wishlist.php), [line 244](BigCommerce/Accounts/Wishlists/Wishlist.php#L244-L251)
+
+### bigcommerce/wishlist/create-url
+
+
+Filter the URL for creating a wishlist.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`url` | `string` | The form handler URL.
+
+Source: [src/BigCommerce/Accounts/Wishlists/Wishlist.php](BigCommerce/Accounts/Wishlists/Wishlist.php), [line 262](BigCommerce/Accounts/Wishlists/Wishlist.php#L262-L267)
+
+### bigcommerce/order/products
+
+
+Filters order products
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`products` | `array` | Products.
+`order_id` | `int` | Order ID.
+`customer` | `\BigCommerce\Accounts\Customer` | The Customer object.
+
+Source: [src/BigCommerce/Accounts/Customer.php](BigCommerce/Accounts/Customer.php), [line 245](BigCommerce/Accounts/Customer.php#L245-L252)
+
+### bigcommerce/order/shipping_addresses
+
+
+Filters order shipping addresses
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`addresses` | `array` | The shipping addresses.
+`order_id` | `int` | Order ID.
+`customer` | `\BigCommerce\Accounts\Customer` | The Customer object.
+
+Source: [src/BigCommerce/Accounts/Customer.php](BigCommerce/Accounts/Customer.php), [line 266](BigCommerce/Accounts/Customer.php#L266-L273)
+
+### bigcommerce/customer/empty_profile
+
+
+Filter the base fields found in a customer profile
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`fields` | `array` | 
+
+Source: [src/BigCommerce/Accounts/Customer.php](BigCommerce/Accounts/Customer.php), [line 296](BigCommerce/Accounts/Customer.php#L296-L308)
+
+### bigcommerce/customer/group_id
+
+
+This filter is documented in src/BigCommerce/Accounts/Customer.php
+
+**Arguments**
+
+No arguments.
+
+Source: [src/BigCommerce/Accounts/Customer.php](BigCommerce/Accounts/Customer.php), [line 374](BigCommerce/Accounts/Customer.php#L374-L377)
+
+Source: [src/BigCommerce/Accounts/Customer.php](BigCommerce/Accounts/Customer.php), [line 401](BigCommerce/Accounts/Customer.php#L401-L407)
+
+### bigcommerce/nav/logout/title
+
+
+Filters the title of the Sign Out link in the navigation menu.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`title` | `string` | The menu item title.
+`menu_item` | `\WP_Post` | The menu item, a \WP_Post that has passed through wp_setup_nav_menu_item().
+
+Source: [src/BigCommerce/Accounts/Nav_Menu.php](BigCommerce/Accounts/Nav_Menu.php), [line 58](BigCommerce/Accounts/Nav_Menu.php#L58-L64)
+
+### bigcommerce/nav/account/title
+
+
+Filters the title of the My Account link in the navigation menu.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`title` | `string` | The menu item title.
+`menu_item` | `\WP_Post` | The menu item, a \WP_Post that has passed through wp_setup_nav_menu_item().
+
+Source: [src/BigCommerce/Accounts/Nav_Menu.php](BigCommerce/Accounts/Nav_Menu.php), [line 82](BigCommerce/Accounts/Nav_Menu.php#L82-L88)
+
+### bigcommerce/plugin/providers
+
+
+Filter the service providers the power the plugin
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`providers` | `\BigCommerce\Container\Provider[]` | 
+
+Source: [src/BigCommerce/Plugin.php](BigCommerce/Plugin.php), [line 89](BigCommerce/Plugin.php#L89-L94)
+
+### bigcommerce/plugin/credentials_set
+
+
+Filters the credentials set
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`` | `bool` | false
+
+Source: [src/BigCommerce/Plugin.php](BigCommerce/Plugin.php), [line 126](BigCommerce/Plugin.php#L126-L131)
+
+### widget_title
+
+
+This filter is documented in wp-includes/widgets/class-wp-widget-pages.php
+
+**Arguments**
+
+No arguments.
+
+Source: [src/BigCommerce/Widgets/Currency_Switcher_Widget.php](BigCommerce/Widgets/Currency_Switcher_Widget.php), [line 45](BigCommerce/Widgets/Currency_Switcher_Widget.php#L45-L46)
+
+Source: [src/BigCommerce/Widgets/Product_Category_Widget.php](BigCommerce/Widgets/Product_Category_Widget.php), [line 41](BigCommerce/Widgets/Product_Category_Widget.php#L41-L42)
+
+Source: [src/BigCommerce/Widgets/Mini_Cart_Widget.php](BigCommerce/Widgets/Mini_Cart_Widget.php), [line 43](BigCommerce/Widgets/Mini_Cart_Widget.php#L43-L44)
+
+### bigcommerce/currency/enabled
+
+Source: [src/BigCommerce/Widgets/Currency_Switcher_Widget.php](BigCommerce/Widgets/Currency_Switcher_Widget.php), [line 57](BigCommerce/Widgets/Currency_Switcher_Widget.php#L57-L57)
+
+### bigcommerce/widget/categories/dropdown_args
+
+Source: [src/BigCommerce/Widgets/Product_Category_Widget.php](BigCommerce/Widgets/Product_Category_Widget.php), [line 120](BigCommerce/Widgets/Product_Category_Widget.php#L120-L120)
+
+### bigcommerce/widget/categories/list_args
+
+Source: [src/BigCommerce/Widgets/Product_Category_Widget.php](BigCommerce/Widgets/Product_Category_Widget.php), [line 155](BigCommerce/Widgets/Product_Category_Widget.php#L155-L155)
+
+### bigcommerce/editor/shortcode_button/label
+
+
+Filter the label of the Add Products button.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`label` | `string` | The button label.
+
+Source: [src/BigCommerce/Editor/Add_Products_Button.php](BigCommerce/Editor/Add_Products_Button.php), [line 44](BigCommerce/Editor/Add_Products_Button.php#L44-L49)
+
+### bigcommerce/pricing/customer_group_id
+
+
+Filter the customer group ID passed to the BigCommerce API.
+
+Null to use the default guest group. 0 to use unmodified catalog pricing.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`` | `int\|null` | The customer group ID
+
+Source: [src/BigCommerce/Rest/Pricing_Controller.php](BigCommerce/Rest/Pricing_Controller.php), [line 81](BigCommerce/Rest/Pricing_Controller.php#L81-L87)
+
+### bigcommerce/pricing/request_args
+
+
+Filters pricing request arguments.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`args` | `array` | Arguments.
+`request` | `\WP_REST_Request` | Full details about the request.
+
+Source: [src/BigCommerce/Rest/Pricing_Controller.php](BigCommerce/Rest/Pricing_Controller.php), [line 96](BigCommerce/Rest/Pricing_Controller.php#L96-L102)
+
+### bigcommerce/rest/shortcode/prepare_item_for_response
+
+
+Filters the product data for a response.
 
 **Arguments**
 
@@ -3951,2126 +3162,1231 @@ Argument | Type | Description
 `post` | `\WP_Post` | Post object.
 `request` | `\WP_REST_Request` | Request object.
 
-**Changelog**
+Source: [src/BigCommerce/Rest/Shortcode_Controller.php](BigCommerce/Rest/Shortcode_Controller.php), [line 150](BigCommerce/Rest/Shortcode_Controller.php#L150-L157)
 
-Version | Description
-------- | -----------
-`4.7.0` | 
+### bigcommerce/rest/shortcode/selection
 
-Source: [src/BigCommerce/Editor/Gutenberg/Migrate_Blocks.php](BigCommerce/Editor/Gutenberg/Migrate_Blocks.php), [line 81](BigCommerce/Editor/Gutenberg/Migrate_Blocks.php#L81-L96)
 
-### `the_editor_content`
-
-Filters the content of the editor when using the classic editor.
-
-This filter checks if the content matches the original post content. If it does,
-it will attempt to replace blocks with shortcodes. If the content doesn't match
-the original post content, it returns the unchanged content to avoid unnecessary
-modification.
+Filters rest shortcode selection.
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`content` | `string` | The content of the editor.
-`default_editor` | `string` | The default editor being used.
+`args` | `array` | Arguments.
+`request` | `\WP_REST_Request` | request.
 
-Source: [src/BigCommerce/Editor/Gutenberg/Migrate_Blocks.php](BigCommerce/Editor/Gutenberg/Migrate_Blocks.php), [line 101](BigCommerce/Editor/Gutenberg/Migrate_Blocks.php#L101-L129)
+Source: [src/BigCommerce/Rest/Shortcode_Controller.php](BigCommerce/Rest/Shortcode_Controller.php), [line 199](BigCommerce/Rest/Shortcode_Controller.php#L199-L205)
 
-### `bigcommerce/channel/listing/should_update`
+### bigcommerce/rest/shortcode/query
 
-Filter: Prevents product listings from being updated during import.
 
-Temporarily disables updates to product listings to avoid conflicts.
+Filters rest shortcode query.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`args` | `array` | Arguments.
+`request` | `\WP_REST_Request` | request.
+
+Source: [src/BigCommerce/Rest/Shortcode_Controller.php](BigCommerce/Rest/Shortcode_Controller.php), [line 265](BigCommerce/Rest/Shortcode_Controller.php#L265-L271)
+
+### bigcommerce/rest/products_query
+
+
+Filters rest products query.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`args` | `array` | Arguments.
+`request` | `\WP_REST_Request` | request.
+
+Source: [src/BigCommerce/Rest/Products_Controller.php](BigCommerce/Rest/Products_Controller.php), [line 289](BigCommerce/Rest/Products_Controller.php#L289-L295)
+
+### bigcommerce/rest/products/prepare_item_for_response
+
+
+Filters the product data for a response.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`response` | `\WP_REST_Response` | The response object.
+`post` | `\WP_Post` | Post object.
+`request` | `\WP_REST_Request` | Request object.
+
+Source: [src/BigCommerce/Rest/Products_Controller.php](BigCommerce/Rest/Products_Controller.php), [line 524](BigCommerce/Rest/Products_Controller.php#L524-L531)
+
+### the_content
+
+Source: [src/BigCommerce/Rest/Products_Controller.php](BigCommerce/Rest/Products_Controller.php), [line 600](BigCommerce/Rest/Products_Controller.php#L600-L600)
+
+### bigcommerce/rest/product/content_trim_words_length
+
+Source: [src/BigCommerce/Rest/Products_Controller.php](BigCommerce/Rest/Products_Controller.php), [line 606](BigCommerce/Rest/Products_Controller.php#L606-L606)
+
+### bigcommerce/rest/missing_image
+
+
+Filters rest missing image data.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`missing_image_data` | `array` | Data.
+
+Source: [src/BigCommerce/Rest/Products_Controller.php](BigCommerce/Rest/Products_Controller.php), [line 662](BigCommerce/Rest/Products_Controller.php#L662-L671)
+
+### bigcommerce/rest/image_sizes
+
+
+Filters rest image sizes.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`sizes` | `array` | Sizes.
+
+Source: [src/BigCommerce/Rest/Products_Controller.php](BigCommerce/Rest/Products_Controller.php), [line 826](BigCommerce/Rest/Products_Controller.php#L826-L831)
+
+### bigcommerce/webhooks/registration_args
+
+
+Filter the arguments sent to the BigCommerce API to register a webhook
 
 **Arguments**
 
 No arguments.
 
-Source: [src/BigCommerce/Webhooks/Product/Product_Creator.php](BigCommerce/Webhooks/Product/Product_Creator.php), [line 75](BigCommerce/Webhooks/Product/Product_Creator.php#L75-L82)
+Source: [src/BigCommerce/Webhooks/Webhook.php](BigCommerce/Webhooks/Webhook.php), [line 138](BigCommerce/Webhooks/Webhook.php#L138-L141)
 
-### `bigcommerce/channel/listing/should_delete`
+### bigcommerce/product_description/allowed_html
 
-Filter: Prevents product listings from being deleted during import.
 
-Temporarily disables deletion of product listings to preserve integrity.
+Filters product description's allowed html
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`allowed_html_tags` | `array` | Allowed HTML tags.
+
+Source: [src/BigCommerce/Util/Kses.php](BigCommerce/Util/Kses.php), [line 19](BigCommerce/Util/Kses.php#L19-L37)
+
+### bigcommerce/settings/import_status/current
+
+Source: [src/BigCommerce/Settings/Import_Status.php](BigCommerce/Settings/Import_Status.php), [line 226](BigCommerce/Settings/Import_Status.php#L226-L226)
+
+### bigcommerce/settings/import_status/previous
+
+Source: [src/BigCommerce/Settings/Import_Status.php](BigCommerce/Settings/Import_Status.php), [line 295](BigCommerce/Settings/Import_Status.php#L295-L295)
+
+Source: [src/BigCommerce/Settings/Import_Status.php](BigCommerce/Settings/Import_Status.php), [line 319](BigCommerce/Settings/Import_Status.php#L319-L319)
+
+### bigcommerce/settings/connect_account_url
+
+
+Filters settings connect account url.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`connect_account_url` | `string` | Connect account url.
+
+Source: [src/BigCommerce/Settings/Screens/Welcome_Screen.php](BigCommerce/Settings/Screens/Welcome_Screen.php), [line 42](BigCommerce/Settings/Screens/Welcome_Screen.php#L42-L47)
+
+### bigcommerce/settings/create_account_url
+
+
+Filters settings create account url.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`create_account_url` | `string` | Create account url.
+
+Source: [src/BigCommerce/Settings/Screens/Welcome_Screen.php](BigCommerce/Settings/Screens/Welcome_Screen.php), [line 51](BigCommerce/Settings/Screens/Welcome_Screen.php#L51-L56)
+
+### bigcommerce/settings/credentials_url
+
+
+Filters settings credential url.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`credential_url` | `string` | Credential url.
+
+Source: [src/BigCommerce/Settings/Screens/Welcome_Screen.php](BigCommerce/Settings/Screens/Welcome_Screen.php), [line 60](BigCommerce/Settings/Screens/Welcome_Screen.php#L60-L65)
+
+### bigcommerce/settings/welcome/notices
+
+
+Filter the array of notices and promotions displayed on the plugin
+welcome screen. The expected data is an array of arrays, each
+with a 'title' and 'content' key. The values of those keys
+should be HTML-safe strings.
+
+The 'title' will be output inside an h3 tag. The 'content' will
+be output inside a div tag.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`notices` | `array` | 
+
+Source: [src/BigCommerce/Settings/Screens/Welcome_Screen.php](BigCommerce/Settings/Screens/Welcome_Screen.php), [line 73](BigCommerce/Settings/Screens/Welcome_Screen.php#L73-L84)
+
+### bigcommerce/settings/default_new_menu_name
+
+
+Filter the default name to give to an automatically generated
+navigation menu when the user does not provide a value.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`name` | `string` | The menu name
+
+Source: [src/BigCommerce/Settings/Screens/Nav_Menu_Screen.php](BigCommerce/Settings/Screens/Nav_Menu_Screen.php), [line 178](BigCommerce/Settings/Screens/Nav_Menu_Screen.php#L178-L184)
+
+### bigcommerce/settings/header/welcome_message
+
+
+Filters the message that displays at the top of the settings page
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`welcome_message` | `string` | 
+
+Source: [src/BigCommerce/Settings/Screens/Settings_Screen.php](BigCommerce/Settings/Screens/Settings_Screen.php), [line 36](BigCommerce/Settings/Screens/Settings_Screen.php#L36-L41)
+
+### bigcommerce/api/timeout
+
+
+Filter the API connection timeout
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`timeout` | `int` | The timeout in seconds
+
+Source: [src/BigCommerce/Container/Api.php](BigCommerce/Container/Api.php), [line 181](BigCommerce/Container/Api.php#L181-L186)
+
+Source: [src/BigCommerce/Settings/Screens/Api_Credentials_Screen.php](BigCommerce/Settings/Screens/Api_Credentials_Screen.php), [line 87](BigCommerce/Settings/Screens/Api_Credentials_Screen.php#L87-L87)
+
+### bigcommerce/settings/settings_url
+
+
+Filters settings url.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`settings_url` | `string` | Settings url.
+
+Source: [src/BigCommerce/Settings/Screens/Onboarding_Complete_Screen.php](BigCommerce/Settings/Screens/Onboarding_Complete_Screen.php), [line 83](BigCommerce/Settings/Screens/Onboarding_Complete_Screen.php#L83-L88)
+
+### bigcommerce/settings/resources_url
+
+
+Filters resources url.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`resources_url` | `string` | Resources url.
+
+Source: [src/BigCommerce/Settings/Screens/Onboarding_Complete_Screen.php](BigCommerce/Settings/Screens/Onboarding_Complete_Screen.php), [line 96](BigCommerce/Settings/Screens/Onboarding_Complete_Screen.php#L96-L101)
+
+### bigcommerce/documentation/url
+
+
+Filters documentation url.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`documentation_url` | `string` | Documentation url.
+
+Source: [src/BigCommerce/Settings/Screens/Onboarding_Complete_Screen.php](BigCommerce/Settings/Screens/Onboarding_Complete_Screen.php), [line 105](BigCommerce/Settings/Screens/Onboarding_Complete_Screen.php#L105-L110)
+
+### bigcommerce/settings/resources/url
+
+
+Filters the URL for fetching the resource data displayed on the
+admin Resources screen.
+
+Return an empty string to short-circuit the request and render
+the default resources.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`url` | `string` | The URL to the resources JSON data
+
+Source: [src/BigCommerce/Settings/Screens/Resources_Screen.php](BigCommerce/Settings/Screens/Resources_Screen.php), [line 52](BigCommerce/Settings/Screens/Resources_Screen.php#L52-L61)
+
+### bigcommerce/settings/resources/default
+
+
+Filter the default resources to display on the Resources admin page.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`default` | `array` | The default data array.
+
+Source: [src/BigCommerce/Settings/Screens/Resources_Screen.php](BigCommerce/Settings/Screens/Resources_Screen.php), [line 119](BigCommerce/Settings/Screens/Resources_Screen.php#L119-L124)
+
+### bigcommerce/settings/onboarding/steps
+
+
+Filters the list of steps in the onboarding progress bar.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`steps` | `array[]` | The steps in the process. Properties:<br>- label  string The label for the step<br>- active bool   Whether the step is currently active
+`state` | `int` | The current onboarding status
+
+Source: [src/BigCommerce/Settings/Onboarding_Progress.php](BigCommerce/Settings/Onboarding_Progress.php), [line 75](BigCommerce/Settings/Onboarding_Progress.php#L75-L83)
+
+### bigcommerce/checkout/can_embed
+
+
+Filters whether checkout can embed or not.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`permitted` | `bool` | Can embed or not.
+
+Source: [src/BigCommerce/Settings/Sections/Cart.php](BigCommerce/Settings/Sections/Cart.php), [line 174](BigCommerce/Settings/Sections/Cart.php#L174-L179)
+
+### bigcommerce/diagnostics
+
+
+Filter the list of diagnostic data
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`diagnostics` | `array` | 
+
+Source: [src/BigCommerce/Settings/Sections/Troubleshooting_Diagnostics.php](BigCommerce/Settings/Sections/Troubleshooting_Diagnostics.php), [line 472](BigCommerce/Settings/Sections/Troubleshooting_Diagnostics.php#L472-L477)
+
+### bigcommerce/settings/api/disabled/field={$option}
+
+
+Filter whether to disable the API settings field
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`disabled` | `bool\|string` | Empty if the field should be enabled, a string indicating why it's disabled otherwise.
+
+Source: [src/BigCommerce/Settings/Sections/Api_Credentials.php](BigCommerce/Settings/Sections/Api_Credentials.php), [line 124](BigCommerce/Settings/Sections/Api_Credentials.php#L124-L129)
+
+### bigcommerce/onboarding/reset
+
+Source: [src/BigCommerce/Settings/Start_Over.php](BigCommerce/Settings/Start_Over.php), [line 83](BigCommerce/Settings/Start_Over.php#L83-L83)
+
+### bigcommerce/channel/listing/should_update
+
+Source: [src/BigCommerce/Post_Types/Product/Channel_Sync.php](BigCommerce/Post_Types/Product/Channel_Sync.php), [line 50](BigCommerce/Post_Types/Product/Channel_Sync.php#L50-L50)
+
+### bigcommerce/channel/listing/state
+
+
+Filter the state to set on the channel listing for the product
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`state` | `string` | The listing state to set
+`post_id` | `int` | The ID of the product post in WordPress
+`listing` | `\BigCommerce\Api\v3\Model\Listing` | The listing from BigCommerce that will be updated
+
+Source: [src/BigCommerce/Post_Types/Product/Channel_Sync.php](BigCommerce/Post_Types/Product/Channel_Sync.php), [line 146](BigCommerce/Post_Types/Product/Channel_Sync.php#L146-L153)
+
+### bigcommerce/channel/listing/title
+
+
+Filter the title to set on the channel listing for the product
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`title` | `string` | The listing title to set
+`post_id` | `int` | The ID of the product post in WordPress
+`listing` | `\BigCommerce\Api\v3\Model\Listing` | The listing from BigCommerce that will be updated
+
+Source: [src/BigCommerce/Post_Types/Product/Channel_Sync.php](BigCommerce/Post_Types/Product/Channel_Sync.php), [line 157](BigCommerce/Post_Types/Product/Channel_Sync.php#L157-L164)
+
+### bigcommerce/channel/listing/description
+
+
+Filter the description to set on the channel listing for the product
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`title` | `string` | The listing description to set
+`post_id` | `int` | The ID of the product post in WordPress
+`listing` | `\BigCommerce\Api\v3\Model\Listing` | The listing from BigCommerce that will be updated
+
+Source: [src/BigCommerce/Post_Types/Product/Channel_Sync.php](BigCommerce/Post_Types/Product/Channel_Sync.php), [line 168](BigCommerce/Post_Types/Product/Channel_Sync.php#L168-L175)
+
+### bigcommerce/channel/listing/should_delete
+
+Source: [src/BigCommerce/Post_Types/Product/Channel_Sync.php](BigCommerce/Post_Types/Product/Channel_Sync.php), [line 199](BigCommerce/Post_Types/Product/Channel_Sync.php#L199-L199)
+
+### bigcommerce/post_type/product/capabilities
+
+Source: [src/BigCommerce/Post_Types/Product/Config.php](BigCommerce/Post_Types/Product/Config.php), [line 31](BigCommerce/Post_Types/Product/Config.php#L31-L31)
+
+### bigcommerce/query/recent_days
+
+Source: [src/BigCommerce/Post_Types/Product/Query_Mapper.php](BigCommerce/Post_Types/Product/Query_Mapper.php), [line 133](BigCommerce/Post_Types/Product/Query_Mapper.php#L133-L133)
+
+### bigcommerce/shortcode/products/query_args
+
+
+Filters shortcode products query arguments.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`query_args` | `array` | Query Arguments.
+`args` | `array` | Arguments.
+
+Source: [src/BigCommerce/Post_Types/Product/Query_Mapper.php](BigCommerce/Post_Types/Product/Query_Mapper.php), [line 143](BigCommerce/Post_Types/Product/Query_Mapper.php#L143-L149)
+
+### bigcommerce/product/price_range/data
+
+
+Filter the price range data for a product
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`prices` | `array` | The price range meta for the product
+`product` | `\BigCommerce\Post_Types\Product\Product` | The product object
+
+Source: [src/BigCommerce/Post_Types/Product/Product.php](BigCommerce/Post_Types/Product/Product.php), [line 237](BigCommerce/Post_Types/Product/Product.php#L237-L243)
+
+Source: [src/BigCommerce/Post_Types/Product/Product.php](BigCommerce/Post_Types/Product/Product.php), [line 273](BigCommerce/Post_Types/Product/Product.php#L273-L276)
+
+### bigcommerce/product/price_range/formatted
+
+
+Filter the formatted price range for a product
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`range` | `string` | The formatted price range
+`product` | `\BigCommerce\Post_Types\Product\Product` | The product object
+`prices` | `array` | The price range meta for the product
+
+Source: [src/BigCommerce/Post_Types/Product/Product.php](BigCommerce/Post_Types/Product/Product.php), [line 259](BigCommerce/Post_Types/Product/Product.php#L259-L266)
+
+### bigcommerce/product/calculated_price_range/formatted
+
+
+Filter the formatted calculated price range for a product
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`range` | `string` | The formatted price range
+`product` | `\BigCommerce\Post_Types\Product\Product` | The product object
+`prices` | `array` | The price range meta for the product
+
+Source: [src/BigCommerce/Post_Types/Product/Product.php](BigCommerce/Post_Types/Product/Product.php), [line 286](BigCommerce/Post_Types/Product/Product.php#L286-L293)
+
+### bigcommerce/produce/retail_price/data
+
+
+Filter the retail price of the product
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`retail_price` | `float` | The retail price of the product
+`product` | `\BigCommerce\Post_Types\Product\Product` | The product object
+
+Source: [src/BigCommerce/Post_Types/Product/Product.php](BigCommerce/Post_Types/Product/Product.php), [line 302](BigCommerce/Post_Types/Product/Product.php#L302-L308)
+
+### bigcommerce/product/retail_price/formatted
+
+
+Filter the formatted retail price for a product
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`retail_price` | `string` | The formatted retail price
+`product` | `\BigCommerce\Post_Types\Product\Product` | The product object
+
+Source: [src/BigCommerce/Post_Types/Product/Product.php](BigCommerce/Post_Types/Product/Product.php), [line 310](BigCommerce/Post_Types/Product/Product.php#L310-L316)
+
+### bigcommerce/product/gallery
+
+
+Filter the images that display in a product gallery
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`gallery` | `int[]` | The IDs of images in the gallery
+
+Source: [src/BigCommerce/Post_Types/Product/Product.php](BigCommerce/Post_Types/Product/Product.php), [line 629](BigCommerce/Post_Types/Product/Product.php#L629-L634)
+
+### bigcommerce/button/purchase
+
+
+Filters purchase button.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`button` | `string` | Button html.
+`post_id` | `int` | Post id.
+`label` | `string` | Label.
+
+Source: [src/BigCommerce/Post_Types/Product/Product.php](BigCommerce/Post_Types/Product/Product.php), [line 766](BigCommerce/Post_Types/Product/Product.php#L766-L773)
+
+Source: [src/BigCommerce/Post_Types/Product/Product.php](BigCommerce/Post_Types/Product/Product.php), [line 732](BigCommerce/Post_Types/Product/Product.php#L732-L732)
+
+### bigcommerce/button/purchase/attributes
+
+
+Filters purchase button attributes.
+
+**Arguments**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`attributes` | `array` | Attributes.
+`product` | `\BigCommerce\Post_Types\Product\Product` | Product.
+
+Source: [src/BigCommerce/Post_Types/Product/Product.php](BigCommerce/Post_Types/Product/Product.php), [line 740](BigCommerce/Post_Types/Product/Product.php#L740-L746)
+
+### bigcommerce/product/related_products
+
+
+This filter is documented in src/BigCommerce/Post_Types/Product/Product.php
 
 **Arguments**
 
 No arguments.
 
-Source: [src/BigCommerce/Webhooks/Product/Product_Creator.php](BigCommerce/Webhooks/Product/Product_Creator.php), [line 84](BigCommerce/Webhooks/Product/Product_Creator.php#L84-L91)
+Source: [src/BigCommerce/Post_Types/Product/Product.php](BigCommerce/Post_Types/Product/Product.php), [line 972](BigCommerce/Post_Types/Product/Product.php#L972-L975)
 
-### `bigcommerce/channel/listing/should_update`
+Source: [src/BigCommerce/Post_Types/Product/Product.php](BigCommerce/Post_Types/Product/Product.php), [line 981](BigCommerce/Post_Types/Product/Product.php#L981-L984)
 
-Prevents product listing updates during the product re-import process.
+Source: [src/BigCommerce/Post_Types/Product/Product.php](BigCommerce/Post_Types/Product/Product.php), [line 991](BigCommerce/Post_Types/Product/Product.php#L991-L997)
 
-This filter ensures that listing data for products is not automatically
-updated when a product is being re-imported, maintaining the integrity of the
-existing listings during the operation.
+### bigcommerce/query/search_post_ids
 
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Webhooks/Product/Product_Updater.php](BigCommerce/Webhooks/Product/Product_Updater.php), [line 85](BigCommerce/Webhooks/Product/Product_Updater.php#L85-L92)
-
-### `bigcommerce/channel/listing/should_delete`
-
-Prevents product listing deletions during the product re-import process.
-
-This filter ensures that listing data for products is not automatically
-deleted when a product is being re-imported, preserving existing listings
-until the process is complete.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Webhooks/Product/Product_Updater.php](BigCommerce/Webhooks/Product/Product_Updater.php), [line 94](BigCommerce/Webhooks/Product/Product_Updater.php#L94-L101)
-
-### `bigcommerce/import/strategy/needs_refresh`
-
-Filter to determine if products need to be refreshed.
-
-This filter is applied when the 'force' flag is passed in the command arguments, forcing a refresh of all products.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`needs_refresh` | `bool` | Whether products need to be refreshed.
-
-Source: [src/BigCommerce/CLI/Import_Products.php](BigCommerce/CLI/Import_Products.php), [line 70](BigCommerce/CLI/Import_Products.php#L70-L78)
-
-### `bigcommerce/import/strategy/term/needs_refresh`
-
-Filter to determine if terms need to be refreshed.
-
-This filter is applied when the 'force' flag is passed in the command arguments, forcing a refresh of terms.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`needs_refresh` | `bool` | Whether terms need to be refreshed.
-
-Source: [src/BigCommerce/CLI/Import_Products.php](BigCommerce/CLI/Import_Products.php), [line 80](BigCommerce/CLI/Import_Products.php#L80-L88)
-
-### `bigcommerce/channel/listing/title`
-
-Filters the listing title, providing an empty value during reset.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`value` | `string` | The listing title.
-
-Source: [src/BigCommerce/Post_Types/Product/Reset_Listing.php](BigCommerce/Post_Types/Product/Reset_Listing.php), [line 133](BigCommerce/Post_Types/Product/Reset_Listing.php#L133-L140)
-
-### `bigcommerce/channel/listing/description`
-
-Filters the listing description, providing an empty value during reset.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`value` | `string` | The listing description.
-
-Source: [src/BigCommerce/Post_Types/Product/Reset_Listing.php](BigCommerce/Post_Types/Product/Reset_Listing.php), [line 142](BigCommerce/Post_Types/Product/Reset_Listing.php#L142-L149)
-
-### `posts_orderby`
-
-Customize the SQL `ORDER BY` clause for posts.
-
-This filter modifies the `ORDER BY` clause used in the SQL query for fetching posts,
-enabling custom sorting logic.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`orderby` | `string` | The existing SQL `ORDER BY` clause.
-`query` | `\BigCommerce\Post_Types\Product\WP_Query` | The current WP_Query instance.
-
-Source: [src/BigCommerce/Post_Types/Product/Query.php](BigCommerce/Post_Types/Product/Query.php), [line 171](BigCommerce/Post_Types/Product/Query.php#L171-L182)
-
-### `allowed_redirect_hosts`
-
-Filters the allowed redirect hosts to include the checkout host from BigCommerce.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`hosts` | `array` | The array of allowed redirect hosts.
-
-Source: [src/BigCommerce/Amp/Amp_Cart.php](BigCommerce/Amp/Amp_Cart.php), [line 137](BigCommerce/Amp/Amp_Cart.php#L137-L151)
-
-### `bigcommerce/plugin/credentials_set`
-
-Filters whether the API credentials are set.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`set` | `bool` | Whether the API credentials are set.
-
-Source: [src/BigCommerce/Container/Api.php](BigCommerce/Container/Api.php), [line 211](BigCommerce/Container/Api.php#L211-L219)
-
-### `bigcommerce/api/default_headers`
-
-Filters the default headers for API requests.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`headers` | `array` | The default headers.
-
-Source: [src/BigCommerce/Container/Api.php](BigCommerce/Container/Api.php), [line 221](BigCommerce/Container/Api.php#L221-L229)
-
-### `bigcommerce/diagnostics`
-
-Adds diagnostic data for webhook statuses.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`data` | `array` | The existing diagnostic data.
-
-Source: [src/BigCommerce/Container/Webhooks.php](BigCommerce/Container/Webhooks.php), [line 380](BigCommerce/Container/Webhooks.php#L380-L389)
-
-### `the_content`
-
-Adds the gift certificates sub-navigation above the content.
-
-This callback function is hooked into the `the_content` filter to insert the gift
-certificates sub-navigation at the beginning of the content.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`content` | `string` | The post content.
-
-Source: [src/BigCommerce/Container/Gift_Certificates.php](BigCommerce/Container/Gift_Certificates.php), [line 43](BigCommerce/Container/Gift_Certificates.php#L43-L55)
-
-### `wp_setup_nav_menu_item`
-
-Filters the navigation menu item to add classes for the cart page.
-
-This filter is applied when setting up the navigation menu item to ensure that
-the appropriate classes are added to the cart page menu item.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`menu_item` | `\WP_Post` | The menu item object to be filtered.
-
-Source: [src/BigCommerce/Container/Cart.php](BigCommerce/Container/Cart.php), [line 159](BigCommerce/Container/Cart.php#L159-L171)
-
-### `bigcommerce/js_config`
-
-Filters the JavaScript configuration for the mini cart.
-
-This filter modifies the `js_config` array to include specific configurations
-related to the mini cart, such as display options and functionality.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`config` | `array` | The existing JavaScript configuration.
-
-Source: [src/BigCommerce/Container/Cart.php](BigCommerce/Container/Cart.php), [line 268](BigCommerce/Container/Cart.php#L268-L280)
-
-### `bigcommerce/settings/settings_url`
-
-Filters the settings URL for the settings screen.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`url` | `string` | Current settings URL.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 365](BigCommerce/Container/Settings.php#L365-L372)
-
-### `pre_option_Api_Credentials::OPTION_STORE_URL`
-
-Applies environment overrides for API credential options.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`value` | `mixed` | Current value of the option.
-`option` | `string` | Name of the option.
-`default` | `mixed` | Default value of the option.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 475](BigCommerce/Container/Settings.php#L475-L484)
-
-### `pre_option_Api_Credentials::OPTION_CLIENT_ID`
-
-Filters the option value for API credentials client ID.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`value` | `mixed` | The option value.
-`option` | `string` | The option name.
-`default` | `mixed` | The default value to return if the option does not exist.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 486](BigCommerce/Container/Settings.php#L486-L494)
-
-### `pre_option_Api_Credentials::OPTION_CLIENT_SECRET`
-
-Filters the option value for API credentials client ID.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`value` | `mixed` | The option value.
-`option` | `string` | The option name.
-`default` | `mixed` | The default value to return if the option does not exist.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 496](BigCommerce/Container/Settings.php#L496-L504)
-
-### `pre_option_Api_Credentials::OPTION_ACCESS_TOKEN`
-
-Filters the option value for API credentials client ID.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`value` | `mixed` | The option value.
-`option` | `string` | The option name.
-`default` | `mixed` | The default value to return if the option does not exist.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 506](BigCommerce/Container/Settings.php#L506-L514)
-
-### `pre_update_option_Api_Credentials::OPTION_STORE_URL`
-
-Filters the value before an API credential option is updated.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`value` | `mixed` | The new option value.
-`option` | `string` | The option name.
-`old_value` | `mixed` | The old option value.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 550](BigCommerce/Container/Settings.php#L550-L558)
-
-### `pre_update_option_Api_Credentials::OPTION_CLIENT_ID`
-
-Filters the value before an API credential option is updated.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`value` | `mixed` | The new option value.
-`option` | `string` | The option name.
-`old_value` | `mixed` | The old option value.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 560](BigCommerce/Container/Settings.php#L560-L568)
-
-### `pre_update_option_Api_Credentials::OPTION_CLIENT_SECRET`
-
-Filters the value before an API credential option is updated.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`value` | `mixed` | The new option value.
-`option` | `string` | The option name.
-`old_value` | `mixed` | The old option value.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 570](BigCommerce/Container/Settings.php#L570-L578)
-
-### `pre_update_option_Api_Credentials::OPTION_ACCESS_TOKEN`
-
-Filters the value before an API credential option is updated.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`value` | `mixed` | The new option value.
-`option` | `string` | The option name.
-`old_value` | `mixed` | The old option value.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 580](BigCommerce/Container/Settings.php#L580-L588)
-
-### `views_edit-Product::NAME`
-
-Modifies the product list table view to include an import link if the configuration status
-meets the required condition.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`views` | `array` | The views for the product list table.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 734](BigCommerce/Container/Settings.php#L734-L747)
-
-### `bigcommerce/onboarding/error_redirect`
-
-Filters the redirect URL during the onboarding error process.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`url` | `string` | The default URL to redirect to.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 998](BigCommerce/Container/Settings.php#L998-L1004)
-
-### `bigcommerce/onboarding/reset`
-
-Filters the URL to reset onboarding progress.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`url` | `string` | The default URL for resetting onboarding.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 1005](BigCommerce/Container/Settings.php#L1005-L1011)
-
-### `bigcommerce/settings/create_account_url`
-
-Filters the URL for creating a BigCommerce account.
-
-This filter allows modification of the URL used to create a BigCommerce account
-during the onboarding process.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`url` | `string` | The current URL for the create account page.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 1026](BigCommerce/Container/Settings.php#L1026-L1037)
-
-### `bigcommerce/onboarding/success_redirect`
-
-Filter to redirect the user after a successful onboarding.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`url` | `string` | The URL to redirect to after success.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 1193](BigCommerce/Container/Settings.php#L1193-L1199)
-
-### `bigcommerce/settings/credentials_url`
-
-Provides various screens and settings for BigCommerce.
-
-This class is responsible for registering settings screens, handling API credentials,
-and managing various onboarding steps in the BigCommerce plugin.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 51](BigCommerce/Container/Settings.php#L51-L1224)
-
-### `bigcommerce/settings/resources_url`
-
-Filters the resources URL for the settings screen.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 1522](BigCommerce/Container/Settings.php#L1522-L1525)
-
-### `request`
-
-Filter triggered to modify the request variables before the query is processed.
-
-This filter applies the `request` filter to modify the request variables by filtering
-empty query vars using the `filter_empty_query_vars` method of the `PRODUCT_QUERY` container instance.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`vars` | `array` | The request variables to be filtered.
-
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 199](BigCommerce/Container/Post_Types.php#L199-L211)
-
-### `query_vars`
-
-Filter triggered to add custom query variables.
-
-This filter applies the `query_vars` filter to add additional query variables using
-the `add_query_vars` method of the `PRODUCT_QUERY` container instance.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`vars` | `array` | The existing query variables.
-
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 213](BigCommerce/Container/Post_Types.php#L213-L225)
-
-### `wp_insert_post_data`
-
-Filter triggered before inserting post data to prevent changes to the post slug.
-
-This filter applies the `wp_insert_post_data` filter to prevent changes to the product's
-slug during post insert or update using the `prevent_slug_changes` method of the `PRODUCT_ADMIN` container instance.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`data` | `array` | The post data to be inserted or updated.
-`submitted` | `array` | The submitted data from the post form.
-
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 271](BigCommerce/Container/Post_Types.php#L271-L284)
-
-### `get_sample_permalink_html`
-
-Filter triggered to modify the sample permalink HTML for a post.
-
-This filter applies the `get_sample_permalink_html` filter to override the HTML for the
-sample permalink using the `override_sample_permalink_html` method of the `PRODUCT_ADMIN` container instance.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`html` | `string` | The HTML for the sample permalink.
-`post_id` | `int` | The ID of the post.
-`title` | `string` | The title of the post.
-`slug` | `string` | The slug of the post.
-`post` | `\WP_Post` | The post object.
-
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 286](BigCommerce/Container/Post_Types.php#L286-L302)
-
-### `pre_handle_404`
-
-Filter triggered to handle product out-of-stock behavior and redirect if necessary.
-
-This filter applies the `pre_handle_404` filter and checks if the queried product is out of stock. If the product
-has a defined redirect URL, the user is redirected. Otherwise, the default 404 behavior is triggered.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`preempt` | `string` | The current preempted status of the 404 response.
-
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 360](BigCommerce/Container/Post_Types.php#L360-L385)
-
-### `views_edit-Product\Product::NAME`
-
-Filter triggered to modify the product list table views for import status.
-
-This filter adds or modifies views related to product import status in the admin list table for products.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`views` | `array` | The current set of views for the product list table.
-
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 387](BigCommerce/Container/Post_Types.php#L387-L398)
-
-### `views_edit-Product\Product::NAME`
-
-Filter triggered to modify the product list table views for import tooltip.
-
-This filter adds a tooltip to the product import status in the product list table in the admin interface.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`views` | `array` | The current set of views for the product list table.
-
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 400](BigCommerce/Container/Post_Types.php#L400-L411)
-
-### `views_edit-Product\Product::NAME`
-
-Filter triggered to modify the product list table views for the manage link.
-
-This filter modifies the views in the product list table by adding or modifying the manage link.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`views` | `array` | The current set of views for the product list table.
-
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 413](BigCommerce/Container/Post_Types.php#L413-L424)
-
-### `map_meta_cap`
-
-Filter triggered to modify the meta capabilities for product post types.
-
-This filter applies the `map_meta_cap` filter to disallow publication capabilities for the product post type.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`caps` | `array` | The current capabilities for the user.
-`cap` | `string` | The capability being checked.
-`user_id` | `int` | The ID of the user being checked.
-`args` | `array` | Additional arguments.
-
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 437](BigCommerce/Container/Post_Types.php#L437-L451)
-
-### `display_post_states`
-
-Filter triggered to modify the post states for unsupported products.
-
-This filter is used to show an unsupported status for certain products in the WordPress admin.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`post_states` | `array` | The current post states.
-`post` | `\WP_Post` | The post object.
-
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 453](BigCommerce/Container/Post_Types.php#L453-L465)
-
-### `wp_insert_post_data`
-
-Filter triggered to prevent the publication of certain product posts.
-
-This filter prevents the publication of certain products by modifying the post data using the `prevent_publication` method.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`data` | `array` | The post data.
-`postarr` | `array` | The post array.
-
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 467](BigCommerce/Container/Post_Types.php#L467-L479)
-
-### `bigcommerce/channel/listing/should_update`
-
-Filter to determine whether a channel listing should be updated.
-
-This filter allows developers to modify the behavior of channel listing updates.
-By default, it is set to return `false`, preventing updates to channel listings.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 505](BigCommerce/Container/Post_Types.php#L505-L513)
-
-### `bigcommerce/channel/listing/should_delete`
-
-Filter to determine whether a channel listing should be deleted.
-
-This filter allows developers to modify the behavior of channel listing deletions.
-By default, it is set to return `false`, preventing deletions of channel listings.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 515](BigCommerce/Container/Post_Types.php#L515-L523)
-
-### `manage_bigcommerce_product_posts_columns`
-
-Filter triggered to modify the columns in the BigCommerce product list table.
-
-This filter is used to add additional columns, such as the BigCommerce product ID, to the product list table in the admin.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`columns` | `array` | The current list of columns.
-
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 538](BigCommerce/Container/Post_Types.php#L538-L549)
-
-### `bigcommerce/diagnostics`
-
-Adds diagnostic data related to the sync log.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`data` | `array` | Diagnostic data to be included in the output.
-
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 653](BigCommerce/Container/Post_Types.php#L653-L664)
-
-### `post_row_actions`
-
-Adds a row action for the product post actions in the admin.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`actions` | `array` | The current actions for the post.
-`post` | `\BigCommerce\Container\WP_Post` | The post object being displayed.
-
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 679](BigCommerce/Container/Post_Types.php#L679-L691)
-
-### `post_submitbox_misc_actions`
-
-Adds a link to the submit box on the product post edit screen.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`post` | `\BigCommerce\Container\WP_Post` | The post object being edited.
-
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 693](BigCommerce/Container/Post_Types.php#L693-L704)
-
-### `bigcommerce/gutenberg/js_config`
-
-Adds a store link to the Gutenberg block editor configuration.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`data` | `array` | The existing Gutenberg block editor configuration data.
-
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 706](BigCommerce/Container/Post_Types.php#L706-L717)
-
-### `post_row_actions`
-
-Adds a reset action to the post row actions for product listings.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`actions` | `array` | The current actions for the post.
-`post` | `\BigCommerce\Container\WP_Post` | The post object being displayed.
-
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 745](BigCommerce/Container/Post_Types.php#L745-L757)
-
-### `post_row_actions`
-
-Adds a resync action to post row actions.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`actions` | `array` | The list of actions for the post.
-`post` | `\BigCommerce\Container\WP_Post` | The post object.
-
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 783](BigCommerce/Container/Post_Types.php#L783-L793)
-
-### `bigcommerce/gutenberg/js_config`
-
-Adds a channel indicator to the Gutenberg JS config.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`data` | `array` | The Gutenberg JS config data.
-
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 830](BigCommerce/Container/Post_Types.php#L830-L843)
-
-### `wp_unique_post_slug`
-
-Filters the unique post slug per channel.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`slug` | `string` | The current post slug.
-`post_id` | `int` | The post ID.
-`post_status` | `string` | The post status.
-`post_type` | `string` | The post type.
-`post_parent` | `int` | The parent post ID.
-`original_slug` | `string` | The original slug.
-
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 894](BigCommerce/Container/Post_Types.php#L894-L912)
-
-### `wp_title_parts`
-
-Modifies the WordPress title parts for products.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`title_parts` | `array` | The parts of the title.
-
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 927](BigCommerce/Container/Post_Types.php#L927-L938)
-
-### `document_title_parts`
-
-Filters the product document title parts.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`title_parts` | `array` | The document title parts.
-
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 940](BigCommerce/Container/Post_Types.php#L940-L949)
-
-### `wp_head`
-
-Filters the product page meta description.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Post_Types.php](BigCommerce/Container/Post_Types.php), [line 951](BigCommerce/Container/Post_Types.php#L951-L962)
-
-### `login_url`
-
-Filter login URL for custom redirection.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`url` | `string` | The login URL.
-`redirect` | `string` | The URL to redirect to after login.
-`reauth` | `bool` | Whether the login is a re-authentication attempt.
-
-Source: [src/BigCommerce/Container/Accounts.php](BigCommerce/Container/Accounts.php), [line 226](BigCommerce/Container/Accounts.php#L226-L236)
-
-### `wp_login_errors`
-
-Filter login errors to handle custom error messages.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`errors` | `\WP_Error` | The login errors.
-`redirect` | `string` | The URL to redirect to after login.
-
-Source: [src/BigCommerce/Container/Accounts.php](BigCommerce/Container/Accounts.php), [line 238](BigCommerce/Container/Accounts.php#L238-L247)
-
-### `lostpassword_url`
-
-Filter lost password URL for custom redirection.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`url` | `string` | The lost password URL.
-`redirect` | `string` | The URL to redirect to after password reset.
-
-Source: [src/BigCommerce/Container/Accounts.php](BigCommerce/Container/Accounts.php), [line 249](BigCommerce/Container/Accounts.php#L249-L258)
-
-### `lostpassword_user_data`
-
-Filter user data before sending the lost password email.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`user_data` | `array` | User data.
-`errors` | `\WP_Error` | Any errors found.
-
-Source: [src/BigCommerce/Container/Accounts.php](BigCommerce/Container/Accounts.php), [line 260](BigCommerce/Container/Accounts.php#L260-L269)
-
-### `register_url`
-
-Filter registration URL for custom redirection.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`url` | `string` | The registration URL.
-
-Source: [src/BigCommerce/Container/Accounts.php](BigCommerce/Container/Accounts.php), [line 280](BigCommerce/Container/Accounts.php#L280-L288)
-
-### `authenticate`
-
-Filter authentication process for new user login.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`user` | `\BigCommerce\Container\WP_User\|null` | The WP_User object on successful authentication, or null if authentication fails.
-`username` | `string` | The username.
-`password` | `string` | The password.
-
-Source: [src/BigCommerce/Container/Accounts.php](BigCommerce/Container/Accounts.php), [line 298](BigCommerce/Container/Accounts.php#L298-L312)
-
-### `check_password`
-
-Filter password check for linked accounts.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`match` | `bool` | Whether the password matches.
-`password` | `string` | The password to check.
-`hash` | `string` | The stored password hash.
-`user_id` | `int` | The user ID.
-
-Source: [src/BigCommerce/Container/Accounts.php](BigCommerce/Container/Accounts.php), [line 314](BigCommerce/Container/Accounts.php#L314-L329)
-
-### `bigcommerce/countries/data`
-
-Adding filters to fetch and handle country data
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Accounts.php](BigCommerce/Container/Accounts.php), [line 366](BigCommerce/Container/Accounts.php#L366-L369)
-
-### `bigcommerce/js_config`
-
-Filter to modify the JavaScript configuration for BigCommerce's storefront.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`config` | `array` | The existing JavaScript configuration.
-
-Source: [src/BigCommerce/Container/Accounts.php](BigCommerce/Container/Accounts.php), [line 375](BigCommerce/Container/Accounts.php#L375-L381)
-
-### `bigcommerce/admin/js_config`
-
-Filter to modify the JavaScript configuration for BigCommerce's admin panel.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`config` | `array` | The existing JavaScript configuration.
-
-Source: [src/BigCommerce/Container/Accounts.php](BigCommerce/Container/Accounts.php), [line 383](BigCommerce/Container/Accounts.php#L383-L389)
-
-### `wp_setup_nav_menu_item`
-
-Action to filter account menu items
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Accounts.php](BigCommerce/Container/Accounts.php), [line 403](BigCommerce/Container/Accounts.php#L403-L406)
-
-### `the_content`
-
-Action to add subnav above content
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Accounts.php](BigCommerce/Container/Accounts.php), [line 413](BigCommerce/Container/Accounts.php#L413-L416)
-
-### `bigcommerce/customer/group_info`
-
-Filter to set customer group information
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Accounts.php](BigCommerce/Container/Accounts.php), [line 465](BigCommerce/Container/Accounts.php#L465-L468)
-
-### `bigcommerce/forms/show_messages`
-
-Filters the display of form messages.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`show` | `bool` | Whether to show messages.
-`post_id` | `int` | The post ID.
-
-Source: [src/BigCommerce/Container/Forms.php](BigCommerce/Container/Forms.php), [line 219](BigCommerce/Container/Forms.php#L219-L229)
-
-### `bigcommerce/product/reviews/show_form`
-
-Toggles the review form availability.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`enabled` | `bool` | Whether the review form is enabled.
-`post_id` | `int` | The post ID.
-
-Source: [src/BigCommerce/Container/Forms.php](BigCommerce/Container/Forms.php), [line 231](BigCommerce/Container/Forms.php#L231-L241)
-
-### `bigcommerce/form/state/errors`
-
-Filters the error data for the form state.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`data` | `array` | Error data.
-
-Source: [src/BigCommerce/Container/Forms.php](BigCommerce/Container/Forms.php), [line 282](BigCommerce/Container/Forms.php#L282-L293)
-
-### `the_content`
-
-Filters the content to render messages above the main content.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`content` | `string` | The post content.
-
-Source: [src/BigCommerce/Container/Forms.php](BigCommerce/Container/Forms.php), [line 338](BigCommerce/Container/Forms.php#L338-L347)
-
-### `bigcommerce/forms/messages`
-
-Filters and renders the messages in the form.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`messages` | `array` | The form messages.
-
-Source: [src/BigCommerce/Container/Forms.php](BigCommerce/Container/Forms.php), [line 349](BigCommerce/Container/Forms.php#L349-L360)
-
-### `bigcommerce/diagnostics`
-
-Filter to add the log to the diagnostics output.
-
-This filter is used to add the debug log to the BigCommerce diagnostics, providing valuable information for troubleshooting.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`diagnostics` | `array` | The array containing diagnostic information.
-
-Source: [src/BigCommerce/Container/Log.php](BigCommerce/Container/Log.php), [line 114](BigCommerce/Container/Log.php#L114-L124)
-
-### `bigcommerce/settings/connect_account_url`
-
-Filter to modify the account connection URL.
-
-Allows customization of the URL used to connect a BigCommerce account.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`url` | `string` | The default account connection URL.
-
-Source: [src/BigCommerce/Container/Merchant.php](BigCommerce/Container/Merchant.php), [line 146](BigCommerce/Container/Merchant.php#L146-L156)
-
-### `bigcommerce/proxy/result_pre`
-
-Filters the proxy result before fetching from the cache.
-
-This filter applies the `bigcommerce/proxy/result_pre` filter to modify or
-cache the result before it is returned from the proxy. It allows for caching
-the result before the response is sent back.
 
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`result` | `mixed` | The result to be cached.
-`args` | `array` | Arguments for the cache request.
-
-Source: [src/BigCommerce/Container/Proxy.php](BigCommerce/Container/Proxy.php), [line 154](BigCommerce/Container/Proxy.php#L154-L181)
-
-### `bigcommerce/admin/js_config`
-
-Filters the JavaScript configuration for the admin editor dialog.
-
-This filter allows modification of the JavaScript configuration for the dialog template
-based on the provided settings, including necessary data for handling the products and
-shortcode configurations.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`config` | `array` | The current JavaScript configuration for the editor dialog.
-
-Source: [src/BigCommerce/Container/Editor.php](BigCommerce/Container/Editor.php), [line 137](BigCommerce/Container/Editor.php#L137-L150)
-
-### `bigcommerce/gutenberg/js_config`
-
-Filters the JavaScript configuration for the BigCommerce Gutenberg blocks.
+Filters query search post ids.
 
-This filter modifies the JavaScript configuration to include the necessary settings
-for all registered Gutenberg blocks in the BigCommerce system, based on the available
-block types.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`data` | `array` | The current JavaScript configuration for Gutenberg blocks.
-
-Source: [src/BigCommerce/Container/Editor.php](BigCommerce/Container/Editor.php), [line 200](BigCommerce/Container/Editor.php#L200-L223)
-
-### `replace_editor`
-
-Checks if the Gutenberg editor should be used for the current post.
-
-This filter determines whether the Gutenberg editor or classic editor should be
-used, based on the provided post and the state of the Gutenberg migration process.
-
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`passthrough` | `bool` | Whether to pass through the original value.
-`post` | `\BigCommerce\Container\WP_Post` | The current post object.
-
-Source: [src/BigCommerce/Container/Editor.php](BigCommerce/Container/Editor.php), [line 246](BigCommerce/Container/Editor.php#L246-L259)
-
-### `replace_editor`
-
-Checks if the classic editor should be used for the current post.
-
-This filter determines whether the classic editor should be used, based on the
-provided post and the state of the Gutenberg migration process.
-
-**Arguments**
+`matches` | `array` | Post ids.
+`search_phrase` | `string` | Search phrase.
 
-Argument | Type | Description
--------- | ---- | -----------
-`passthrough` | `bool` | Whether to pass through the original value.
-`post` | `\BigCommerce\Container\WP_Post` | The current post object.
+Source: [src/BigCommerce/Post_Types/Product/Query.php](BigCommerce/Post_Types/Product/Query.php), [line 525](BigCommerce/Post_Types/Product/Query.php#L525-L531)
 
-Source: [src/BigCommerce/Container/Editor.php](BigCommerce/Container/Editor.php), [line 261](BigCommerce/Container/Editor.php#L261-L274)
+### bigcommerce/admin/js_localization
 
-### `bigcommerce/js_config`
 
-Filters JavaScript configuration data to include banners settings.
+Filters admin js localization data.
 
-Modifies the existing JavaScript configuration array to include
-any settings or data required by the banners manager.
+Allows modification of the JS localization data before it is returned.
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`config` | `array` | The existing JavaScript configuration.
-
-Source: [src/BigCommerce/Container/Banners.php](BigCommerce/Container/Banners.php), [line 35](BigCommerce/Container/Banners.php#L35-L46)
-
-### `bigcommerce/messages/success/arguments`
-
-Adds tracking attributes to success message arguments after adding a product to the cart.
-
-These attributes are used for tracking events in analytics platforms.
-
-**Arguments**
+`js_i18n_array` | `array` | Js i18n data.
 
-Argument | Type | Description
--------- | ---- | -----------
-`args` | `array` | Arguments for the success message.
-`data` | `array` | Additional data related to the cart event.
+Source: [src/BigCommerce/Assets/Admin/JS_Localization.php](BigCommerce/Assets/Admin/JS_Localization.php), [line 63](BigCommerce/Assets/Admin/JS_Localization.php#L63-L70)
 
-Source: [src/BigCommerce/Container/Analytics.php](BigCommerce/Container/Analytics.php), [line 118](BigCommerce/Container/Analytics.php#L118-L130)
+### bigcommerce/admin/js_config
 
-### `bigcommerce/button/purchase/attributes`
 
-Adds tracking attributes to the purchase button.
+Filters admin js config object.
 
-These attributes allow tracking user interactions with the purchase button.
+Allows modification of the JS configuration data before it is returned.
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`attributes` | `array` | HTML attributes for the purchase button.
-`product` | `object` | The product associated with the button.
-
-Source: [src/BigCommerce/Container/Analytics.php](BigCommerce/Container/Analytics.php), [line 132](BigCommerce/Container/Analytics.php#L132-L144)
-
-### `bigcommerce/template=components/products/view-product-button.php/options`
-
-Adds tracking attributes to the "View Product" button.
-
-These attributes are used to track interactions with product detail links.
-
-**Arguments**
+`data` | `array` | Js config data.
 
-Argument | Type | Description
--------- | ---- | -----------
-`options` | `array` | Options for the view product button.
-`template` | `string` | The template path for the button.
+Source: [src/BigCommerce/Assets/Admin/JS_Config.php](BigCommerce/Assets/Admin/JS_Config.php), [line 69](BigCommerce/Assets/Admin/JS_Config.php#L69-L76)
 
-Source: [src/BigCommerce/Container/Analytics.php](BigCommerce/Container/Analytics.php), [line 150](BigCommerce/Container/Analytics.php#L150-L162)
+### bigcommerce/gutenberg/js_config
 
-### `bigcommerce/template=components/products/product-card.php/options`
 
-Adds tracking attributes to product quick-view buttons on product cards.
+Filters gutenberg js config data.
 
-Tracks user interactions with quick-view functionality for products.
+Allows modification of the Gutenberg-specific JS configuration data.
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`options` | `array` | Options for the quick-view button.
-`template` | `string` | The template path for the product card.
+`gutenberg` | `array` | Js config data.
 
-Source: [src/BigCommerce/Container/Analytics.php](BigCommerce/Container/Analytics.php), [line 164](BigCommerce/Container/Analytics.php#L164-L176)
+Source: [src/BigCommerce/Assets/Admin/JS_Config.php](BigCommerce/Assets/Admin/JS_Config.php), [line 93](BigCommerce/Assets/Admin/JS_Config.php#L93-L100)
 
-### `bigcommerce/template=components/products/product-title.php/options`
+### bigcommerce/assets/stylesheet
 
-Adds tracking attributes to product titles.
 
-Tracks user interactions with product title links.
+Filters assets stylesheet file.
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`options` | `array` | Options for the product title link.
-`template` | `string` | The template path for the title.
-
-Source: [src/BigCommerce/Container/Analytics.php](BigCommerce/Container/Analytics.php), [line 178](BigCommerce/Container/Analytics.php#L178-L190)
-
-### `BigCommerce\Settings\Sections\Analytics::TRACK_BY_HOOK`
-
-Modifies the tracking data options for analytics.
-
-This allows for customization of analytics tracking behavior.
-
-**Arguments**
+`css_file` | `string` | CSS file name.
 
-Argument | Type | Description
--------- | ---- | -----------
-`track_data` | `array` | Tracking data options.
+Source: [src/BigCommerce/Assets/Theme/Styles.php](BigCommerce/Assets/Theme/Styles.php), [line 51](BigCommerce/Assets/Theme/Styles.php#L51-L56)
 
-Source: [src/BigCommerce/Container/Analytics.php](BigCommerce/Container/Analytics.php), [line 192](BigCommerce/Container/Analytics.php#L192-L203)
+### bigcommerce/js_localization
 
-### `cron_schedules`
 
-Adds a custom cron schedule to the cron schedules.
+Filter the localization strings passed to front end scripts
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`schedules` | `array` | The array of existing cron schedules.
+`js_i18n_array` | `array` | The localization strings
 
-Source: [src/BigCommerce/Container/Import.php](BigCommerce/Container/Import.php), [line 281](BigCommerce/Container/Import.php#L281-L289)
+Source: [src/BigCommerce/Assets/Theme/JS_Localization.php](BigCommerce/Assets/Theme/JS_Localization.php), [line 73](BigCommerce/Assets/Theme/JS_Localization.php#L73-L78)
 
-### `bigcommerce_modified_product_ids`
+### bigcommerce/js_config
 
-Filter the list of modified product IDs during the BigCommerce import.
 
-This filter allows modification of the product IDs returned for products that have been modified.
+Filters Theme Js config.
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`modified_product_ids` | `array` | The list of modified product IDs.
-`modified_product_ids` | `array` | The modified product IDs list after applying the filter.
-
-Source: [src/BigCommerce/Container/Import.php](BigCommerce/Container/Import.php), [line 669](BigCommerce/Container/Import.php#L669-L679)
-
-### `bigcommerce/import/task_list`
-
-Filter the import task list.
-
-This filter modifies the list of tasks to be executed during the import process.
-
-**Arguments**
+`data` | `array` | Theme Js config.
 
-Argument | Type | Description
--------- | ---- | -----------
-`task_list` | `array` | The list of tasks in the import queue.
-`task_list` | `array` | The filtered list of tasks after applying the filter.
+Source: [src/BigCommerce/Assets/Theme/JS_Config.php](BigCommerce/Assets/Theme/JS_Config.php), [line 74](BigCommerce/Assets/Theme/JS_Config.php#L74-L79)
 
-Source: [src/BigCommerce/Container/Import.php](BigCommerce/Container/Import.php), [line 681](BigCommerce/Container/Import.php#L681-L691)
+### bigcommerce/channel/default_name
 
-### `bigcommerce/import/term/data`
 
-Filter category data before importing.
+Filter the name given to the auto-created channel.
 
-This filter modifies the category data based on the BigCommerce category ID.
+Defaults to the blog's domain name.
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`data` | `array` | The original category data.
-`bc_category_id` | `int` | The BigCommerce category ID.
-`data` | `array` | The filtered category data after applying the filter.
-
-Source: [src/BigCommerce/Container/Import.php](BigCommerce/Container/Import.php), [line 693](BigCommerce/Container/Import.php#L693-L705)
-
-### `bigcommerce/import/product/import_images`
-
-Checks if image import is allowed.
-
-This callback function is hooked into the `bigcommerce/import/product/import_images` filter
-to determine whether image import is permitted.
-
-**Arguments**
+`name` | `string` | The default channel name
 
-No arguments.
-
-Source: [src/BigCommerce/Container/Image.php](BigCommerce/Container/Image.php), [line 28](BigCommerce/Container/Image.php#L28-L38)
-
-### `wp_get_attachment_image`
-
-Modifies the image HTML to load images from CDN if applicable.
-
-This callback function is hooked into the `wp_get_attachment_image` filter to check
-if the image should be loaded from a CDN. If a valid BigCommerce ID and CDN URL are found,
-the image source is replaced with the CDN URL.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`html` | `string` | The HTML of the image tag.
-`thumb_id` | `int` | The attachment ID of the image.
+Source: [src/BigCommerce/Taxonomies/Channel/Channel_Connector.php](BigCommerce/Taxonomies/Channel/Channel_Connector.php), [line 55](BigCommerce/Taxonomies/Channel/Channel_Connector.php#L55-L61)
 
-Source: [src/BigCommerce/Container/Image.php](BigCommerce/Container/Image.php), [line 40](BigCommerce/Container/Image.php#L40-L73)
+### bigcommerce/channels/enable-multi-channel
 
-### `bigcommerce/template/directory/plugin`
 
-Look for plugin templates in [plugin]/templates/public.
+Filter whether multi-channel support is enabled.
 
-This filter hooks into the `bigcommerce/template/directory/plugin` event and sets the
-plugin template directory to `[plugin]/templates/public` if no directory is provided.
+Enabling this feature allows site owners to
+connect to multiple channels and switch between
+them based on arbitrary criteria.
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`directory` | `string` | The current plugin template directory.
-
-Source: [src/BigCommerce/Container/Templates.php](BigCommerce/Container/Templates.php), [line 53](BigCommerce/Container/Templates.php#L53-L65)
-
-### `bigcommerce/template/directory/theme`
-
-Look for template overrides in [theme]/bigcommerce.
+`enabled` | `bool` | Whether multi-channel is enabled. Defaults to false.
 
-This filter hooks into the `bigcommerce/template/directory/theme` event and sets the
-theme template directory to `bigcommerce` if no directory is provided.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`directory` | `string` | The current theme template directory.
+Source: [src/BigCommerce/Taxonomies/Channel/Channel.php](BigCommerce/Taxonomies/Channel/Channel.php), [line 25](BigCommerce/Taxonomies/Channel/Channel.php#L25-L35)
 
-Source: [src/BigCommerce/Container/Templates.php](BigCommerce/Container/Templates.php), [line 67](BigCommerce/Container/Templates.php#L67-L79)
+### bigcommerce/channels/map-products-to-all-channels
 
-### `bigcommerce/template/product/single`
 
-Render the product single page template.
+Filter whether multi-channel sync should sync to all channels.
 
-This filter hooks into the `bigcommerce/template/product/single` event and checks if a
-custom product single template is available. If not, it renders the template using
-the `render_product_single` method of the `Template_Override` class.
+Enabling this feature allows site owners to
+connect to sync products to all channels or
+only the channel it is assigned to.
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`output` | `string` | The current output of the product single template.
-`post_id` | `int` | The ID of the current product post.
+`enabled` | `bool` | 
 
-Source: [src/BigCommerce/Container/Templates.php](BigCommerce/Container/Templates.php), [line 81](BigCommerce/Container/Templates.php#L81-L99)
+Source: [src/BigCommerce/Taxonomies/Channel/Channel.php](BigCommerce/Taxonomies/Channel/Channel.php), [line 44](BigCommerce/Taxonomies/Channel/Channel.php#L44-L52)
 
-### `bigcommerce/template/product/archive`
+### bigcommerce/channel/routes
 
-Render the product archive page template.
 
-This filter hooks into the `bigcommerce/template/product/archive` event and checks if a
-custom product archive template is available. If not, it renders the template using
-the `render_product_archive` method of the `Template_Override` class.
+Filter the routes that will be set for the site
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`output` | `string` | The current output of the product archive template.
+`routes` | `\BigCommerce\Api\v3\Model\Route[]` | 
 
-Source: [src/BigCommerce/Container/Templates.php](BigCommerce/Container/Templates.php), [line 101](BigCommerce/Container/Templates.php#L101-L118)
+Source: [src/BigCommerce/Taxonomies/Channel/Routes.php](BigCommerce/Taxonomies/Channel/Routes.php), [line 274](BigCommerce/Taxonomies/Channel/Routes.php#L274-L279)
 
-### `single_template_hierarchy`
+### bigcommerce/channel/current
 
-Set the product single template path in the template hierarchy.
 
-This filter hooks into the `single_template_hierarchy` event and modifies the template
-hierarchy for single product pages by calling the `set_product_single_template_path`
-method of the `Template_Override` class.
+Filter the channel to use for the current request. This only
+fires if multi-channel support is enabled.
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`templates` | `array` | An array of available templates in the hierarchy.
-
-Source: [src/BigCommerce/Container/Templates.php](BigCommerce/Container/Templates.php), [line 124](BigCommerce/Container/Templates.php#L124-L135)
-
-### `singular_template_hierarchy`
-
-Set the singular template path in the template hierarchy.
+`channel` | `\WP_Term` | The WP term associated with the BigCommerce channel
 
-This filter hooks into the `singular_template_hierarchy` event and modifies the template
-hierarchy for singular pages (e.g., single posts or pages) by calling the `set_product_single_template_path`
-method of the `Template_Override` class.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`templates` | `array` | An array of available templates in the hierarchy.
+Source: [src/BigCommerce/Taxonomies/Channel/Connections.php](BigCommerce/Taxonomies/Channel/Connections.php), [line 46](BigCommerce/Taxonomies/Channel/Connections.php#L46-L54)
 
-Source: [src/BigCommerce/Container/Templates.php](BigCommerce/Container/Templates.php), [line 137](BigCommerce/Container/Templates.php#L137-L148)
+### bigcommerce/taxonomy/{$this->taxonomy}/capabilities
 
-### `index_template_hierarchy`
 
-Set the index template path in the template hierarchy.
+Filter the default capabilities for taxonomy terms.
 
-This filter hooks into the `index_template_hierarchy` event and modifies the template
-hierarchy for the index page (homepage) by calling the `set_product_single_template_path`
-method of the `Template_Override` class.
+The dynamic portion of the hook is the name of the taxonomy.
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`templates` | `array` | An array of available templates in the hierarchy.
+`caps` | `array` | The capabilities array for the taxonomy
 
-Source: [src/BigCommerce/Container/Templates.php](BigCommerce/Container/Templates.php), [line 150](BigCommerce/Container/Templates.php#L150-L161)
+Source: [src/BigCommerce/Taxonomies/Taxonomy_Config.php](BigCommerce/Taxonomies/Taxonomy_Config.php), [line 90](BigCommerce/Taxonomies/Taxonomy_Config.php#L90-L97)
 
-### `archive_template_hierarchy`
+### bigcommerce/product_category/group_filter_terms_user_cache_time
 
-Set the product archive template path in the template hierarchy.
 
-This filter hooks into the `archive_template_hierarchy` event and modifies the template
-hierarchy for product archive pages by calling the `set_product_archive_template_path`
-method of the `Template_Override` class.
+Set the cache time for the list of term ids that a group-member user has access to.
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`templates` | `array` | An array of available templates in the hierarchy.
-
-Source: [src/BigCommerce/Container/Templates.php](BigCommerce/Container/Templates.php), [line 167](BigCommerce/Container/Templates.php#L167-L178)
-
-### `index_template_hierarchy`
-
-Register the template-related services and filters.
+`time` | `int` | The length of time in seconds to cache the terms.
 
-This method registers all the necessary services and filters related to templates, including
-template overrides, body classes, and template hierarchy modifications. It is called when the
-container is initialized and hooks into various WordPress actions and filters for template management.
+Source: [src/BigCommerce/Taxonomies/Product_Category/Group_Filtered_Terms.php](BigCommerce/Taxonomies/Product_Category/Group_Filtered_Terms.php), [line 138](BigCommerce/Taxonomies/Product_Category/Group_Filtered_Terms.php#L138-L143)
 
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`container` | `\Pimple\Container` | The container instance used to register services.
+### bigcommerce/gift_certificates/do_subnav
 
-Source: [src/BigCommerce/Container/Templates.php](BigCommerce/Container/Templates.php), [line 35](BigCommerce/Container/Templates.php#L35-L179)
+Source: [src/BigCommerce/Gift_Certificates/Sub_Nav.php](BigCommerce/Gift_Certificates/Sub_Nav.php), [line 45](BigCommerce/Gift_Certificates/Sub_Nav.php#L45-L45)
 
-### `taxonomy_template_hierarchy`
+### bigcommerce/gift_certificates/subnav/links
 
-Set the taxonomy archive template path in the template hierarchy.
 
-This filter hooks into the `taxonomy_template_hierarchy` event and modifies the template
-hierarchy for taxonomy archive pages by calling the `set_taxonomy_archive_template_path`
-method of the `Template_Override` class.
+Filter the links that show in the account subnav.
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`templates` | `array` | An array of available templates in the hierarchy.
+`links` | `array[]` | Each link will have the properties:<br>`url` - The URL of the link<br>`label` - The label of the link<br>`current` - Whether the link is to the current page
 
-Source: [src/BigCommerce/Container/Templates.php](BigCommerce/Container/Templates.php), [line 185](BigCommerce/Container/Templates.php#L185-L196)
+Source: [src/BigCommerce/Gift_Certificates/Sub_Nav.php](BigCommerce/Gift_Certificates/Sub_Nav.php), [line 78](BigCommerce/Gift_Certificates/Sub_Nav.php#L78-L86)
 
-### `archive_template_hierarchy`
+### bigcommerce/reviews/cache/per_page
 
-Set the product archive template path in the template hierarchy.
 
-This filter hooks into the `archive_template_hierarchy` event and modifies the template
-hierarchy for product archive pages by calling the `set_product_archive_template_path`
-method of the `Template_Override` class.
+Filter the number of product reviews to cache
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`templates` | `array` | An array of available templates in the hierarchy.
+`count` | `int` | The max number of reviews that will be cached
+`product_id` | `int` | The BigCommerce ID of the product;
 
-Source: [src/BigCommerce/Container/Templates.php](BigCommerce/Container/Templates.php), [line 198](BigCommerce/Container/Templates.php#L198-L209)
+Source: [src/BigCommerce/Reviews/Review_Cache.php](BigCommerce/Reviews/Review_Cache.php), [line 36](BigCommerce/Reviews/Review_Cache.php#L36-L42)
 
-### `index_template_hierarchy`
+### bigcommerce/analytics/segment/settings
 
-Register the template-related services and filters.
 
-This method registers all the necessary services and filters related to templates, including
-template overrides, body classes, and template hierarchy modifications. It is called when the
-container is initialized and hooks into various WordPress actions and filters for template management.
+Filter the configuration object passed to Segment
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`container` | `\Pimple\Container` | The container instance used to register services.
+`settings` | `array` | Settings.
 
-Source: [src/BigCommerce/Container/Templates.php](BigCommerce/Container/Templates.php), [line 35](BigCommerce/Container/Templates.php#L35-L210)
+Source: [src/BigCommerce/Analytics/Segment.php](BigCommerce/Analytics/Segment.php), [line 78](BigCommerce/Analytics/Segment.php#L78-L83)
 
-### `search_template_hierarchy`
+### Analytics::TRACK_BY_HOOK
 
-Set the search template path in the template hierarchy.
+Source: [src/BigCommerce/Analytics/Events/Add_To_Cart.php](BigCommerce/Analytics/Events/Add_To_Cart.php), [line 58](BigCommerce/Analytics/Events/Add_To_Cart.php#L58-L58)
 
-This filter hooks into the `search_template_hierarchy` event and modifies the template
-hierarchy for search results pages by calling the `set_search_template_path`
-method of the `Template_Override` class.
+Source: [src/BigCommerce/Analytics/Events/Add_To_Cart.php](BigCommerce/Analytics/Events/Add_To_Cart.php), [line 90](BigCommerce/Analytics/Events/Add_To_Cart.php#L90-L90)
 
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`templates` | `array` | An array of available templates in the hierarchy.
+Source: [src/BigCommerce/Analytics/Events/View_Product.php](BigCommerce/Analytics/Events/View_Product.php), [line 57](BigCommerce/Analytics/Events/View_Product.php#L57-L57)
 
-Source: [src/BigCommerce/Container/Templates.php](BigCommerce/Container/Templates.php), [line 216](BigCommerce/Container/Templates.php#L216-L227)
+Source: [src/BigCommerce/Analytics/Events/View_Product.php](BigCommerce/Analytics/Events/View_Product.php), [line 98](BigCommerce/Analytics/Events/View_Product.php#L98-L98)
 
-### `index_template_hierarchy`
+### bigcommerce/amp/https_help_url
 
-Register the template-related services and filters.
 
-This method registers all the necessary services and filters related to templates, including
-template overrides, body classes, and template hierarchy modifications. It is called when the
-container is initialized and hooks into various WordPress actions and filters for template management.
+Filters the URL with information about updating the current site to HTTPS.
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`container` | `\Pimple\Container` | The container instance used to register services.
+`` | `string` | URL.
 
-Source: [src/BigCommerce/Container/Templates.php](BigCommerce/Container/Templates.php), [line 35](BigCommerce/Container/Templates.php#L35-L228)
+Source: [src/BigCommerce/Amp/Amp_Admin_Notices.php](BigCommerce/Amp/Amp_Admin_Notices.php), [line 98](BigCommerce/Amp/Amp_Admin_Notices.php#L98-L106)
 
-### `template_include`
+### bigcommerce/amp/amp_ssl_notice
 
-Includes the product template if it matches the path.
 
-This filter hooks into the `template_include` event and checks if a custom product template
-is available. If so, it includes the template using the `include_product_template`
-method of the `Template_Override` class.
+Filters the AMP SSL notice text.
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`path` | `string` | The current template path.
+`` | `string` | 
 
-Source: [src/BigCommerce/Container/Templates.php](BigCommerce/Container/Templates.php), [line 230](BigCommerce/Container/Templates.php#L230-L243)
+Source: [src/BigCommerce/Amp/Amp_Admin_Notices.php](BigCommerce/Amp/Amp_Admin_Notices.php), [line 109](BigCommerce/Amp/Amp_Admin_Notices.php#L109-L114)
 
-### `body_class`
-
-Add custom body classes.
-
-This filter hooks into the `body_class` event and allows the modification of the body
-classes by calling the `set_body_classes` method of the `Body_Classes` class.
-
-**Arguments**
+### bigcommerce/amp/admin_notices
 
-Argument | Type | Description
--------- | ---- | -----------
-`classes` | `array` | An array of the current body classes.
+Source: [src/BigCommerce/Amp/Amp_Admin_Notices.php](BigCommerce/Amp/Amp_Admin_Notices.php), [line 143](BigCommerce/Amp/Amp_Admin_Notices.php#L143-L143)
 
-Source: [src/BigCommerce/Container/Templates.php](BigCommerce/Container/Templates.php), [line 245](BigCommerce/Container/Templates.php#L245-L257)
+### bigcommerce/amp/kses_allowed_html
 
-### `get_terms_args`
 
-Exclude product categories by group during term fetching.
+Filters AMP kses allowed html from BC.
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`args` | `array` | The arguments for get_terms.
-`taxonomies` | `array` | The taxonomies being queried.
+`allowed_tags` | `array` | Allowed tags.
 
-Source: [src/BigCommerce/Container/Taxonomies.php](BigCommerce/Container/Taxonomies.php), [line 215](BigCommerce/Container/Taxonomies.php#L215-L227)
+Source: [src/BigCommerce/Amp/Overrides.php](BigCommerce/Amp/Overrides.php), [line 141](BigCommerce/Amp/Overrides.php#L141-L246)
 
-### `sanitize_option_Channel_Select::CHANNEL_TERM`
+### bigcommerce/api/config
 
-Filters the channel selection value when sanitizing options.
 
-This filter modifies the channel selection value before it is saved.
+Filter the API connection configuration object
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`value` | `mixed` | The channel term value to be sanitized.
+`config` | `\BigCommerce\Api\Configuration` | 
 
-Source: [src/BigCommerce/Container/Taxonomies.php](BigCommerce/Container/Taxonomies.php), [line 363](BigCommerce/Container/Taxonomies.php#L363-L371)
+Source: [src/BigCommerce/Container/Api.php](BigCommerce/Container/Api.php), [line 144](BigCommerce/Container/Api.php#L144-L149)
 
-### `sanitize_option_Channel_Settings::NEW_NAME`
+### bigcommerce/webhooks
 
-Filters the new channel name when sanitizing options.
 
-This filter modifies the new channel name value before it is saved.
+Filter the webhooks that the plugin will register with BigCommerce
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`value` | `mixed` | The new channel name value to be sanitized.
+`webhooks` | `\BigCommerce\Webhooks\Webhook[]` | 
 
-Source: [src/BigCommerce/Container/Taxonomies.php](BigCommerce/Container/Taxonomies.php), [line 373](BigCommerce/Container/Taxonomies.php#L373-L381)
+Source: [src/BigCommerce/Container/Webhooks.php](BigCommerce/Container/Webhooks.php), [line 252](BigCommerce/Container/Webhooks.php#L252-L257)
 
-### `bigcommerce/settings/api/disabled/field=Api_Credentials::OPTION_STORE_URL`
+### bigcommerce/settings/credentials_notice/excluded_screens
 
-Filters the store URL changes and prevents them if needed.
 
-This filter prevents changes to the store URL if certain conditions are met.
+Filters settings credentials notice for excluded screens.
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`disabled` | `bool` | Whether the store URL field is disabled.
-`container` | `\Pimple\Container` | The container object.
+`excluded_screens` | `array` | 
 
-Source: [src/BigCommerce/Container/Taxonomies.php](BigCommerce/Container/Taxonomies.php), [line 383](BigCommerce/Container/Taxonomies.php#L383-L392)
+Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 632](BigCommerce/Container/Settings.php#L632-L644)
 
-### `restrict_manage_posts`
+### bigcommerce/countries/data_file
 
-Adds a channel selection filter to the posts list table for product management in the admin area.
 
-This filter hooks into the `restrict_manage_posts` action, which is triggered when displaying
-the posts list table in the WordPress admin. It adds a dropdown menu for selecting a channel,
-allowing users to filter products by channel. The filter is displayed for the relevant post type.
+Filters the path of the countries data file.
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`post_type` | `string` | The post type currently being displayed in the admin area.
-`which` | `string` | The screen on which the filter is being displayed (either 'top' or 'bottom').
+`file` | `string` | Countries data json file path
 
-Source: [src/BigCommerce/Container/Taxonomies.php](BigCommerce/Container/Taxonomies.php), [line 406](BigCommerce/Container/Taxonomies.php#L406-L420)
+Source: [src/BigCommerce/Container/Accounts.php](BigCommerce/Container/Accounts.php), [line 358](BigCommerce/Container/Accounts.php#L358-L363)
 
-### `parse_request`
+### bigcommerce/logger/path
 
-Filters the product list based on the selected channel in the admin area.
 
-This filter hooks into the `parse_request` action, which is triggered when parsing the request
-to filter the products list. It applies the channel filter if multichannel is enabled, ensuring
-that only the products relevant to the selected channel are displayed.
+Filter the path to the debug logging file
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`wp` | `\WP` | The current WP instance, passed by reference, which contains the query variables.
+`log_path` | `string` | The full file system path to the log file
 
-Source: [src/BigCommerce/Container/Taxonomies.php](BigCommerce/Container/Taxonomies.php), [line 422](BigCommerce/Container/Taxonomies.php#L422-L435)
+Source: [src/BigCommerce/Container/Log.php](BigCommerce/Container/Log.php), [line 63](BigCommerce/Container/Log.php#L63-L68)
 
-### `bigcommerce/diagnostics`
+### bigcommerce/logger/custom_path
 
-Adds route-related diagnostics data to the BigCommerce diagnostics.
 
-Modifies the diagnostic data to include information related to routes, as fetched by the `diagnostic_data` method
-of the `Routes` class.
+Filter the path to the debug logging file
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`data` | `array` | The existing diagnostics data.
-
-Source: [src/BigCommerce/Container/Taxonomies.php](BigCommerce/Container/Taxonomies.php), [line 718](BigCommerce/Container/Taxonomies.php#L718-L730)
-
-### `bigcommerce/product/reviews/rest_url`
+`log_path` | `string` | The full file system path to the log file
 
-Filters the REST URL for product reviews.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`url` | `string` | The current reviews REST URL.
-`post_id` | `int` | The product post ID.
+Source: [src/BigCommerce/Container/Log.php](BigCommerce/Container/Log.php), [line 74](BigCommerce/Container/Log.php#L74-L79)
 
-Source: [src/BigCommerce/Container/Rest.php](BigCommerce/Container/Rest.php), [line 386](BigCommerce/Container/Rest.php#L386-L396)
+### bigcommerce/oauth_connector/url
 
-### `bigcommerce/js_config`
 
-Filters the BigCommerce JS configuration for cart settings.
+Filters oauth connector url
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`config` | `array` | The existing JS configuration.
-
-Source: [src/BigCommerce/Container/Rest.php](BigCommerce/Container/Rest.php), [line 398](BigCommerce/Container/Rest.php#L398-L407)
-
-### `bigcommerce/js_config`
-
-Filters the BigCommerce JS configuration for pricing settings.
+`url` | `string` | Oauth connector URL.
 
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`config` | `array` | The existing JS configuration.
+Source: [src/BigCommerce/Container/Merchant.php](BigCommerce/Container/Merchant.php), [line 90](BigCommerce/Container/Merchant.php#L90-L95)
 
-Source: [src/BigCommerce/Container/Rest.php](BigCommerce/Container/Rest.php), [line 409](BigCommerce/Container/Rest.php#L409-L418)
+### bigcommerce/proxy/use_cache
 
-### `bigcommerce/js_config`
 
-Filters the BigCommerce JS configuration for product settings.
+Filters whether to use the proxy cache.
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`config` | `array` | The existing JS configuration.
+`` | `bool` | Default true.
 
-Source: [src/BigCommerce/Container/Rest.php](BigCommerce/Container/Rest.php), [line 420](BigCommerce/Container/Rest.php#L420-L429)
+Source: [src/BigCommerce/Container/Proxy.php](BigCommerce/Container/Proxy.php), [line 143](BigCommerce/Container/Proxy.php#L143-L148)
 
-### `bigcommerce/js_config`
+### bigcommerce/import/timeout
 
-Filters the BigCommerce JS configuration for shipping settings.
 
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`config` | `array` | The existing JS configuration.
+Filter the timeout for an import job. If a step in the import
+takes more than this amount of time, it will be considered stalled
+and a new job will take it over.
 
-Source: [src/BigCommerce/Container/Rest.php](BigCommerce/Container/Rest.php), [line 431](BigCommerce/Container/Rest.php#L431-L440)
-
-### `bigcommerce/js_config`
-
-Filters the BigCommerce JS configuration for coupon code settings.
-
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`config` | `array` | The existing JS configuration.
+`timeout` | `int` | The timeout in seconds
 
-Source: [src/BigCommerce/Container/Rest.php](BigCommerce/Container/Rest.php), [line 442](BigCommerce/Container/Rest.php#L442-L453)
+Source: [src/BigCommerce/Container/Import.php](BigCommerce/Container/Import.php), [line 239](BigCommerce/Container/Import.php#L239-L246)
 
-### `bigcommerce/template/path`
+### bigcommerce/import/task_list
 
-Filters the template path for rendering BigCommerce templates.
 
-This allows AMP-specific overrides to adjust the template path dynamically.
+Filter the tasks that will be registered for the product import
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`path` | `string` | The original template path.
-`relative_path` | `string` | The relative path to the requested template.
+`list` | `\BigCommerce\Import\Task_Definition[]` | The list of tasks to register
 
-Source: [src/BigCommerce/Container/Amp.php](BigCommerce/Container/Amp.php), [line 228](BigCommerce/Container/Amp.php#L228-L238)
+Source: [src/BigCommerce/Container/Import.php](BigCommerce/Container/Import.php), [line 596](BigCommerce/Container/Import.php#L596-L601)
 
-### `bigcommerce/template/controller_factory`
+### bigcommerce/rest/namespace_base
 
-Filters the controller factory used to load BigCommerce templates.
 
-This allows AMP to replace the default controller factory with an AMP-specific implementation.
+Filters REST namespace base.
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`factory` | `object` | The current controller factory.
-`classname` | `string` | The class name for the requested controller.
+`namespace` | `string` | Namespace.
 
-Source: [src/BigCommerce/Container/Amp.php](BigCommerce/Container/Amp.php), [line 240](BigCommerce/Container/Amp.php#L240-L249)
+Source: [src/BigCommerce/Container/Rest.php](BigCommerce/Container/Rest.php), [line 213](BigCommerce/Container/Rest.php#L213-L218)
 
-### `bigcommerce/template/data`
+### bigcommerce/rest/version
 
-Filters the template data used for rendering BigCommerce templates.
 
-This adds AMP-specific adjustments, such as ensuring valid AMP-compatible `<img>` elements.
+Filters REST version.
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`data` | `array` | The data array for the template.
-`template` | `string` | The template being rendered.
-`options` | `array` | Additional options for the template.
+`version` | `int` | Version.
 
-Source: [src/BigCommerce/Container/Amp.php](BigCommerce/Container/Amp.php), [line 251](BigCommerce/Container/Amp.php#L251-L262)
+Source: [src/BigCommerce/Container/Rest.php](BigCommerce/Container/Rest.php), [line 222](BigCommerce/Container/Rest.php#L222-L227)
 
-### `bigcommerce/button/purchase`
+### bigcommerce/rest/cart_base
 
-Filters the purchase button markup.
 
-This allows AMP to modify the purchase button for AMP-specific functionality.
+Filters REST cart base.
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`button` | `string` | The original purchase button markup.
-`post_id` | `int` | The ID of the product post.
+`cart` | `string` | Cart base.
 
-Source: [src/BigCommerce/Container/Amp.php](BigCommerce/Container/Amp.php), [line 264](BigCommerce/Container/Amp.php#L264-L274)
+Source: [src/BigCommerce/Container/Rest.php](BigCommerce/Container/Rest.php), [line 231](BigCommerce/Container/Rest.php#L231-L236)
 
-### `bigcommerce/template/wrapper/attributes`
+### bigcommerce/rest/products_base
 
-Filters the attributes of the template wrapper element.
 
-This removes AMP-incompatible attributes to ensure validation.
+Filters REST products base.
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`attributes` | `array` | The attributes for the wrapper element.
-`template_name` | `string` | The name of the template being rendered.
-
-Source: [src/BigCommerce/Container/Amp.php](BigCommerce/Container/Amp.php), [line 276](BigCommerce/Container/Amp.php#L276-L286)
-
-### `bigcommerce/template/image/fallback`
-
-Filters the fallback image used in BigCommerce templates.
-
-This allows AMP to provide a specific fallback image for AMP templates.
-
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Amp.php](BigCommerce/Container/Amp.php), [line 288](BigCommerce/Container/Amp.php#L288-L297)
-
-### `wp_kses_allowed_html`
+`products` | `string` | Products base.
 
-Filters the allowed HTML tags and attributes for the current context.
+Source: [src/BigCommerce/Container/Rest.php](BigCommerce/Container/Rest.php), [line 244](BigCommerce/Container/Rest.php#L244-L249)
 
-This enables AMP to add or remove specific tags and attributes for validation.
+Source: [src/BigCommerce/Container/Rest.php](BigCommerce/Container/Rest.php), [line 270](BigCommerce/Container/Rest.php#L270-L273)
 
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`allowed_tags` | `array` | The currently allowed tags and attributes.
-`context` | `string` | The context for which tags are allowed.
+### bigcommerce/rest/storefront_base
 
-Source: [src/BigCommerce/Container/Amp.php](BigCommerce/Container/Amp.php), [line 299](BigCommerce/Container/Amp.php#L299-L309)
 
-### `amp_post_template_file`
+Filters REST products base.
 
-Filters the AMP template file for rendering a post.
-
-This allows overriding the default AMP template file with a classic template.
-
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`file` | `string` | The path to the current template file.
-`type` | `string` | The type of template being loaded (e.g., `single`, `archive`).
-`post_type` | `string` | The post type being rendered.
+`products` | `string` | Products base.
 
-Source: [src/BigCommerce/Container/Amp.php](BigCommerce/Container/Amp.php), [line 325](BigCommerce/Container/Amp.php#L325-L336)
+Source: [src/BigCommerce/Container/Rest.php](BigCommerce/Container/Rest.php), [line 257](BigCommerce/Container/Rest.php#L257-L262)
 
-### `amp_post_template_file`
+### bigcommerce/rest/shortcode_base
 
-Filters the AMP template file for rendering the header.
 
-This allows overriding the default header template with a custom AMP-specific version.
+Filters REST shortcode base.
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`file` | `string` | The path to the current header template file.
-`type` | `string` | The type of template being loaded (e.g., `header`).
+`shortcode` | `string` | Shortcode base.
 
-Source: [src/BigCommerce/Container/Amp.php](BigCommerce/Container/Amp.php), [line 338](BigCommerce/Container/Amp.php#L338-L348)
+Source: [src/BigCommerce/Container/Rest.php](BigCommerce/Container/Rest.php), [line 281](BigCommerce/Container/Rest.php#L281-L286)
 
-### `amp_post_template_data`
+### bigcommerce/rest/orders_shortcode_base
 
-Filters the data used by AMP post templates.
 
-This enables customization of the rendered data, such as modifying the menu structure for AMP.
+Filters REST orders shortcode base.
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`data` | `array` | The data array passed to the AMP template.
+`orders_shortcode` | `string` | Orders shortcode base.
 
-Source: [src/BigCommerce/Container/Amp.php](BigCommerce/Container/Amp.php), [line 350](BigCommerce/Container/Amp.php#L350-L359)
+Source: [src/BigCommerce/Container/Rest.php](BigCommerce/Container/Rest.php), [line 294](BigCommerce/Container/Rest.php#L294-L299)
 
-### `bigcommerce/assets/stylesheet`
+### bigcommerce/rest/product_component_shortcode_base
 
-Filters the stylesheet URL for BigCommerce assets.
 
-This allows modifying or replacing the default stylesheet used by BigCommerce, such as providing AMP-compatible styles.
+Filters REST product component shortcode base.
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`stylesheet` | `string` | The URL of the BigCommerce stylesheet.
+`component_shortcode` | `string` | Component shortcode base.
 
-Source: [src/BigCommerce/Container/Amp.php](BigCommerce/Container/Amp.php), [line 362](BigCommerce/Container/Amp.php#L362-L371)
+Source: [src/BigCommerce/Container/Rest.php](BigCommerce/Container/Rest.php), [line 307](BigCommerce/Container/Rest.php#L307-L312)
 
-### `wp_setup_nav_menu_item`
+### bigcommerce/rest/review_list_base
 
-Filters a single nav menu item during setup.
 
-This adds custom classes to the nav menu item if it corresponds to the cart page, using data from the BigCommerce container.
+Filters REST review list base.
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`menu_item` | `\BigCommerce\Container\WP_Post` | The menu item being processed.
-
-Source: [src/BigCommerce/Container/Amp.php](BigCommerce/Container/Amp.php), [line 374](BigCommerce/Container/Amp.php#L374-L385)
-
-### `amp_post_template_data`
+`product_reviews` | `string` | Product reviews base.
 
-Filters the data passed to AMP post templates.
+Source: [src/BigCommerce/Container/Rest.php](BigCommerce/Container/Rest.php), [line 320](BigCommerce/Container/Rest.php#L320-L325)
 
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`data` | `array` | The data passed to the post template.
+### bigcommerce/rest/pricing_base
 
-Source: [src/BigCommerce/Container/Amp.php](BigCommerce/Container/Amp.php), [line 404](BigCommerce/Container/Amp.php#L404-L416)
 
-### `page_template`
+Filters REST pricing base.
 
-Filters the page template for custom page types.
-
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`template` | `string` | The current template being used.
-`type` | `string` | The type of page (e.g., 'page', 'single', etc.).
-`templates` | `array` | Array of available templates.
+`pricing` | `string` | Pricing base.
 
-Source: [src/BigCommerce/Container/Compatibility.php](BigCommerce/Container/Compatibility.php), [line 93](BigCommerce/Container/Compatibility.php#L93-L104)
+Source: [src/BigCommerce/Container/Rest.php](BigCommerce/Container/Rest.php), [line 333](BigCommerce/Container/Rest.php#L333-L338)
 
-### `bigcommerce/js_config`
+### bigcommerce/rest/shipping_base
 
-Filters the JS configuration for Matomo tracking.
 
-This filter checks if Matomo is enabled and modifies the JS configuration accordingly.
-If tracking is enabled, the Matomo integration adds its own JS configuration.
+Filters REST shipping base.
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`config` | `array` | The current JS configuration.
+`shipping` | `string` | Shipping base.
 
-Source: [src/BigCommerce/Container/Compatibility.php](BigCommerce/Container/Compatibility.php), [line 209](BigCommerce/Container/Compatibility.php#L209-L225)
+Source: [src/BigCommerce/Container/Rest.php](BigCommerce/Container/Rest.php), [line 346](BigCommerce/Container/Rest.php#L346-L351)
 
-### `bigcommerce/currency/format`
+### bigcommerce/rest/coupon_code
 
-Filters the currency formatting for a given value.
 
-This filter allows modification of how a currency value is formatted. It utilizes
-the formatter to convert the value into the correct format based on the active currency.
+Filters REST coupon code base.
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`formatted` | `string` | The formatted currency value.
-`value` | `float` | The raw currency value to be formatted.
-
-Source: [src/BigCommerce/Container/Currency.php](BigCommerce/Container/Currency.php), [line 72](BigCommerce/Container/Currency.php#L72-L85)
-
-### `bigcommerce/currency/code`
-
-Filters the currency code.
+`coupon_code` | `string` | Coupon code base.
 
-This filter allows modification of the currency code being used. It returns
-the current currency code based on the configured currency.
+Source: [src/BigCommerce/Container/Rest.php](BigCommerce/Container/Rest.php), [line 359](BigCommerce/Container/Rest.php#L359-L364)
 
-**Arguments**
-
-No arguments.
-
-Source: [src/BigCommerce/Container/Currency.php](BigCommerce/Container/Currency.php), [line 87](BigCommerce/Container/Currency.php#L87-L97)
-
-### `bigcommerce/currency/enabled`
-
-Filters the list of enabled currencies for the current channel.
-
-This filter returns a list of currencies that are enabled for the current channel,
-allowing for dynamic adjustment based on context.
-
-**Arguments**
+### bigcommerce/amp/templates/directory
 
-No arguments.
 
-Source: [src/BigCommerce/Container/Currency.php](BigCommerce/Container/Currency.php), [line 99](BigCommerce/Container/Currency.php#L99-L109)
+Filter the name of the AMP template directory
 
-### `pre_option_BigCommerce\Settings\Sections\Cart::OPTION_EMBEDDED_CHECKOUT`
-
-Filters the value of the "Embedded Checkout" option based on setup requirements.
-
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`value` | `mixed` | The current option value.
-
-Source: [src/BigCommerce/Container/Checkout.php](BigCommerce/Container/Checkout.php), [line 69](BigCommerce/Container/Checkout.php#L69-L77)
-
-### `bigcommerce/checkout/can_embed`
+`directory` | `string` | The base name of the template directory
 
-Determines whether the embedded checkout can be enabled based on current requirements.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`supported` | `bool` | Indicates if embedded checkout is currently supported.
+Source: [src/BigCommerce/Container/Amp.php](BigCommerce/Container/Amp.php), [line 108](BigCommerce/Container/Amp.php#L108-L113)
 
-Source: [src/BigCommerce/Container/Checkout.php](BigCommerce/Container/Checkout.php), [line 79](BigCommerce/Container/Checkout.php#L79-L87)
+### bigcommerce/amp/templates/enable_override
 
-### `bigcommerce/checkout/url`
 
-Modifies the checkout URL by adding a login token for customer authentication.
+Toggles whether AMP template overrides will be used to render plugin templates
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`url` | `string` | The original checkout URL.
-
-Source: [src/BigCommerce/Container/Checkout.php](BigCommerce/Container/Checkout.php), [line 95](BigCommerce/Container/Checkout.php#L95-L103)
-
-### `wp_setup_nav_menu_item`
-
-Filters the setup of a navigation menu item.
+`enable` | `bool` | Whether AMP template overrides are enabled
 
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`item` | `mixed` | The menu item being set up.
+Source: [src/BigCommerce/Container/Amp.php](BigCommerce/Container/Amp.php), [line 182](BigCommerce/Container/Amp.php#L182-L187)
 
-Source: [src/BigCommerce/Container/Nav_Menu.php](BigCommerce/Container/Nav_Menu.php), [line 59](BigCommerce/Container/Nav_Menu.php#L59-L67)
+### bigcommerce/api/default_headers
 
-### `wp_get_nav_menu_items`
 
-Filters the list of navigation menu items to include dynamic items.
+Filters API default headers.
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`items` | `array` | The existing menu items.
-`menu` | `object` | The current menu object.
-`args` | `array` | The menu arguments.
+`default_headers` | `array` | An array of default header(s).
 
-Source: [src/BigCommerce/Container/Nav_Menu.php](BigCommerce/Container/Nav_Menu.php), [line 69](BigCommerce/Container/Nav_Menu.php#L69-L79)
+Source: [src/BigCommerce/Api/Configuration.php](BigCommerce/Api/Configuration.php), [line 24](BigCommerce/Api/Configuration.php#L24-L29)
 
-### `customize_nav_menu_available_item_types`
+### bigcommerce/api/ttl
 
-Filters the available item types in the customizer.
+Source: [src/BigCommerce/Api/Caching_Client.php](BigCommerce/Api/Caching_Client.php), [line 118](BigCommerce/Api/Caching_Client.php#L118-L118)
 
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`types` | `array` | The existing item types.
+### bigcommerce/checkout/config
 
-Source: [src/BigCommerce/Container/Nav_Menu.php](BigCommerce/Container/Nav_Menu.php), [line 123](BigCommerce/Container/Nav_Menu.php#L123-L131)
 
-### `customize_nav_menu_available_items`
+Filter the config used to render the embedded checkout.
 
-Filters the available menu items in the customizer.
+For more details, @see https://github.com/bigcommerce/checkout-sdk-js/blob/master/docs/interfaces/embeddedcheckoutoptions.md
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`items` | `array` | The existing menu items.
-`type` | `string` | The item type.
-`object` | `object` | The current object.
-`page` | `int` | The page number.
+`checkout_config` | `array` | 
 
-Source: [src/BigCommerce/Container/Nav_Menu.php](BigCommerce/Container/Nav_Menu.php), [line 133](BigCommerce/Container/Nav_Menu.php#L133-L144)
+Source: [src/BigCommerce/Shortcodes/Checkout.php](BigCommerce/Shortcodes/Checkout.php), [line 66](BigCommerce/Shortcodes/Checkout.php#L66-L72)
 
-### `pre_option_Currency::CURRENCY_CODE`
+### bigcommerce/products/reviews/per_page
 
-Temporarily filters the currency code to match the order's currency.
-
-**Arguments**
-
-Argument | Type | Description
--------- | ---- | -----------
-`currency` | `string` | The original currency code.
+Source: [src/BigCommerce/Shortcodes/Product_Reviews.php](BigCommerce/Shortcodes/Product_Reviews.php), [line 58](BigCommerce/Shortcodes/Product_Reviews.php#L58-L58)
 
-Source: [src/BigCommerce/Shortcodes/Order_History.php](BigCommerce/Shortcodes/Order_History.php), [line 110](BigCommerce/Shortcodes/Order_History.php#L110-L117)
+### bigcommerce/product/reviews/rest_url
 
-### `pre_option_Currency::CURRENCY_CODE`
 
-Temporarily filters the currency code to match the order's currency.
+Filters product reviews REST url.
 
 **Arguments**
 
 Argument | Type | Description
 -------- | ---- | -----------
-`currency` | `string` | The original currency code.
+`base_url` | `string` | URL.
+`post_id` | `int` | Post id.
 
-Source: [src/BigCommerce/Shortcodes/Order_History.php](BigCommerce/Shortcodes/Order_History.php), [line 140](BigCommerce/Shortcodes/Order_History.php#L140-L147)
+Source: [src/BigCommerce/Shortcodes/Product_Reviews.php](BigCommerce/Shortcodes/Product_Reviews.php), [line 91](BigCommerce/Shortcodes/Product_Reviews.php#L91-L97)
 
 
 <p align="center"><a href="https://github.com/pronamic/wp-documentor"><img src="https://cdn.jsdelivr.net/gh/pronamic/wp-documentor@main/logos/pronamic-wp-documentor.svgo-min.svg" alt="Pronamic WordPress Documentor" width="32" height="32"></a><br><em>Generated by <a href="https://github.com/pronamic/wp-documentor">Pronamic WordPress Documentor</a> <code>1.2.0</code></em><p>

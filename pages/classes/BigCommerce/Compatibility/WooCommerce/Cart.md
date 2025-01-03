@@ -86,4 +86,4 @@ The formatted subtotal of the cart or 0 if the cart amount is unavailable.
 
 
 ***
-> Automatically generated on 2024-12-31
+> Automatically generated on 2025-01-03

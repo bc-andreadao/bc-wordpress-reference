@@ -48,4 +48,4 @@ The modified configuration array with mini-cart settings.
 
 
 ***
-> Automatically generated on 2024-12-31
+> Automatically generated on 2025-01-03

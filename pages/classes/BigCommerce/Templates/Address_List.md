@@ -423,4 +423,4 @@ protected build_attribute_string(array $attributes): string
 
 
 ***
-> Automatically generated on 2024-12-31
+> Automatically generated on 2025-01-03

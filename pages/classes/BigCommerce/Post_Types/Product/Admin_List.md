@@ -126,4 +126,4 @@ public get_bigcommerce_product_thumbnail_value(mixed $column_name, mixed $post_I
 
 
 ***
-> Automatically generated on 2024-12-31
+> Automatically generated on 2025-01-03

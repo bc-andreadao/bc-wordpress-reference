@@ -90,4 +90,4 @@ Returns the Configuration object used by this API client.
 
 
 ***
-> Automatically generated on 2024-12-31
+> Automatically generated on 2025-01-03
