@@ -70,4 +70,4 @@ public render(array $context): string
 
 
 ***
-> Automatically generated on 2025-01-03
+> Automatically generated on 2025-01-07

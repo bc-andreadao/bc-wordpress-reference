@@ -492,4 +492,4 @@ protected get_form(\BigCommerce\Post_Types\Product\Product $product): mixed
 
 
 ***
-> Automatically generated on 2025-01-03
+> Automatically generated on 2025-01-07

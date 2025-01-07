@@ -61,4 +61,4 @@ public __construct(\BigCommerce\Compatibility\WooCommerce\Cart $cart): mixed
 
 
 ***
-> Automatically generated on 2025-01-03
+> Automatically generated on 2025-01-07

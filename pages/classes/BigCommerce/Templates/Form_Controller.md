@@ -399,4 +399,4 @@ protected build_attribute_string(array $attributes): string
 
 
 ***
-> Automatically generated on 2025-01-03
+> Automatically generated on 2025-01-07

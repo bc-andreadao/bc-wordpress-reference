@@ -26,4 +26,4 @@ Retrieves and renders a WooCommerce template.
 
 
 ***
-> Automatically generated on 2025-01-03
+> Automatically generated on 2025-01-07

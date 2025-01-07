@@ -48,4 +48,4 @@ Adds a new panel to the WordPress Customizer for editing the appearance of the B
 
 
 ***
-> Automatically generated on 2025-01-03
+> Automatically generated on 2025-01-07

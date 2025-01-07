@@ -123,4 +123,4 @@ public static is_msf_channel_prop_on(string $prop): bool
 
 
 ***
-> Automatically generated on 2025-01-03
+> Automatically generated on 2025-01-07

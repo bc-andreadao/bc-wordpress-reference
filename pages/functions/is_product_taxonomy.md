@@ -21,4 +21,4 @@ This function has no parameters.
 True if the current page is a product taxonomy page, false otherwise.
 
 ***
-> Automatically generated on 2025-01-03
+> Automatically generated on 2025-01-07

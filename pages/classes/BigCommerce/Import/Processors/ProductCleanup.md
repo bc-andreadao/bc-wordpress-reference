@@ -86,4 +86,4 @@ protected get_terms(): mixed
 
 
 ***
-> Automatically generated on 2025-01-03
+> Automatically generated on 2025-01-07

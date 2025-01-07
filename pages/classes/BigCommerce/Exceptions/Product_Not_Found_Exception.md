@@ -15,4 +15,4 @@ Exception thrown when a product cannot be found in the system.
 
 
 ***
-> Automatically generated on 2025-01-03
+> Automatically generated on 2025-01-07

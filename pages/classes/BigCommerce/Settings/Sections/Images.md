@@ -42,5 +42,5 @@ public enable_images_import_toggle(array $args = []): mixed
 ***
 
 ***
-> Automatically generated on 2025-01-03
+> Automatically generated on 2025-01-07
 

@@ -87,4 +87,4 @@ public get_options_fields_description(): array
 
 
 ***
-> Automatically generated on 2025-01-03
+> Automatically generated on 2025-01-07

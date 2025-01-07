@@ -72,4 +72,4 @@ public fetch(mixed $product_id, mixed $page = 1, mixed $per_page = 12): mixed
 
 
 ***
-> Automatically generated on 2025-01-03
+> Automatically generated on 2025-01-07

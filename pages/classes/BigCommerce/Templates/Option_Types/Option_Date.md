@@ -492,4 +492,4 @@ protected sort_options(mixed $a, mixed $b): mixed
 
 
 ***
-> Automatically generated on 2025-01-03
+> Automatically generated on 2025-01-07
