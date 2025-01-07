@@ -14,8 +14,8 @@
 
 | Constant | Visibility | Type | Value |
 |:---------|:-----------|:-----|:------|
-|`CUSTOMER_CHANNEL_META`|public| |&#039;bigcommerce_customer_channel_meta&#039;|
-|`CUSTOMER_ORIGIN_CHANNEL`|public| |&#039;bigcommerce_customer_origin_channel&#039;|
+|`CUSTOMER_CHANNEL_META`|public|string|&#039;bigcommerce_customer_channel_meta&#039;|
+|`CUSTOMER_ORIGIN_CHANNEL`|public|string|&#039;bigcommerce_customer_origin_channel&#039;|
 
 
 ## Methods

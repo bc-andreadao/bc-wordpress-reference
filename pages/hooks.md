@@ -540,7 +540,7 @@ Source: [src/BigCommerce/Webhooks/Customer/Customer_Creator.php](BigCommerce/Web
 
 Source: [src/BigCommerce/Webhooks/Customer/Customer_Creator.php](BigCommerce/Webhooks/Customer/Customer_Creator.php), [line 52](BigCommerce/Webhooks/Customer/Customer_Creator.php#L52-L55)
 
-Source: [src/BigCommerce/Webhooks/Customer/Customer_Channel_Updater.php](BigCommerce/Webhooks/Customer/Customer_Channel_Updater.php), [line 35](BigCommerce/Webhooks/Customer/Customer_Channel_Updater.php#L35-L37)
+Source: [src/BigCommerce/Webhooks/Customer/Customer_Channel_Updater.php](BigCommerce/Webhooks/Customer/Customer_Channel_Updater.php), [line 46](BigCommerce/Webhooks/Customer/Customer_Channel_Updater.php#L46-L48)
 
 Source: [src/BigCommerce/Webhooks/Customer/Customer_Updater.php](BigCommerce/Webhooks/Customer/Customer_Updater.php), [line 30](BigCommerce/Webhooks/Customer/Customer_Updater.php#L30-L32)
 
