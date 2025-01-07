@@ -2,22 +2,21 @@
 
 # Checkout
 
-Handles the registration of checkout-related services and actions.
+Registers checkout-related functionality for the BigCommerce platform, including customer login and checkout requirements.
 
-This class is responsible for registering the services related to the checkout
-process, such as displaying checkout requirements notices and handling customer
-login functionality during the checkout flow.
+This class extends the Provider class and interacts with various BigCommerce services, such as customer login and checkout
+requirements, through a Pimple container.
 
 * Full name: `\BigCommerce\Container\Checkout`
-* Parent class: [`Provider`](./classes/BigCommerce/Container/Provider.md)
+* Parent class: [`Provider`](./Provider.md)
 
 
 ## Constants
 
 | Constant | Visibility | Type | Value |
 |:---------|:-----------|:-----|:------|
-|`REQUIREMENTS_NOTICE`|public| |&#039;checkout.requirements_notice&#039;|
-|`LOGIN`|public| |&#039;checkout.customer_login&#039;|
+|`REQUIREMENTS_NOTICE`|public|string|&#039;checkout.requirements_notice&#039;|
+|`LOGIN`|public|string|&#039;checkout.customer_login&#039;|
 
 
 ## Methods
@@ -25,14 +24,13 @@ login functionality during the checkout flow.
 
 ### register
 
-Registers checkout-related services in the container.
+Registers the checkout-related functionality in the container.
 
 ```php
-public register(\Pimple\Container $container): mixed
+public register(\Pimple\Container $container): void
 ```
 
-This method is used to register the checkout services, including the
-requirements notice and customer login services, in the container.
+
 
 
 
@@ -43,7 +41,61 @@ requirements notice and customer login services, in the container.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `$container` | **\Pimple\Container** | The container to register the services in. |
+| `$container` | **\Pimple\Container** | The Pimple container to register services in. |
+
+
+
+
+
+***
+
+### requirements
+
+Registers services related to the checkout requirements.
+
+```php
+private requirements(\Pimple\Container $container): void
+```
+
+This method sets up services for the requirements notice, admin actions, and filters.
+
+
+
+
+
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `$container` | **\Pimple\Container** | The Pimple container to register services in. |
+
+
+
+
+
+***
+
+### customer_login
+
+Registers services related to the customer login functionality during checkout.
+
+```php
+private customer_login(\Pimple\Container $container): void
+```
+
+This method sets up the customer login service and modifies the checkout URL to include the login token.
+
+
+
+
+
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `$container` | **\Pimple\Container** | The Pimple container to register services in. |
 
 
 
@@ -53,4 +105,4 @@ requirements notice and customer login services, in the container.
 
 
 ***
-> Automatically generated on 2025-01-07
+> Automatically generated on 2024-11-21

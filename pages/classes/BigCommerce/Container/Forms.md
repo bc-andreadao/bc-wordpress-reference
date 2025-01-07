@@ -2,13 +2,14 @@
 
 # Forms
 
-Forms class handles various form actions within BigCommerce, such as registration, address updates, product reviews, and more.
+Provides form-related functionality for handling various form actions like user registration, address updates,
+gift certificate purchases, and error handling. Registers form handlers and processes corresponding actions
+based on incoming requests. This class interacts with the Pimple container for dependency injection.
 
-It registers form handlers and provides functionality to process form actions, handle errors, success messages, redirects, and messaging.
-This class is part of the container and utilizes dependency injection to manage the various handlers for each action.
+
 
 * Full name: `\BigCommerce\Container\Forms`
-* Parent class: [`Provider`](./classes/BigCommerce/Container/Provider.md)
+* Parent class: [`Provider`](./Provider.md)
 
 
 ## Constants
@@ -33,13 +34,13 @@ This class is part of the container and utilizes dependency injection to manage 
 
 ### register
 
-Registers all the form actions and handlers into the container.
+Registers the form-related actions and handlers.
 
 ```php
-public register(\Pimple\Container $container): mixed
+public register(\Pimple\Container $container): void
 ```
 
-This method sets up actions for handling form submissions, errors, success, redirects, and messaging.
+
 
 
 
@@ -50,7 +51,61 @@ This method sets up actions for handling form submissions, errors, success, redi
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `$container` | **\Pimple\Container** | The dependency injection container. |
+| `$container` | **\Pimple\Container** | The container instance used to inject dependencies. |
+
+
+
+
+
+***
+
+### actions
+
+Registers form actions related to deleting, updating addresses, and handling user registrations.
+
+```php
+private actions(\Pimple\Container $container): void
+```
+
+
+
+
+
+
+
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `$container` | **\Pimple\Container** | The container instance used to inject dependencies. |
+
+
+
+
+
+***
+
+### errors
+
+Registers the error handling actions for form submissions.
+
+```php
+private errors(\Pimple\Container $container): void
+```
+
+
+
+
+
+
+
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `$container` | **\Pimple\Container** | The container instance used to inject dependencies. |
 
 
 
@@ -60,4 +115,4 @@ This method sets up actions for handling form submissions, errors, success, redi
 
 
 ***
-> Automatically generated on 2025-01-07
+> Automatically generated on 2024-11-21
