@@ -49,4 +49,4 @@ Registers a list of widgets and hooks them into WordPress using `widgets_init`.
 
 
 ***
-> Automatically generated on 2025-01-07
+> Automatically generated on 2025-01-13

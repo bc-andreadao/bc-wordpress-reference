@@ -47,4 +47,4 @@ The currency formatter.
 
 
 ***
-> Automatically generated on 2025-01-07
+> Automatically generated on 2025-01-13

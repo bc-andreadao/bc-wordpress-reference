@@ -26,4 +26,4 @@ Retrieves the HTML content for a WooCommerce template.
 An empty string.
 
 ***
-> Automatically generated on 2025-01-07
+> Automatically generated on 2025-01-13

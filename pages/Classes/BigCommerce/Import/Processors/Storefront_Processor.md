@@ -206,4 +206,4 @@ protected handle_options(int $term_id, array $entries = []): void
 
 
 ***
-> Automatically generated on 2025-01-07
+> Automatically generated on 2025-01-13

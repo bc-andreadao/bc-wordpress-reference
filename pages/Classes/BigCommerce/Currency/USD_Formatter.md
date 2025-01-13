@@ -49,4 +49,4 @@ The formatted currency value in USD.
 
 
 ***
-> Automatically generated on 2025-01-07
+> Automatically generated on 2025-01-13

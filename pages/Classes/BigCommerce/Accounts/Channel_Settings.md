@@ -212,4 +212,4 @@ Clears the scheduled events for the "bigcommerce/sync_global_logins" hook.
 
 
 ***
-> Automatically generated on 2025-01-07
+> Automatically generated on 2025-01-13

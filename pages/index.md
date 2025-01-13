@@ -1,11 +1,9 @@
 
 ***
 
-# Documentation
+# BigCommerce for Wordpress Reference
 
 
-
-This is an automatically generated documentation for **Documentation**.
 
 
 ## Namespaces
@@ -1566,4 +1564,4 @@ This is an automatically generated documentation for **Documentation**.
 
 
 ***
-> Automatically generated on 2025-01-07
+> Automatically generated on 2025-01-13

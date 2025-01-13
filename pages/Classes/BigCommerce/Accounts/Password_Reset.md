@@ -99,4 +99,4 @@ public sync_password_change_with_bigcommerce(int $user_id, \WP_User $old_user_da
 
 
 ***
-> Automatically generated on 2025-01-07
+> Automatically generated on 2025-01-13

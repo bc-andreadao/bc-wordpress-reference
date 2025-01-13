@@ -53,4 +53,4 @@ the `add_image_size` function. The sizes are registered when the theme is set up
 
 
 ***
-> Automatically generated on 2025-01-07
+> Automatically generated on 2025-01-13

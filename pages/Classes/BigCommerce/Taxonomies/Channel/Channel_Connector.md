@@ -148,4 +148,4 @@ public prevent_store_url_changes(bool|string $disabled_message): bool|string
 
 
 ***
-> Automatically generated on 2025-01-07
+> Automatically generated on 2025-01-13

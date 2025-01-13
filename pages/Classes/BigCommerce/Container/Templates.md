@@ -54,4 +54,4 @@ container is initialized and hooks into various WordPress actions and filters fo
 
 
 ***
-> Automatically generated on 2025-01-07
+> Automatically generated on 2025-01-13

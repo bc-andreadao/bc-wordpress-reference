@@ -42,4 +42,4 @@ The GraphQL query string for product reviews.
 
 
 ***
-> Automatically generated on 2025-01-07
+> Automatically generated on 2025-01-13

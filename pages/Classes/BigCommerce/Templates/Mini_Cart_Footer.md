@@ -482,4 +482,4 @@ protected is_physical_item_in_cart(mixed $cart): mixed
 
 
 ***
-> Automatically generated on 2025-01-07
+> Automatically generated on 2025-01-13

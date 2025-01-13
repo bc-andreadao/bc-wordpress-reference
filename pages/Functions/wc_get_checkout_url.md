@@ -21,4 +21,4 @@ This function has no parameters.
 The checkout page URL.
 
 ***
-> Automatically generated on 2025-01-07
+> Automatically generated on 2025-01-13

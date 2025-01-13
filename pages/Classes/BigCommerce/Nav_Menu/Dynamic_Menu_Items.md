@@ -77,4 +77,4 @@ public insert_dynamic_menu_items(array $items, object $menu, array $args): array
 
 
 ***
-> Automatically generated on 2025-01-07
+> Automatically generated on 2025-01-13
