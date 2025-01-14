@@ -57,4 +57,4 @@ Returns `true` if the submission is spam, otherwise `false`.
 
 
 ***
-> Automatically generated on 2025-01-13
+> Automatically generated on 2025-01-14

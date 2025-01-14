@@ -620,4 +620,4 @@ protected get_brand(\BigCommerce\Post_Types\Product\Product $product): string
 
 
 ***
-> Automatically generated on 2025-01-13
+> Automatically generated on 2025-01-14

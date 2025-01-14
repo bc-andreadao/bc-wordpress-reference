@@ -177,4 +177,4 @@ public completed_count(mixed $state): int
 
 
 ***
-> Automatically generated on 2025-01-13
+> Automatically generated on 2025-01-14

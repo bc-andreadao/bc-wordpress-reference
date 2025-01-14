@@ -16,7 +16,7 @@ Deletes imported terms that no longer exist in BigCommerce
 
 | Constant | Visibility | Type | Value |
 |:---------|:-----------|:-----|:------|
-|`STATE_OPTION`|public| |&#039;bigcommerce_purge_terms_state&#039;|
+|`STATE_OPTION`|public|string|&#039;bigcommerce_purge_terms_state&#039;|
 
 ## Properties
 
@@ -332,4 +332,4 @@ protected delete_option(string $option): bool
 
 
 ***
-> Automatically generated on 2025-01-13
+> Automatically generated on 2025-01-14
