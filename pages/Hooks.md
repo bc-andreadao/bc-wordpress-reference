@@ -107,9 +107,9 @@ Source: [src/BigCommerce/Forms/Update_Address_Handler.php](BigCommerce/Forms/Upd
 
 Source: [src/BigCommerce/Forms/Delete_Address_Handler.php](BigCommerce/Forms/Delete_Address_Handler.php), [line 33](BigCommerce/Forms/Delete_Address_Handler.php#L33-L40)
 
-Source: [src/BigCommerce/Forms/Registration_Handler.php](BigCommerce/Forms/Registration_Handler.php), [line 76](BigCommerce/Forms/Registration_Handler.php#L76-L82)
+Source: [src/BigCommerce/Forms/Registration_Handler.php](BigCommerce/Forms/Registration_Handler.php), [line 75](BigCommerce/Forms/Registration_Handler.php#L75-L81)
 
-Source: [src/BigCommerce/Forms/Registration_Handler.php](BigCommerce/Forms/Registration_Handler.php), [line 112](BigCommerce/Forms/Registration_Handler.php#L112-L112)
+Source: [src/BigCommerce/Forms/Registration_Handler.php](BigCommerce/Forms/Registration_Handler.php), [line 111](BigCommerce/Forms/Registration_Handler.php#L111-L111)
 
 Source: [src/BigCommerce/Forms/Switch_Currency_Handler.php](BigCommerce/Forms/Switch_Currency_Handler.php), [line 75](BigCommerce/Forms/Switch_Currency_Handler.php#L75-L75)
 
@@ -159,7 +159,7 @@ Source: [src/BigCommerce/Forms/Update_Address_Handler.php](BigCommerce/Forms/Upd
 
 Source: [src/BigCommerce/Forms/Delete_Address_Handler.php](BigCommerce/Forms/Delete_Address_Handler.php), [line 49](BigCommerce/Forms/Delete_Address_Handler.php#L49-L59)
 
-Source: [src/BigCommerce/Forms/Registration_Handler.php](BigCommerce/Forms/Registration_Handler.php), [line 177](BigCommerce/Forms/Registration_Handler.php#L177-L185)
+Source: [src/BigCommerce/Forms/Registration_Handler.php](BigCommerce/Forms/Registration_Handler.php), [line 171](BigCommerce/Forms/Registration_Handler.php#L171-L179)
 
 Source: [src/BigCommerce/Forms/Switch_Currency_Handler.php](BigCommerce/Forms/Switch_Currency_Handler.php), [line 104](BigCommerce/Forms/Switch_Currency_Handler.php#L104-L112)
 
@@ -280,13 +280,13 @@ Source: [src/BigCommerce/Import/Processors/Storefront_Processor.php](BigCommerce
 
 Source: [src/BigCommerce/Import/Processors/Storefront_Processor.php](BigCommerce/Import/Processors/Storefront_Processor.php), [line 210](BigCommerce/Import/Processors/Storefront_Processor.php#L210-L212)
 
-Source: [src/BigCommerce/Import/Processors/Term_Purge.php](BigCommerce/Import/Processors/Term_Purge.php), [line 67](BigCommerce/Import/Processors/Term_Purge.php#L67-L71)
+Source: [src/BigCommerce/Import/Processors/Term_Purge.php](BigCommerce/Import/Processors/Term_Purge.php), [line 86](BigCommerce/Import/Processors/Term_Purge.php#L86-L90)
 
-Source: [src/BigCommerce/Import/Processors/Term_Purge.php](BigCommerce/Import/Processors/Term_Purge.php), [line 88](BigCommerce/Import/Processors/Term_Purge.php#L88-L88)
+Source: [src/BigCommerce/Import/Processors/Term_Purge.php](BigCommerce/Import/Processors/Term_Purge.php), [line 107](BigCommerce/Import/Processors/Term_Purge.php#L107-L107)
 
-Source: [src/BigCommerce/Import/Processors/Term_Purge.php](BigCommerce/Import/Processors/Term_Purge.php), [line 97](BigCommerce/Import/Processors/Term_Purge.php#L97-L99)
+Source: [src/BigCommerce/Import/Processors/Term_Purge.php](BigCommerce/Import/Processors/Term_Purge.php), [line 116](BigCommerce/Import/Processors/Term_Purge.php#L116-L118)
 
-Source: [src/BigCommerce/Import/Processors/Term_Purge.php](BigCommerce/Import/Processors/Term_Purge.php), [line 107](BigCommerce/Import/Processors/Term_Purge.php#L107-L110)
+Source: [src/BigCommerce/Import/Processors/Term_Purge.php](BigCommerce/Import/Processors/Term_Purge.php), [line 126](BigCommerce/Import/Processors/Term_Purge.php#L126-L129)
 
 Source: [src/BigCommerce/Import/Processors/Headless_Product_Processor.php](BigCommerce/Import/Processors/Headless_Product_Processor.php), [line 74](BigCommerce/Import/Processors/Headless_Product_Processor.php#L74-L74)
 
@@ -468,7 +468,7 @@ Source: [src/BigCommerce/Rest/Products_Controller.php](BigCommerce/Rest/Products
 
 Source: [src/BigCommerce/Rest/Products_Controller.php](BigCommerce/Rest/Products_Controller.php), [line 264](BigCommerce/Rest/Products_Controller.php#L264-L264)
 
-Source: [src/BigCommerce/Rest/Products_Controller.php](BigCommerce/Rest/Products_Controller.php), [line 330](BigCommerce/Rest/Products_Controller.php#L330-L332)
+Source: [src/BigCommerce/Rest/Products_Controller.php](BigCommerce/Rest/Products_Controller.php), [line 319](BigCommerce/Rest/Products_Controller.php#L319-L321)
 
 Source: [src/BigCommerce/Webhooks/Product/Channel_Updater.php](BigCommerce/Webhooks/Product/Channel_Updater.php), [line 14](BigCommerce/Webhooks/Product/Channel_Updater.php#L14-L16)
 
@@ -524,11 +524,11 @@ Source: [src/BigCommerce/Webhooks/Product/Channels_Manager.php](BigCommerce/Webh
 
 Source: [src/BigCommerce/Webhooks/Product/Product_Creator.php](BigCommerce/Webhooks/Product/Product_Creator.php), [line 60](BigCommerce/Webhooks/Product/Product_Creator.php#L60-L60)
 
-Source: [src/BigCommerce/Webhooks/Product/Product_Creator.php](BigCommerce/Webhooks/Product/Product_Creator.php), [line 105](BigCommerce/Webhooks/Product/Product_Creator.php#L105-L105)
+Source: [src/BigCommerce/Webhooks/Product/Product_Creator.php](BigCommerce/Webhooks/Product/Product_Creator.php), [line 90](BigCommerce/Webhooks/Product/Product_Creator.php#L90-L90)
 
-Source: [src/BigCommerce/Webhooks/Product/Product_Creator.php](BigCommerce/Webhooks/Product/Product_Creator.php), [line 138](BigCommerce/Webhooks/Product/Product_Creator.php#L138-L138)
+Source: [src/BigCommerce/Webhooks/Product/Product_Creator.php](BigCommerce/Webhooks/Product/Product_Creator.php), [line 123](BigCommerce/Webhooks/Product/Product_Creator.php#L123-L123)
 
-Source: [src/BigCommerce/Webhooks/Product/Product_Updater.php](BigCommerce/Webhooks/Product/Product_Updater.php), [line 115](BigCommerce/Webhooks/Product/Product_Updater.php#L115-L115)
+Source: [src/BigCommerce/Webhooks/Product/Product_Updater.php](BigCommerce/Webhooks/Product/Product_Updater.php), [line 100](BigCommerce/Webhooks/Product/Product_Updater.php#L100-L100)
 
 Source: [src/BigCommerce/Webhooks/Webhook.php](BigCommerce/Webhooks/Webhook.php), [line 154](BigCommerce/Webhooks/Webhook.php#L154-L154)
 
@@ -546,13 +546,13 @@ Source: [src/BigCommerce/Webhooks/Customer/Customer_Updater.php](BigCommerce/Web
 
 Source: [src/BigCommerce/Webhooks/Customer/Customer_Update_Webhook.php](BigCommerce/Webhooks/Customer/Customer_Update_Webhook.php), [line 32](BigCommerce/Webhooks/Customer/Customer_Update_Webhook.php#L32-L39)
 
-Source: [src/BigCommerce/Webhooks/Customer/Customer_Saver.php](BigCommerce/Webhooks/Customer/Customer_Saver.php), [line 40](BigCommerce/Webhooks/Customer/Customer_Saver.php#L40-L45)
+Source: [src/BigCommerce/Webhooks/Customer/Customer_Saver.php](BigCommerce/Webhooks/Customer/Customer_Saver.php), [line 52](BigCommerce/Webhooks/Customer/Customer_Saver.php#L52-L57)
 
-Source: [src/BigCommerce/Webhooks/Customer/Customer_Saver.php](BigCommerce/Webhooks/Customer/Customer_Saver.php), [line 112](BigCommerce/Webhooks/Customer/Customer_Saver.php#L112-L114)
+Source: [src/BigCommerce/Webhooks/Customer/Customer_Saver.php](BigCommerce/Webhooks/Customer/Customer_Saver.php), [line 124](BigCommerce/Webhooks/Customer/Customer_Saver.php#L124-L126)
 
-Source: [src/BigCommerce/Webhooks/Customer/Customer_Saver.php](BigCommerce/Webhooks/Customer/Customer_Saver.php), [line 123](BigCommerce/Webhooks/Customer/Customer_Saver.php#L123-L125)
+Source: [src/BigCommerce/Webhooks/Customer/Customer_Saver.php](BigCommerce/Webhooks/Customer/Customer_Saver.php), [line 135](BigCommerce/Webhooks/Customer/Customer_Saver.php#L135-L137)
 
-Source: [src/BigCommerce/Webhooks/Customer/Customer_Saver.php](BigCommerce/Webhooks/Customer/Customer_Saver.php), [line 152](BigCommerce/Webhooks/Customer/Customer_Saver.php#L152-L155)
+Source: [src/BigCommerce/Webhooks/Customer/Customer_Saver.php](BigCommerce/Webhooks/Customer/Customer_Saver.php), [line 164](BigCommerce/Webhooks/Customer/Customer_Saver.php#L164-L167)
 
 Source: [src/BigCommerce/Webhooks/Customer/Customer_Create_Webhook.php](BigCommerce/Webhooks/Customer/Customer_Create_Webhook.php), [line 29](BigCommerce/Webhooks/Customer/Customer_Create_Webhook.php#L29-L36)
 
@@ -588,7 +588,7 @@ Source: [src/BigCommerce/Manager/Manager.php](BigCommerce/Manager/Manager.php), 
 
 Source: [src/BigCommerce/Manager/Manager.php](BigCommerce/Manager/Manager.php), [line 55](BigCommerce/Manager/Manager.php#L55-L57)
 
-Source: [src/BigCommerce/Container/Import.php](BigCommerce/Container/Import.php), [line 633](BigCommerce/Container/Import.php#L633-L633)
+Source: [src/BigCommerce/Container/Import.php](BigCommerce/Container/Import.php), [line 545](BigCommerce/Container/Import.php#L545-L545)
 
 Source: [src/BigCommerce/Api/Api_Scopes_Validator.php](BigCommerce/Api/Api_Scopes_Validator.php), [line 90](BigCommerce/Api/Api_Scopes_Validator.php#L90-L99)
 
@@ -627,7 +627,7 @@ Argument | Type | Description
 `message` | `string` | The error message to be logged.
 `context` | `array` | Additional context for the error.
 
-Source: [src/BigCommerce/Import/Processors/Term_Purge.php](BigCommerce/Import/Processors/Term_Purge.php), [line 76](BigCommerce/Import/Processors/Term_Purge.php#L76-L87)
+Source: [src/BigCommerce/Import/Processors/Term_Purge.php](BigCommerce/Import/Processors/Term_Purge.php), [line 95](BigCommerce/Import/Processors/Term_Purge.php#L95-L106)
 
 Source: [src/BigCommerce/Import/Processors/Headless_Product_Processor.php](BigCommerce/Import/Processors/Headless_Product_Processor.php), [line 132](BigCommerce/Import/Processors/Headless_Product_Processor.php#L132-L135)
 
@@ -647,17 +647,17 @@ Source: [src/BigCommerce/Import/Processors/Listing_Fetcher.php](BigCommerce/Impo
 
 Source: [src/BigCommerce/Webhooks/Product/Product_Creator.php](BigCommerce/Webhooks/Product/Product_Creator.php), [line 59](BigCommerce/Webhooks/Product/Product_Creator.php#L59-L59)
 
-Source: [src/BigCommerce/Webhooks/Product/Product_Creator.php](BigCommerce/Webhooks/Product/Product_Creator.php), [line 101](BigCommerce/Webhooks/Product/Product_Creator.php#L101-L104)
+Source: [src/BigCommerce/Webhooks/Product/Product_Creator.php](BigCommerce/Webhooks/Product/Product_Creator.php), [line 86](BigCommerce/Webhooks/Product/Product_Creator.php#L86-L89)
 
-Source: [src/BigCommerce/Webhooks/Product/Product_Creator.php](BigCommerce/Webhooks/Product/Product_Creator.php), [line 134](BigCommerce/Webhooks/Product/Product_Creator.php#L134-L137)
+Source: [src/BigCommerce/Webhooks/Product/Product_Creator.php](BigCommerce/Webhooks/Product/Product_Creator.php), [line 119](BigCommerce/Webhooks/Product/Product_Creator.php#L119-L122)
 
 Source: [src/BigCommerce/Webhooks/Product/Product_Updater.php](BigCommerce/Webhooks/Product/Product_Updater.php), [line 68](BigCommerce/Webhooks/Product/Product_Updater.php#L68-L68)
 
-Source: [src/BigCommerce/Webhooks/Product/Product_Updater.php](BigCommerce/Webhooks/Product/Product_Updater.php), [line 111](BigCommerce/Webhooks/Product/Product_Updater.php#L111-L114)
+Source: [src/BigCommerce/Webhooks/Product/Product_Updater.php](BigCommerce/Webhooks/Product/Product_Updater.php), [line 96](BigCommerce/Webhooks/Product/Product_Updater.php#L96-L99)
 
 Source: [src/BigCommerce/Taxonomies/Channel/BC_Status.php](BigCommerce/Taxonomies/Channel/BC_Status.php), [line 29](BigCommerce/Taxonomies/Channel/BC_Status.php#L29-L29)
 
-Source: [src/BigCommerce/Container/Import.php](BigCommerce/Container/Import.php), [line 632](BigCommerce/Container/Import.php#L632-L632)
+Source: [src/BigCommerce/Container/Import.php](BigCommerce/Container/Import.php), [line 544](BigCommerce/Container/Import.php#L544-L544)
 
 ### bigcommerce/import/fetched_currency
 
@@ -1016,7 +1016,7 @@ Argument | Type | Description
 
 Source: [src/BigCommerce/Webhooks/Product/Channels_Assign.php](BigCommerce/Webhooks/Product/Channels_Assign.php), [line 82](BigCommerce/Webhooks/Product/Channels_Assign.php#L82-L88)
 
-Source: [src/BigCommerce/Webhooks/Product/Product_Updater.php](BigCommerce/Webhooks/Product/Product_Updater.php), [line 139](BigCommerce/Webhooks/Product/Product_Updater.php#L139-L145)
+Source: [src/BigCommerce/Webhooks/Product/Product_Updater.php](BigCommerce/Webhooks/Product/Product_Updater.php), [line 124](BigCommerce/Webhooks/Product/Product_Updater.php#L124-L130)
 
 ### bigcommerce/webhooks/product_created
 
@@ -1163,7 +1163,7 @@ Argument | Type | Description
 `hook_suffix` | `string` | The hook suffix generated for the screen
 `name` | `string` | The name of the screen
 
-Source: [src/BigCommerce/Settings/Screens/Abstract_Screen.php](BigCommerce/Settings/Screens/Abstract_Screen.php), [line 187](BigCommerce/Settings/Screens/Abstract_Screen.php#L187-L194)
+Source: [src/BigCommerce/Settings/Screens/Abstract_Screen.php](BigCommerce/Settings/Screens/Abstract_Screen.php), [line 177](BigCommerce/Settings/Screens/Abstract_Screen.php#L177-L184)
 
 ### bigcommerce/settings/after_start_form/page=static::NAME
 
@@ -1178,7 +1178,7 @@ Argument | Type | Description
 -------- | ---- | -----------
 `hook_suffix` | `string` | The hook suffix generated for the screen
 
-Source: [src/BigCommerce/Settings/Screens/Abstract_Screen.php](BigCommerce/Settings/Screens/Abstract_Screen.php), [line 254](BigCommerce/Settings/Screens/Abstract_Screen.php#L254-L260)
+Source: [src/BigCommerce/Settings/Screens/Abstract_Screen.php](BigCommerce/Settings/Screens/Abstract_Screen.php), [line 244](BigCommerce/Settings/Screens/Abstract_Screen.php#L244-L250)
 
 ### bigcommerce/settings/before_end_form/page=static::NAME
 
@@ -1193,7 +1193,7 @@ Argument | Type | Description
 -------- | ---- | -----------
 `hook_suffix` | `string` | The hook suffix generated for the screen
 
-Source: [src/BigCommerce/Settings/Screens/Abstract_Screen.php](BigCommerce/Settings/Screens/Abstract_Screen.php), [line 269](BigCommerce/Settings/Screens/Abstract_Screen.php#L269-L275)
+Source: [src/BigCommerce/Settings/Screens/Abstract_Screen.php](BigCommerce/Settings/Screens/Abstract_Screen.php), [line 259](BigCommerce/Settings/Screens/Abstract_Screen.php#L259-L265)
 
 ### bigcommerce/settings/before_form/page=static::NAME
 
@@ -1208,7 +1208,7 @@ Argument | Type | Description
 -------- | ---- | -----------
 `hook_suffix` | `string` | The hook suffix generated for the screen
 
-Source: [src/BigCommerce/Settings/Screens/Abstract_Screen.php](BigCommerce/Settings/Screens/Abstract_Screen.php), [line 314](BigCommerce/Settings/Screens/Abstract_Screen.php#L314-L320)
+Source: [src/BigCommerce/Settings/Screens/Abstract_Screen.php](BigCommerce/Settings/Screens/Abstract_Screen.php), [line 304](BigCommerce/Settings/Screens/Abstract_Screen.php#L304-L310)
 
 ### bigcommerce/settings/after_form/page=static::NAME
 
@@ -1223,7 +1223,7 @@ Argument | Type | Description
 -------- | ---- | -----------
 `hook_suffix` | `string` | The hook suffix generated for the screen
 
-Source: [src/BigCommerce/Settings/Screens/Abstract_Screen.php](BigCommerce/Settings/Screens/Abstract_Screen.php), [line 329](BigCommerce/Settings/Screens/Abstract_Screen.php#L329-L335)
+Source: [src/BigCommerce/Settings/Screens/Abstract_Screen.php](BigCommerce/Settings/Screens/Abstract_Screen.php), [line 319](BigCommerce/Settings/Screens/Abstract_Screen.php#L319-L325)
 
 ### bigcommerce/settings/section/before/id={$section}[id]
 
@@ -1238,7 +1238,7 @@ Argument | Type | Description
 -------- | ---- | -----------
 `section` | `array` | 
 
-Source: [src/BigCommerce/Settings/Screens/Abstract_Screen.php](BigCommerce/Settings/Screens/Abstract_Screen.php), [line 354](BigCommerce/Settings/Screens/Abstract_Screen.php#L354-L360)
+Source: [src/BigCommerce/Settings/Screens/Abstract_Screen.php](BigCommerce/Settings/Screens/Abstract_Screen.php), [line 344](BigCommerce/Settings/Screens/Abstract_Screen.php#L344-L350)
 
 ### bigcommerce/settings/section/after/id={$section}[id]
 
@@ -1253,7 +1253,7 @@ Argument | Type | Description
 -------- | ---- | -----------
 `section` | `array` | 
 
-Source: [src/BigCommerce/Settings/Screens/Abstract_Screen.php](BigCommerce/Settings/Screens/Abstract_Screen.php), [line 370](BigCommerce/Settings/Screens/Abstract_Screen.php#L370-L376)
+Source: [src/BigCommerce/Settings/Screens/Abstract_Screen.php](BigCommerce/Settings/Screens/Abstract_Screen.php), [line 360](BigCommerce/Settings/Screens/Abstract_Screen.php#L360-L366)
 
 ### bigcommerce/settings/section/before_title/id={$section}[id]
 
@@ -1268,7 +1268,7 @@ Argument | Type | Description
 -------- | ---- | -----------
 `section` | `array` | 
 
-Source: [src/BigCommerce/Settings/Screens/Abstract_Screen.php](BigCommerce/Settings/Screens/Abstract_Screen.php), [line 391](BigCommerce/Settings/Screens/Abstract_Screen.php#L391-L397)
+Source: [src/BigCommerce/Settings/Screens/Abstract_Screen.php](BigCommerce/Settings/Screens/Abstract_Screen.php), [line 381](BigCommerce/Settings/Screens/Abstract_Screen.php#L381-L387)
 
 ### bigcommerce/settings/section/after_title/id={$section}[id]
 
@@ -1283,7 +1283,7 @@ Argument | Type | Description
 -------- | ---- | -----------
 `section` | `array` | 
 
-Source: [src/BigCommerce/Settings/Screens/Abstract_Screen.php](BigCommerce/Settings/Screens/Abstract_Screen.php), [line 403](BigCommerce/Settings/Screens/Abstract_Screen.php#L403-L409)
+Source: [src/BigCommerce/Settings/Screens/Abstract_Screen.php](BigCommerce/Settings/Screens/Abstract_Screen.php), [line 393](BigCommerce/Settings/Screens/Abstract_Screen.php#L393-L399)
 
 ### bigcommerce/settings/section/before_callback/id={$section}[id]
 
@@ -1298,7 +1298,7 @@ Argument | Type | Description
 -------- | ---- | -----------
 `section` | `array` | 
 
-Source: [src/BigCommerce/Settings/Screens/Abstract_Screen.php](BigCommerce/Settings/Screens/Abstract_Screen.php), [line 427](BigCommerce/Settings/Screens/Abstract_Screen.php#L427-L433)
+Source: [src/BigCommerce/Settings/Screens/Abstract_Screen.php](BigCommerce/Settings/Screens/Abstract_Screen.php), [line 417](BigCommerce/Settings/Screens/Abstract_Screen.php#L417-L423)
 
 ### bigcommerce/settings/section/after_callback/id={$section}[id]
 
@@ -1313,7 +1313,7 @@ Argument | Type | Description
 -------- | ---- | -----------
 `section` | `array` | 
 
-Source: [src/BigCommerce/Settings/Screens/Abstract_Screen.php](BigCommerce/Settings/Screens/Abstract_Screen.php), [line 439](BigCommerce/Settings/Screens/Abstract_Screen.php#L439-L445)
+Source: [src/BigCommerce/Settings/Screens/Abstract_Screen.php](BigCommerce/Settings/Screens/Abstract_Screen.php), [line 429](BigCommerce/Settings/Screens/Abstract_Screen.php#L429-L435)
 
 ### bigcommerce/settings/section/before_fields/id={$section}[id]
 
@@ -1329,7 +1329,7 @@ Argument | Type | Description
 `section` | `array` | 
 `has_fields` | `bool` | Whether the settings section has any fields to render
 
-Source: [src/BigCommerce/Settings/Screens/Abstract_Screen.php](BigCommerce/Settings/Screens/Abstract_Screen.php), [line 449](BigCommerce/Settings/Screens/Abstract_Screen.php#L449-L456)
+Source: [src/BigCommerce/Settings/Screens/Abstract_Screen.php](BigCommerce/Settings/Screens/Abstract_Screen.php), [line 439](BigCommerce/Settings/Screens/Abstract_Screen.php#L439-L446)
 
 ### bigcommerce/settings/section/after_fields/id={$section}[id]
 
@@ -1345,7 +1345,7 @@ Argument | Type | Description
 `section` | `array` | 
 `has_fields` | `bool` | Whether the settings section has any fields to render
 
-Source: [src/BigCommerce/Settings/Screens/Abstract_Screen.php](BigCommerce/Settings/Screens/Abstract_Screen.php), [line 464](BigCommerce/Settings/Screens/Abstract_Screen.php#L464-L471)
+Source: [src/BigCommerce/Settings/Screens/Abstract_Screen.php](BigCommerce/Settings/Screens/Abstract_Screen.php), [line 454](BigCommerce/Settings/Screens/Abstract_Screen.php#L454-L461)
 
 ### bigcommerce/settings/unregistered_screen
 
@@ -1358,7 +1358,7 @@ Argument | Type | Description
 -------- | ---- | -----------
 `unregistered_screen` | `string` | The name of the unregistered screen.
 
-Source: [src/BigCommerce/Settings/Screens/Abstract_Screen.php](BigCommerce/Settings/Screens/Abstract_Screen.php), [line 500](BigCommerce/Settings/Screens/Abstract_Screen.php#L500-L505)
+Source: [src/BigCommerce/Settings/Screens/Abstract_Screen.php](BigCommerce/Settings/Screens/Abstract_Screen.php), [line 481](BigCommerce/Settings/Screens/Abstract_Screen.php#L481-L486)
 
 ### bigcommerce/settings/onboarding/progress
 
@@ -1550,7 +1550,7 @@ Argument | Type | Description
 -------- | ---- | -----------
 `product_id` | `int` | The ID of the product to update.
 
-Source: [src/BigCommerce/Post_Types/Product/Single_Product_Sync.php](BigCommerce/Post_Types/Product/Single_Product_Sync.php), [line 130](BigCommerce/Post_Types/Product/Single_Product_Sync.php#L130-L140)
+Source: [src/BigCommerce/Post_Types/Product/Single_Product_Sync.php](BigCommerce/Post_Types/Product/Single_Product_Sync.php), [line 122](BigCommerce/Post_Types/Product/Single_Product_Sync.php#L122-L132)
 
 ### bigcommerce/channel/error/could_not_fetch_listing
 
@@ -1590,7 +1590,7 @@ Source: [src/BigCommerce/Post_Types/Product/Channel_Sync.php](BigCommerce/Post_T
 
 ### bigcommerce/query/sort
 
-Source: [src/BigCommerce/Post_Types/Product/Query.php](BigCommerce/Post_Types/Product/Query.php), [line 216](BigCommerce/Post_Types/Product/Query.php#L216-L216)
+Source: [src/BigCommerce/Post_Types/Product/Query.php](BigCommerce/Post_Types/Product/Query.php), [line 205](BigCommerce/Post_Types/Product/Query.php#L205-L205)
 
 ### bigcommerce/channel/promote
 
@@ -1647,7 +1647,7 @@ Argument | Type | Description
 -------- | ---- | -----------
 `submission` | `array` | The sanitized form submission data (typically from $_REQUEST)
 
-Source: [src/BigCommerce/Container/Forms.php](BigCommerce/Container/Forms.php), [line 130](BigCommerce/Container/Forms.php#L130-L135)
+Source: [src/BigCommerce/Container/Forms.php](BigCommerce/Container/Forms.php), [line 125](BigCommerce/Container/Forms.php#L125-L130)
 
 ### bigcommerce/import/task_manager/init
 
@@ -1660,7 +1660,7 @@ Argument | Type | Description
 -------- | ---- | -----------
 `manager` | `\BigCommerce\Import\Task_Manager` | The task manager object
 
-Source: [src/BigCommerce/Container/Import.php](BigCommerce/Container/Import.php), [line 611](BigCommerce/Container/Import.php#L611-L616)
+Source: [src/BigCommerce/Container/Import.php](BigCommerce/Container/Import.php), [line 530](BigCommerce/Container/Import.php#L530-L535)
 
 ## Filters
 
@@ -2168,11 +2168,11 @@ This filter is documented in src/BigCommerce/Accounts/Login.php
 
 No arguments.
 
-Source: [src/BigCommerce/Forms/Registration_Handler.php](BigCommerce/Forms/Registration_Handler.php), [line 152](BigCommerce/Forms/Registration_Handler.php#L152-L153)
+Source: [src/BigCommerce/Forms/Registration_Handler.php](BigCommerce/Forms/Registration_Handler.php), [line 146](BigCommerce/Forms/Registration_Handler.php#L146-L147)
 
-Source: [src/BigCommerce/Accounts/Login.php](BigCommerce/Accounts/Login.php), [line 238](BigCommerce/Accounts/Login.php#L238-L243)
+Source: [src/BigCommerce/Accounts/Login.php](BigCommerce/Accounts/Login.php), [line 237](BigCommerce/Accounts/Login.php#L237-L242)
 
-Source: [src/BigCommerce/Accounts/Login.php](BigCommerce/Accounts/Login.php), [line 454](BigCommerce/Accounts/Login.php#L454-L459)
+Source: [src/BigCommerce/Accounts/Login.php](BigCommerce/Accounts/Login.php), [line 453](BigCommerce/Accounts/Login.php#L453-L458)
 
 Source: [src/BigCommerce/Webhooks/Customer/Customer_Creator.php](BigCommerce/Webhooks/Customer/Customer_Creator.php), [line 62](BigCommerce/Webhooks/Customer/Customer_Creator.php#L62-L67)
 
@@ -2187,7 +2187,7 @@ Argument | Type | Description
 -------- | ---- | -----------
 `message` | `string` | 
 
-Source: [src/BigCommerce/Forms/Registration_Handler.php](BigCommerce/Forms/Registration_Handler.php), [line 170](BigCommerce/Forms/Registration_Handler.php#L170-L175)
+Source: [src/BigCommerce/Forms/Registration_Handler.php](BigCommerce/Forms/Registration_Handler.php), [line 164](BigCommerce/Forms/Registration_Handler.php#L164-L169)
 
 ### bigcommerce/form/registration/errors
 
@@ -2201,7 +2201,7 @@ Argument | Type | Description
 `errors` | `\WP_Error` | WP error.
 `submission` | `array` | Submitted data.
 
-Source: [src/BigCommerce/Forms/Registration_Handler.php](BigCommerce/Forms/Registration_Handler.php), [line 274](BigCommerce/Forms/Registration_Handler.php#L274-L280)
+Source: [src/BigCommerce/Forms/Registration_Handler.php](BigCommerce/Forms/Registration_Handler.php), [line 256](BigCommerce/Forms/Registration_Handler.php#L256-L262)
 
 ### bigcommerce/form/currency_switch/success_message
 
@@ -2416,7 +2416,7 @@ Argument | Type | Description
 -------- | ---- | -----------
 `` | `string` | Default 'bc/v3'.
 
-Source: [src/BigCommerce/Container/Proxy.php](BigCommerce/Container/Proxy.php), [line 76](BigCommerce/Container/Proxy.php#L76-L81)
+Source: [src/BigCommerce/Container/Proxy.php](BigCommerce/Container/Proxy.php), [line 81](BigCommerce/Container/Proxy.php#L81-L86)
 
 Source: [src/BigCommerce/Templates/Amp_Cart_Summary.php](BigCommerce/Templates/Amp_Cart_Summary.php), [line 34](BigCommerce/Templates/Amp_Cart_Summary.php#L34-L34)
 
@@ -3109,7 +3109,7 @@ Argument | Type | Description
 -------- | ---- | -----------
 `new_customer_data` | `array` | Customer data.
 
-Source: [src/BigCommerce/Accounts/Login.php](BigCommerce/Accounts/Login.php), [line 103](BigCommerce/Accounts/Login.php#L103-L108)
+Source: [src/BigCommerce/Accounts/Login.php](BigCommerce/Accounts/Login.php), [line 102](BigCommerce/Accounts/Login.php#L102-L107)
 
 Source: [src/BigCommerce/Accounts/Register.php](BigCommerce/Accounts/Register.php), [line 147](BigCommerce/Accounts/Register.php#L147-L152)
 
@@ -3124,11 +3124,11 @@ Argument | Type | Description
 -------- | ---- | -----------
 `url` | `string` | The account profile page URL
 
-Source: [src/BigCommerce/Accounts/Login.php](BigCommerce/Accounts/Login.php), [line 355](BigCommerce/Accounts/Login.php#L355-L360)
+Source: [src/BigCommerce/Accounts/Login.php](BigCommerce/Accounts/Login.php), [line 354](BigCommerce/Accounts/Login.php#L354-L359)
 
 ### bigcommerce/accounts/login/delete_missing_user
 
-Source: [src/BigCommerce/Accounts/Login.php](BigCommerce/Accounts/Login.php), [line 540](BigCommerce/Accounts/Login.php#L540-L540)
+Source: [src/BigCommerce/Accounts/Login.php](BigCommerce/Accounts/Login.php), [line 539](BigCommerce/Accounts/Login.php#L539-L539)
 
 ### bigcommerce/account/do_subnav
 
@@ -3509,7 +3509,7 @@ Argument | Type | Description
 `post` | `\WP_Post` | Post object.
 `request` | `\WP_REST_Request` | Request object.
 
-Source: [src/BigCommerce/Rest/Products_Controller.php](BigCommerce/Rest/Products_Controller.php), [line 524](BigCommerce/Rest/Products_Controller.php#L524-L531)
+Source: [src/BigCommerce/Rest/Products_Controller.php](BigCommerce/Rest/Products_Controller.php), [line 513](BigCommerce/Rest/Products_Controller.php#L513-L520)
 
 ### the_content
 
@@ -3522,11 +3522,11 @@ Argument | Type | Description
 -------- | ---- | -----------
 `content` | `string` | The post content.
 
-Source: [src/BigCommerce/Rest/Products_Controller.php](BigCommerce/Rest/Products_Controller.php), [line 600](BigCommerce/Rest/Products_Controller.php#L600-L607)
+Source: [src/BigCommerce/Rest/Products_Controller.php](BigCommerce/Rest/Products_Controller.php), [line 589](BigCommerce/Rest/Products_Controller.php#L589-L596)
 
 ### bigcommerce/rest/product/content_trim_words_length
 
-Source: [src/BigCommerce/Rest/Products_Controller.php](BigCommerce/Rest/Products_Controller.php), [line 613](BigCommerce/Rest/Products_Controller.php#L613-L613)
+Source: [src/BigCommerce/Rest/Products_Controller.php](BigCommerce/Rest/Products_Controller.php), [line 602](BigCommerce/Rest/Products_Controller.php#L602-L602)
 
 ### bigcommerce/rest/missing_image
 
@@ -3539,7 +3539,7 @@ Argument | Type | Description
 -------- | ---- | -----------
 `missing_image_data` | `array` | Data.
 
-Source: [src/BigCommerce/Rest/Products_Controller.php](BigCommerce/Rest/Products_Controller.php), [line 669](BigCommerce/Rest/Products_Controller.php#L669-L678)
+Source: [src/BigCommerce/Rest/Products_Controller.php](BigCommerce/Rest/Products_Controller.php), [line 658](BigCommerce/Rest/Products_Controller.php#L658-L667)
 
 ### bigcommerce/rest/image_sizes
 
@@ -3552,7 +3552,7 @@ Argument | Type | Description
 -------- | ---- | -----------
 `sizes` | `array` | Sizes.
 
-Source: [src/BigCommerce/Rest/Products_Controller.php](BigCommerce/Rest/Products_Controller.php), [line 833](BigCommerce/Rest/Products_Controller.php#L833-L838)
+Source: [src/BigCommerce/Rest/Products_Controller.php](BigCommerce/Rest/Products_Controller.php), [line 822](BigCommerce/Rest/Products_Controller.php#L822-L827)
 
 ### bigcommerce/webhooks/registration_args
 
@@ -4043,7 +4043,7 @@ Argument | Type | Description
 `matches` | `array` | Post ids.
 `search_phrase` | `string` | Search phrase.
 
-Source: [src/BigCommerce/Post_Types/Product/Query.php](BigCommerce/Post_Types/Product/Query.php), [line 525](BigCommerce/Post_Types/Product/Query.php#L525-L531)
+Source: [src/BigCommerce/Post_Types/Product/Query.php](BigCommerce/Post_Types/Product/Query.php), [line 514](BigCommerce/Post_Types/Product/Query.php#L514-L520)
 
 ### bigcommerce/admin/js_localization
 
@@ -4275,7 +4275,7 @@ Argument | Type | Description
 -------- | ---- | -----------
 `settings` | `array` | Settings.
 
-Source: [src/BigCommerce/Analytics/Segment.php](BigCommerce/Analytics/Segment.php), [line 78](BigCommerce/Analytics/Segment.php#L78-L83)
+Source: [src/BigCommerce/Analytics/Segment.php](BigCommerce/Analytics/Segment.php), [line 79](BigCommerce/Analytics/Segment.php#L79-L84)
 
 ### Analytics::TRACK_BY_HOOK
 
@@ -4378,7 +4378,7 @@ Argument | Type | Description
 -------- | ---- | -----------
 `excluded_screens` | `array` | 
 
-Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 632](BigCommerce/Container/Settings.php#L632-L644)
+Source: [src/BigCommerce/Container/Settings.php](BigCommerce/Container/Settings.php), [line 493](BigCommerce/Container/Settings.php#L493-L505)
 
 ### bigcommerce/countries/data_file
 
@@ -4391,7 +4391,7 @@ Argument | Type | Description
 -------- | ---- | -----------
 `file` | `string` | Countries data json file path
 
-Source: [src/BigCommerce/Container/Accounts.php](BigCommerce/Container/Accounts.php), [line 358](BigCommerce/Container/Accounts.php#L358-L363)
+Source: [src/BigCommerce/Container/Accounts.php](BigCommerce/Container/Accounts.php), [line 286](BigCommerce/Container/Accounts.php#L286-L291)
 
 ### bigcommerce/logger/path
 
@@ -4443,7 +4443,7 @@ Argument | Type | Description
 -------- | ---- | -----------
 `` | `bool` | Default true.
 
-Source: [src/BigCommerce/Container/Proxy.php](BigCommerce/Container/Proxy.php), [line 143](BigCommerce/Container/Proxy.php#L143-L148)
+Source: [src/BigCommerce/Container/Proxy.php](BigCommerce/Container/Proxy.php), [line 138](BigCommerce/Container/Proxy.php#L138-L143)
 
 ### bigcommerce/import/timeout
 
@@ -4471,7 +4471,7 @@ Argument | Type | Description
 -------- | ---- | -----------
 `list` | `\BigCommerce\Import\Task_Definition[]` | The list of tasks to register
 
-Source: [src/BigCommerce/Container/Import.php](BigCommerce/Container/Import.php), [line 596](BigCommerce/Container/Import.php#L596-L601)
+Source: [src/BigCommerce/Container/Import.php](BigCommerce/Container/Import.php), [line 515](BigCommerce/Container/Import.php#L515-L520)
 
 ### bigcommerce/rest/namespace_base
 
@@ -4655,7 +4655,7 @@ Argument | Type | Description
 -------- | ---- | -----------
 `enable` | `bool` | Whether AMP template overrides are enabled
 
-Source: [src/BigCommerce/Container/Amp.php](BigCommerce/Container/Amp.php), [line 182](BigCommerce/Container/Amp.php#L182-L187)
+Source: [src/BigCommerce/Container/Amp.php](BigCommerce/Container/Amp.php), [line 167](BigCommerce/Container/Amp.php#L167-L172)
 
 ### bigcommerce/api/default_headers
 

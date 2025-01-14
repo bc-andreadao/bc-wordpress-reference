@@ -43,4 +43,4 @@ public filter_currency(string $currency_code): string
 
 
 ***
-> Automatically generated on 2025-01-13
+> Automatically generated on 2025-01-14

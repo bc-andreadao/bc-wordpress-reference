@@ -13,7 +13,7 @@
 
 | Constant | Visibility | Type | Value |
 |:---------|:-----------|:-----|:------|
-|`VERSION`|public| |&#039;5.1.0&#039;|
+|`VERSION`|public| |&#039;5.1.2&#039;|
 
 ## Properties
 
@@ -276,4 +276,4 @@ public static activate(): mixed
 
 
 ***
-> Automatically generated on 2025-01-13
+> Automatically generated on 2025-01-14

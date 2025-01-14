@@ -65,6 +65,64 @@ public render_channel_select_field(): mixed
 
 ***
 
+### sanitize_channel_name
+
+Sanitize the channel name before saving or using
+
+```php
+public sanitize_channel_name(string $name): string
+```
+
+
+
+
+
+
+
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `$name` | **string** | The channel name to sanitize |
+
+
+**Return Value:**
+
+The sanitized channel name
+
+
+
+
+***
+
+### render_field
+
+Override parent render_field to ensure channel name is sanitized
+
+```php
+public render_field(mixed $args): void
+```
+
+
+
+
+
+
+
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `$args` | **mixed** |  |
+
+
+
+
+
+***
+
 
 ## Inherited methods
 
@@ -146,4 +204,4 @@ public get_disabled_attr_headless(): string
 
 
 ***
-> Automatically generated on 2025-01-13
+> Automatically generated on 2025-01-14
