@@ -246,4 +246,4 @@ public diagnostic_data(array $data): array
 
 
 ***
-> Automatically generated on 2025-01-13
+> Automatically generated on 2025-01-14

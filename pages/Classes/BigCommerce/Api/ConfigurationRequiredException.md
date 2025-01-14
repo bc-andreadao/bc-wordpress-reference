@@ -16,4 +16,4 @@ This allows for more granular exception handling within the BigCommerce API SDK.
 
 
 ***
-> Automatically generated on 2025-01-13
+> Automatically generated on 2025-01-14

@@ -44,4 +44,4 @@ public apply(\WP_Query $query): void
 
 
 ***
-> Automatically generated on 2025-01-13
+> Automatically generated on 2025-01-14

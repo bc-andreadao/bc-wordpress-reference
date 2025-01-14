@@ -21,4 +21,4 @@ This function has no parameters.
 True if the current page is a product category page, false otherwise.
 
 ***
-> Automatically generated on 2025-01-13
+> Automatically generated on 2025-01-14

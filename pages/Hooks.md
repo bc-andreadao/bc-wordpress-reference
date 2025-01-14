@@ -280,13 +280,13 @@ Source: [src/BigCommerce/Import/Processors/Storefront_Processor.php](BigCommerce
 
 Source: [src/BigCommerce/Import/Processors/Storefront_Processor.php](BigCommerce/Import/Processors/Storefront_Processor.php), [line 210](BigCommerce/Import/Processors/Storefront_Processor.php#L210-L212)
 
-Source: [src/BigCommerce/Import/Processors/Term_Purge.php](BigCommerce/Import/Processors/Term_Purge.php), [line 67](BigCommerce/Import/Processors/Term_Purge.php#L67-L71)
+Source: [src/BigCommerce/Import/Processors/Term_Purge.php](BigCommerce/Import/Processors/Term_Purge.php), [line 86](BigCommerce/Import/Processors/Term_Purge.php#L86-L90)
 
-Source: [src/BigCommerce/Import/Processors/Term_Purge.php](BigCommerce/Import/Processors/Term_Purge.php), [line 88](BigCommerce/Import/Processors/Term_Purge.php#L88-L88)
+Source: [src/BigCommerce/Import/Processors/Term_Purge.php](BigCommerce/Import/Processors/Term_Purge.php), [line 107](BigCommerce/Import/Processors/Term_Purge.php#L107-L107)
 
-Source: [src/BigCommerce/Import/Processors/Term_Purge.php](BigCommerce/Import/Processors/Term_Purge.php), [line 97](BigCommerce/Import/Processors/Term_Purge.php#L97-L99)
+Source: [src/BigCommerce/Import/Processors/Term_Purge.php](BigCommerce/Import/Processors/Term_Purge.php), [line 116](BigCommerce/Import/Processors/Term_Purge.php#L116-L118)
 
-Source: [src/BigCommerce/Import/Processors/Term_Purge.php](BigCommerce/Import/Processors/Term_Purge.php), [line 107](BigCommerce/Import/Processors/Term_Purge.php#L107-L110)
+Source: [src/BigCommerce/Import/Processors/Term_Purge.php](BigCommerce/Import/Processors/Term_Purge.php), [line 126](BigCommerce/Import/Processors/Term_Purge.php#L126-L129)
 
 Source: [src/BigCommerce/Import/Processors/Headless_Product_Processor.php](BigCommerce/Import/Processors/Headless_Product_Processor.php), [line 74](BigCommerce/Import/Processors/Headless_Product_Processor.php#L74-L74)
 
@@ -627,7 +627,7 @@ Argument | Type | Description
 `message` | `string` | The error message to be logged.
 `context` | `array` | Additional context for the error.
 
-Source: [src/BigCommerce/Import/Processors/Term_Purge.php](BigCommerce/Import/Processors/Term_Purge.php), [line 76](BigCommerce/Import/Processors/Term_Purge.php#L76-L87)
+Source: [src/BigCommerce/Import/Processors/Term_Purge.php](BigCommerce/Import/Processors/Term_Purge.php), [line 95](BigCommerce/Import/Processors/Term_Purge.php#L95-L106)
 
 Source: [src/BigCommerce/Import/Processors/Headless_Product_Processor.php](BigCommerce/Import/Processors/Headless_Product_Processor.php), [line 132](BigCommerce/Import/Processors/Headless_Product_Processor.php#L132-L135)
 
