@@ -16,7 +16,7 @@ Deletes imported terms that no longer exist in BigCommerce
 
 | Constant | Visibility | Type | Value |
 |:---------|:-----------|:-----|:------|
-|`STATE_OPTION`|public| |&#039;bigcommerce_purge_terms_state&#039;|
+|`STATE_OPTION`|public|string|&#039;bigcommerce_purge_terms_state&#039;|
 
 ## Properties
 
@@ -86,7 +86,7 @@ public __construct(\BigCommerce\Api\v3\Api\CatalogApi $catalog_api, int $batch_s
 
 ### taxonomy
 
-
+Gets the WordPress taxonomy identifier that this purge processor handles.
 
 ```php
 protected taxonomy(): string
@@ -102,7 +102,7 @@ protected taxonomy(): string
 
 **Return Value:**
 
-The name of the taxonomy to update
+The taxonomy name (e.g., 'product_category', 'product_brand').
 
 
 
@@ -111,7 +111,7 @@ The name of the taxonomy to update
 
 ### running_state
 
-
+Gets the status identifier for when this term purge process is running.
 
 ```php
 protected running_state(): string
@@ -127,7 +127,7 @@ protected running_state(): string
 
 **Return Value:**
 
-The name of the state to set while the import is running
+The status identifier for the running state.
 
 
 
@@ -136,7 +136,7 @@ The name of the state to set while the import is running
 
 ### completed_state
 
-
+Gets the status identifier for when this term purge process is completed.
 
 ```php
 protected completed_state(): string
@@ -152,7 +152,7 @@ protected completed_state(): string
 
 **Return Value:**
 
-The name of the state to set when the import is complete
+The status identifier for the completed state.
 
 
 
@@ -161,12 +161,15 @@ The name of the state to set when the import is complete
 
 ### run
 
-
+Executes the term purge process.
 
 ```php
-public run(): mixed
+public run(): void
 ```
 
+This method handles the deletion of WordPress terms that no longer exist in BigCommerce.
+It processes terms in batches, comparing local terms with remote BigCommerce data.
+The process tracks its state to support pagination and can be resumed if interrupted.
 
 
 
@@ -175,6 +178,11 @@ public run(): mixed
 
 
 
+
+**Throws:**
+<p>If there's an error communicating with the BigCommerce API.</p>
+
+- [`ApiException`](./classes/BigCommerce/Api/v3/ApiException.md)
 
 
 
@@ -332,4 +340,4 @@ protected delete_option(string $option): bool
 
 
 ***
-> Automatically generated on 2025-01-13
+> Automatically generated on 2025-01-14

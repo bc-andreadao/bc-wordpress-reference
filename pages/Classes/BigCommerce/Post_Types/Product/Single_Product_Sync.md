@@ -74,4 +74,4 @@ Verifies the request and synchronizes the product with BigCommerce. Redirects to
 
 
 ***
-> Automatically generated on 2025-01-13
+> Automatically generated on 2025-01-14

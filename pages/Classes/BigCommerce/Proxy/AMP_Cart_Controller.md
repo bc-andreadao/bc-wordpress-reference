@@ -396,4 +396,4 @@ public route(\WP_REST_Request $request): string
 
 
 ***
-> Automatically generated on 2025-01-13
+> Automatically generated on 2025-01-14

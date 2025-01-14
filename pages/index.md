@@ -1512,15 +1512,15 @@
 
 | Class | Description |
 |-------|-------------|
-| [`Customer_Channel_Updater`](./classes/BigCommerce/Webhooks/Customer/Customer_Channel_Updater.md) | |
+| [`Customer_Channel_Updater`](./classes/BigCommerce/Webhooks/Customer/Customer_Channel_Updater.md) | Abstract class for handling BigCommerce customer webhook operations.|
 | [`Customer_Channel_Webhook`](./classes/BigCommerce/Webhooks/Customer/Customer_Channel_Webhook.md) | Class Customer_Channel_Webhook|
 | [`Customer_Create_Webhook`](./classes/BigCommerce/Webhooks/Customer/Customer_Create_Webhook.md) | Class Customer_Create_Webhook|
-| [`Customer_Creator`](./classes/BigCommerce/Webhooks/Customer/Customer_Creator.md) | |
+| [`Customer_Creator`](./classes/BigCommerce/Webhooks/Customer/Customer_Creator.md) | Abstract class for handling BigCommerce customer webhook operations.|
 | [`Customer_Delete_Webhook`](./classes/BigCommerce/Webhooks/Customer/Customer_Delete_Webhook.md) | Class Product_Delete_Webhook|
-| [`Customer_Deleter`](./classes/BigCommerce/Webhooks/Customer/Customer_Deleter.md) | |
-| [`Customer_Saver`](./classes/BigCommerce/Webhooks/Customer/Customer_Saver.md) | |
+| [`Customer_Deleter`](./classes/BigCommerce/Webhooks/Customer/Customer_Deleter.md) | Abstract class for handling BigCommerce customer webhook operations.|
+| [`Customer_Saver`](./classes/BigCommerce/Webhooks/Customer/Customer_Saver.md) | Abstract class for handling BigCommerce customer webhook operations.|
 | [`Customer_Update_Webhook`](./classes/BigCommerce/Webhooks/Customer/Customer_Update_Webhook.md) | Class Customer_Update_Webhook|
-| [`Customer_Updater`](./classes/BigCommerce/Webhooks/Customer/Customer_Updater.md) | |
+| [`Customer_Updater`](./classes/BigCommerce/Webhooks/Customer/Customer_Updater.md) | Abstract class for handling BigCommerce customer webhook operations.|
 
 
 
@@ -1564,4 +1564,4 @@
 
 
 ***
-> Automatically generated on 2025-01-13
+> Automatically generated on 2025-01-14

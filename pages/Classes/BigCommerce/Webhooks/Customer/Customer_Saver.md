@@ -2,9 +2,11 @@
 
 # Customer_Saver
 
+Abstract class for handling BigCommerce customer webhook operations.
 
-
-
+Provides base functionality for saving, updating, and managing customer data
+between BigCommerce and WordPress, including channel-aware operations and
+customer data synchronization.
 
 * Full name: `\BigCommerce\Webhooks\Customer\Customer_Saver`
 * This class is an **Abstract class**
@@ -253,4 +255,4 @@ protected save_customer_channel_data(\WP_User $user, \BigCommerce\Api\v3\Model\C
 
 
 ***
-> Automatically generated on 2025-01-13
+> Automatically generated on 2025-01-14

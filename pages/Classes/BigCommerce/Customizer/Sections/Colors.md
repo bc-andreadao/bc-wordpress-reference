@@ -68,4 +68,4 @@ public register(\WP_Customize_Manager $wp_customize): void
 
 
 ***
-> Automatically generated on 2025-01-13
+> Automatically generated on 2025-01-14
