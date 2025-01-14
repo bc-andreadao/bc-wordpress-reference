@@ -134,5 +134,5 @@ protected delete_option(string $option): bool
 ***
 
 ***
-> Automatically generated on 2025-01-13
+> Automatically generated on 2025-01-14
 

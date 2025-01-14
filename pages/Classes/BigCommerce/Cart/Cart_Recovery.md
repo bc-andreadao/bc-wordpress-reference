@@ -81,4 +81,4 @@ The URL of the cart page, either with the recovered cart or as a fallback.
 
 
 ***
-> Automatically generated on 2025-01-13
+> Automatically generated on 2025-01-14

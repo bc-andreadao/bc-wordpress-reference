@@ -193,4 +193,4 @@ public customer_login_token(string $store_id, string $customer_id, \BigCommerce\
 
 
 ***
-> Automatically generated on 2025-01-13
+> Automatically generated on 2025-01-14
