@@ -925,7 +925,7 @@ Argument | Type | Description
 -------- | ---- | -----------
 `status` | `string` | The status being set.
 
-Source: [src/BigCommerce/Import/Runner/Status.php](BigCommerce/Import/Runner/Status.php), [line 76](BigCommerce/Import/Runner/Status.php#L76-L81)
+Source: [src/BigCommerce/Import/Runner/Status.php](BigCommerce/Import/Runner/Status.php), [line 86](BigCommerce/Import/Runner/Status.php#L86-L91)
 
 ### bigcommerce/import/logs/rotate
 
@@ -938,7 +938,7 @@ Argument | Type | Description
 -------- | ---- | -----------
 `log` | `array` | The current log
 
-Source: [src/BigCommerce/Import/Runner/Status.php](BigCommerce/Import/Runner/Status.php), [line 91](BigCommerce/Import/Runner/Status.php#L91-L96)
+Source: [src/BigCommerce/Import/Runner/Status.php](BigCommerce/Import/Runner/Status.php), [line 101](BigCommerce/Import/Runner/Status.php#L101-L106)
 
 ### bigcommerce/import/logs/rotated
 
@@ -951,7 +951,7 @@ Argument | Type | Description
 -------- | ---- | -----------
 `log` | `array` | The previous log
 
-Source: [src/BigCommerce/Import/Runner/Status.php](BigCommerce/Import/Runner/Status.php), [line 99](BigCommerce/Import/Runner/Status.php#L99-L104)
+Source: [src/BigCommerce/Import/Runner/Status.php](BigCommerce/Import/Runner/Status.php), [line 109](BigCommerce/Import/Runner/Status.php#L109-L114)
 
 ### bigcommerce/wishlist_endpoint/{$action}
 
