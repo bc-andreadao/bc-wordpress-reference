@@ -829,7 +829,7 @@
 | [`AsyncProcessing_Runner`](./classes/BigCommerce/Import/Runner/AsyncProcessing_Runner.md) | Handles asynchronous processing for BigCommerce import operations.|
 | [`CLI_Runner`](./classes/BigCommerce/Import/Runner/CLI_Runner.md) | CLI Runner for BigCommerce imports.|
 | [`Cron_Monitor`](./classes/BigCommerce/Import/Runner/Cron_Monitor.md) | Class Cron_Monitor|
-| [`Cron_Runner`](./classes/BigCommerce/Import/Runner/Cron_Runner.md) | |
+| [`Cron_Runner`](./classes/BigCommerce/Import/Runner/Cron_Runner.md) | Handles the scheduling and execution of BigCommerce import processes via WordPress cron.|
 | [`Cron_Scheduler`](./classes/BigCommerce/Import/Runner/Cron_Scheduler.md) | |
 | [`Lock`](./classes/BigCommerce/Import/Runner/Lock.md) | |
 | [`Lock_Monitor`](./classes/BigCommerce/Import/Runner/Lock_Monitor.md) | Class Lock_Monitor|

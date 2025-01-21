@@ -2,7 +2,7 @@
 
 # Cron_Runner
 
-
+Handles the scheduling and execution of BigCommerce import processes via WordPress cron.
 
 
 

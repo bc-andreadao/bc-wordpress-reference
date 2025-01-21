@@ -855,7 +855,7 @@ This action is triggered at the start of the BigCommerce import process. It clea
 
 No arguments.
 
-Source: [src/BigCommerce/Import/Runner/Cron_Runner.php](BigCommerce/Import/Runner/Cron_Runner.php), [line 30](BigCommerce/Import/Runner/Cron_Runner.php#L30-L33)
+Source: [src/BigCommerce/Import/Runner/Cron_Runner.php](BigCommerce/Import/Runner/Cron_Runner.php), [line 33](BigCommerce/Import/Runner/Cron_Runner.php#L33-L36)
 
 Source: [src/BigCommerce/Import/Runner/CLI_Runner.php](BigCommerce/Import/Runner/CLI_Runner.php), [line 28](BigCommerce/Import/Runner/CLI_Runner.php#L28-L28)
 
@@ -870,7 +870,7 @@ Argument | Type | Description
 -------- | ---- | -----------
 `status` | `string` | Current status of the import.
 
-Source: [src/BigCommerce/Import/Runner/Cron_Runner.php](BigCommerce/Import/Runner/Cron_Runner.php), [line 55](BigCommerce/Import/Runner/Cron_Runner.php#L55-L60)
+Source: [src/BigCommerce/Import/Runner/Cron_Runner.php](BigCommerce/Import/Runner/Cron_Runner.php), [line 58](BigCommerce/Import/Runner/Cron_Runner.php#L58-L63)
 
 Source: [src/BigCommerce/Import/Runner/AsyncProcessing_Runner.php](BigCommerce/Import/Runner/AsyncProcessing_Runner.php), [line 52](BigCommerce/Import/Runner/AsyncProcessing_Runner.php#L52-L52)
 
@@ -887,7 +887,7 @@ Argument | Type | Description
 -------- | ---- | -----------
 `status` | `string` | Current status of the import.
 
-Source: [src/BigCommerce/Import/Runner/Cron_Runner.php](BigCommerce/Import/Runner/Cron_Runner.php), [line 61](BigCommerce/Import/Runner/Cron_Runner.php#L61-L66)
+Source: [src/BigCommerce/Import/Runner/Cron_Runner.php](BigCommerce/Import/Runner/Cron_Runner.php), [line 64](BigCommerce/Import/Runner/Cron_Runner.php#L64-L69)
 
 Source: [src/BigCommerce/Import/Runner/AsyncProcessing_Runner.php](BigCommerce/Import/Runner/AsyncProcessing_Runner.php), [line 53](BigCommerce/Import/Runner/AsyncProcessing_Runner.php#L53-L53)
 
@@ -904,7 +904,7 @@ Argument | Type | Description
 -------- | ---- | -----------
 `status` | `string` | Current status of the import.
 
-Source: [src/BigCommerce/Import/Runner/Cron_Runner.php](BigCommerce/Import/Runner/Cron_Runner.php), [line 67](BigCommerce/Import/Runner/Cron_Runner.php#L67-L72)
+Source: [src/BigCommerce/Import/Runner/Cron_Runner.php](BigCommerce/Import/Runner/Cron_Runner.php), [line 70](BigCommerce/Import/Runner/Cron_Runner.php#L70-L75)
 
 Source: [src/BigCommerce/Import/Runner/AsyncProcessing_Runner.php](BigCommerce/Import/Runner/AsyncProcessing_Runner.php), [line 54](BigCommerce/Import/Runner/AsyncProcessing_Runner.php#L54-L54)
 
@@ -912,7 +912,7 @@ Source: [src/BigCommerce/Import/Runner/CLI_Runner.php](BigCommerce/Import/Runner
 
 ### self::CONTINUE_CRON
 
-Source: [src/BigCommerce/Import/Runner/Cron_Runner.php](BigCommerce/Import/Runner/Cron_Runner.php), [line 93](BigCommerce/Import/Runner/Cron_Runner.php#L93-L93)
+Source: [src/BigCommerce/Import/Runner/Cron_Runner.php](BigCommerce/Import/Runner/Cron_Runner.php), [line 96](BigCommerce/Import/Runner/Cron_Runner.php#L96-L96)
 
 ### bigcommerce/import/set_status
 
