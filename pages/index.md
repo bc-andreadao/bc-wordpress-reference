@@ -826,7 +826,7 @@
 
 | Class | Description |
 |-------|-------------|
-| [`AsyncProcessing_Runner`](./classes/BigCommerce/Import/Runner/AsyncProcessing_Runner.md) | |
+| [`AsyncProcessing_Runner`](./classes/BigCommerce/Import/Runner/AsyncProcessing_Runner.md) | Handles asynchronous processing for BigCommerce import operations.|
 | [`CLI_Runner`](./classes/BigCommerce/Import/Runner/CLI_Runner.md) | |
 | [`Cron_Monitor`](./classes/BigCommerce/Import/Runner/Cron_Monitor.md) | Class Cron_Monitor|
 | [`Cron_Runner`](./classes/BigCommerce/Import/Runner/Cron_Runner.md) | |
@@ -1564,4 +1564,4 @@
 
 
 ***
-> Automatically generated on 2025-01-14
+> Automatically generated on 2025-01-21

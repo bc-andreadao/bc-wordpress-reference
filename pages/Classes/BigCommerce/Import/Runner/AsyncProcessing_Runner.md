@@ -2,9 +2,12 @@
 
 # AsyncProcessing_Runner
 
+Handles asynchronous processing for BigCommerce import operations.
 
-
-
+This class manages parallel processing of time-consuming import tasks
+such as fetching listings, initializing channels, and product fetching.
+It implements locking mechanisms to prevent concurrent processing conflicts
+and validates processing status to ensure only allowed operations run in parallel.
 
 * Full name: `\BigCommerce\Import\Runner\AsyncProcessing_Runner`
 
@@ -42,4 +45,4 @@ public run(): mixed
 
 
 ***
-> Automatically generated on 2025-01-14
+> Automatically generated on 2025-01-21

@@ -21,4 +21,4 @@ This function has no parameters.
 The WooCommerce facade instance.
 
 ***
-> Automatically generated on 2025-01-14
+> Automatically generated on 2025-01-21

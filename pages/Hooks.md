@@ -444,9 +444,9 @@ Source: [src/BigCommerce/Import/Processors/Listing_Fetcher.php](BigCommerce/Impo
 
 Source: [src/BigCommerce/Import/Processors/Listing_Fetcher.php](BigCommerce/Import/Processors/Listing_Fetcher.php), [line 116](BigCommerce/Import/Processors/Listing_Fetcher.php#L116-L118)
 
-Source: [src/BigCommerce/Import/Runner/AsyncProcessing_Runner.php](BigCommerce/Import/Runner/AsyncProcessing_Runner.php), [line 26](BigCommerce/Import/Runner/AsyncProcessing_Runner.php#L26-L28)
+Source: [src/BigCommerce/Import/Runner/AsyncProcessing_Runner.php](BigCommerce/Import/Runner/AsyncProcessing_Runner.php), [line 35](BigCommerce/Import/Runner/AsyncProcessing_Runner.php#L35-L37)
 
-Source: [src/BigCommerce/Import/Runner/AsyncProcessing_Runner.php](BigCommerce/Import/Runner/AsyncProcessing_Runner.php), [line 34](BigCommerce/Import/Runner/AsyncProcessing_Runner.php#L34-L36)
+Source: [src/BigCommerce/Import/Runner/AsyncProcessing_Runner.php](BigCommerce/Import/Runner/AsyncProcessing_Runner.php), [line 43](BigCommerce/Import/Runner/AsyncProcessing_Runner.php#L43-L45)
 
 Source: [src/BigCommerce/Import/Runner/Lock_Monitor.php](BigCommerce/Import/Runner/Lock_Monitor.php), [line 42](BigCommerce/Import/Runner/Lock_Monitor.php#L42-L44)
 
@@ -872,7 +872,7 @@ Argument | Type | Description
 
 Source: [src/BigCommerce/Import/Runner/Cron_Runner.php](BigCommerce/Import/Runner/Cron_Runner.php), [line 55](BigCommerce/Import/Runner/Cron_Runner.php#L55-L60)
 
-Source: [src/BigCommerce/Import/Runner/AsyncProcessing_Runner.php](BigCommerce/Import/Runner/AsyncProcessing_Runner.php), [line 43](BigCommerce/Import/Runner/AsyncProcessing_Runner.php#L43-L43)
+Source: [src/BigCommerce/Import/Runner/AsyncProcessing_Runner.php](BigCommerce/Import/Runner/AsyncProcessing_Runner.php), [line 52](BigCommerce/Import/Runner/AsyncProcessing_Runner.php#L52-L52)
 
 Source: [src/BigCommerce/Import/Runner/CLI_Runner.php](BigCommerce/Import/Runner/CLI_Runner.php), [line 29](BigCommerce/Import/Runner/CLI_Runner.php#L29-L29)
 
@@ -889,7 +889,7 @@ Argument | Type | Description
 
 Source: [src/BigCommerce/Import/Runner/Cron_Runner.php](BigCommerce/Import/Runner/Cron_Runner.php), [line 61](BigCommerce/Import/Runner/Cron_Runner.php#L61-L66)
 
-Source: [src/BigCommerce/Import/Runner/AsyncProcessing_Runner.php](BigCommerce/Import/Runner/AsyncProcessing_Runner.php), [line 44](BigCommerce/Import/Runner/AsyncProcessing_Runner.php#L44-L44)
+Source: [src/BigCommerce/Import/Runner/AsyncProcessing_Runner.php](BigCommerce/Import/Runner/AsyncProcessing_Runner.php), [line 53](BigCommerce/Import/Runner/AsyncProcessing_Runner.php#L53-L53)
 
 Source: [src/BigCommerce/Import/Runner/CLI_Runner.php](BigCommerce/Import/Runner/CLI_Runner.php), [line 30](BigCommerce/Import/Runner/CLI_Runner.php#L30-L30)
 
@@ -906,7 +906,7 @@ Argument | Type | Description
 
 Source: [src/BigCommerce/Import/Runner/Cron_Runner.php](BigCommerce/Import/Runner/Cron_Runner.php), [line 67](BigCommerce/Import/Runner/Cron_Runner.php#L67-L72)
 
-Source: [src/BigCommerce/Import/Runner/AsyncProcessing_Runner.php](BigCommerce/Import/Runner/AsyncProcessing_Runner.php), [line 45](BigCommerce/Import/Runner/AsyncProcessing_Runner.php#L45-L45)
+Source: [src/BigCommerce/Import/Runner/AsyncProcessing_Runner.php](BigCommerce/Import/Runner/AsyncProcessing_Runner.php), [line 54](BigCommerce/Import/Runner/AsyncProcessing_Runner.php#L54-L54)
 
 Source: [src/BigCommerce/Import/Runner/CLI_Runner.php](BigCommerce/Import/Runner/CLI_Runner.php), [line 31](BigCommerce/Import/Runner/CLI_Runner.php#L31-L31)
 
