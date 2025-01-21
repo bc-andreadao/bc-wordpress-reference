@@ -255,4 +255,4 @@ protected save_customer_channel_data(\WP_User $user, \BigCommerce\Api\v3\Model\C
 
 
 ***
-> Automatically generated on 2025-01-14
+> Automatically generated on 2025-01-21

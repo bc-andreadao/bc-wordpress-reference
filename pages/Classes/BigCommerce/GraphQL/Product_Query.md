@@ -267,4 +267,4 @@ The GraphQL fragment for checkbox options.
 
 
 ***
-> Automatically generated on 2025-01-14
+> Automatically generated on 2025-01-21

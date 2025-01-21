@@ -45,4 +45,4 @@ public get_controller(string $classname, array $options = [], string $template =
 
 
 ***
-> Automatically generated on 2025-01-14
+> Automatically generated on 2025-01-21
