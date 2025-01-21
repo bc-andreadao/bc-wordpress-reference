@@ -831,7 +831,7 @@
 | [`Cron_Monitor`](./classes/BigCommerce/Import/Runner/Cron_Monitor.md) | Class Cron_Monitor|
 | [`Cron_Runner`](./classes/BigCommerce/Import/Runner/Cron_Runner.md) | Handles the scheduling and execution of BigCommerce import processes via WordPress cron.|
 | [`Cron_Scheduler`](./classes/BigCommerce/Import/Runner/Cron_Scheduler.md) | Handles scheduling of import tasks using WordPress cron system.|
-| [`Lock`](./classes/BigCommerce/Import/Runner/Lock.md) | |
+| [`Lock`](./classes/BigCommerce/Import/Runner/Lock.md) | Manages a lock mechanism for the BigCommerce import process using WordPress options.|
 | [`Lock_Monitor`](./classes/BigCommerce/Import/Runner/Lock_Monitor.md) | Class Lock_Monitor|
 | [`Status`](./classes/BigCommerce/Import/Runner/Status.md) | |
 

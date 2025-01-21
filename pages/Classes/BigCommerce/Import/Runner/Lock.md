@@ -2,9 +2,10 @@
 
 # Lock
 
+Manages a lock mechanism for the BigCommerce import process using WordPress options.
 
-
-
+The lock is implemented as a timestamp to prevent concurrent import operations
+from running simultaneously.
 
 * Full name: `\BigCommerce\Import\Runner\Lock`
 
