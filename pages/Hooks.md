@@ -857,7 +857,7 @@ No arguments.
 
 Source: [src/BigCommerce/Import/Runner/Cron_Runner.php](BigCommerce/Import/Runner/Cron_Runner.php), [line 30](BigCommerce/Import/Runner/Cron_Runner.php#L30-L33)
 
-Source: [src/BigCommerce/Import/Runner/CLI_Runner.php](BigCommerce/Import/Runner/CLI_Runner.php), [line 22](BigCommerce/Import/Runner/CLI_Runner.php#L22-L22)
+Source: [src/BigCommerce/Import/Runner/CLI_Runner.php](BigCommerce/Import/Runner/CLI_Runner.php), [line 28](BigCommerce/Import/Runner/CLI_Runner.php#L28-L28)
 
 ### bigcommerce/import/before
 
@@ -874,7 +874,7 @@ Source: [src/BigCommerce/Import/Runner/Cron_Runner.php](BigCommerce/Import/Runne
 
 Source: [src/BigCommerce/Import/Runner/AsyncProcessing_Runner.php](BigCommerce/Import/Runner/AsyncProcessing_Runner.php), [line 52](BigCommerce/Import/Runner/AsyncProcessing_Runner.php#L52-L52)
 
-Source: [src/BigCommerce/Import/Runner/CLI_Runner.php](BigCommerce/Import/Runner/CLI_Runner.php), [line 29](BigCommerce/Import/Runner/CLI_Runner.php#L29-L29)
+Source: [src/BigCommerce/Import/Runner/CLI_Runner.php](BigCommerce/Import/Runner/CLI_Runner.php), [line 35](BigCommerce/Import/Runner/CLI_Runner.php#L35-L35)
 
 ### bigcommerce/import/run
 
@@ -891,7 +891,7 @@ Source: [src/BigCommerce/Import/Runner/Cron_Runner.php](BigCommerce/Import/Runne
 
 Source: [src/BigCommerce/Import/Runner/AsyncProcessing_Runner.php](BigCommerce/Import/Runner/AsyncProcessing_Runner.php), [line 53](BigCommerce/Import/Runner/AsyncProcessing_Runner.php#L53-L53)
 
-Source: [src/BigCommerce/Import/Runner/CLI_Runner.php](BigCommerce/Import/Runner/CLI_Runner.php), [line 30](BigCommerce/Import/Runner/CLI_Runner.php#L30-L30)
+Source: [src/BigCommerce/Import/Runner/CLI_Runner.php](BigCommerce/Import/Runner/CLI_Runner.php), [line 36](BigCommerce/Import/Runner/CLI_Runner.php#L36-L36)
 
 ### bigcommerce/import/after
 
@@ -908,7 +908,7 @@ Source: [src/BigCommerce/Import/Runner/Cron_Runner.php](BigCommerce/Import/Runne
 
 Source: [src/BigCommerce/Import/Runner/AsyncProcessing_Runner.php](BigCommerce/Import/Runner/AsyncProcessing_Runner.php), [line 54](BigCommerce/Import/Runner/AsyncProcessing_Runner.php#L54-L54)
 
-Source: [src/BigCommerce/Import/Runner/CLI_Runner.php](BigCommerce/Import/Runner/CLI_Runner.php), [line 31](BigCommerce/Import/Runner/CLI_Runner.php#L31-L31)
+Source: [src/BigCommerce/Import/Runner/CLI_Runner.php](BigCommerce/Import/Runner/CLI_Runner.php), [line 37](BigCommerce/Import/Runner/CLI_Runner.php#L37-L37)
 
 ### self::CONTINUE_CRON
 

@@ -2,9 +2,11 @@
 
 # CLI_Runner
 
+CLI Runner for BigCommerce imports.
 
-
-
+Handles the execution of BigCommerce import processes via command line,
+managing import locks to prevent concurrent imports and monitoring
+the import status throughout the process.
 
 * Full name: `\BigCommerce\Import\Runner\CLI_Runner`
 
